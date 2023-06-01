@@ -98,16 +98,16 @@ local Converted = {
 
 -- Properties:
 
-Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].DisplayOrder = 2147483647
+Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].DisplayOrder = 999999999
 Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].ResetOnSpawn = false
 Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Name = "GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"
-Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Parent = game:GetService("CoreGui")
+Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Parent = game.Workspace
 
 Converted["_MainFrame"].BackgroundColor3 = Color3.fromRGB(25.000000409781933, 25.000000409781933, 25.000000409781933)
 Converted["_MainFrame"].BorderSizePixel = 0
 Converted["_MainFrame"].Position = UDim2.new(0.747767806, 0, 0.405534327, 0)
 Converted["_MainFrame"].Size = UDim2.new(0.251993626, 0, 0.187697157, 0)
-Converted["_MainFrame"].ZIndex = 2147483647
+Converted["_MainFrame"].ZIndex = 999999999
 Converted["_MainFrame"].Name = "MainFrame"
 Converted["_MainFrame"].Parent = Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"]
 
@@ -125,7 +125,7 @@ Converted["_Input"].BackgroundTransparency = 0.5
 Converted["_Input"].BorderSizePixel = 0
 Converted["_Input"].Position = UDim2.new(0.0221518986, 0, 0.0588235296, 0)
 Converted["_Input"].Size = UDim2.new(0.952531636, 0, 0.30252102, 0)
-Converted["_Input"].ZIndex = 2147483647
+Converted["_Input"].ZIndex = 999999999
 Converted["_Input"].Name = "Input"
 Converted["_Input"].Parent = Converted["_MainFrame"]
 
@@ -140,7 +140,7 @@ Converted["_UICorner1"].Parent = Converted["_MainFrame"]
 Converted["_Line"].BackgroundColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
 Converted["_Line"].Position = UDim2.new(0.0221518986, 0, 0.436974794, 0)
 Converted["_Line"].Size = UDim2.new(0.952531636, 0, 0.0168067235, 0)
-Converted["_Line"].ZIndex = 2147483647
+Converted["_Line"].ZIndex = 999999999
 Converted["_Line"].Name = "Line"
 Converted["_Line"].Parent = Converted["_MainFrame"]
 
@@ -155,7 +155,7 @@ Converted["_Output"].BackgroundTransparency = 0.5
 Converted["_Output"].BorderSizePixel = 0
 Converted["_Output"].Position = UDim2.new(0.0221518986, 0, 0.512605071, 0)
 Converted["_Output"].Size = UDim2.new(0.952531636, 0, 0.420168072, 0)
-Converted["_Output"].ZIndex = 2147483647
+Converted["_Output"].ZIndex = 999999999
 Converted["_Output"].Name = "Output"
 Converted["_Output"].Parent = Converted["_MainFrame"]
 
@@ -169,7 +169,7 @@ Converted["_CmdFrame"].BackgroundColor3 = Color3.fromRGB(47.0000009983778, 47.00
 Converted["_CmdFrame"].Position = UDim2.new(0.0911790431, 0, 0.331386805, 0)
 Converted["_CmdFrame"].Size = UDim2.new(0.196495235, 0, 0.417981058, 0)
 Converted["_CmdFrame"].Visible = false
-Converted["_CmdFrame"].ZIndex = 2147483647
+Converted["_CmdFrame"].ZIndex = 999999999
 Converted["_CmdFrame"].Name = "CmdFrame"
 Converted["_CmdFrame"].Parent = Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"]
 
@@ -185,7 +185,7 @@ Converted["_Title"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Title"].BackgroundTransparency = 1
 Converted["_Title"].Position = UDim2.new(0.042857144, 0, 0, 0)
 Converted["_Title"].Size = UDim2.new(0.919047594, 0, 0.128301889, 0)
-Converted["_Title"].ZIndex = 2147483647
+Converted["_Title"].ZIndex = 999999999
 Converted["_Title"].Name = "Title"
 Converted["_Title"].Parent = Converted["_CmdFrame"]
 
@@ -193,7 +193,7 @@ Converted["_Frame"].BackgroundColor3 = Color3.fromRGB(38.0000015348196, 38.00000
 Converted["_Frame"].BorderSizePixel = 0
 Converted["_Frame"].Position = UDim2.new(0.0316538028, 0, 0.169117838, 0)
 Converted["_Frame"].Size = UDim2.new(0.940561295, 0, 0.796226442, 0)
-Converted["_Frame"].ZIndex = 2147483647
+Converted["_Frame"].ZIndex = 999999999
 Converted["_Frame"].Parent = Converted["_CmdFrame"]
 
 Converted["_CmdScroll"].CanvasSize = UDim2.new(0, 0, 30, 0)
@@ -204,7 +204,7 @@ Converted["_CmdScroll"].BackgroundTransparency = 1
 Converted["_CmdScroll"].BorderSizePixel = 0
 Converted["_CmdScroll"].Position = UDim2.new(1.79515169e-07, 0, 0.00313078682, 0)
 Converted["_CmdScroll"].Size = UDim2.new(0.999999702, 0, 0.996869266, 0)
-Converted["_CmdScroll"].ZIndex = 2147483647
+Converted["_CmdScroll"].ZIndex = 999999999
 Converted["_CmdScroll"].Name = "CmdScroll"
 Converted["_CmdScroll"].Parent = Converted["_Frame"]
 
@@ -221,7 +221,7 @@ Converted["_cmd"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd"].BackgroundTransparency = 1
 Converted["_cmd"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd"].ZIndex = 2147483647
+Converted["_cmd"].ZIndex = 999999999
 Converted["_cmd"].Name = "cmd"
 Converted["_cmd"].Parent = Converted["_CmdScroll"]
 
@@ -239,7 +239,7 @@ Converted["_cmd1"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd1"].BackgroundTransparency = 1
 Converted["_cmd1"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd1"].ZIndex = 2147483647
+Converted["_cmd1"].ZIndex = 999999999
 Converted["_cmd1"].Name = "cmd"
 Converted["_cmd1"].Parent = Converted["_CmdScroll"]
 
@@ -257,7 +257,7 @@ Converted["_cmd2"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd2"].BackgroundTransparency = 1
 Converted["_cmd2"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd2"].ZIndex = 2147483647
+Converted["_cmd2"].ZIndex = 999999999
 Converted["_cmd2"].Name = "cmd"
 Converted["_cmd2"].Parent = Converted["_CmdScroll"]
 
@@ -275,7 +275,7 @@ Converted["_cmd3"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd3"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd3"].BackgroundTransparency = 1
 Converted["_cmd3"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd3"].ZIndex = 2147483647
+Converted["_cmd3"].ZIndex = 999999999
 Converted["_cmd3"].Name = "cmd"
 Converted["_cmd3"].Parent = Converted["_CmdScroll"]
 
@@ -293,7 +293,7 @@ Converted["_cmd4"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd4"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd4"].BackgroundTransparency = 1
 Converted["_cmd4"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd4"].ZIndex = 2147483647
+Converted["_cmd4"].ZIndex = 999999999
 Converted["_cmd4"].Name = "cmd"
 Converted["_cmd4"].Parent = Converted["_CmdScroll"]
 
@@ -311,7 +311,7 @@ Converted["_cmd5"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd5"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd5"].BackgroundTransparency = 1
 Converted["_cmd5"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd5"].ZIndex = 2147483647
+Converted["_cmd5"].ZIndex = 999999999
 Converted["_cmd5"].Name = "cmd"
 Converted["_cmd5"].Parent = Converted["_CmdScroll"]
 
@@ -329,7 +329,7 @@ Converted["_cmd6"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd6"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd6"].BackgroundTransparency = 1
 Converted["_cmd6"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd6"].ZIndex = 2147483647
+Converted["_cmd6"].ZIndex = 999999999
 Converted["_cmd6"].Name = "cmd"
 Converted["_cmd6"].Parent = Converted["_CmdScroll"]
 
@@ -347,7 +347,7 @@ Converted["_cmd7"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd7"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd7"].BackgroundTransparency = 1
 Converted["_cmd7"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd7"].ZIndex = 2147483647
+Converted["_cmd7"].ZIndex = 999999999
 Converted["_cmd7"].Name = "cmd"
 Converted["_cmd7"].Parent = Converted["_CmdScroll"]
 
@@ -365,7 +365,7 @@ Converted["_cmd8"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd8"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd8"].BackgroundTransparency = 1
 Converted["_cmd8"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd8"].ZIndex = 2147483647
+Converted["_cmd8"].ZIndex = 999999999
 Converted["_cmd8"].Name = "cmd"
 Converted["_cmd8"].Parent = Converted["_CmdScroll"]
 
@@ -383,7 +383,7 @@ Converted["_cmd9"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd9"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd9"].BackgroundTransparency = 1
 Converted["_cmd9"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd9"].ZIndex = 2147483647
+Converted["_cmd9"].ZIndex = 999999999
 Converted["_cmd9"].Name = "cmd"
 Converted["_cmd9"].Parent = Converted["_CmdScroll"]
 
@@ -401,7 +401,7 @@ Converted["_cmd10"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd10"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd10"].BackgroundTransparency = 1
 Converted["_cmd10"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd10"].ZIndex = 2147483647
+Converted["_cmd10"].ZIndex = 999999999
 Converted["_cmd10"].Name = "cmd"
 Converted["_cmd10"].Parent = Converted["_CmdScroll"]
 
@@ -419,7 +419,7 @@ Converted["_cmd11"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd11"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd11"].BackgroundTransparency = 1
 Converted["_cmd11"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd11"].ZIndex = 2147483647
+Converted["_cmd11"].ZIndex = 999999999
 Converted["_cmd11"].Name = "cmd"
 Converted["_cmd11"].Parent = Converted["_CmdScroll"]
 
@@ -437,7 +437,7 @@ Converted["_cmd12"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd12"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd12"].BackgroundTransparency = 1
 Converted["_cmd12"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd12"].ZIndex = 2147483647
+Converted["_cmd12"].ZIndex = 999999999
 Converted["_cmd12"].Name = "cmd"
 Converted["_cmd12"].Parent = Converted["_CmdScroll"]
 
@@ -455,7 +455,7 @@ Converted["_cmd13"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd13"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd13"].BackgroundTransparency = 1
 Converted["_cmd13"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd13"].ZIndex = 2147483647
+Converted["_cmd13"].ZIndex = 999999999
 Converted["_cmd13"].Name = "cmd"
 Converted["_cmd13"].Parent = Converted["_CmdScroll"]
 
@@ -473,7 +473,7 @@ Converted["_cmd14"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd14"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd14"].BackgroundTransparency = 1
 Converted["_cmd14"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd14"].ZIndex = 2147483647
+Converted["_cmd14"].ZIndex = 999999999
 Converted["_cmd14"].Name = "cmd"
 Converted["_cmd14"].Parent = Converted["_CmdScroll"]
 
@@ -491,7 +491,7 @@ Converted["_cmd15"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd15"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd15"].BackgroundTransparency = 1
 Converted["_cmd15"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd15"].ZIndex = 2147483647
+Converted["_cmd15"].ZIndex = 999999999
 Converted["_cmd15"].Name = "cmd"
 Converted["_cmd15"].Parent = Converted["_CmdScroll"]
 
@@ -509,7 +509,7 @@ Converted["_cmd16"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd16"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd16"].BackgroundTransparency = 1
 Converted["_cmd16"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd16"].ZIndex = 2147483647
+Converted["_cmd16"].ZIndex = 999999999
 Converted["_cmd16"].Name = "cmd"
 Converted["_cmd16"].Parent = Converted["_CmdScroll"]
 
@@ -527,7 +527,7 @@ Converted["_cmd17"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd17"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd17"].BackgroundTransparency = 1
 Converted["_cmd17"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd17"].ZIndex = 2147483647
+Converted["_cmd17"].ZIndex = 999999999
 Converted["_cmd17"].Name = "cmd"
 Converted["_cmd17"].Parent = Converted["_CmdScroll"]
 
@@ -545,7 +545,7 @@ Converted["_cmd18"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd18"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd18"].BackgroundTransparency = 1
 Converted["_cmd18"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd18"].ZIndex = 2147483647
+Converted["_cmd18"].ZIndex = 999999999
 Converted["_cmd18"].Name = "cmd"
 Converted["_cmd18"].Parent = Converted["_CmdScroll"]
 
@@ -563,7 +563,7 @@ Converted["_cmd19"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd19"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd19"].BackgroundTransparency = 1
 Converted["_cmd19"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd19"].ZIndex = 2147483647
+Converted["_cmd19"].ZIndex = 999999999
 Converted["_cmd19"].Name = "cmd"
 Converted["_cmd19"].Parent = Converted["_CmdScroll"]
 
@@ -581,7 +581,7 @@ Converted["_cmd20"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd20"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd20"].BackgroundTransparency = 1
 Converted["_cmd20"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd20"].ZIndex = 2147483647
+Converted["_cmd20"].ZIndex = 999999999
 Converted["_cmd20"].Name = "cmd"
 Converted["_cmd20"].Parent = Converted["_CmdScroll"]
 
@@ -599,7 +599,7 @@ Converted["_cmd21"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd21"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd21"].BackgroundTransparency = 1
 Converted["_cmd21"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd21"].ZIndex = 2147483647
+Converted["_cmd21"].ZIndex = 999999999
 Converted["_cmd21"].Name = "cmd"
 Converted["_cmd21"].Parent = Converted["_CmdScroll"]
 
@@ -620,7 +620,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function FCWI_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Dragify
+local function NQKXUPD_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Dragify
     local script = Instance.new("LocalScript")
     script.Name = "Dragify"
     script.Parent = Converted["_MainFrame"]
@@ -676,7 +676,7 @@ local function FCWI_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfj
 	
 	dragify(script.Parent)
 end
-local function HDLHHQZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Main
+local function CRWO_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Main
     local script = Instance.new("LocalScript")
     script.Name = "Main"
     script.Parent = Converted["_MainFrame"]
@@ -699,16 +699,23 @@ local function HDLHHQZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 	local flinging = false
 	local Clip = true
 	local floatName = "dfkjygsahfyvfnw7f8n538dnd4tgregw6er78red48hx35t6rgn8eewi"
+	local CFSpeed = 50
+	local TPWalk = false
 	
 	local p = game:GetService("Players").LocalPlayer
 	local c = p.Character
 	local h = c:FindFirstChildOfClass("Humanoid")
+	local speaker = p
+	local RunService = game:GetService("RunService")
 	
 	local prefix = ">"
 	
-	local cmdbarkey = "-"
-	
 	local pm = p:GetMouse()
+	
+	function getRoot(char)
+		local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
+		return rootPart
+	end
 	
 	local getPlr = function(Name)
 		local Players = game:GetService("Players")
@@ -727,9 +734,10 @@ local function HDLHHQZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 	end
 	
 	pm.KeyDown:Connect(function(key)
-		if key == cmdbarkey then
+		if key == "-" then
 			input:CaptureFocus()
 			task.spawn(function()
+				task.wait(0.1)
 				input.Text = prefix
 			end)
 		end
@@ -895,7 +903,7 @@ local function HDLHHQZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 						flingDied:Disconnect()
 					end
 					flinging = false
-					wait(.1)
+					task.wait(.1)
 					local speakerChar = game.Players.LocalPlayer.Character
 					if not speakerChar or not getRoot(speakerChar) then return end
 					for i,v in pairs(getRoot(speakerChar):GetChildren()) do
@@ -1110,7 +1118,7 @@ local function HDLHHQZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 					end
 	
 					getgenv().Welcome = true
-					if Targets[1] then for _,x in next, Targets do GetPlayer(x) end else return end
+					if Targets then for _,x in next, Targets do GetPlayer(x) end else return end
 	
 					if AllBool then
 						for _,x in next, Players:GetPlayers() do
@@ -1118,17 +1126,9 @@ local function HDLHHQZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 						end
 					end
 	
-					for _,x in next, Targets do
-						if GetPlayer(x) and GetPlayer(x) ~= Player then
-							if GetPlayer(x).UserId ~= 1414978355 then
-								local TPlayer = GetPlayer(x)
-								if TPlayer then
-									SkidFling(TPlayer)
-								end
-							else
-							end
-						elseif not GetPlayer(x) and not AllBool then
-						end
+					local TPlayer = GetPlayer(Targets)
+					if TPlayer then
+						SkidFling(TPlayer)
 					end
 				end)
 			elseif args[1] == prefix.."noclipfling" then
@@ -1554,11 +1554,8 @@ local function HDLHHQZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 				task.spawn(function()
 					Username = args[2]
 					if game:GetService("SoundService").RespectFilteringEnabled == true then
-	
-						task.wait();
 						print("Muted Radio as Client")
 					else
-						task.wait();
 						print("Muted Radio as FE")
 						if Username == "all" or Username == "others" then
 							local players = game:GetService("Players"):GetPlayers()
@@ -1601,6 +1598,8 @@ local function HDLHHQZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 					output.Text = ""
 				elseif args[2] == plrs.Name then
 					output.Text = "Checking Console tells you that it's FE or Client. (What it means is RespectFilteringEnabled in Sound Service is on or off.)"
+					task.wait(4)
+					output.Text = ""
 				end
 			elseif args[1] == prefix.."loopmuteradio" then
 				task.spawn(function()
@@ -1644,19 +1643,9 @@ local function HDLHHQZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 							end 
 						until Loopmute == false
 						if game:GetService("SoundService").RespectFilteringEnabled == true then
-	
-	
-	
-							task.wait();
-	
 							print("Boombox loop muted as Client")
 						else
 							if game:GetService("SoundService").RespectFilteringEnabled == false then
-	
-	
-	
-								task.wait()
-	
 								print("Boombox loop muted as FE")
 							end
 						end
@@ -1669,10 +1658,11 @@ local function HDLHHQZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 					output.Text = ""
 				elseif args[2] == plrs.Name then
 					output.Text = "Checking Console tells you that it's FE or Client. (What it means is RespectFilteringEnabled in Sound Service is on or off.)"
+					task.wait(4)
+					output.Text = ""
 				end
 			elseif args[1] == prefix.."unloopmuteradio" then
 				Loopmute = false
-				task.wait(0.06)
 				print("Muted Boomboxes are now able to be used.")
 			elseif args[1] == prefix.."glitchradio" then
 				task.spawn(function()
@@ -1702,7 +1692,7 @@ local function HDLHHQZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 								x.Playing = true
 							end
 						end
-						wait(0.2)
+						task.wait(0.2)
 						for i, x in next, players:FindFirstChildOfClass("Backpack"):GetDescendants() do
 							if x:IsA("Sound") and x.Playing == true then
 								x.Playing = false
@@ -1713,22 +1703,12 @@ local function HDLHHQZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 								x.Playing = false
 							end
 						end
-						wait(0.2)
+						task.wait(0.2)
 					until Loopglitch == false
 					if game:GetService("SoundService").RespectFilteringEnabled == true then
-	
-	
-	
-						wait();
-	
 						print("Boombox Glitched as Client")
 					else
 						if game:GetService("SoundService").RespectFilteringEnabled == false then
-	
-	
-	
-							wait();
-	
 							print("Boombox Glitched as FE")
 						end
 					end
@@ -2190,7 +2170,7 @@ local function HDLHHQZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 				loadstring(game:HttpGet(("https://raw.githubusercontent.com/L1ghtingBolt/FraktureSS/master/source.lua"),true))()
 			elseif args[1] == prefix.."chatbot" then
 				task.spawn(function()
-					repeat wait() until game:IsLoaded();
+					repeat task.wait() until game:IsLoaded();
 	
 					-- // SETTINGS \\ --
 	
@@ -2263,7 +2243,7 @@ local function HDLHHQZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 	
 						if #Response < 128 then --200
 							SayMessageRequest:FireServer(Response, "All");
-							wait(5);
+							task.wait(5);
 							Debounce = false;
 						else
 							--warn("Response (> 128): " .. Response);
@@ -2271,12 +2251,12 @@ local function HDLHHQZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 								SayMessageRequest:FireServer(string.sub(Response, 1, 128), "All");
 								delay(3, function()
 									SayMessageRequest:FireServer(string.sub(Response, 129), "All");
-									wait(5);
+									task.wait(5);
 									Debounce = false;
 								end)	
 							else
 								SayMessageRequest:FireServer("Sorry but the answer was too big, please try again.", "All");
-								wait(2.5);
+								task.wait(2.5);
 								Debounce = false;
 							end
 						end
@@ -2292,13 +2272,106 @@ local function HDLHHQZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 				elseif args[2] ~= "secret key here" or args[2] ~= "nil" or args[2] ~= "" then
 					output.Text = "If you put something random in argument '1' (API Key) then you won't get the best out of it OR it just completely breaks, I don't know."
 				end
-			elseif input.Text == tostring(prefix.."antifling") then
+			elseif args[1] == prefix.."antifling" then
 				loadstring(game:HttpGet("https://pastebin.com/raw/uLhKZbBz", true))()
+			elseif args[1] == prefix.."fly" then
+				task.spawn(function()
+					if args[2] == "" then
+						CFSpeed = 50
+					else
+						CFSpeed = args[2]
+					end
+					--Full credit to peyton#9148
+					speaker.Character:FindFirstChildOfClass('Humanoid').PlatformStand = true
+					local Head = speaker.Character:WaitForChild("Head")
+					Head.Anchored = true
+					if CFloop then CFloop:Disconnect() end
+					CFloop = RunService.Heartbeat:Connect(function(deltaTime)
+						local moveDirection = speaker.Character:FindFirstChildOfClass('Humanoid').MoveDirection * (CFspeed * deltaTime)
+						local headCFrame = Head.CFrame
+						local cameraCFrame = workspace.CurrentCamera.CFrame
+						local cameraOffset = headCFrame:ToObjectSpace(cameraCFrame).Position
+						cameraCFrame = cameraCFrame * CFrame.new(-cameraOffset.X, -cameraOffset.Y, -cameraOffset.Z + 1)
+						local cameraPosition = cameraCFrame.Position
+						local headPosition = headCFrame.Position
+	
+						local objectSpaceVelocity = CFrame.new(cameraPosition, Vector3.new(headPosition.X, cameraPosition.Y, headPosition.Z)):VectorToObjectSpace(moveDirection)
+						Head.CFrame = CFrame.new(headPosition) * (cameraCFrame - cameraPosition) * CFrame.new(objectSpaceVelocity)
+					end)
+				end)
+			elseif args[1] == prefix.."unfly" then
+				task.spawn(function()
+					if CFloop then
+						CFloop:Disconnect()
+						speaker.Character:FindFirstChildOfClass('Humanoid').PlatformStand = false
+						local Head = speaker.Character:WaitForChild("Head")
+						Head.Anchored = false
+					end
+				end)
+			elseif args[1] == prefix.."noclip" then
+				task.spawn(function()
+					Clip = false
+					wait(0.1)
+					local function NoclipLoop()
+						if Clip == false and speaker.Character ~= nil then
+							for _, child in pairs(speaker.Character:GetDescendants()) do
+								if child:IsA("BasePart") and child.CanCollide == true and child.Name ~= floatName then
+									child.CanCollide = false
+								end
+							end
+						end
+					end
+					Noclipping = RunService.Stepped:Connect(NoclipLoop)
+				end)
+			elseif args[1] == prefix.."clip" then
+				if Noclipping then
+					Noclipping:Disconnect()
+				end
+				Clip = true
+			elseif args[1] == prefix.."speed" then
+				task.spawn(function()
+					if TPWalk == true then
+						TPWalk = false
+						TPWalking = TPWalking:Disconnect()
+					end
+					TPWalk = true
+					Speed = args[2]
+					TPWalking = game:GetService("RunService").Heartbeat:Wait()
+					game:GetService("RunService").Stepped:Connect(function()
+						if TPWalk == true then
+							if game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").MoveDirection.Magnitude > 0 then
+								if Speed then
+									game.Players.LocalPlayer.Character:TranslateBy(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").MoveDirection * Speed * TPWalking * 10)
+								else
+									game.Players.LocalPlayer.Character:TranslateBy(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").MoveDirection * TPWalking * 10)
+								end
+							end
+						end
+					end)
+				end)
+			elseif args[1] == prefix.."unspeed" then
+				TPWalk = false
+				TPWalking = TPWalking:Disconnect()
+			elseif args[1] == prefix.."to" then
+				task.spawn(function()
+					local Username = args[2]
+	
+	
+					char = game.Players.LocalPlayer
+	
+					TweenService = game:GetService("TweenService")
+	
+					speaker = game.Players.LocalPlayer
+					Players = game:GetService("Players")
+	
+					local players = getPlr(Username)
+					TweenService:Create(getRoot(speaker.Character), TweenInfo.new(2, Enum.EasingStyle.Linear), {CFrame = getRoot(players.Character).CFrame + Vector3.new(3,1,0)}):Play()
+				end)
 			end
 		end
 	end)
 end
-local function WTGLIOU_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.SmoothScroll
+local function MUMUT_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.SmoothScroll
     local script = Instance.new("LocalScript")
     script.Name = "SmoothScroll"
     script.Parent = Converted["_CmdScroll"]
@@ -2450,7 +2523,7 @@ local function WTGLIOU_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 		end
 	end)
 end
-local function KRBMLDH_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function NAIJIFP_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd"]
@@ -2474,7 +2547,7 @@ local function KRBMLDH_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function UIPUDFB_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function ELSM_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd1"]
@@ -2498,7 +2571,7 @@ local function UIPUDFB_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function NVYOI_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function ZRYVEN_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd2"]
@@ -2522,7 +2595,7 @@ local function NVYOI_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function XBACDMN_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function GRABVS_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd3"]
@@ -2546,7 +2619,7 @@ local function XBACDMN_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function DLTK_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function DHZOUH_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd4"]
@@ -2570,7 +2643,7 @@ local function DLTK_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfj
 		cmd.Text = backupmsg
 	end)
 end
-local function EYTMDA_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function WSVK_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd5"]
@@ -2594,7 +2667,7 @@ local function EYTMDA_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function PIUMAWU_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function OTKN_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd6"]
@@ -2618,7 +2691,7 @@ local function PIUMAWU_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function YPPVQZQ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function OBJHZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd7"]
@@ -2642,7 +2715,7 @@ local function YPPVQZQ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function MBTTZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function WWBRO_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd8"]
@@ -2666,7 +2739,7 @@ local function MBTTZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function LRSOIEW_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function KEDQBG_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd9"]
@@ -2690,7 +2763,7 @@ local function LRSOIEW_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function HEAXEXY_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function AXVGXN_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd10"]
@@ -2714,7 +2787,7 @@ local function HEAXEXY_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function GZBMSUT_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function ZMHSUEJ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd11"]
@@ -2738,7 +2811,7 @@ local function GZBMSUT_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function YKJGDU_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function JBFK_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd12"]
@@ -2762,7 +2835,7 @@ local function YKJGDU_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function JHWRRG_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function LCSAQGN_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd13"]
@@ -2786,7 +2859,7 @@ local function JHWRRG_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function QMFHZW_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function FCOV_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd14"]
@@ -2810,7 +2883,7 @@ local function QMFHZW_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function CPSUM_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function XMRZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd15"]
@@ -2834,7 +2907,7 @@ local function CPSUM_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function JUOZJ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function REKGEV_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd16"]
@@ -2858,7 +2931,7 @@ local function JUOZJ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function MJNL_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function NNHWF_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd17"]
@@ -2882,7 +2955,7 @@ local function MJNL_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfj
 		cmd.Text = backupmsg
 	end)
 end
-local function PDUXX_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function UNWYKH_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd18"]
@@ -2906,7 +2979,7 @@ local function PDUXX_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function NYKL_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function QWFRFV_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd19"]
@@ -2930,7 +3003,7 @@ local function NYKL_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfj
 		cmd.Text = backupmsg
 	end)
 end
-local function NBBAFID_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function PJCM_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd20"]
@@ -2954,7 +3027,7 @@ local function NBBAFID_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function JWCBS_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function WZWGKD_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd21"]
@@ -2978,7 +3051,7 @@ local function JWCBS_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function HDAZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Dragify
+local function NMIFIEM_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Dragify
     local script = Instance.new("LocalScript")
     script.Name = "Dragify"
     script.Parent = Converted["_CmdFrame"]
@@ -3035,29 +3108,29 @@ local function HDAZ_fake_script() -- Fake Script: Workspace.GFUYHjBJHjHjhvfjhvfj
 	dragify(script.Parent)
 end
 
-coroutine.wrap(FCWI_fake_script)()
-coroutine.wrap(HDLHHQZ_fake_script)()
-coroutine.wrap(WTGLIOU_fake_script)()
-coroutine.wrap(KRBMLDH_fake_script)()
-coroutine.wrap(UIPUDFB_fake_script)()
-coroutine.wrap(NVYOI_fake_script)()
-coroutine.wrap(XBACDMN_fake_script)()
-coroutine.wrap(DLTK_fake_script)()
-coroutine.wrap(EYTMDA_fake_script)()
-coroutine.wrap(PIUMAWU_fake_script)()
-coroutine.wrap(YPPVQZQ_fake_script)()
-coroutine.wrap(MBTTZ_fake_script)()
-coroutine.wrap(LRSOIEW_fake_script)()
-coroutine.wrap(HEAXEXY_fake_script)()
-coroutine.wrap(GZBMSUT_fake_script)()
-coroutine.wrap(YKJGDU_fake_script)()
-coroutine.wrap(JHWRRG_fake_script)()
-coroutine.wrap(QMFHZW_fake_script)()
-coroutine.wrap(CPSUM_fake_script)()
-coroutine.wrap(JUOZJ_fake_script)()
-coroutine.wrap(MJNL_fake_script)()
-coroutine.wrap(PDUXX_fake_script)()
-coroutine.wrap(NYKL_fake_script)()
-coroutine.wrap(NBBAFID_fake_script)()
-coroutine.wrap(JWCBS_fake_script)()
-coroutine.wrap(HDAZ_fake_script)()
+coroutine.wrap(NQKXUPD_fake_script)()
+coroutine.wrap(CRWO_fake_script)()
+coroutine.wrap(MUMUT_fake_script)()
+coroutine.wrap(NAIJIFP_fake_script)()
+coroutine.wrap(ELSM_fake_script)()
+coroutine.wrap(ZRYVEN_fake_script)()
+coroutine.wrap(GRABVS_fake_script)()
+coroutine.wrap(DHZOUH_fake_script)()
+coroutine.wrap(WSVK_fake_script)()
+coroutine.wrap(OTKN_fake_script)()
+coroutine.wrap(OBJHZ_fake_script)()
+coroutine.wrap(WWBRO_fake_script)()
+coroutine.wrap(KEDQBG_fake_script)()
+coroutine.wrap(AXVGXN_fake_script)()
+coroutine.wrap(ZMHSUEJ_fake_script)()
+coroutine.wrap(JBFK_fake_script)()
+coroutine.wrap(LCSAQGN_fake_script)()
+coroutine.wrap(FCOV_fake_script)()
+coroutine.wrap(XMRZ_fake_script)()
+coroutine.wrap(REKGEV_fake_script)()
+coroutine.wrap(NNHWF_fake_script)()
+coroutine.wrap(UNWYKH_fake_script)()
+coroutine.wrap(QWFRFV_fake_script)()
+coroutine.wrap(PJCM_fake_script)()
+coroutine.wrap(WZWGKD_fake_script)()
+coroutine.wrap(NMIFIEM_fake_script)()
