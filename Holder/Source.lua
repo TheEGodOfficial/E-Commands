@@ -98,16 +98,16 @@ local Converted = {
 
 -- Properties:
 
-Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].DisplayOrder = 999999999
+Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].DisplayOrder = 2147483647
 Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].ResetOnSpawn = false
 Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Name = "GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"
-Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Parent = game.Workspace
+Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Parent = game:GetService("CoreGui")
 
 Converted["_MainFrame"].BackgroundColor3 = Color3.fromRGB(25.000000409781933, 25.000000409781933, 25.000000409781933)
 Converted["_MainFrame"].BorderSizePixel = 0
 Converted["_MainFrame"].Position = UDim2.new(0.747767806, 0, 0.405534327, 0)
 Converted["_MainFrame"].Size = UDim2.new(0.251993626, 0, 0.187697157, 0)
-Converted["_MainFrame"].ZIndex = 999999999
+Converted["_MainFrame"].ZIndex = 2147483647
 Converted["_MainFrame"].Name = "MainFrame"
 Converted["_MainFrame"].Parent = Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"]
 
@@ -125,7 +125,7 @@ Converted["_Input"].BackgroundTransparency = 0.5
 Converted["_Input"].BorderSizePixel = 0
 Converted["_Input"].Position = UDim2.new(0.0221518986, 0, 0.0588235296, 0)
 Converted["_Input"].Size = UDim2.new(0.952531636, 0, 0.30252102, 0)
-Converted["_Input"].ZIndex = 999999999
+Converted["_Input"].ZIndex = 2147483647
 Converted["_Input"].Name = "Input"
 Converted["_Input"].Parent = Converted["_MainFrame"]
 
@@ -140,7 +140,7 @@ Converted["_UICorner1"].Parent = Converted["_MainFrame"]
 Converted["_Line"].BackgroundColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
 Converted["_Line"].Position = UDim2.new(0.0221518986, 0, 0.436974794, 0)
 Converted["_Line"].Size = UDim2.new(0.952531636, 0, 0.0168067235, 0)
-Converted["_Line"].ZIndex = 999999999
+Converted["_Line"].ZIndex = 2147483647
 Converted["_Line"].Name = "Line"
 Converted["_Line"].Parent = Converted["_MainFrame"]
 
@@ -155,7 +155,7 @@ Converted["_Output"].BackgroundTransparency = 0.5
 Converted["_Output"].BorderSizePixel = 0
 Converted["_Output"].Position = UDim2.new(0.0221518986, 0, 0.512605071, 0)
 Converted["_Output"].Size = UDim2.new(0.952531636, 0, 0.420168072, 0)
-Converted["_Output"].ZIndex = 999999999
+Converted["_Output"].ZIndex = 2147483647
 Converted["_Output"].Name = "Output"
 Converted["_Output"].Parent = Converted["_MainFrame"]
 
@@ -169,7 +169,7 @@ Converted["_CmdFrame"].BackgroundColor3 = Color3.fromRGB(47.0000009983778, 47.00
 Converted["_CmdFrame"].Position = UDim2.new(0.0911790431, 0, 0.331386805, 0)
 Converted["_CmdFrame"].Size = UDim2.new(0.196495235, 0, 0.417981058, 0)
 Converted["_CmdFrame"].Visible = false
-Converted["_CmdFrame"].ZIndex = 999999999
+Converted["_CmdFrame"].ZIndex = 2147483647
 Converted["_CmdFrame"].Name = "CmdFrame"
 Converted["_CmdFrame"].Parent = Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"]
 
@@ -185,7 +185,7 @@ Converted["_Title"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Title"].BackgroundTransparency = 1
 Converted["_Title"].Position = UDim2.new(0.042857144, 0, 0, 0)
 Converted["_Title"].Size = UDim2.new(0.919047594, 0, 0.128301889, 0)
-Converted["_Title"].ZIndex = 999999999
+Converted["_Title"].ZIndex = 2147483647
 Converted["_Title"].Name = "Title"
 Converted["_Title"].Parent = Converted["_CmdFrame"]
 
@@ -193,7 +193,7 @@ Converted["_Frame"].BackgroundColor3 = Color3.fromRGB(38.0000015348196, 38.00000
 Converted["_Frame"].BorderSizePixel = 0
 Converted["_Frame"].Position = UDim2.new(0.0316538028, 0, 0.169117838, 0)
 Converted["_Frame"].Size = UDim2.new(0.940561295, 0, 0.796226442, 0)
-Converted["_Frame"].ZIndex = 999999999
+Converted["_Frame"].ZIndex = 2147483647
 Converted["_Frame"].Parent = Converted["_CmdFrame"]
 
 Converted["_CmdScroll"].CanvasSize = UDim2.new(0, 0, 30, 0)
@@ -204,7 +204,7 @@ Converted["_CmdScroll"].BackgroundTransparency = 1
 Converted["_CmdScroll"].BorderSizePixel = 0
 Converted["_CmdScroll"].Position = UDim2.new(1.79515169e-07, 0, 0.00313078682, 0)
 Converted["_CmdScroll"].Size = UDim2.new(0.999999702, 0, 0.996869266, 0)
-Converted["_CmdScroll"].ZIndex = 999999999
+Converted["_CmdScroll"].ZIndex = 2147483647
 Converted["_CmdScroll"].Name = "CmdScroll"
 Converted["_CmdScroll"].Parent = Converted["_Frame"]
 
@@ -221,7 +221,7 @@ Converted["_cmd"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd"].BackgroundTransparency = 1
 Converted["_cmd"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd"].ZIndex = 999999999
+Converted["_cmd"].ZIndex = 2147483647
 Converted["_cmd"].Name = "cmd"
 Converted["_cmd"].Parent = Converted["_CmdScroll"]
 
@@ -239,7 +239,7 @@ Converted["_cmd1"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd1"].BackgroundTransparency = 1
 Converted["_cmd1"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd1"].ZIndex = 999999999
+Converted["_cmd1"].ZIndex = 2147483647
 Converted["_cmd1"].Name = "cmd"
 Converted["_cmd1"].Parent = Converted["_CmdScroll"]
 
@@ -257,7 +257,7 @@ Converted["_cmd2"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd2"].BackgroundTransparency = 1
 Converted["_cmd2"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd2"].ZIndex = 999999999
+Converted["_cmd2"].ZIndex = 2147483647
 Converted["_cmd2"].Name = "cmd"
 Converted["_cmd2"].Parent = Converted["_CmdScroll"]
 
@@ -275,7 +275,7 @@ Converted["_cmd3"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd3"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd3"].BackgroundTransparency = 1
 Converted["_cmd3"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd3"].ZIndex = 999999999
+Converted["_cmd3"].ZIndex = 2147483647
 Converted["_cmd3"].Name = "cmd"
 Converted["_cmd3"].Parent = Converted["_CmdScroll"]
 
@@ -293,7 +293,7 @@ Converted["_cmd4"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd4"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd4"].BackgroundTransparency = 1
 Converted["_cmd4"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd4"].ZIndex = 999999999
+Converted["_cmd4"].ZIndex = 2147483647
 Converted["_cmd4"].Name = "cmd"
 Converted["_cmd4"].Parent = Converted["_CmdScroll"]
 
@@ -311,7 +311,7 @@ Converted["_cmd5"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd5"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd5"].BackgroundTransparency = 1
 Converted["_cmd5"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd5"].ZIndex = 999999999
+Converted["_cmd5"].ZIndex = 2147483647
 Converted["_cmd5"].Name = "cmd"
 Converted["_cmd5"].Parent = Converted["_CmdScroll"]
 
@@ -329,7 +329,7 @@ Converted["_cmd6"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd6"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd6"].BackgroundTransparency = 1
 Converted["_cmd6"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd6"].ZIndex = 999999999
+Converted["_cmd6"].ZIndex = 2147483647
 Converted["_cmd6"].Name = "cmd"
 Converted["_cmd6"].Parent = Converted["_CmdScroll"]
 
@@ -347,7 +347,7 @@ Converted["_cmd7"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd7"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd7"].BackgroundTransparency = 1
 Converted["_cmd7"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd7"].ZIndex = 999999999
+Converted["_cmd7"].ZIndex = 2147483647
 Converted["_cmd7"].Name = "cmd"
 Converted["_cmd7"].Parent = Converted["_CmdScroll"]
 
@@ -365,7 +365,7 @@ Converted["_cmd8"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd8"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd8"].BackgroundTransparency = 1
 Converted["_cmd8"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd8"].ZIndex = 999999999
+Converted["_cmd8"].ZIndex = 2147483647
 Converted["_cmd8"].Name = "cmd"
 Converted["_cmd8"].Parent = Converted["_CmdScroll"]
 
@@ -383,7 +383,7 @@ Converted["_cmd9"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd9"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd9"].BackgroundTransparency = 1
 Converted["_cmd9"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd9"].ZIndex = 999999999
+Converted["_cmd9"].ZIndex = 2147483647
 Converted["_cmd9"].Name = "cmd"
 Converted["_cmd9"].Parent = Converted["_CmdScroll"]
 
@@ -401,7 +401,7 @@ Converted["_cmd10"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd10"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd10"].BackgroundTransparency = 1
 Converted["_cmd10"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd10"].ZIndex = 999999999
+Converted["_cmd10"].ZIndex = 2147483647
 Converted["_cmd10"].Name = "cmd"
 Converted["_cmd10"].Parent = Converted["_CmdScroll"]
 
@@ -419,7 +419,7 @@ Converted["_cmd11"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd11"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd11"].BackgroundTransparency = 1
 Converted["_cmd11"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd11"].ZIndex = 999999999
+Converted["_cmd11"].ZIndex = 2147483647
 Converted["_cmd11"].Name = "cmd"
 Converted["_cmd11"].Parent = Converted["_CmdScroll"]
 
@@ -437,7 +437,7 @@ Converted["_cmd12"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd12"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd12"].BackgroundTransparency = 1
 Converted["_cmd12"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd12"].ZIndex = 999999999
+Converted["_cmd12"].ZIndex = 2147483647
 Converted["_cmd12"].Name = "cmd"
 Converted["_cmd12"].Parent = Converted["_CmdScroll"]
 
@@ -455,7 +455,7 @@ Converted["_cmd13"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd13"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd13"].BackgroundTransparency = 1
 Converted["_cmd13"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd13"].ZIndex = 999999999
+Converted["_cmd13"].ZIndex = 2147483647
 Converted["_cmd13"].Name = "cmd"
 Converted["_cmd13"].Parent = Converted["_CmdScroll"]
 
@@ -473,7 +473,7 @@ Converted["_cmd14"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd14"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd14"].BackgroundTransparency = 1
 Converted["_cmd14"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd14"].ZIndex = 999999999
+Converted["_cmd14"].ZIndex = 2147483647
 Converted["_cmd14"].Name = "cmd"
 Converted["_cmd14"].Parent = Converted["_CmdScroll"]
 
@@ -491,7 +491,7 @@ Converted["_cmd15"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd15"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd15"].BackgroundTransparency = 1
 Converted["_cmd15"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd15"].ZIndex = 999999999
+Converted["_cmd15"].ZIndex = 2147483647
 Converted["_cmd15"].Name = "cmd"
 Converted["_cmd15"].Parent = Converted["_CmdScroll"]
 
@@ -509,7 +509,7 @@ Converted["_cmd16"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd16"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd16"].BackgroundTransparency = 1
 Converted["_cmd16"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd16"].ZIndex = 999999999
+Converted["_cmd16"].ZIndex = 2147483647
 Converted["_cmd16"].Name = "cmd"
 Converted["_cmd16"].Parent = Converted["_CmdScroll"]
 
@@ -527,7 +527,7 @@ Converted["_cmd17"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd17"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd17"].BackgroundTransparency = 1
 Converted["_cmd17"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd17"].ZIndex = 999999999
+Converted["_cmd17"].ZIndex = 2147483647
 Converted["_cmd17"].Name = "cmd"
 Converted["_cmd17"].Parent = Converted["_CmdScroll"]
 
@@ -545,7 +545,7 @@ Converted["_cmd18"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd18"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd18"].BackgroundTransparency = 1
 Converted["_cmd18"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd18"].ZIndex = 999999999
+Converted["_cmd18"].ZIndex = 2147483647
 Converted["_cmd18"].Name = "cmd"
 Converted["_cmd18"].Parent = Converted["_CmdScroll"]
 
@@ -563,7 +563,7 @@ Converted["_cmd19"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd19"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd19"].BackgroundTransparency = 1
 Converted["_cmd19"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd19"].ZIndex = 999999999
+Converted["_cmd19"].ZIndex = 2147483647
 Converted["_cmd19"].Name = "cmd"
 Converted["_cmd19"].Parent = Converted["_CmdScroll"]
 
@@ -581,7 +581,7 @@ Converted["_cmd20"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd20"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd20"].BackgroundTransparency = 1
 Converted["_cmd20"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd20"].ZIndex = 999999999
+Converted["_cmd20"].ZIndex = 2147483647
 Converted["_cmd20"].Name = "cmd"
 Converted["_cmd20"].Parent = Converted["_CmdScroll"]
 
@@ -599,7 +599,7 @@ Converted["_cmd21"].TextXAlignment = Enum.TextXAlignment.Left
 Converted["_cmd21"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_cmd21"].BackgroundTransparency = 1
 Converted["_cmd21"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd21"].ZIndex = 999999999
+Converted["_cmd21"].ZIndex = 2147483647
 Converted["_cmd21"].Name = "cmd"
 Converted["_cmd21"].Parent = Converted["_CmdScroll"]
 
