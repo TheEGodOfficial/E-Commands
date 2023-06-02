@@ -693,7 +693,7 @@ Converted["_cmd25"].ZIndex = 999999999
 Converted["_cmd25"].Name = "cmd"
 Converted["_cmd25"].Parent = Converted["_CmdScroll"]
 
-Converted["_Info25"].Value = "Command Info: Turns of noclip. (reset when you say this command)"
+Converted["_Info25"].Value = "Command Info: Turns off noclip."
 Converted["_Info25"].Name = "Info"
 Converted["_Info25"].Parent = Converted["_cmd25"]
 
@@ -746,7 +746,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function WQRMSX_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Dragify
+local function CGXYQ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Dragify
     local script = Instance.new("LocalScript")
     script.Name = "Dragify"
     script.Parent = Converted["_MainFrame"]
@@ -802,7 +802,7 @@ local function WQRMSX_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 	
 	dragify(script.Parent)
 end
-local function FCGDKJ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Main
+local function BHJO_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Main
     local script = Instance.new("LocalScript")
     script.Name = "Main"
     script.Parent = Converted["_MainFrame"]
@@ -825,7 +825,6 @@ local function FCGDKJ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 	local flinging = false
 	local Clip = true
 	local floatName = "dfkjygsahfyvfnw7f8n538dnd4tgregw6er78red48hx35t6rgn8eewi"
-	local CFspeed
 	local TPWalk = false
 	
 	local p = game:GetService("Players").LocalPlayer
@@ -2410,8 +2409,8 @@ local function FCGDKJ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 				loadstring(game:HttpGet("https://pastebin.com/raw/uLhKZbBz", true))()
 			elseif args[1] == prefix.."fly" then
 				--Full credit to peyton#9148
-				CFspeed = 50
 				task.spawn(function()
+					CFspeed = 50
 					speaker.Character:FindFirstChildOfClass('Humanoid').PlatformStand = true
 					local Head = speaker.Character:WaitForChild("Head")
 					Head.Anchored = true
@@ -2456,6 +2455,11 @@ local function FCGDKJ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 			elseif args[1] == prefix.."clip" then
 				if Noclipping then
 					Noclipping:Disconnect()
+					for _, child in pairs(speaker.Character:GetDescendants()) do
+						if child:IsA("BasePart") and child.CanCollide == false and child.Name ~= floatName then
+							child.CanCollide = true
+						end
+					end
 				end
 				Clip = true
 			elseif args[1] == prefix.."speed" then
@@ -2501,7 +2505,7 @@ local function FCGDKJ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		end
 	end)
 end
-local function UKKFOI_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.SmoothScroll
+local function FESVL_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.SmoothScroll
     local script = Instance.new("LocalScript")
     script.Name = "SmoothScroll"
     script.Parent = Converted["_CmdScroll"]
@@ -2653,7 +2657,7 @@ local function UKKFOI_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		end
 	end)
 end
-local function LPZAL_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function HNPOWZH_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd"]
@@ -2677,7 +2681,7 @@ local function LPZAL_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function VAXYMA_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function TYSSVNF_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd1"]
@@ -2701,7 +2705,7 @@ local function VAXYMA_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function URWXS_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function MMYZOHB_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd2"]
@@ -2725,7 +2729,7 @@ local function URWXS_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function ENZJINQ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function SLDB_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd3"]
@@ -2749,7 +2753,7 @@ local function ENZJINQ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
 		cmd.Text = backupmsg
 	end)
 end
-local function OKPWADQ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function RCZN_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd4"]
@@ -2773,7 +2777,7 @@ local function OKPWADQ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
 		cmd.Text = backupmsg
 	end)
 end
-local function VWWV_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function RDQRL_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd5"]
@@ -2797,7 +2801,7 @@ local function VWWV_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function PAUB_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function RHIBQI_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd6"]
@@ -2821,7 +2825,7 @@ local function PAUB_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function MVKUY_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function BCKYUBV_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd7"]
@@ -2845,7 +2849,7 @@ local function MVKUY_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function HRJZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function IUOYTLZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd8"]
@@ -2869,7 +2873,7 @@ local function HRJZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function KZDFKR_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function ROIIKR_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd9"]
@@ -2893,7 +2897,7 @@ local function KZDFKR_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function DYHFX_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function WHDW_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd10"]
@@ -2917,7 +2921,7 @@ local function DYHFX_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function KNJT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function ZUQP_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd11"]
@@ -2941,7 +2945,7 @@ local function KNJT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function RPXAC_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function SGOON_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd12"]
@@ -2965,7 +2969,7 @@ local function RPXAC_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function OJWZRWT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function RDZDV_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd13"]
@@ -2989,7 +2993,7 @@ local function OJWZRWT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
 		cmd.Text = backupmsg
 	end)
 end
-local function SOOXH_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function UDBW_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd14"]
@@ -3013,7 +3017,7 @@ local function SOOXH_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function IOPV_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function YILEGTU_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd15"]
@@ -3037,7 +3041,7 @@ local function IOPV_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function MOKICXW_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function DQYC_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd16"]
@@ -3061,7 +3065,7 @@ local function MOKICXW_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
 		cmd.Text = backupmsg
 	end)
 end
-local function SBIPQK_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function HYCGCN_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd17"]
@@ -3085,7 +3089,7 @@ local function SBIPQK_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function SYGSHN_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function UCCJ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd18"]
@@ -3109,7 +3113,7 @@ local function SYGSHN_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function QLVJ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function DHPRJ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd19"]
@@ -3133,7 +3137,7 @@ local function QLVJ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function WMUCNU_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function NSQNCTT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd20"]
@@ -3157,7 +3161,7 @@ local function WMUCNU_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function CEZWD_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function EFWOBS_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd21"]
@@ -3181,7 +3185,7 @@ local function CEZWD_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function AVTA_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function TMVEHA_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd22"]
@@ -3205,7 +3209,7 @@ local function AVTA_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function SYIDWN_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function DVYQX_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd23"]
@@ -3229,7 +3233,7 @@ local function SYIDWN_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function FMBS_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function HQVXAK_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd24"]
@@ -3253,7 +3257,7 @@ local function FMBS_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function ZUZCV_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function DQVZIVE_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd25"]
@@ -3277,7 +3281,7 @@ local function ZUZCV_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function WFQT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function PNZSD_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd26"]
@@ -3301,7 +3305,7 @@ local function WFQT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function RHUT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function PPPWCIC_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd27"]
@@ -3325,7 +3329,7 @@ local function RHUT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function EAAPCGG_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Dragify
+local function MTUQOKR_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Dragify
     local script = Instance.new("LocalScript")
     script.Name = "Dragify"
     script.Parent = Converted["_CmdFrame"]
@@ -3382,35 +3386,35 @@ local function EAAPCGG_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
 	dragify(script.Parent)
 end
 
-coroutine.wrap(WQRMSX_fake_script)()
-coroutine.wrap(FCGDKJ_fake_script)()
-coroutine.wrap(UKKFOI_fake_script)()
-coroutine.wrap(LPZAL_fake_script)()
-coroutine.wrap(VAXYMA_fake_script)()
-coroutine.wrap(URWXS_fake_script)()
-coroutine.wrap(ENZJINQ_fake_script)()
-coroutine.wrap(OKPWADQ_fake_script)()
-coroutine.wrap(VWWV_fake_script)()
-coroutine.wrap(PAUB_fake_script)()
-coroutine.wrap(MVKUY_fake_script)()
-coroutine.wrap(HRJZ_fake_script)()
-coroutine.wrap(KZDFKR_fake_script)()
-coroutine.wrap(DYHFX_fake_script)()
-coroutine.wrap(KNJT_fake_script)()
-coroutine.wrap(RPXAC_fake_script)()
-coroutine.wrap(OJWZRWT_fake_script)()
-coroutine.wrap(SOOXH_fake_script)()
-coroutine.wrap(IOPV_fake_script)()
-coroutine.wrap(MOKICXW_fake_script)()
-coroutine.wrap(SBIPQK_fake_script)()
-coroutine.wrap(SYGSHN_fake_script)()
-coroutine.wrap(QLVJ_fake_script)()
-coroutine.wrap(WMUCNU_fake_script)()
-coroutine.wrap(CEZWD_fake_script)()
-coroutine.wrap(AVTA_fake_script)()
-coroutine.wrap(SYIDWN_fake_script)()
-coroutine.wrap(FMBS_fake_script)()
-coroutine.wrap(ZUZCV_fake_script)()
-coroutine.wrap(WFQT_fake_script)()
-coroutine.wrap(RHUT_fake_script)()
-coroutine.wrap(EAAPCGG_fake_script)()
+coroutine.wrap(CGXYQ_fake_script)()
+coroutine.wrap(BHJO_fake_script)()
+coroutine.wrap(FESVL_fake_script)()
+coroutine.wrap(HNPOWZH_fake_script)()
+coroutine.wrap(TYSSVNF_fake_script)()
+coroutine.wrap(MMYZOHB_fake_script)()
+coroutine.wrap(SLDB_fake_script)()
+coroutine.wrap(RCZN_fake_script)()
+coroutine.wrap(RDQRL_fake_script)()
+coroutine.wrap(RHIBQI_fake_script)()
+coroutine.wrap(BCKYUBV_fake_script)()
+coroutine.wrap(IUOYTLZ_fake_script)()
+coroutine.wrap(ROIIKR_fake_script)()
+coroutine.wrap(WHDW_fake_script)()
+coroutine.wrap(ZUQP_fake_script)()
+coroutine.wrap(SGOON_fake_script)()
+coroutine.wrap(RDZDV_fake_script)()
+coroutine.wrap(UDBW_fake_script)()
+coroutine.wrap(YILEGTU_fake_script)()
+coroutine.wrap(DQYC_fake_script)()
+coroutine.wrap(HYCGCN_fake_script)()
+coroutine.wrap(UCCJ_fake_script)()
+coroutine.wrap(DHPRJ_fake_script)()
+coroutine.wrap(NSQNCTT_fake_script)()
+coroutine.wrap(EFWOBS_fake_script)()
+coroutine.wrap(TMVEHA_fake_script)()
+coroutine.wrap(DVYQX_fake_script)()
+coroutine.wrap(HQVXAK_fake_script)()
+coroutine.wrap(DQVZIVE_fake_script)()
+coroutine.wrap(PNZSD_fake_script)()
+coroutine.wrap(PPPWCIC_fake_script)()
+coroutine.wrap(MTUQOKR_fake_script)()
