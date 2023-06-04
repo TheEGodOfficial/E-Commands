@@ -2453,6 +2453,7 @@ local function UPKVT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 						end
 					end
 					game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
+						if gameProcessedEvent then return end
 	
 						if inputObject.KeyCode == Enum.KeyCode.W then
 							KeyHandler("Forward", Enum.UserInputState.Begin, inputObject)
@@ -2472,6 +2473,7 @@ local function UPKVT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 	
 					end)
 					game:GetService("UserInputService").InputEnded:connect(function(inputObject, gameProcessedEvent)
+						if gameProcessedEvent then return end
 	
 						if inputObject.KeyCode == Enum.KeyCode.W then
 							KeyHandler("Forward", Enum.UserInputState.End, inputObject)
@@ -2511,6 +2513,9 @@ local function UPKVT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 					Toggled = false
 					LastPos = nil
 					game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+					pcall(function()
+						game.Players.LocalPlayer.DevCameraOcclusionMode = Enum.DevCameraOcclusionMode.Zoom	
+					end)
 				end)
 			elseif args[1] == prefix.."noclip" then
 				task.spawn(function()
