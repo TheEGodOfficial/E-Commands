@@ -109,6 +109,45 @@ local Converted = {
 	["_cmd27"] = Instance.new("TextButton");
 	["_InfoScript27"] = Instance.new("LocalScript");
 	["_Info27"] = Instance.new("StringValue");
+	["_cmd28"] = Instance.new("TextButton");
+	["_InfoScript28"] = Instance.new("LocalScript");
+	["_Info28"] = Instance.new("StringValue");
+	["_cmd29"] = Instance.new("TextButton");
+	["_InfoScript29"] = Instance.new("LocalScript");
+	["_Info29"] = Instance.new("StringValue");
+	["_cmd30"] = Instance.new("TextButton");
+	["_InfoScript30"] = Instance.new("LocalScript");
+	["_Info30"] = Instance.new("StringValue");
+	["_cmd31"] = Instance.new("TextButton");
+	["_InfoScript31"] = Instance.new("LocalScript");
+	["_Info31"] = Instance.new("StringValue");
+	["_cmd32"] = Instance.new("TextButton");
+	["_InfoScript32"] = Instance.new("LocalScript");
+	["_Info32"] = Instance.new("StringValue");
+	["_cmd33"] = Instance.new("TextButton");
+	["_InfoScript33"] = Instance.new("LocalScript");
+	["_Info33"] = Instance.new("StringValue");
+	["_cmd34"] = Instance.new("TextButton");
+	["_InfoScript34"] = Instance.new("LocalScript");
+	["_Info34"] = Instance.new("StringValue");
+	["_cmd35"] = Instance.new("TextButton");
+	["_InfoScript35"] = Instance.new("LocalScript");
+	["_Info35"] = Instance.new("StringValue");
+	["_cmd36"] = Instance.new("TextButton");
+	["_InfoScript36"] = Instance.new("LocalScript");
+	["_Info36"] = Instance.new("StringValue");
+	["_cmd37"] = Instance.new("TextButton");
+	["_InfoScript37"] = Instance.new("LocalScript");
+	["_Info37"] = Instance.new("StringValue");
+	["_cmd38"] = Instance.new("TextButton");
+	["_InfoScript38"] = Instance.new("LocalScript");
+	["_Info38"] = Instance.new("StringValue");
+	["_cmd39"] = Instance.new("TextButton");
+	["_InfoScript39"] = Instance.new("LocalScript");
+	["_Info39"] = Instance.new("StringValue");
+	["_cmd40"] = Instance.new("TextButton");
+	["_InfoScript40"] = Instance.new("LocalScript");
+	["_Info40"] = Instance.new("StringValue");
 	["_UICorner4"] = Instance.new("UICorner");
 	["_UIStroke2"] = Instance.new("UIStroke");
 	["_Dragify1"] = Instance.new("LocalScript");
@@ -733,6 +772,240 @@ Converted["_Info27"].Value = "Command Info: turns off speed (because it can't be
 Converted["_Info27"].Name = "Info"
 Converted["_Info27"].Parent = Converted["_cmd27"]
 
+Converted["_cmd28"].Font = Enum.Font.FredokaOne
+Converted["_cmd28"].Text = " >remotespy"
+Converted["_cmd28"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
+Converted["_cmd28"].TextScaled = true
+Converted["_cmd28"].TextSize = 14
+Converted["_cmd28"].TextWrapped = true
+Converted["_cmd28"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_cmd28"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_cmd28"].BackgroundTransparency = 1
+Converted["_cmd28"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
+Converted["_cmd28"].ZIndex = 999999999
+Converted["_cmd28"].Name = "cmd"
+Converted["_cmd28"].Parent = Converted["_CmdScroll"]
+
+Converted["_Info28"].Value = "Command Info: Let's you see some remote event stuff"
+Converted["_Info28"].Name = "Info"
+Converted["_Info28"].Parent = Converted["_cmd28"]
+
+Converted["_cmd29"].Font = Enum.Font.FredokaOne
+Converted["_cmd29"].Text = " >chatbypass/<method(1-3)>"
+Converted["_cmd29"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
+Converted["_cmd29"].TextScaled = true
+Converted["_cmd29"].TextSize = 14
+Converted["_cmd29"].TextWrapped = true
+Converted["_cmd29"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_cmd29"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_cmd29"].BackgroundTransparency = 1
+Converted["_cmd29"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
+Converted["_cmd29"].ZIndex = 999999999
+Converted["_cmd29"].Name = "cmd"
+Converted["_cmd29"].Parent = Converted["_CmdScroll"]
+
+Converted["_Info29"].Value = "Command Info: Press F to disable/enable. Methods are 1: main method 2: emoji method 3: full transparency. Check console for words you can say with the method."
+Converted["_Info29"].Name = "Info"
+Converted["_Info29"].Parent = Converted["_cmd29"]
+
+Converted["_cmd30"].Font = Enum.Font.FredokaOne
+Converted["_cmd30"].Text = " >collisions"
+Converted["_cmd30"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
+Converted["_cmd30"].TextScaled = true
+Converted["_cmd30"].TextSize = 14
+Converted["_cmd30"].TextWrapped = true
+Converted["_cmd30"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_cmd30"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_cmd30"].BackgroundTransparency = 1
+Converted["_cmd30"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
+Converted["_cmd30"].ZIndex = 999999999
+Converted["_cmd30"].Name = "cmd"
+Converted["_cmd30"].Parent = Converted["_CmdScroll"]
+
+Converted["_Info30"].Value = "Command Info: Makes you able to walk on people in non collision games. (Fling scripts don't work though.)"
+Converted["_Info30"].Name = "Info"
+Converted["_Info30"].Parent = Converted["_cmd30"]
+
+Converted["_cmd31"].Font = Enum.Font.FredokaOne
+Converted["_cmd31"].Text = " >laggame"
+Converted["_cmd31"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
+Converted["_cmd31"].TextScaled = true
+Converted["_cmd31"].TextSize = 14
+Converted["_cmd31"].TextWrapped = true
+Converted["_cmd31"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_cmd31"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_cmd31"].BackgroundTransparency = 1
+Converted["_cmd31"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
+Converted["_cmd31"].ZIndex = 999999999
+Converted["_cmd31"].Name = "cmd"
+Converted["_cmd31"].Parent = Converted["_CmdScroll"]
+
+Converted["_Info31"].Value = "Command Info: Lags the game using chat. Protects you from the lag though. (Might be patched but idk.)"
+Converted["_Info31"].Name = "Info"
+Converted["_Info31"].Parent = Converted["_cmd31"]
+
+Converted["_cmd32"].Font = Enum.Font.FredokaOne
+Converted["_cmd32"].Text = " >brookhaven"
+Converted["_cmd32"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
+Converted["_cmd32"].TextScaled = true
+Converted["_cmd32"].TextSize = 14
+Converted["_cmd32"].TextWrapped = true
+Converted["_cmd32"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_cmd32"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_cmd32"].BackgroundTransparency = 1
+Converted["_cmd32"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
+Converted["_cmd32"].ZIndex = 999999999
+Converted["_cmd32"].Name = "cmd"
+Converted["_cmd32"].Parent = Converted["_CmdScroll"]
+
+Converted["_Info32"].Value = "Command Info: Brookhaven trolling script."
+Converted["_Info32"].Name = "Info"
+Converted["_Info32"].Parent = Converted["_cmd32"]
+
+Converted["_cmd33"].Font = Enum.Font.FredokaOne
+Converted["_cmd33"].Text = " >btools"
+Converted["_cmd33"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
+Converted["_cmd33"].TextScaled = true
+Converted["_cmd33"].TextSize = 14
+Converted["_cmd33"].TextWrapped = true
+Converted["_cmd33"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_cmd33"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_cmd33"].BackgroundTransparency = 1
+Converted["_cmd33"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
+Converted["_cmd33"].ZIndex = 999999999
+Converted["_cmd33"].Name = "cmd"
+Converted["_cmd33"].Parent = Converted["_CmdScroll"]
+
+Converted["_Info33"].Value = "Command Info: Btools V5 by rouxhaver."
+Converted["_Info33"].Name = "Info"
+Converted["_Info33"].Parent = Converted["_cmd33"]
+
+Converted["_cmd34"].Font = Enum.Font.FredokaOne
+Converted["_cmd34"].Text = " >emojichat"
+Converted["_cmd34"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
+Converted["_cmd34"].TextScaled = true
+Converted["_cmd34"].TextSize = 14
+Converted["_cmd34"].TextWrapped = true
+Converted["_cmd34"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_cmd34"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_cmd34"].BackgroundTransparency = 1
+Converted["_cmd34"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
+Converted["_cmd34"].ZIndex = 999999999
+Converted["_cmd34"].Name = "cmd"
+Converted["_cmd34"].Parent = Converted["_CmdScroll"]
+
+Converted["_Info34"].Value = "Command Info: Let's you do emojis in chat using :"
+Converted["_Info34"].Name = "Info"
+Converted["_Info34"].Parent = Converted["_cmd34"]
+
+Converted["_cmd35"].Font = Enum.Font.FredokaOne
+Converted["_cmd35"].Text = " >vghub"
+Converted["_cmd35"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
+Converted["_cmd35"].TextScaled = true
+Converted["_cmd35"].TextSize = 14
+Converted["_cmd35"].TextWrapped = true
+Converted["_cmd35"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_cmd35"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_cmd35"].BackgroundTransparency = 1
+Converted["_cmd35"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
+Converted["_cmd35"].ZIndex = 999999999
+Converted["_cmd35"].Name = "cmd"
+Converted["_cmd35"].Parent = Converted["_CmdScroll"]
+
+Converted["_Info35"].Value = "Command Info: A script hub with a lot of games."
+Converted["_Info35"].Name = "Info"
+Converted["_Info35"].Parent = Converted["_cmd35"]
+
+Converted["_cmd36"].Font = Enum.Font.FredokaOne
+Converted["_cmd36"].Text = " >scpfuturistic"
+Converted["_cmd36"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
+Converted["_cmd36"].TextScaled = true
+Converted["_cmd36"].TextSize = 14
+Converted["_cmd36"].TextWrapped = true
+Converted["_cmd36"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_cmd36"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_cmd36"].BackgroundTransparency = 1
+Converted["_cmd36"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
+Converted["_cmd36"].ZIndex = 999999999
+Converted["_cmd36"].Name = "cmd"
+Converted["_cmd36"].Parent = Converted["_CmdScroll"]
+
+Converted["_Info36"].Value = "Command Info: Old SCP Futuristic GUI I made."
+Converted["_Info36"].Name = "Info"
+Converted["_Info36"].Parent = Converted["_cmd36"]
+
+Converted["_cmd37"].Font = Enum.Font.FredokaOne
+Converted["_cmd37"].Text = " >togglekillbricks"
+Converted["_cmd37"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
+Converted["_cmd37"].TextScaled = true
+Converted["_cmd37"].TextSize = 14
+Converted["_cmd37"].TextWrapped = true
+Converted["_cmd37"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_cmd37"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_cmd37"].BackgroundTransparency = 1
+Converted["_cmd37"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
+Converted["_cmd37"].ZIndex = 999999999
+Converted["_cmd37"].Name = "cmd"
+Converted["_cmd37"].Parent = Converted["_CmdScroll"]
+
+Converted["_Info37"].Value = "Command Info: Makes kill bricks not kill you. Press Z to toggle."
+Converted["_Info37"].Name = "Info"
+Converted["_Info37"].Parent = Converted["_cmd37"]
+
+Converted["_cmd38"].Font = Enum.Font.FredokaOne
+Converted["_cmd38"].Text = " >doorsgui"
+Converted["_cmd38"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
+Converted["_cmd38"].TextScaled = true
+Converted["_cmd38"].TextSize = 14
+Converted["_cmd38"].TextWrapped = true
+Converted["_cmd38"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_cmd38"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_cmd38"].BackgroundTransparency = 1
+Converted["_cmd38"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
+Converted["_cmd38"].ZIndex = 999999999
+Converted["_cmd38"].Name = "cmd"
+Converted["_cmd38"].Parent = Converted["_CmdScroll"]
+
+Converted["_Info38"].Value = "Command Info: Actually good doors gui with a lot of features. MS Doors"
+Converted["_Info38"].Name = "Info"
+Converted["_Info38"].Parent = Converted["_cmd38"]
+
+Converted["_cmd39"].Font = Enum.Font.FredokaOne
+Converted["_cmd39"].Text = " >chatspy"
+Converted["_cmd39"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
+Converted["_cmd39"].TextScaled = true
+Converted["_cmd39"].TextSize = 14
+Converted["_cmd39"].TextWrapped = true
+Converted["_cmd39"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_cmd39"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_cmd39"].BackgroundTransparency = 1
+Converted["_cmd39"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
+Converted["_cmd39"].ZIndex = 999999999
+Converted["_cmd39"].Name = "cmd"
+Converted["_cmd39"].Parent = Converted["_CmdScroll"]
+
+Converted["_Info39"].Value = "Command Info: Let's you spy on peoples private chats."
+Converted["_Info39"].Name = "Info"
+Converted["_Info39"].Parent = Converted["_cmd39"]
+
+Converted["_cmd40"].Font = Enum.Font.FredokaOne
+Converted["_cmd40"].Text = " >translator"
+Converted["_cmd40"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
+Converted["_cmd40"].TextScaled = true
+Converted["_cmd40"].TextSize = 14
+Converted["_cmd40"].TextWrapped = true
+Converted["_cmd40"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_cmd40"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_cmd40"].BackgroundTransparency = 1
+Converted["_cmd40"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
+Converted["_cmd40"].ZIndex = 999999999
+Converted["_cmd40"].Name = "cmd"
+Converted["_cmd40"].Parent = Converted["_CmdScroll"]
+
+Converted["_Info40"].Value = "Command Info: Lets you translate peoples chats. Click ona  message to translate. May need to choose the language you think it is. Quote to toggle GUI, Enter to Send."
+Converted["_Info40"].Name = "Info"
+Converted["_Info40"].Parent = Converted["_cmd40"]
+
 Converted["_UICorner4"].Parent = Converted["_Frame"]
 
 Converted["_UIStroke2"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
@@ -746,7 +1019,7 @@ local fake_module_scripts = {}
 
 -- Fake Local Scripts:
 
-local function EFXMT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Dragify
+local function ZZCLK_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Dragify
     local script = Instance.new("LocalScript")
     script.Name = "Dragify"
     script.Parent = Converted["_MainFrame"]
@@ -802,7 +1075,7 @@ local function EFXMT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 	
 	dragify(script.Parent)
 end
-local function UPKVT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Main
+local function HKAFTYJ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Main
     local script = Instance.new("LocalScript")
     script.Name = "Main"
     script.Parent = Converted["_MainFrame"]
@@ -876,7 +1149,7 @@ local function UPKVT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 		if key == "-" then
 			input:CaptureFocus()
 			task.spawn(function()
-				task.wait(0.1)
+				task.wait(0.03)
 				input.Text = prefix
 			end)
 		end
@@ -1867,6 +2140,8 @@ local function UPKVT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 					output.Text = ""
 				elseif args[2] == plrs.Name then
 					output.Text = "Checking Console tells you that it's FE or Client. (What it means is RespectFilteringEnabled in Sound Service is on or off.)"
+					task.wait(4)
+					output.Text = ""
 				end
 			elseif args[1] == prefix.."audiologs" then
 				task.spawn(function()
@@ -2418,6 +2693,8 @@ local function UPKVT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 					output.Text = ""
 				elseif args[2] ~= "secret key here" or args[2] ~= "nil" or args[2] ~= "" then
 					output.Text = "If you put something random in argument '1' (API Key) then you won't get the best out of it OR it just completely breaks, I don't know."
+					task.wait(4)
+					output.Text = ""
 				end
 			elseif args[1] == prefix.."antifling" then
 				loadstring(game:HttpGet("https://pastebin.com/raw/uLhKZbBz", true))()
@@ -2510,12 +2787,12 @@ local function UPKVT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 				end)
 			elseif args[1] == prefix.."unfly" then
 				task.spawn(function()
-					Toggled = false
-					LastPos = nil
-					game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
 					pcall(function()
 						game.Players.LocalPlayer.DevCameraOcclusionMode = Enum.DevCameraOcclusionMode.Zoom	
 					end)
+					Toggled = false
+					LastPos = nil
+					game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
 				end)
 			elseif args[1] == prefix.."noclip" then
 				task.spawn(function()
@@ -2581,11 +2858,608 @@ local function UPKVT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 					local players = getPlr(Username)
 					TweenService:Create(getRoot(speaker.Character), TweenInfo.new(2, Enum.EasingStyle.Linear), {CFrame = getRoot(players.Character).CFrame + Vector3.new(3,1,0)}):Play()
 				end)
+			elseif args[1] == prefix.."remotespy" then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/SimpleSpySource.lua"))()
+			elseif args[1] == prefix.."chatbypass" then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/synnyyy/synergy/additional/betterbypasser", true))({
+					Method = args[2], -- Method 1 is the main method. Method two is emojis. Method 3 is full transparency, no special symbols.
+					Keybind = "b", -- Usually defaulted to F. You can change this keybind by replacing the string with a letter. Must be lowercase
+					ShowMethodDictionary = true -- Shows you the full list of words that you can say with the method. Press FN + F9 to see this dictionary.
+				})
+			elseif args[1] == prefix.."collisions" then
+				task.spawn(function()
+					LP = game.Players.LocalPlayer
+					while wait(3) do
+						for i,v in pairs(game.Players:GetDescendants()) do
+							if v:IsA("Player") and workspace:FindFirstChild(v.Name) and v ~= LP and workspace[v.Name]:FindFirstChild("CHECKER") == nil then
+								checker = Instance.new("BoolValue",workspace[v.Name])
+								checker.Name = "CHECKER"
+								for i,v in pairs(workspace:WaitForChild(v.Name):GetDescendants()) do
+									if v:IsA("Part") or v:IsA("MeshPart") then
+										local collider = Instance.new("Part",v)
+										collider.Size = v.Size
+										collider.Position = v.Position
+										collider.Transparency = 1
+										local weld = Instance.new("Weld",v)
+										weld.Part0 = v
+										weld.Part1 = collider
+									end
+								end
+							end
+						end
+					end
+				end)
+			elseif args[1] == prefix.."laggame" then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/ChatLag.lua"))()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLag.lua"))()
+			elseif args[1] == prefix.."brookhaven" then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+			elseif args[1] == prefix.."btools" then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts-3/main/fe%20btools%20V5.lua", true))()
+			elseif args[1] == prefix.."connectionterminated" then -- secret command
+				loadstring(game:HttpGet("https://pastebin.com/raw/9V1vY98E", true))()
+			elseif args[1] == prefix.."emojichat" then
+				task.spawn(function()
+					-- // Notes:
+					-- The emojis list is based from discord the list is here: https://raw.githubusercontent.com/Aidez/emojiscopy/master/main or https://pastebin.com/raw/719UsVji \\ --
+					-- My code is ugly k dont read c:
+	
+					-- // Configuration, super simple: \\ --
+	
+					local config = {
+						-- // Values should be "true" or "false" and make sure there's a "," or ";" after them. \\ --
+						['EmojiAutofill'] = true; -- Autofills potential emojis like :sungla with :sunglasses:, you can hit tab to fill
+						['EmojiReplace'] = true; -- Autofills emojis instantly after adding both ":"'s example: ":sunglasses:" will turn into "?"
+					}
+	
+					-- // Main (no need to modify( \\ --
+	
+					if not game:IsLoaded() then
+						game.Loaded:Wait()
+					end
+	
+					local jsondecode = function(arg)
+						return game:GetService("HttpService"):JSONDecode(arg)
+					end
+	
+					local jsonencode = function(arg)
+						return game:GetService("HttpService"):JSONEncode(arg)
+					end
+	
+					local getchat = function()
+						return {
+							main = game:GetService("Players").LocalPlayer.PlayerGui.Chat;
+							chatbar = game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar;
+							messages = game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatChannelParentFrame.Frame_MessageLogDisplay.Scroller
+						}
+					end
+	
+					local scroller = function(obj)
+						obj.ClipsDescendants = true;
+						local Scroller = Instance.new("Frame")
+						local CopyMessage = Instance.new("TextButton")
+						local UIListLayout = Instance.new("UIListLayout")
+						local CopyUser = Instance.new("TextButton")
+						local DeleteMessage = Instance.new("TextButton")
+						local Mute = Instance.new("TextButton")
+						local Unmute = Instance.new("TextButton")
+						local Tp = Instance.new("TextButton")
+	
+						Scroller.Name = "Scroller"
+						Scroller.Parent = obj;
+						Scroller.AnchorPoint = Vector2.new(0.5, 1)
+						Scroller.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+						Scroller.BackgroundTransparency = 1.000
+						Scroller.Position = UDim2.new(0, #obj.TextButton.Text * 14, 6.5, 0)
+						Scroller.Size = UDim2.new(0, 206, 0, 99)
+	
+						CopyMessage.Name = "CopyMessage"
+						CopyMessage.Parent = Scroller
+						CopyMessage.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+						CopyMessage.BackgroundTransparency = 0.500
+						CopyMessage.BorderColor3 = Color3.fromRGB(27, 42, 53)
+						CopyMessage.BorderSizePixel = 0
+						CopyMessage.Position = UDim2.new(0, 49, 0, 50)
+						CopyMessage.Size = UDim2.new(0, 200, 0, 15)
+						CopyMessage.Font = Enum.Font.SourceSansBold
+						CopyMessage.Text = "Copy message"
+						CopyMessage.TextColor3 = Color3.fromRGB(255, 255, 255)
+						CopyMessage.TextSize = 14.000
+						CopyMessage.TextStrokeTransparency = 0.750
+						CopyMessage.TextWrapped = true
+	
+						UIListLayout.Parent = Scroller
+						UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+						UIListLayout.Padding = UDim.new(0, 2)
+	
+						CopyUser.Name = "CopyUser"
+						CopyUser.Parent = Scroller
+						CopyUser.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+						CopyUser.BackgroundTransparency = 0.500
+						CopyUser.BorderColor3 = Color3.fromRGB(27, 42, 53)
+						CopyUser.BorderSizePixel = 0
+						CopyUser.Position = UDim2.new(0, 49, 0, 50)
+						CopyUser.Size = UDim2.new(0, 200, 0, 15)
+						CopyUser.Font = Enum.Font.SourceSansBold
+						CopyUser.Text = "Copy username"
+						CopyUser.TextColor3 = Color3.fromRGB(255, 255, 255)
+						CopyUser.TextSize = 14.000
+						CopyUser.TextStrokeTransparency = 0.750
+						CopyUser.TextWrapped = true
+	
+						DeleteMessage.Name = "DeleteMessage"
+						DeleteMessage.Parent = Scroller
+						DeleteMessage.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+						DeleteMessage.BackgroundTransparency = 0.500
+						DeleteMessage.BorderColor3 = Color3.fromRGB(27, 42, 53)
+						DeleteMessage.BorderSizePixel = 0
+						DeleteMessage.Position = UDim2.new(0, 49, 0, 50)
+						DeleteMessage.Size = UDim2.new(0, 200, 0, 15)
+						DeleteMessage.Font = Enum.Font.SourceSansBold
+						DeleteMessage.Text = "Delete (client)"
+						DeleteMessage.TextColor3 = Color3.fromRGB(255, 255, 255)
+						DeleteMessage.TextSize = 14.000
+						DeleteMessage.TextStrokeTransparency = 0.750
+						DeleteMessage.TextWrapped = true
+	
+						Mute.Name = "Mute"
+						Mute.Parent = Scroller
+						Mute.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+						Mute.BackgroundTransparency = 0.500
+						Mute.BorderColor3 = Color3.fromRGB(27, 42, 53)
+						Mute.BorderSizePixel = 0
+						Mute.Position = UDim2.new(0, 49, 0, 50)
+						Mute.Size = UDim2.new(0, 200, 0, 15)
+						Mute.Font = Enum.Font.SourceSansBold
+						Mute.Text = "Mute (client)"
+						Mute.TextColor3 = Color3.fromRGB(255, 255, 255)
+						Mute.TextSize = 14.000
+						Mute.TextStrokeTransparency = 0.750
+						Mute.TextWrapped = true
+	
+						Unmute.Name = "Unmute"
+						Unmute.Parent = Scroller
+						Unmute.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+						Unmute.BackgroundTransparency = 0.500
+						Unmute.BorderColor3 = Color3.fromRGB(27, 42, 53)
+						Unmute.BorderSizePixel = 0
+						Unmute.Position = UDim2.new(0, 49, 0, 50)
+						Unmute.Size = UDim2.new(0, 200, 0, 15)
+						Unmute.Font = Enum.Font.SourceSansBold
+						Unmute.Text = "Unmute (client)"
+						Unmute.TextColor3 = Color3.fromRGB(255, 255, 255)
+						Unmute.TextSize = 14.000
+						Unmute.TextStrokeTransparency = 0.750
+						Unmute.TextWrapped = true
+	
+						Tp.Name = "Tp"
+						Tp.Parent = Scroller
+						Tp.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+						Tp.BackgroundTransparency = 0.500
+						Tp.BorderColor3 = Color3.fromRGB(27, 42, 53)
+						Tp.BorderSizePixel = 0
+						Tp.Position = UDim2.new(0, 49, 0, 50)
+						Tp.Size = UDim2.new(0, 200, 0, 15)
+						Tp.Font = Enum.Font.SourceSansBold
+						Tp.Text = "Teleport To Player"
+						Tp.TextColor3 = Color3.fromRGB(255, 255, 255)
+						Tp.TextSize = 14.000
+						Tp.TextStrokeTransparency = 0.750
+						Tp.TextWrapped = true
+						return Scroller;
+					end
+	
+					local bindable = Instance.new("BindableEvent");
+					local cache = {};
+					local dependencies = {
+						['Emojis'] = jsondecode(game:HttpGet('https://pastebin.com/raw/719UsVji'));
+						['Chat'] = getchat();
+					}
+	
+					local sendmsg = function(m)
+						if dependencies['Chat'] then
+							game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(m, "All")
+						end
+					end
+	
+					local get = function(s)
+						if dependencies['Emojis'][s] then
+							return dependencies['Emojis'][s];
+						else
+							return nil;
+						end
+					end
+	
+					local fillmatches = function(emojis, object)
+						local t = object.Text;
+						for i, v in pairs(emojis) do
+							local emoji = get(v);
+							if emoji then
+								object.Text = string.gsub(object.Text, ":"..v..":", emoji)
+							end
+						end
+					end
+	
+					local last;
+	
+					local autofill = function(tbl, object)
+						local find = tbl[1];
+						if #find >= 2 then
+						else
+							return;
+						end
+	
+						local start = tbl[2]
+						last = tbl;
+	
+						local match;
+	
+						for i, v in pairs(dependencies['Emojis']) do
+							if i:lower():sub(1, #find) == find:lower() then
+								match = i;
+							end
+						end
+	
+						object.Parent.AutofillBox.PlaceholderText = '';
+	
+						if match then
+							local s = object.Text:sub(1, start - 1);
+							object.Parent.AutofillBox.PlaceholderText = s..':'..match..':'
+						end
+					end
+	
+					local trueautofill = function(tbl, object)
+						local find = tbl[1];
+						local start = tbl[2]
+	
+						local match;
+						last = nil;
+	
+						if #find >= 2 then
+						else
+							return;
+						end
+	
+						for i, v in pairs(dependencies['Emojis']) do
+							if i:lower():sub(1, #find) == find:lower() then
+								match = i;
+							end
+						end
+	
+						if match then
+							local s = object.Text:sub(1, start - 1);
+							object.Text = s..':'..match..':'
+						end
+					end
+	
+	
+					local match = function(t, obj)
+						if t:find(":") then
+							local start = 0;
+							local scan = {};
+							local autofills = {};
+	
+							for i = 1, #t do
+								local s = t:sub(i, i)
+								if s == ':' then
+									if start >= 1 then
+										table.insert(scan, t:sub(start + 1, i - 1))
+										start = 0;
+									else
+										start = i;
+									end
+								end
+							end
+	
+							start = 0;
+	
+							for i = 1, #t do
+								local s = t:sub(i, i)
+								if s == ':' then
+									if start >= 1 then
+										start = 0;
+									else
+										start = i;
+									end
+								end
+							end
+	
+							obj.Parent.AutofillBox.PlaceholderText = '';
+	
+							if start >= 1 then
+								table.insert(autofills, t:sub(start + 1, #t))
+								if config['EmojiAutofill'] == true then
+									autofill({
+										autofills[1],
+										start
+									}, obj)
+								end
+							else
+								obj.Parent.AutofillBox.PlaceholderText = '';
+							end
+	
+							if config['EmojiReplace'] == true then
+								fillmatches(scan, obj)
+							end
+						else
+							return {}
+						end
+					end
+	
+	
+					spawn(function()
+						game:GetService("RunService").Heartbeat:Connect(function()
+							if cache[dependencies['Chat'].chatbar] == nil then
+								cache[dependencies['Chat'].chatbar] = true;
+								dependencies['Chat'] = getchat()
+								bindable:Fire(dependencies['Chat'])
+							end
+						end)
+					end)
+	
+					game:GetService("UserInputService").InputBegan:Connect(function(k)
+						if k.KeyCode then
+							if k.KeyCode == Enum.KeyCode.Tab then
+								if focused then
+									if last then
+										local object = dependencies['Chat'].chatbar;
+										trueautofill(last, object)
+										wait()
+										object.Text = object.Text:sub(1, #object.Text - 1)
+									end
+								end
+							end
+						end
+					end)
+	
+					local getplayer = function(t)
+						for i = 1, #t do
+							if t:sub(i, i) == ']' then
+								return game:GetService("Players"):FindFirstChild(t:sub(2, i - 1));
+							end
+						end
+						return nil;
+					end
+	
+					local getvalue = function(t)
+						for i = 1,#t do
+							if t:sub(i,i) == ' ' then
+							else
+								return t:sub(i,#t)
+							end
+						end
+						return 'void'
+					end
+	
+					local scrollers = {};
+	
+					game:GetService("UserInputService").InputBegan:Connect(function(input)
+						if dependencies['Chat'] then
+							if input.UserInputType == Enum.UserInputType.MouseButton2 then
+								local m = game:GetService("Players").LocalPlayer:GetMouse()
+								local objs = game:GetService("Players").LocalPlayer.PlayerGui:GetGuiObjectsAtPosition(m.X, m.Y)
+								for i, v in pairs(objs) do
+									if v:FindFirstChild("TextButton") then
+										if v:FindFirstChild("Scroller") then
+											return
+										end
+										local s = scroller(v);
+	
+										for i, v in pairs(s:GetChildren()) do
+											if v:IsA("TextButton") then
+												v.ZIndex = 20;
+											end
+										end
+	
+										table.insert(scrollers, s);
+										if #scrollers >= 2 then
+											scrollers[1]:Destroy()
+											scrollers = {
+												s
+											}
+										end
+										s.Parent.ClipsDescendants = false;
+										s.MouseLeave:Connect(function()
+											s:Destroy();
+										end)
+	
+										s.CopyMessage.MouseButton1Click:Connect(function()
+											setclipboard(getvalue(v.Text))
+											s:Destroy();
+										end)
+	
+										s.DeleteMessage.MouseButton1Click:Connect(function()
+											v:Destroy()
+										end)
+	
+										s.CopyUser.MouseButton1Click:Connect(function()
+											local t = v.TextButton.Text;
+											for i = 1, #t do
+												if t:sub(i, i) == ']' then
+													setclipboard(t:sub(2, i - 1));
+												end
+											end
+											s:Destroy()
+										end)
+	
+										s.Unmute.MouseButton1Click:Connect(function()
+											sendmsg("/unmute "..tostring(getplayer(v.TextButton.Text)))
+											s:Destroy()
+										end)
+	
+										s.Mute.MouseButton1Click:Connect(function()
+											sendmsg("/mute "..tostring(getplayer(v.TextButton.Text)))
+											s:Destroy()
+										end)
+	
+										s.Tp.MouseButton1Click:Connect(function()
+											local plr = getplayer(v.TextButton.Text)
+											local hrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart;
+											local them = plr.Character:WaitForChild("HumanoidRootPart");
+											hrp.CFrame = CFrame.new(them.Position)
+										end)
+									end
+								end
+							end
+						end
+					end)
+	
+					bindable.Event:Connect(function(tbl)
+						local bar = tbl.chatbar;
+						bar.ZIndex = 2;
+						bar.Parent.TextLabel.ZIndex = 3;
+						local clone = bar:Clone();
+						clone.Name = 'AutofillBox'
+						clone.Parent = bar.Parent;
+						clone.TextEditable = false;
+						clone.ZIndex = 1;
+						clone.TextTransparency = .5
+						clone.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
+	
+						bar:GetPropertyChangedSignal("Text"):Connect(function()
+							focused = true;
+							local txt = bar.Text;
+							if txt == '' then
+								clone.PlaceholderText = '';
+								return;
+							end
+							match(txt, bar)
+						end)
+	
+						bar.FocusLost:Connect(function()
+							clone.PlaceholderText = '';
+							focused = false;
+						end)
+					end)
+				end)
+			elseif args[1] == prefix.."vghub" then
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+			elseif args[1] == prefix.."scpfuturistic" then
+				loadstring(game:HttpGet("https://pastebin.com/raw/uAmBPsE4"))()
+			elseif args[1] == prefix.."togglekillbricks" then
+				task.spawn(function()
+					local player = game:GetService("Players").LocalPlayer
+					local UIS = game:GetService("UserInputService")
+					local myzaza = false
+	
+					UIS.InputBegan:Connect(function(input, GPE)
+						if GPE then return end
+						if input.KeyCode == Enum.KeyCode.Z then
+							myzaza = not myzaza
+						end
+					end)
+	
+					while task.wait() do
+						local parts = workspace:GetPartBoundsInRadius(player.Character:WaitForChild("HumanoidRootPart").Position, 10)
+						for _, part in ipairs(parts) do
+							part.CanTouch = myzaza
+						end
+					end
+				end)
+			elseif args[1] == prefix.."doorsgui" then
+				loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/MSDOORS/main/MSDOORS.lua"),true))()
+			elseif args[1] == prefix.."chatspy" then
+				task.spawn(function()
+					--This script reveals ALL hidden messages in the default chat
+	
+					enabled = true --chat "/spy" to toggle!
+					spyOnMyself = true --if true will check your messages too
+					public = false --if true will chat the logs publicly (fun, risky)
+					publicItalics = true --if true will use /me to stand out
+					privateProperties = { --customize private logs
+						Color = Color3.fromRGB(0,255,255); 
+						Font = Enum.Font.SourceSansBold;
+						TextSize = 18;
+					}
+	
+	
+					local StarterGui = game:GetService("StarterGui")
+					local Players = game:GetService("Players")
+					local player = Players.LocalPlayer or Players:GetPropertyChangedSignal("LocalPlayer"):Wait() or Players.LocalPlayer
+					local saymsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+					local getmsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering")
+					local instance = (_G.chatSpyInstance or 0) + 1
+					_G.chatSpyInstance = instance
+	
+					local function onChatted(p,msg)
+						if _G.chatSpyInstance == instance then
+							if p==player and msg:lower():sub(1,4)=="/spy" then
+								enabled = not enabled
+								wait(0.3)
+								privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+								StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+							elseif enabled and (spyOnMyself==true or p~=player) then
+								msg = msg:gsub("[\n\r]",''):gsub("\t",' '):gsub("[ ]+",' ')
+								local hidden = true
+								local conn = getmsg.OnClientEvent:Connect(function(packet,channel)
+									if packet.SpeakerUserId==p.UserId and packet.Message==msg:sub(#msg-#packet.Message+1) and (channel=="All" or (channel=="Team" and public==false and Players[packet.FromSpeaker].Team==player.Team)) then
+										hidden = false
+									end
+								end)
+								wait(1)
+								conn:Disconnect()
+								if hidden and enabled then
+									if public then
+										saymsg:FireServer((publicItalics and "/me " or '').."{SPY} [".. p.Name .."]: "..msg,"All")
+									else
+										privateProperties.Text = "{SPY} [".. p.Name .."]: "..msg
+										StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+									end
+								end
+							end
+						end
+					end
+	
+					for _,p in ipairs(Players:GetPlayers()) do
+						p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+					end
+					Players.PlayerAdded:Connect(function(p)
+						p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+					end)
+					privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+					StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+					if not player.PlayerGui:FindFirstChild("Chat") then wait(3) end
+					local chatFrame = player.PlayerGui.Chat.Frame
+					chatFrame.ChatChannelParentFrame.Visible = true
+					chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
+				end)
+			elseif args[1] == prefix.."translator" then
+				pcall(function()
+					loadstring(
+	      --[[
+	
+	      ░░░░░██╗  ███╗░░░███╗███████╗███╗░░░███╗███████╗
+	      ░░░░░██║  ████╗░████║██╔════╝████╗░████║██╔════╝
+	      ░░░░░██║  ██╔████╔██║█████╗░░██╔████╔██║█████╗░░
+	      ██╗░░██║  ██║╚██╔╝██║██╔══╝░░██║╚██╔╝██║██╔══╝░░
+	      ╚█████╔╝  ██║░╚═╝░██║███████╗██║░╚═╝░██║███████╗
+	      ░╚════╝░  ╚═╝░░░░░╚═╝╚══════╝╚═╝░░░░░╚═╝╚══════╝
+	
+	
+	      Keybind:
+	     
+	      - Semicolon // To trigger chat box
+	      - Enter // To submit your chat
+	      - Click on player chat // To view his translation
+	      - Quote // To hide/show UI
+	     
+	      Next Update:
+	     
+	      - Ill make it so it auto detects language of chat upon click
+	      - yes thats it
+	      --]]
+	
+						game:HttpGet(
+							'https://raw.githubusercontent.com/PivotEngine/cool_scripts/main/Pedro.exe',
+							true
+						)
+					)();
+				end)
 			end
 		end
 	end)
 end
-local function DIBHFW_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.SmoothScroll
+local function LKBW_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.SmoothScroll
     local script = Instance.new("LocalScript")
     script.Name = "SmoothScroll"
     script.Parent = Converted["_CmdScroll"]
@@ -2737,7 +3611,7 @@ local function DIBHFW_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		end
 	end)
 end
-local function QJETEGB_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function EGFA_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd"]
@@ -2761,7 +3635,7 @@ local function QJETEGB_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
 		cmd.Text = backupmsg
 	end)
 end
-local function YFKQ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function ZXJX_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd1"]
@@ -2785,7 +3659,7 @@ local function YFKQ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function FYTMAP_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function BGBURI_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd2"]
@@ -2809,7 +3683,7 @@ local function FYTMAP_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function PXTJE_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function PLOZNN_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd3"]
@@ -2833,7 +3707,7 @@ local function PXTJE_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function AXDY_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function SCRTDI_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd4"]
@@ -2857,7 +3731,7 @@ local function AXDY_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function AIITBA_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function WDTZK_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd5"]
@@ -2881,7 +3755,7 @@ local function AIITBA_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function BOLXY_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function SKTYP_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd6"]
@@ -2905,7 +3779,7 @@ local function BOLXY_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function RUTXWUV_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function ORQZIKX_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd7"]
@@ -2929,7 +3803,7 @@ local function RUTXWUV_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
 		cmd.Text = backupmsg
 	end)
 end
-local function IKSEP_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function LNXA_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd8"]
@@ -2953,7 +3827,7 @@ local function IKSEP_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function XCWDMY_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function YNUNQSP_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd9"]
@@ -2977,7 +3851,7 @@ local function XCWDMY_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function JVVJGIZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function YCYRL_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd10"]
@@ -3001,7 +3875,7 @@ local function JVVJGIZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
 		cmd.Text = backupmsg
 	end)
 end
-local function BJJAEQC_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function GAHVB_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd11"]
@@ -3025,7 +3899,7 @@ local function BJJAEQC_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
 		cmd.Text = backupmsg
 	end)
 end
-local function EJJZILF_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function KFPT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd12"]
@@ -3049,7 +3923,7 @@ local function EJJZILF_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
 		cmd.Text = backupmsg
 	end)
 end
-local function ONCALJ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function MUMFFXX_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd13"]
@@ -3073,7 +3947,7 @@ local function ONCALJ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function ZVTXA_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function PTUEZYI_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd14"]
@@ -3097,7 +3971,7 @@ local function ZVTXA_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function TJDLAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function GLRHCI_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd15"]
@@ -3121,7 +3995,7 @@ local function TJDLAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function UYQRFH_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function YBHIZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd16"]
@@ -3145,7 +4019,7 @@ local function UYQRFH_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function TWPVQWD_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function LCBNIK_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd17"]
@@ -3169,7 +4043,7 @@ local function TWPVQWD_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
 		cmd.Text = backupmsg
 	end)
 end
-local function VJSJ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function WTWVNFT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd18"]
@@ -3193,7 +4067,7 @@ local function VJSJ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvf
 		cmd.Text = backupmsg
 	end)
 end
-local function NVWSHM_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function SESOIF_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd19"]
@@ -3217,7 +4091,7 @@ local function NVWSHM_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function JIOXNHS_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function ILUSTJV_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd20"]
@@ -3241,7 +4115,7 @@ local function JIOXNHS_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
 		cmd.Text = backupmsg
 	end)
 end
-local function QMKFPTM_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function ISZH_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd21"]
@@ -3265,7 +4139,7 @@ local function QMKFPTM_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
 		cmd.Text = backupmsg
 	end)
 end
-local function YLAFD_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function EFPLBUZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd22"]
@@ -3289,7 +4163,7 @@ local function YLAFD_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function PWILJA_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function IVWGKGE_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd23"]
@@ -3313,7 +4187,7 @@ local function PWILJA_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		cmd.Text = backupmsg
 	end)
 end
-local function NPXGV_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function NIWAR_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd24"]
@@ -3337,7 +4211,7 @@ local function NPXGV_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function DHJLSIT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function BOBHHRX_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd25"]
@@ -3361,7 +4235,7 @@ local function DHJLSIT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
 		cmd.Text = backupmsg
 	end)
 end
-local function UPEILJW_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function UUDJDIY_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd26"]
@@ -3385,7 +4259,7 @@ local function UPEILJW_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
 		cmd.Text = backupmsg
 	end)
 end
-local function BLFCB_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+local function ETRIN_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
     script.Parent = Converted["_cmd27"]
@@ -3409,7 +4283,319 @@ local function BLFCB_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
 		cmd.Text = backupmsg
 	end)
 end
-local function AQBBSA_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Dragify
+local function NFBCANE_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+    local script = Instance.new("LocalScript")
+    script.Name = "InfoScript"
+    script.Parent = Converted["_cmd28"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local cmd = script.Parent
+	local info = cmd.Info
+	local backupmsg = cmd.Text
+	
+	cmd.MouseButton1Click:Connect(function()
+		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
+		print(tostring(info.Value))
+		task.wait(4)
+		cmd.Text = backupmsg
+	end)
+end
+local function MXSKIRH_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+    local script = Instance.new("LocalScript")
+    script.Name = "InfoScript"
+    script.Parent = Converted["_cmd29"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local cmd = script.Parent
+	local info = cmd.Info
+	local backupmsg = cmd.Text
+	
+	cmd.MouseButton1Click:Connect(function()
+		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
+		print(tostring(info.Value))
+		task.wait(4)
+		cmd.Text = backupmsg
+	end)
+end
+local function NZAP_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+    local script = Instance.new("LocalScript")
+    script.Name = "InfoScript"
+    script.Parent = Converted["_cmd30"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local cmd = script.Parent
+	local info = cmd.Info
+	local backupmsg = cmd.Text
+	
+	cmd.MouseButton1Click:Connect(function()
+		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
+		print(tostring(info.Value))
+		task.wait(4)
+		cmd.Text = backupmsg
+	end)
+end
+local function WSCMP_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+    local script = Instance.new("LocalScript")
+    script.Name = "InfoScript"
+    script.Parent = Converted["_cmd31"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local cmd = script.Parent
+	local info = cmd.Info
+	local backupmsg = cmd.Text
+	
+	cmd.MouseButton1Click:Connect(function()
+		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
+		print(tostring(info.Value))
+		task.wait(4)
+		cmd.Text = backupmsg
+	end)
+end
+local function AOFJCZC_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+    local script = Instance.new("LocalScript")
+    script.Name = "InfoScript"
+    script.Parent = Converted["_cmd32"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local cmd = script.Parent
+	local info = cmd.Info
+	local backupmsg = cmd.Text
+	
+	cmd.MouseButton1Click:Connect(function()
+		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
+		print(tostring(info.Value))
+		task.wait(4)
+		cmd.Text = backupmsg
+	end)
+end
+local function WEUULWL_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+    local script = Instance.new("LocalScript")
+    script.Name = "InfoScript"
+    script.Parent = Converted["_cmd33"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local cmd = script.Parent
+	local info = cmd.Info
+	local backupmsg = cmd.Text
+	
+	cmd.MouseButton1Click:Connect(function()
+		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
+		print(tostring(info.Value))
+		task.wait(4)
+		cmd.Text = backupmsg
+	end)
+end
+local function SUROF_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+    local script = Instance.new("LocalScript")
+    script.Name = "InfoScript"
+    script.Parent = Converted["_cmd34"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local cmd = script.Parent
+	local info = cmd.Info
+	local backupmsg = cmd.Text
+	
+	cmd.MouseButton1Click:Connect(function()
+		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
+		print(tostring(info.Value))
+		task.wait(4)
+		cmd.Text = backupmsg
+	end)
+end
+local function XEWL_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+    local script = Instance.new("LocalScript")
+    script.Name = "InfoScript"
+    script.Parent = Converted["_cmd35"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local cmd = script.Parent
+	local info = cmd.Info
+	local backupmsg = cmd.Text
+	
+	cmd.MouseButton1Click:Connect(function()
+		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
+		print(tostring(info.Value))
+		task.wait(4)
+		cmd.Text = backupmsg
+	end)
+end
+local function ADBWN_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+    local script = Instance.new("LocalScript")
+    script.Name = "InfoScript"
+    script.Parent = Converted["_cmd36"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local cmd = script.Parent
+	local info = cmd.Info
+	local backupmsg = cmd.Text
+	
+	cmd.MouseButton1Click:Connect(function()
+		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
+		print(tostring(info.Value))
+		task.wait(4)
+		cmd.Text = backupmsg
+	end)
+end
+local function PWHU_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+    local script = Instance.new("LocalScript")
+    script.Name = "InfoScript"
+    script.Parent = Converted["_cmd37"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local cmd = script.Parent
+	local info = cmd.Info
+	local backupmsg = cmd.Text
+	
+	cmd.MouseButton1Click:Connect(function()
+		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
+		print(tostring(info.Value))
+		task.wait(4)
+		cmd.Text = backupmsg
+	end)
+end
+local function JFDU_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+    local script = Instance.new("LocalScript")
+    script.Name = "InfoScript"
+    script.Parent = Converted["_cmd38"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local cmd = script.Parent
+	local info = cmd.Info
+	local backupmsg = cmd.Text
+	
+	cmd.MouseButton1Click:Connect(function()
+		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
+		print(tostring(info.Value))
+		task.wait(4)
+		cmd.Text = backupmsg
+	end)
+end
+local function AQKLD_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+    local script = Instance.new("LocalScript")
+    script.Name = "InfoScript"
+    script.Parent = Converted["_cmd39"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local cmd = script.Parent
+	local info = cmd.Info
+	local backupmsg = cmd.Text
+	
+	cmd.MouseButton1Click:Connect(function()
+		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
+		print(tostring(info.Value))
+		task.wait(4)
+		cmd.Text = backupmsg
+	end)
+end
+local function JYYNN_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
+    local script = Instance.new("LocalScript")
+    script.Name = "InfoScript"
+    script.Parent = Converted["_cmd40"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local cmd = script.Parent
+	local info = cmd.Info
+	local backupmsg = cmd.Text
+	
+	cmd.MouseButton1Click:Connect(function()
+		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
+		print(tostring(info.Value))
+		task.wait(4)
+		cmd.Text = backupmsg
+	end)
+end
+local function XYRPJE_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Dragify
     local script = Instance.new("LocalScript")
     script.Name = "Dragify"
     script.Parent = Converted["_CmdFrame"]
@@ -3466,35 +4652,48 @@ local function AQBBSA_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 	dragify(script.Parent)
 end
 
-coroutine.wrap(EFXMT_fake_script)()
-coroutine.wrap(UPKVT_fake_script)()
-coroutine.wrap(DIBHFW_fake_script)()
-coroutine.wrap(QJETEGB_fake_script)()
-coroutine.wrap(YFKQ_fake_script)()
-coroutine.wrap(FYTMAP_fake_script)()
-coroutine.wrap(PXTJE_fake_script)()
-coroutine.wrap(AXDY_fake_script)()
-coroutine.wrap(AIITBA_fake_script)()
-coroutine.wrap(BOLXY_fake_script)()
-coroutine.wrap(RUTXWUV_fake_script)()
-coroutine.wrap(IKSEP_fake_script)()
-coroutine.wrap(XCWDMY_fake_script)()
-coroutine.wrap(JVVJGIZ_fake_script)()
-coroutine.wrap(BJJAEQC_fake_script)()
-coroutine.wrap(EJJZILF_fake_script)()
-coroutine.wrap(ONCALJ_fake_script)()
-coroutine.wrap(ZVTXA_fake_script)()
-coroutine.wrap(TJDLAZ_fake_script)()
-coroutine.wrap(UYQRFH_fake_script)()
-coroutine.wrap(TWPVQWD_fake_script)()
-coroutine.wrap(VJSJ_fake_script)()
-coroutine.wrap(NVWSHM_fake_script)()
-coroutine.wrap(JIOXNHS_fake_script)()
-coroutine.wrap(QMKFPTM_fake_script)()
-coroutine.wrap(YLAFD_fake_script)()
-coroutine.wrap(PWILJA_fake_script)()
-coroutine.wrap(NPXGV_fake_script)()
-coroutine.wrap(DHJLSIT_fake_script)()
-coroutine.wrap(UPEILJW_fake_script)()
-coroutine.wrap(BLFCB_fake_script)()
-coroutine.wrap(AQBBSA_fake_script)()
+coroutine.wrap(ZZCLK_fake_script)()
+coroutine.wrap(HKAFTYJ_fake_script)()
+coroutine.wrap(LKBW_fake_script)()
+coroutine.wrap(EGFA_fake_script)()
+coroutine.wrap(ZXJX_fake_script)()
+coroutine.wrap(BGBURI_fake_script)()
+coroutine.wrap(PLOZNN_fake_script)()
+coroutine.wrap(SCRTDI_fake_script)()
+coroutine.wrap(WDTZK_fake_script)()
+coroutine.wrap(SKTYP_fake_script)()
+coroutine.wrap(ORQZIKX_fake_script)()
+coroutine.wrap(LNXA_fake_script)()
+coroutine.wrap(YNUNQSP_fake_script)()
+coroutine.wrap(YCYRL_fake_script)()
+coroutine.wrap(GAHVB_fake_script)()
+coroutine.wrap(KFPT_fake_script)()
+coroutine.wrap(MUMFFXX_fake_script)()
+coroutine.wrap(PTUEZYI_fake_script)()
+coroutine.wrap(GLRHCI_fake_script)()
+coroutine.wrap(YBHIZ_fake_script)()
+coroutine.wrap(LCBNIK_fake_script)()
+coroutine.wrap(WTWVNFT_fake_script)()
+coroutine.wrap(SESOIF_fake_script)()
+coroutine.wrap(ILUSTJV_fake_script)()
+coroutine.wrap(ISZH_fake_script)()
+coroutine.wrap(EFPLBUZ_fake_script)()
+coroutine.wrap(IVWGKGE_fake_script)()
+coroutine.wrap(NIWAR_fake_script)()
+coroutine.wrap(BOBHHRX_fake_script)()
+coroutine.wrap(UUDJDIY_fake_script)()
+coroutine.wrap(ETRIN_fake_script)()
+coroutine.wrap(NFBCANE_fake_script)()
+coroutine.wrap(MXSKIRH_fake_script)()
+coroutine.wrap(NZAP_fake_script)()
+coroutine.wrap(WSCMP_fake_script)()
+coroutine.wrap(AOFJCZC_fake_script)()
+coroutine.wrap(WEUULWL_fake_script)()
+coroutine.wrap(SUROF_fake_script)()
+coroutine.wrap(XEWL_fake_script)()
+coroutine.wrap(ADBWN_fake_script)()
+coroutine.wrap(PWHU_fake_script)()
+coroutine.wrap(JFDU_fake_script)()
+coroutine.wrap(AQKLD_fake_script)()
+coroutine.wrap(JYYNN_fake_script)()
+coroutine.wrap(XYRPJE_fake_script)()
