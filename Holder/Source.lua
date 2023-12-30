@@ -2883,8 +2883,8 @@ local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/SimpleSpySource.lua"))()
 			elseif args[1] == prefix.."chatbypass" then
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/synnyyy/synergy/additional/betterbypasser", true))({
-					Method = args[2], -- Method 1 is the main method. Method two is emojis. Method 3 is full transparency, no special symbols.
-					Keybind = "b", -- Usually defaulted to F. You can change this keybind by replacing the string with a letter. Must be lowercase
+					Method = tonumber(args[2]), -- Method 1 is the main method. Method two is emojis. Method 3 is full transparency, no special symbols.
+					Keybind = "B", -- Usually defaulted to F. You can change this keybind by replacing the string with a letter. Must be lowercase
 					ShowMethodDictionary = true -- Shows you the full list of words that you can say with the method. Press FN + F9 to see this dictionary.
 				})
 			elseif args[1] == prefix.."collisions" then
@@ -3378,7 +3378,7 @@ local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 					end
 				end)
 			elseif args[1] == prefix.."doorsgui" then
-				loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/MSDOORS/main/MSDOORS.lua"),true))()
+				loadstring(game:HttpGet(("https://raw.githubusercontent.com/TheEGodOfficial/doorsfunni/main/sourcething.lua"),true))()
 			elseif args[1] == prefix.."chatspy" then
 				task.spawn(function()
 					--This script reveals ALL hidden messages in the default chat
@@ -3408,7 +3408,11 @@ local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 								enabled = not enabled
 								wait(0.3)
 								privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
-								StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+								if game:GetService("TextChatService").ChatVersion == "LegacyChatService" then
+									StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+								else
+									game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("{SPY "..(enabled and "EN" or "DIS").."ABLED}")
+								end
 							elseif enabled and (spyOnMyself==true or p~=player) then
 								msg = msg:gsub("[\n\r]",''):gsub("\t",' '):gsub("[ ]+",' ')
 								local hidden = true
@@ -3424,7 +3428,11 @@ local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 										saymsg:FireServer((publicItalics and "/me " or '').."{SPY} [".. p.Name .."]: "..msg,"All")
 									else
 										privateProperties.Text = "{SPY} [".. p.Name .."]: "..msg
-										StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+										if game:GetService("TextChatService").ChatVersion == "LegacyChatService" then
+											StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+										else
+											game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("{SPY} ["..p.Name.."]: "..msg)
+										end
 									end
 								end
 							end
