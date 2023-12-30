@@ -1,3 +1,10 @@
+--[[
+THIS IS NOT BEING USED BECAUSE IT IS BROKEN ON A LOT OF EXPLOITS
+DO NOT USE IT OR ELSE IT WONT WORK
+YOU HAVE BEEN WARNED
+]]
+
+
 local function ontp(s)
     if syn and syn.queue_on_teleport then
         syn.queue_on_teleport(s)
