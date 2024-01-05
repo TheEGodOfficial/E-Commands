@@ -161,7 +161,7 @@ Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"]
 
 Converted["_MainFrame"].BackgroundColor3 = Color3.fromRGB(25.000000409781933, 25.000000409781933, 25.000000409781933)
 Converted["_MainFrame"].BorderSizePixel = 0
-Converted["_MainFrame"].Position = UDim2.new(0.747767806, 0, 0.405534327, 0)
+Converted["_MainFrame"].Position = UDim2.new(0.747767806, 0, 0.557, 0)
 Converted["_MainFrame"].Size = UDim2.new(0.251993626, 0, 0.187697157, 0)
 Converted["_MainFrame"].ZIndex = 999999999
 Converted["_MainFrame"].Name = "MainFrame"
