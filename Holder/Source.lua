@@ -3783,7 +3783,7 @@ local function TPFW_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvf
 	-- get the 'content' scrolling frame, aka the scrolling frame with all the content inside
 	-- if smoothing is enabled, disable scrolling
 	local content = script.Parent
-	content.ScrollingEnabled = not script.SmoothingEnabled.Value 
+	content.ScrollingEnabled = not script:WaitForChild("SmoothingEnabled").Value 
 	
 	-- create the 'input' scrolling frame, aka the scrolling frame which receives user input
 	-- if smoothing is enabled, enable scrolling
@@ -3793,22 +3793,22 @@ local function TPFW_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvf
 	input.ScrollBarImageTransparency = 1
 	input.ZIndex = content.ZIndex + 1
 	input.Name = "_smoothinputframe"
-	input.ScrollingEnabled = script.SmoothingEnabled.Value 
+	input.ScrollingEnabled = script:WaitForChild("SmoothingEnabled").Value 
 	input.Parent = content.Parent
 	
 	-- bind to SmoothingEnabled
 	script.SmoothingEnabled:GetPropertyChangedSignal("Value"):Connect(function()
 		-- move input canvas position to content canvas position on re-enable
-		if script.SmoothingEnabled.Value then
+		if script:WaitForChild("SmoothingEnabled").Value then
 			input.CanvasPosition = content.CanvasPosition
 		end
-		content.ScrollingEnabled = not script.SmoothingEnabled.Value 
-		input.ScrollingEnabled = script.SmoothingEnabled.Value 
+		content.ScrollingEnabled = not script:WaitForChild("SmoothingEnabled").Value 
+		input.ScrollingEnabled = script:WaitForChild("SmoothingEnabled").Value 
 	end)
 	
 	-- fallback for when smoothing is disabled and the input frame position is set
 	input:GetPropertyChangedSignal("CanvasPosition"):Connect(function()
-		if not script.SmoothingEnabled.Value then
+		if not script:WaitForChild("SmoothingEnabled").Value then
 			content.CanvasPosition = input.CanvasPosition
 		end
 	end)
@@ -3845,7 +3845,7 @@ local function TPFW_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvf
 	
 	-- create a render stepped connection to interpolate the content frame position to the input frame position
 	local smoothConnection = game:GetService("RunService").RenderStepped:Connect(function()
-		if script.SmoothingEnabled.Value then
+		if script:WaitForChild("SmoothingEnabled").Value then
 			local a = content.CanvasPosition
 			local b = input.CanvasPosition
 			local c = script.SmoothingFactor.Value
