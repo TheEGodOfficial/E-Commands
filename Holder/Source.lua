@@ -1048,11 +1048,9 @@ local function QGHWZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
         end
         return req(obj)
     end
-
-	local frame = Converted["_MainFrame"]
-	frame.Draggable = true
-	frame.Selectable = true
-	frame.Active = true
+	script.Parent.Draggable = true
+	script.Parent.Selectable = true
+	script.Parent.Active = true
 end
 local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Main
     local script = Instance.new("LocalScript")
@@ -4689,11 +4687,9 @@ local function ILFUROO_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
         return req(obj)
     end
 
-	local frame = script.Parent
-
-	frame.Draggable = true
-	frame.Selectable = true
-	frame.Active = true
+	script.Parent.Draggable = true
+	script.Parent.Selectable = true
+	script.Parent.Active = true
 end
 
 coroutine.wrap(QGHWZ_fake_script)()
