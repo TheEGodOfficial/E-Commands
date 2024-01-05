@@ -1048,9 +1048,8 @@ local function QGHWZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
         end
         return req(obj)
     end
-	script.Parent.Draggable = true
-	script.Parent.Selectable = true
-	script.Parent.Active = true
+	Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Draggable = true
+	Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Active = true
 end
 local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Main
     local script = Instance.new("LocalScript")
@@ -4686,10 +4685,8 @@ local function ILFUROO_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
         end
         return req(obj)
     end
-
-	script.Parent.Draggable = true
-	script.Parent.Selectable = true
-	script.Parent.Active = true
+	Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Draggable = true
+	Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Active = true
 end
 
 coroutine.wrap(QGHWZ_fake_script)()
