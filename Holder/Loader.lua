@@ -1,17 +1,22 @@
---[[
-THIS IS NOT BEING USED BECAUSE IT IS BROKEN ON A LOT OF EXPLOITS
-DO NOT USE IT OR ELSE IT WONT WORK
-YOU HAVE BEEN WARNED
-]]
+local tpenabled = true
 
+if getgenv ~= nil and getgenv().ComeBackOnTeleport ~= nil then
+    tpenabled = getgenv().ComeBackOnTeleport
+end
 
 local function ontp(s)
-    if syn and syn.queue_on_teleport then
-        syn.queue_on_teleport(s)
-    elseif queue_on_teleport then
+    if queue_on_teleport then
         queue_on_teleport(s)
+    elseif queueonteleport then
+        queueonteleport(s)
+    else
+        warn("Executor does not support queue_on_teleport")
     end
 end
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/main/Holder/Source.lua", true))()
-ontp("if not game:IsLoaded() then game.Loaded:Wait() end wait(3) if not game.Players.LocalPlayer.Character then game.Players.LocalPlayer.CharacterAdded:Wait() end loadstring(game:HttpGet('https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/main/Holder/Loader.lua'))()")
+task.spawn(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/main/Holder/Source.lua", true))()
+end
+
+
+ontp([[if game:IsLoaded() then else game.Loaded:Wait() end local plr = game:GetService("Players").LocalPlayer if not plr.Character then plr.CharacterAdded:Wait() end loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/main/Holder/Loader.lua", true))()]])
