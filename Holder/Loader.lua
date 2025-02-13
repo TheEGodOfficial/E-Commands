@@ -29,4 +29,4 @@ ontp([[if game:IsLoaded() then
     if not plr.Character then
         plr.CharacterAdded:Wait()
     end
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/main/Holder/Loader.lua", true))()]])
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/refs/heads/main/Holder/Loader.lua", true))()]])
