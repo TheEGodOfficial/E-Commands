@@ -16,9 +16,17 @@ end
 
 task.spawn(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/main/Holder/Source.lua", true))()
-end
+end)
 
 if tpenabled == false then
     return
 end
-ontp([[if game:IsLoaded() then else game.Loaded:Wait() end local plr = game:GetService("Players").LocalPlayer if not plr.Character then plr.CharacterAdded:Wait() end loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/main/Holder/Loader.lua", true))()]])
+ontp([[if game:IsLoaded() then
+    else
+        game.Loaded:Wait()
+    end
+    local plr = game:GetService("Players").LocalPlayer
+    if not plr.Character then
+        plr.CharacterAdded:Wait()
+    end
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/main/Holder/Loader.lua", true))()]])
