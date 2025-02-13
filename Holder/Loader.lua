@@ -15,7 +15,7 @@ local function ontp(s)
 end
 
 task.spawn(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/main/Holder/Source.lua", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/refs/heads/main/Holder/Source.lua", true))()
 end)
 
 if tpenabled == false then
