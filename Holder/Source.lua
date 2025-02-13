@@ -161,11 +161,11 @@ local Converted = {
 Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].DisplayOrder = 999999999
 Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].ResetOnSpawn = false
 Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Name = "GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"
-Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Parent = game:GetService("CoreGui")
+Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Parent = gethui()
 
 Converted["_MainFrame"].BackgroundColor3 = Color3.fromRGB(25.000000409781933, 25.000000409781933, 25.000000409781933)
 Converted["_MainFrame"].BorderSizePixel = 0
-Converted["_MainFrame"].Position = UDim2.new(0.747767806, 0, 0.405534327, 0)
+Converted["_MainFrame"].Position = UDim2.new(0.747767806, 0, 0.4042245557, 0)
 Converted["_MainFrame"].Size = UDim2.new(0.251993626, 0, 0.187697157, 0)
 Converted["_MainFrame"].ZIndex = 999999999
 Converted["_MainFrame"].Name = "MainFrame"
@@ -2608,117 +2608,13 @@ local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 					drag(aa.PopupFrame)
 				end)
 			elseif args[1] == prefix.."bdexe" then
-				loadstring(game:HttpGet("https://pastebin.com/raw/hqxkViCX"))()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/k4scripts/backdoor.exe/v8/src/main.lua"))();
 			elseif args[1] == prefix.."frakturess" then
 				loadstring(game:HttpGet(("https://raw.githubusercontent.com/L1ghtingBolt/FraktureSS/master/source.lua"),true))()
 			elseif args[1] == prefix.."chatbot" then
-				task.spawn(function()
-					repeat task.wait() until game:IsLoaded();
-	
-					-- // SETTINGS \\ --
-	
-					local SECRET_KEY = args[2]; --https://beta.openai.com/account/api-keys
-					local CLOSE_RANGE_ONLY = true;
-	
-					_G.MESSAGE_SETTINGS = {
-						["MINIMUM_CHARACTERS"] = 1,
-						["MAXIMUM_CHARACTERS"] = 60,
-						["MAXIMUM_STUDS"] = 1000000000,
-					};
-	
-					_G.WHITELISTED = { --Only works if CLOSE_RANGE_ONLY is disabled
-						["seem2006"] = false,
-					};
-	
-					_G.BLACKLISTED = { --Only works if CLOSE_RANGE_ONLY is enabled
-						["Builderman"] = false,
-					};
-	
-					-- // DO NOT CHANGE BELOW \\ --
-	
-					if _G.OpenAI or SECRET_KEY == "secret key here" or SECRET_KEY == "nil" or SECRET_KEY == "" then return end;
-	
-					_G.OpenAI = true;
-	
-					local ReplicatedStorage = game:GetService("ReplicatedStorage");
-					local Players = game:GetService("Players");
-					local HttpService = game:GetService("HttpService");
-					local LocalPlayer = Players.LocalPlayer;
-					local SayMessageRequest = ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest");
-					local OnMessageDoneFiltering = ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering");
-					local Debounce = false;
-	
-					local RequestFunctiom = syn and syn.request or request;
-	
-					local function MakeRequest(Prompt)
-						return RequestFunctiom({
-							Url = "https://api.openai.com/v1/completions", 
-							Method = "POST",
-							Headers = {
-								["Content-Type"] = "application/json",
-								["Authorization"] =  "Bearer " .. SECRET_KEY
-							},
-							Body = HttpService:JSONEncode({
-								model = "text-davinci-003",
-								prompt = Prompt,
-								temperature = 0.9,
-								max_tokens = 45, --150
-								top_p = 1,
-								frequency_penalty = 0.0,
-								presence_penalty = 0.6,
-								stop = {" Human:", " AI:"}
-							});
-						});
-					end
-	
-					OnMessageDoneFiltering.OnClientEvent:Connect(function(Table)
-						local Message, Instance = Table.Message, Players:FindFirstChild(Table.FromSpeaker);
-						local Character = Instance and Instance.Character;
-	
-						if Instance == LocalPlayer or string.match(Message, "#") or not Character or not Character:FindFirstChild("Head") or not LocalPlayer.Character or not LocalPlayer.Character:FindFirstChild("Head") then return end;
-						if Debounce or #Message < _G.MESSAGE_SETTINGS["MINIMUM_CHARACTERS"] or #Message > _G.MESSAGE_SETTINGS["MAXIMUM_CHARACTERS"] then return end;
-						if CLOSE_RANGE_ONLY then if _G.BLACKLISTED[Instance.Name] or (Character.Head.Position - LocalPlayer.Character.Head.Position).Magnitude > _G.MESSAGE_SETTINGS["MAXIMUM_STUDS"] then return end elseif not _G.WHITELISTED[Instance.Name] then return end;
-	
-						Debounce = true;
-	
-						local HttpRequest = MakeRequest("Human: " .. Message .. "\n\nAI:");
-						local Response = Instance.Name .. ": " .. string.sub(HttpService:JSONDecode(HttpRequest["Body"]).choices[1].text, 2);
-	
-						if #Response < 128 then --200
-							SayMessageRequest:FireServer(Response, "All");
-							task.wait(5);
-							Debounce = false;
-						else
-							--warn("Response (> 128): " .. Response);
-							if #Response - 128 < 128 then
-								SayMessageRequest:FireServer(string.sub(Response, 1, 128), "All");
-								delay(3, function()
-									SayMessageRequest:FireServer(string.sub(Response, 129), "All");
-									task.wait(5);
-									Debounce = false;
-								end)	
-							else
-								SayMessageRequest:FireServer("Sorry but the answer was too big, please try again.", "All");
-								task.wait(2.5);
-								Debounce = false;
-							end
-						end
-					end)
-	
-					warn("Script has been executed with success.");
-	
-				end)
-				if args[2] == "secret key here" or args[2] == "nil" or args[2] == "" then
-					output.Text = "Error: You need an API key in argument '1' (Get it from here: https://beta.openai.com/account/api-keys)"
-					task.wait(4)
-					output.Text = ""
-				elseif args[2] ~= "secret key here" or args[2] ~= "nil" or args[2] ~= "" then
-					output.Text = "If you put something random in argument '1' (API Key) then you won't get the best out of it OR it just completely breaks, I don't know."
-					task.wait(4)
-					output.Text = ""
-				end
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/Guerric9018/chatbothub/main/ChatbotHub.lua"))()
 			elseif args[1] == prefix.."antifling" then
-				loadstring(game:HttpGet("https://pastebin.com/raw/uLhKZbBz", true))()
+				loadstring(game:HttpGet("https://pastebin.com/raw/mHaznh3T", true))()
 			elseif args[1] == prefix.."fly" then
 				task.spawn(function()
 					pcall(function()
@@ -2882,11 +2778,7 @@ local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 			elseif args[1] == prefix.."remotespy" then
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/SimpleSpySource.lua"))()
 			elseif args[1] == prefix.."chatbypass" then
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/synnyyy/synergy/additional/betterbypasser", true))({
-					Method = tonumber(args[2]), -- Method 1 is the main method. Method two is emojis. Method 3 is full transparency, no special symbols.
-					Keybind = "B", -- Usually defaulted to F. You can change this keybind by replacing the string with a letter. Must be lowercase
-					ShowMethodDictionary = true -- Shows you the full list of words that you can say with the method. Press FN + F9 to see this dictionary.
-				})
+				loadstring(game:HttpGet("https://github.com/Synergy-Networks/products/raw/main/BetterBypasser/loader.lua"))()
 			elseif args[1] == prefix.."collisions" then
 				task.spawn(function()
 					LP = game.Players.LocalPlayer
