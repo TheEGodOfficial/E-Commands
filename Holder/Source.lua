@@ -1,4 +1,5 @@
 -- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879)
+-- this is old as hell i just randomly decided to update it to fix a few things and make loader work
 
 -- Instances:
 
@@ -161,7 +162,7 @@ local Converted = {
 Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].DisplayOrder = 999999999
 Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].ResetOnSpawn = false
 Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Name = "GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"
-Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Parent = gethui()
+Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Parent = gethui() or game:GetService("CoreGui") -- for non gethui support executors - e god
 
 Converted["_MainFrame"].BackgroundColor3 = Color3.fromRGB(25.000000409781933, 25.000000409781933, 25.000000409781933)
 Converted["_MainFrame"].BorderSizePixel = 0
@@ -285,7 +286,7 @@ Converted["_cmd"].ZIndex = 999999999
 Converted["_cmd"].Name = "cmd"
 Converted["_cmd"].Parent = Converted["_CmdScroll"]
 
-Converted["_Info"].Value = "Command Info: Dex let's you see every instance in the game."
+Converted["_Info"].Value = "Command Info: Dex let's you see every instance in the game. (well not every idk why I said every) (some executors may crash when loading this idk for sure though since this is the bypassed version which uses a ton of methods)"
 Converted["_Info"].Name = "Info"
 Converted["_Info"].Parent = Converted["_cmd"]
 
@@ -465,7 +466,7 @@ Converted["_cmd10"].ZIndex = 999999999
 Converted["_cmd10"].Name = "cmd"
 Converted["_cmd10"].Parent = Converted["_CmdScroll"]
 
-Converted["_Info10"].Value = "Command Info: Let's you be able to resize the chat + drag it."
+Converted["_Info10"].Value = "Command Info: Let's you be able to resize the chat + drag it. (only for legacy chat and i think only works on mobile most of the time)"
 Converted["_Info10"].Name = "Info"
 Converted["_Info10"].Parent = Converted["_cmd10"]
 
@@ -483,7 +484,7 @@ Converted["_cmd11"].ZIndex = 999999999
 Converted["_cmd11"].Name = "cmd"
 Converted["_cmd11"].Parent = Converted["_CmdScroll"]
 
-Converted["_Info11"].Value = "Command Info: Makes you unabkle to get banned by Roblox. (bypassing, whats on your screen, etc)"
+Converted["_Info11"].Value = "Command Info: Makes you unable to get banned by Roblox. (this is broken and stuff but im too lazy to remove this)"
 Converted["_Info11"].Name = "Info"
 Converted["_Info11"].Parent = Converted["_cmd11"]
 
@@ -555,7 +556,7 @@ Converted["_cmd15"].ZIndex = 999999999
 Converted["_cmd15"].Name = "cmd"
 Converted["_cmd15"].Parent = Converted["_CmdScroll"]
 
-Converted["_Info15"].Value = "Command Info: Turns off Loop Mute for all the peaopl who were affected."
+Converted["_Info15"].Value = "Command Info: Turns off Loop Mute for all the people who were affected."
 Converted["_Info15"].Name = "Info"
 Converted["_Info15"].Parent = Converted["_cmd15"]
 
@@ -591,7 +592,7 @@ Converted["_cmd17"].ZIndex = 999999999
 Converted["_cmd17"].Name = "cmd"
 Converted["_cmd17"].Parent = Converted["_CmdScroll"]
 
-Converted["_Info17"].Value = "Command Info: Executes an Audio Logger."
+Converted["_Info17"].Value = "Command Info: Executes an Audio Logger. (probably old idk)"
 Converted["_Info17"].Name = "Info"
 Converted["_Info17"].Parent = Converted["_cmd17"]
 
@@ -609,7 +610,7 @@ Converted["_cmd18"].ZIndex = 999999999
 Converted["_cmd18"].Name = "cmd"
 Converted["_cmd18"].Parent = Converted["_CmdScroll"]
 
-Converted["_Info18"].Value = "Command Info: Executes the no logs version of Backdoor.exe."
+Converted["_Info18"].Value = "Command Info: This doesnt execute no logs version anymore since pastebin deleted my account for no reason and now I have to give normal but the logs are removed by the devs so your fine. (they were game logs anyways)"
 Converted["_Info18"].Name = "Info"
 Converted["_Info18"].Parent = Converted["_cmd18"]
 
@@ -627,12 +628,12 @@ Converted["_cmd19"].ZIndex = 999999999
 Converted["_cmd19"].Name = "cmd"
 Converted["_cmd19"].Parent = Converted["_CmdScroll"]
 
-Converted["_Info19"].Value = "Command Info: Executes Frakture SS. (backdoor scanner)"
+Converted["_Info19"].Value = "Command Info: Executes Frakture SS. (backdoor scanner) (idk if this is discontinued honestly)"
 Converted["_Info19"].Name = "Info"
 Converted["_Info19"].Parent = Converted["_cmd19"]
 
 Converted["_cmd20"].Font = Enum.Font.FredokaOne
-Converted["_cmd20"].Text = " >chatbot/<api key>"
+Converted["_cmd20"].Text = " >chatbot"
 Converted["_cmd20"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
 Converted["_cmd20"].TextScaled = true
 Converted["_cmd20"].TextSize = 14
@@ -645,7 +646,7 @@ Converted["_cmd20"].ZIndex = 999999999
 Converted["_cmd20"].Name = "cmd"
 Converted["_cmd20"].Parent = Converted["_CmdScroll"]
 
-Converted["_Info20"].Value = "Command Info: Get an API key from: https://beta.openai.com/account/api-keys"
+Converted["_Info20"].Value = "Command Info: Use a new Chat Bot thing so it works now."
 Converted["_Info20"].Name = "Info"
 Converted["_Info20"].Parent = Converted["_cmd20"]
 
@@ -794,7 +795,7 @@ Converted["_Info28"].Name = "Info"
 Converted["_Info28"].Parent = Converted["_cmd28"]
 
 Converted["_cmd29"].Font = Enum.Font.FredokaOne
-Converted["_cmd29"].Text = " >chatbypass/<method(1-3)>"
+Converted["_cmd29"].Text = " >chatbypass"
 Converted["_cmd29"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
 Converted["_cmd29"].TextScaled = true
 Converted["_cmd29"].TextSize = 14
@@ -807,7 +808,7 @@ Converted["_cmd29"].ZIndex = 999999999
 Converted["_cmd29"].Name = "cmd"
 Converted["_cmd29"].Parent = Converted["_CmdScroll"]
 
-Converted["_Info29"].Value = "Command Info: Press F to disable/enable. Methods are 1: main method 2: emoji method 3: full transparency. Check console for words you can say with the method."
+Converted["_Info29"].Value = "Command Info: The best chat bypasser honestly for me. (BetterBypasser) (may only for for new chat idk)"
 Converted["_Info29"].Name = "Info"
 Converted["_Info29"].Parent = Converted["_cmd29"]
 
@@ -843,7 +844,7 @@ Converted["_cmd31"].ZIndex = 999999999
 Converted["_cmd31"].Name = "cmd"
 Converted["_cmd31"].Parent = Converted["_CmdScroll"]
 
-Converted["_Info31"].Value = "Command Info: Lags the game using chat. Protects you from the lag though. (Might be patched but idk.)"
+Converted["_Info31"].Value = "Command Info: Lags the game using chat. Protects you from the lag though. (It's patched but I'm too lazy to remove it)"
 Converted["_Info31"].Name = "Info"
 Converted["_Info31"].Parent = Converted["_cmd31"]
 
@@ -897,7 +898,7 @@ Converted["_cmd34"].ZIndex = 999999999
 Converted["_cmd34"].Name = "cmd"
 Converted["_cmd34"].Parent = Converted["_CmdScroll"]
 
-Converted["_Info34"].Value = "Command Info: Let's you do emojis in chat using :"
+Converted["_Info34"].Value = "Command Info: Let's you do emojis in chat using : (new chat has this feature but this is for legacy chat)"
 Converted["_Info34"].Name = "Info"
 Converted["_Info34"].Parent = Converted["_cmd34"]
 
@@ -933,7 +934,7 @@ Converted["_cmd36"].ZIndex = 999999999
 Converted["_cmd36"].Name = "cmd"
 Converted["_cmd36"].Parent = Converted["_CmdScroll"]
 
-Converted["_Info36"].Value = "Command Info: Old SCP Futuristic GUI I made."
+Converted["_Info36"].Value = "Command Info: Newest version of SCP Futuristic gui I made since I updated it."
 Converted["_Info36"].Name = "Info"
 Converted["_Info36"].Parent = Converted["_cmd36"]
 
@@ -969,7 +970,7 @@ Converted["_cmd38"].ZIndex = 999999999
 Converted["_cmd38"].Name = "cmd"
 Converted["_cmd38"].Parent = Converted["_CmdScroll"]
 
-Converted["_Info38"].Value = "Command Info: Actually good doors gui with a lot of features. MS Doors"
+Converted["_Info38"].Value = "Command Info: Not MSDoors anymore but I may add a differengt doors gui here that doesnt use keys systems if I can find one"
 Converted["_Info38"].Name = "Info"
 Converted["_Info38"].Parent = Converted["_cmd38"]
 
@@ -987,7 +988,7 @@ Converted["_cmd39"].ZIndex = 999999999
 Converted["_cmd39"].Name = "cmd"
 Converted["_cmd39"].Parent = Converted["_CmdScroll"]
 
-Converted["_Info39"].Value = "Command Info: Let's you spy on peoples private chats."
+Converted["_Info39"].Value = "Command Info: Let's you spy on peoples private chats. (only for legacy chat but the >chatbypass command also has a chat spy which works for new chat)"
 Converted["_Info39"].Name = "Info"
 Converted["_Info39"].Parent = Converted["_cmd39"]
 
@@ -1005,7 +1006,7 @@ Converted["_cmd40"].ZIndex = 999999999
 Converted["_cmd40"].Name = "cmd"
 Converted["_cmd40"].Parent = Converted["_CmdScroll"]
 
-Converted["_Info40"].Value = "Command Info: Lets you translate peoples chats. Click ona  message to translate. May need to choose the language you think it is. Quote to toggle GUI, Enter to Send."
+Converted["_Info40"].Value = "Command Info: Lets you translate peoples chats. Click on a message to translate. May need to choose the language you think it is. Quote to toggle GUI, Enter to Send. (legacy chat only)"
 Converted["_Info40"].Name = "Info"
 Converted["_Info40"].Parent = Converted["_cmd40"]
 
@@ -1053,48 +1054,8 @@ local function QGHWZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhv
         return req(obj)
     end
 
-	local UIS = game:GetService("UserInputService")
-	local dragSpeed = -math.huge
-	
-	local dragToggle = nil
-	local dragInput = nil
-	local dragStart = nil
-	local dragPos = nil
-	
-	function dragify(Frame)
-		function updateInput(input)
-	        local Delta = input.Position - dragStart
-	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-	        script.Parent.Position = Position
-		end
-		
-	    Frame.InputBegan:Connect(function(input)
-	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-	            dragToggle = true
-	            dragStart = input.Position
-	            startPos = Frame.Position
-	            input.Changed:Connect(function()
-	                if input.UserInputState == Enum.UserInputState.End then
-	                    dragToggle = false
-	                end
-	            end)
-	        end
-		end)
-		
-	    Frame.InputChanged:Connect(function(input)
-	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-	            dragInput = input
-	        end
-		end)
-		
-	    game:GetService("UserInputService").InputChanged:Connect(function(input)
-	        if input == dragInput and dragToggle then
-	            updateInput(input)
-	        end
-	    end)
-	end
-	
-	dragify(script.Parent)
+	local uidrag = Instance.new("UIDragDetector")
+	uidrag.Parent = script.Parent
 end
 local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Main
     local script = Instance.new("LocalScript")
@@ -3602,158 +3563,6 @@ local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		end
 	end)
 end
-local function TPFW_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.SmoothScroll
-    local script = Instance.new("LocalScript")
-    script.Name = "SmoothScroll"
-    script.Parent = Converted["_CmdScroll"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	--[[
-		
-		SmoothScroll
-		smoother scrolling frames
-		
-		by Elttob
-		
-		-----
-		
-		Drop this script inside any scrolling frame to make it scroll smoothly!
-		
-		
-		Change Smoothing Factor
-		-----------------------
-		If your scrolling frame is scrolling too fast or too slow, try changing
-		the smoothing factor. This is stored in a NumberValue inside this script
-		called SmoothingFactor, and can be any number from 0 to 1. A smoothing
-		factor of 1 means instant scrolling (no smoothing), and a factor of 0
-		means no scrolling (infinitely slow). The default value is 0.14, for faster
-		scrolling try 0.25, 0.3, 0.4 or 0.5.
-		
-		
-		Disable/Enable Scrolling
-		------------------------
-		If you want to turn off smooth scrolling, *don't* disable this script.
-		Instead, this script contains a BoolValue called SmoothingEnabled.
-		Set it's value to false to stop smooth scrolling.
-		
-		
-		Setting the CanvasPosition
-		--------------------------
-		
-		If your scripts set CanvasPosition directly, you might encounter some issues.
-		To fix these issues, this script contains an ObjectValue called InputFrame.
-		This contains a reference to the scrolling frame used to capture user
-		scrolling internally, which you can set CanvasPosition on directly.
-		
-		Old code (bad):
-		
-		1	|	ScreenGui.ScrollingFrame.CanvasPosition = Vector2.new(0, 125)
-		2	|
-		
-		New code (good):
-		
-		1	|	local inputFrame = ScreenGui.ScrollingFrame.SmoothScroll.InputFrame.Value
-		2	|	inputFrame.CanvasPosition = Vector2.new(0, 125)
-		
-		
-		User Input Blocked Issues?
-		--------------------------
-		
-		If some user input is being blocked around the scrolling frame area, you
-		may be suffering from ZIndex related issues. To fix these issues, try
-		making the ZIndex larger for any UI in front of the scrolling frame.
-		
-	--]]
-	
-	-- get the 'content' scrolling frame, aka the scrolling frame with all the content inside
-	-- if smoothing is enabled, disable scrolling
-	local content = script.Parent
-	content.ScrollingEnabled = not script:WaitForChild("SmoothingEnabled").Value 
-	
-	-- create the 'input' scrolling frame, aka the scrolling frame which receives user input
-	-- if smoothing is enabled, enable scrolling
-	local input = content:Clone()
-	input:ClearAllChildren()
-	input.BackgroundTransparency = 1
-	input.ScrollBarImageTransparency = 1
-	input.ZIndex = content.ZIndex + 1
-	input.Name = "_smoothinputframe"
-	input.ScrollingEnabled = script:WaitForChild("SmoothingEnabled").Value 
-	input.Parent = content.Parent
-	
-	-- bind to SmoothingEnabled
-	script.SmoothingEnabled:GetPropertyChangedSignal("Value"):Connect(function()
-		-- move input canvas position to content canvas position on re-enable
-		if script:WaitForChild("SmoothingEnabled").Value then
-			input.CanvasPosition = content.CanvasPosition
-		end
-		content.ScrollingEnabled = not script:WaitForChild("SmoothingEnabled").Value 
-		input.ScrollingEnabled = script:WaitForChild("SmoothingEnabled").Value 
-	end)
-	
-	-- fallback for when smoothing is disabled and the input frame position is set
-	input:GetPropertyChangedSignal("CanvasPosition"):Connect(function()
-		if not script:WaitForChild("SmoothingEnabled").Value then
-			content.CanvasPosition = input.CanvasPosition
-		end
-	end)
-	
-	-- set InputFrame to the input scrolling frame
-	script.InputFrame.Value = input
-	
-	-- keep input frame in sync with content frame
-	local function syncProperty(prop)
-		content:GetPropertyChangedSignal(prop):Connect(function()
-			if prop == "ZIndex" then
-				-- keep the input frame on top!
-				input[prop] = content[prop] + 1
-			else
-				input[prop] = content[prop]
-			end
-		end)
-	end
-	
-	syncProperty "CanvasSize"
-	syncProperty "Position"
-	syncProperty "Rotation"
-	syncProperty "ScrollingDirection"
-	syncProperty "ScrollBarThickness"
-	syncProperty "BorderSizePixel"
-	syncProperty "ElasticBehavior"
-	syncProperty "SizeConstraint"
-	syncProperty "ZIndex"
-	syncProperty "BorderColor3"
-	syncProperty "Size"
-	syncProperty "AnchorPoint"
-	syncProperty "Visible"
-	
-	
-	-- create a render stepped connection to interpolate the content frame position to the input frame position
-	local smoothConnection = game:GetService("RunService").RenderStepped:Connect(function()
-		if script:WaitForChild("SmoothingEnabled").Value then
-			local a = content.CanvasPosition
-			local b = input.CanvasPosition
-			local c = script.SmoothingFactor.Value
-			local d = (b - a) * c + a
-			content.CanvasPosition = d
-		end
-	end)
-	
-	-- destroy everything when the frame is destroyed
-	content.AncestryChanged:Connect(function()
-		if content.Parent == nil then
-			input:Destroy()
-			smoothConnection:Disconnect()
-		end
-	end)
-end
 local function AMFF_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
     local script = Instance.new("LocalScript")
     script.Name = "InfoScript"
@@ -4775,53 +4584,12 @@ local function ILFUROO_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfj
         return req(obj)
     end
 
-	local UIS = game:GetService("UserInputService")
-	local dragSpeed = -math.huge
-	
-	local dragToggle = nil
-	local dragInput = nil
-	local dragStart = nil
-	local dragPos = nil
-	
-	function dragify(Frame)
-		function updateInput(input)
-	        local Delta = input.Position - dragStart
-	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-	        script.Parent.Position = Position
-		end
-		
-	    Frame.InputBegan:Connect(function(input)
-	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-	            dragToggle = true
-	            dragStart = input.Position
-	            startPos = Frame.Position
-	            input.Changed:Connect(function()
-	                if input.UserInputState == Enum.UserInputState.End then
-	                    dragToggle = false
-	                end
-	            end)
-	        end
-		end)
-		
-	    Frame.InputChanged:Connect(function(input)
-	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-	            dragInput = input
-	        end
-		end)
-		
-	    game:GetService("UserInputService").InputChanged:Connect(function(input)
-	        if input == dragInput and dragToggle then
-	            updateInput(input)
-	        end
-	    end)
-	end
-	
-	dragify(script.Parent)
+	local uidrag = Instance.new("UIDragDetector")
+	uidrag.Parent = script.Parent
 end
 
 coroutine.wrap(QGHWZ_fake_script)()
 coroutine.wrap(FGJNAZ_fake_script)()
-coroutine.wrap(TPFW_fake_script)()
 coroutine.wrap(AMFF_fake_script)()
 coroutine.wrap(MRQTJE_fake_script)()
 coroutine.wrap(CTCU_fake_script)()
