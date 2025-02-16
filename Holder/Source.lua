@@ -1,5 +1,3 @@
--- E COMMANDS FE V2
-
 --[=[
  d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
 88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
@@ -2230,12 +2228,12 @@ local script = G2L["c"];
 							end
 						end
 					end)
-					local plrs = game:GetService("Players"):FindFirstChild(args[2])
-					if args[2] ~= plrs.Name then
+					local plrs = game:GetService("Players"):FindFirstChild(arg1)
+					if arg1 ~= plrs.Name then
 						output.Text = "Error: Player not found."
 						task.wait(4)
 						output.Text = ""
-					elseif args[2] == plrs.Name then
+					elseif arg1 == plrs.Name then
 						output.Text = "Checking Console tells you that it's FE or Client. (What it means is RespectFilteringEnabled in Sound Service is on or off.)"
 						task.wait(4)
 						output.Text = ""
