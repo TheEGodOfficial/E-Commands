@@ -687,14 +687,14 @@ G2L["41"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], 
 G2L["41"]["ZIndex"] = 2147483647;
 G2L["41"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["41"]["BackgroundTransparency"] = 1;
-G2L["41"]["Name"] = [[ >fly]];
-G2L["41"]["Text"] = [[ >fly]];
+G2L["41"]["Name"] = [[ >fly/<speed num>]];
+G2L["41"]["Text"] = [[ >fly/<speed num>]];
 
 
 -- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >fly.Info
 G2L["42"] = Instance.new("StringValue", G2L["41"]);
 G2L["42"]["Name"] = [[Info]];
-G2L["42"]["Value"] = [[Command Info: Makes you fly in a way that bypasses most anti cheats. Controls: W,A,S,D,Q,E,LeftCtrl]];
+G2L["42"]["Value"] = [[Command Info: Makes you fly in a way that bypasses most anti cheats with an optional speed argument.]];
 
 
 -- StarterGui.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >noclip
@@ -1457,6 +1457,7 @@ local script = G2L["c"];
 	local CameraPos = workspace.CurrentCamera.CFrame.Position
 	local LastPos = nil
 	local CFloop = nil
+	local CFspeed = 1
 	
 	local p = game:GetService("Players").LocalPlayer
 	local c = p.Character
@@ -1661,6 +1662,8 @@ local script = G2L["c"];
 		for _, name in pairs(allcmds.fly) do
 			if cmd == prefix..name then
 				task.spawn(function()
+					-- this part added by e god
+					CFspeed = (arg1 ~= nil and type(tonumber(arg1)) == "number") and tunumber(arg1) or 1
 					-- Full credit to peyton#9148 (apeyton)
 					speaker.Character:FindFirstChildOfClass('Humanoid').PlatformStand = true
 					local Head = speaker.Character:WaitForChild("Head")
