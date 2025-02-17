@@ -2755,7 +2755,7 @@ local function C_67()
 	for _, cmds in pairs(script.Parent:GetChildren()) do
 		if cmds:IsA("TextButton") and cmds:FindFirstChild("Info") then
 			local db = false
-			cmds.MousButton1Click:Connect(function()
+			cmds.MouseButton1Click:Connect(function()
 				if db == true then
 					return
 				end
