@@ -1457,7 +1457,7 @@ local script = G2L["c"];
 	local CameraPos = workspace.CurrentCamera.CFrame.Position
 	local LastPos = nil
 	local CFloop = nil
-	local CFspeed = 1
+	local CFspeed = 50
 	
 	local p = game:GetService("Players").LocalPlayer
 	local c = p.Character
@@ -1663,7 +1663,7 @@ local script = G2L["c"];
 			if cmd == prefix..name then
 				task.spawn(function()
 					-- this part added by e god
-					CFspeed = (arg1 ~= nil and type(tonumber(arg1)) == "number") and tunumber(arg1) or 1
+					CFspeed = (arg1 ~= nil and type(tonumber(arg1)) == "number") and tunumber(arg1) or 50
 					-- Full credit to peyton#9148 (apeyton)
 					speaker.Character:FindFirstChildOfClass('Humanoid').PlatformStand = true
 					local Head = speaker.Character:WaitForChild("Head")
