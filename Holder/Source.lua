@@ -1584,7 +1584,7 @@ local script = G2L["c"];
 		for _, name in pairs(allcmds.dex) do
 			if cmd == prefix..name then
 				task.spawn(function()
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua"))()
 				end)
 			end
 		end
@@ -1717,7 +1717,7 @@ local script = G2L["c"];
 		for _, name in pairs(allcmds.cmdx) do
 			if cmd == prefix..name then
 				task.spawn(function()
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source"))()
 				end)
 			end
 		end
@@ -2107,7 +2107,7 @@ local script = G2L["c"];
 		for _, name in pairs(allcmds.rizzgui) do
 			if cmd == prefix..name then
 				task.spawn(function()
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/OpenSource/main/rizzler.lua",true))()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/OpenSource/main/rizzler.lua"))()
 				end)
 			end
 		end
@@ -2156,7 +2156,7 @@ local script = G2L["c"];
 		for _, name in pairs(allcmds.antifling) do
 			if cmd == prefix..name then
 				task.spawn(function()
-					loadstring(game:HttpGet("https://pastebin.com/raw/mHaznh3T", true))()
+					loadstring(game:HttpGet("https://pastebin.com/raw/mHaznh3T"))()
 				end)
 			end
 		end
@@ -2164,7 +2164,7 @@ local script = G2L["c"];
 		for _, name in pairs(allcmds.audiologs) do
 			if cmd == prefix..name then
 				task.spawn(function()
-					loadstring(game:HttpGet(('https://raw.githubusercontent.com/infyiff/backup/main/audiologger.lua'),true))()
+					loadstring(game:HttpGet('https://raw.githubusercontent.com/infyiff/backup/main/audiologger.lua'))()
 				end)
 			end
 		end
@@ -2246,7 +2246,7 @@ local script = G2L["c"];
 			if cmd == prefix..name then
 				task.spawn(function()
 					pcall(function()
-						loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/obby-ruiner/main/obby-ruiner.lua",true))()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/obby-ruiner/main/obby-ruiner.lua"))()
 					end)
 				end)
 			end
@@ -2420,7 +2420,7 @@ local script = G2L["c"];
 		for _, name in pairs(allcmds.frakturess) do
 			if cmd == prefix..name then
 				task.spawn(function()
-					loadstring(game:HttpGet(("https://raw.githubusercontent.com/L1ghtingBolt/FraktureSS/master/source.lua"),true))()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/L1ghtingBolt/FraktureSS/master/source.lua"))()
 				end)
 			end
 		end
@@ -2428,7 +2428,7 @@ local script = G2L["c"];
 		for _, name in pairs(allcmds.translator) do
 			if cmd == prefix..name then
 				task.spawn(function()
-					loadstring(game:HttpGet(("https://pastebin.com/raw/itr2s59y"),true))() -- edited by me idk if it will work but i made it also for textchatservice and made it use the unc version of syn.request and whatever
+					loadstring(game:HttpGet("https://pastebin.com/raw/itr2s59y"))() -- edited by me idk if it will work but i made it also for textchatservice and made it use the unc version of syn.request and whatever
 				end)
 			end
 		end
