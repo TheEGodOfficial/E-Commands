@@ -1,7 +1,11 @@
 local tpenabled = true
 
-if getgenv ~= nil and getgenv().ComeBackOnTeleport ~= nil then
-    tpenabled = getgenv().ComeBackOnTeleport
+local env = getgenv and getgenv() or (_G or shared)
+
+if env and env.ComeBackOnTeleport ~= nil then
+    tpenabled = env.ComeBackOnTeleport
+else
+    warn("Executor does not support any of the global variables (running with ComeBackOnTeleport on true)")
 end
 
 local function ontp(s)
@@ -10,7 +14,7 @@ local function ontp(s)
     elseif queueonteleport then
         queueonteleport(s)
     else
-        warn("Executor does not support queue_on_teleport")
+        warn("Executor does not support queue_on_teleport (ComeBackOnTeleport will not work)")
     end
 end
 
