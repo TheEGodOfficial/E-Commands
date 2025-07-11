@@ -1528,8 +1528,8 @@ G2L["80"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], 
 G2L["80"]["ZIndex"] = 2147483647;
 G2L["80"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["80"]["BackgroundTransparency"] = 1;
-G2L["80"]["Name"] = [[ >serverhop]];
-G2L["80"]["Text"] = [[ >serverhop]];
+G2L["80"]["Name"] = [[ >serverhop/<small,ping (optional)>]];
+G2L["80"]["Text"] = [[ >serverhop/<small,ping (optional)>]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >serverhop.Info
@@ -3446,7 +3446,7 @@ toggleBlackHole()
 		for _, name in pairs(allcmds.serverhop) do -- credits to nameless admin
 			if cmd == pf..name then
 				task.spawn(function()
-					if args1 == "ping" then
+					if arg1 == "ping" then
 task.wait()
 
 	print("Searching for a server with the best ping...")
@@ -3475,7 +3475,7 @@ task.wait()
 	else
 		warn("No server found with the best ping")
 	end
-					elseif args1 == "small"
+					elseif arg1 == "small"
 task.wait();
 
 	print("Searching for a small server...")
