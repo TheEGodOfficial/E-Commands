@@ -19,7 +19,7 @@ local function ontp(s)
 end
 
 task.spawn(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/refs/heads/main/Holder/Source.lua", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/refs/heads/main/Holder/Source.lua"))()
 end)
 
 if tpenabled == false then
@@ -33,4 +33,4 @@ ontp([[if game:IsLoaded() then
     if not plr.Character then
         plr.CharacterAdded:Wait()
     end
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/refs/heads/main/Holder/Loader.lua", true))()]])
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/refs/heads/main/Holder/Loader.lua"))()]])
