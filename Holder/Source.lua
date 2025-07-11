@@ -170,6 +170,8 @@ G2L["1"]["DisplayOrder"] = 2147483647;
 G2L["1"]["Name"] = [[GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh]];
 G2L["1"]["ResetOnSpawn"] = false;
 
+NaProtectUI(G2L["1"])
+
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
@@ -2326,8 +2328,6 @@ G2L["a9"]["Color"] = Color3.fromRGB(0, 171, 255);
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.UIDragDetector
 G2L["aa"] = Instance.new("UIDragDetector", G2L["d"]);
-
-NaProtectUI(G2L["1"])
 
 
 
