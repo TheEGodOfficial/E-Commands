@@ -2327,7 +2327,7 @@ G2L["a9"]["Color"] = Color3.fromRGB(0, 171, 255);
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.UIDragDetector
 G2L["aa"] = Instance.new("UIDragDetector", G2L["d"]);
 
-NAProtection(G2L["1"])
+NaProtectUI(G2L["1"])
 
 
 
