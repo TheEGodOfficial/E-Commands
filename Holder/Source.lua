@@ -148,7 +148,7 @@ function NaProtectUI(gui) -- credits to nameless admin
 			pcall(function() gui.Parent = target end)
 		end
 	end)
-	local hb
+	local hb = nil
 	hb = RunService.Heartbeat:Connect(function()
 		for prop, val in pairs(props) do
 			if gui[prop] ~= val then
@@ -165,12 +165,7 @@ end
 local G2L = {};
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh
-G2L["1"] = Instance.new("ScreenGui"));
-G2L["1"]["DisplayOrder"] = 2147483647;
-G2L["1"]["Name"] = [[GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh]];
-G2L["1"]["ResetOnSpawn"] = false;
-
-NaProtectUI(G2L["1"])
+G2L["1"] = NaProtectUI(Instance.new("ScreenGui"));
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame
@@ -564,7 +559,7 @@ G2L["27"]["Text"] = [[ >expandchat]];
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >expandchat.Info
 G2L["28"] = Instance.new("StringValue", G2L["27"]);
 G2L["28"]["Name"] = [[Info]];
-G2L["28"]["Value"] = [[Command Info: Let's you be able to resize the chat + drag it.]];
+G2L["28"]["Value"] = [[Command Info: Let's you be able to resize the chat + drag it. (legacy only)]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >unglitchaudio
@@ -1020,7 +1015,7 @@ G2L["51"]["ZIndex"] = 2147483647;
 G2L["51"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["51"]["BackgroundTransparency"] = 1;
 G2L["51"]["Name"] = [[ >iplog]];
-G2L["51"]["Text"] = [[>iplog]];
+G2L["51"]["Text"] = [[ >iplog]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >iplog.Info
@@ -2333,7 +2328,7 @@ G2L["aa"] = Instance.new("UIDragDetector", G2L["d"]);
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.MainFrame.Main
 local function C_c()
-local script = G2L["c"];
+	local script = G2L["c"];
 	-- not a complete rewrite but the commands system was rewritten
 	--[[
 	CREDITS THAT WERENT ORIGINALLY IN THE OG VERSION:
@@ -2344,67 +2339,60 @@ local script = G2L["c"];
 	More idk I forgot
 	]]
 	
+	local RunService,HttpService,Players,TeleportService,Workspace,ReplicatedStorage,ChatService,TextChatService,UserInputService,TweenService,StarterGui,SoundService,CoreGui = SafeGetService("RunService"),SafeGetService("HttpService"),SafeGetService("Players"),SafeGetService("TeleportService"),SafeGetService("Workspace"),SafeGetService("ReplicatedStorage"),SafeGetService("Chat"),SafeGetService("TextChatService"),SafeGetService("UserInputService"),SafeGetService("TweenService"),SafeGetService("StarterGui"),SafeGetService("SoundService"),SafeGetService("CoreGui")
+
 	local cmdlist = script.Parent.Parent.CmdFrame
 	local cmdbar = script.Parent
 	local input = cmdbar.Input
 	local output = cmdbar.Output
-	
-	local Loopmute = false
-	local Loopglitch = false
-	local flinging = false
-	local Clip = true
+
+	local Loopmute,Loopglitch,flinging,Clip,TPWalk,Toggled,Sprinting,TFlyEnabled = false,false,true,false,false,false,false,false
 	local floatName = "dfkjygsahfyvfnw7f8n538dnd4tgregw6er78red48hx35t6rgn8eewi"
-	local TPWalk = false
-	local Mouse = SafeGetService("Players").LocalPlayer:GetMouse()
+	local Mouse = Players.LocalPlayer:GetMouse()
 	local Direction = Vector3.new(0,0,0)
 	local InterpolatedDir = Direction
 	local Tilt = 0
 	local InterpolatedTilt = Tilt
-	local RunService = SafeGetService("RunService")
-	local Toggled = false
-	local Sprinting = false
-	local CameraPos = SafeGetService("Workspace").CurrentCamera.CFrame.Position
+	local CameraPos = Workspace.CurrentCamera.CFrame.Position
 	local LastPos = nil
 	local tflyCORE = nil
-	local TFlyEnabled = false
 	local TFspeed = 10
-	
-	local plrserv = SafeGetService("Players")
-        local tempplr = plrserv.LocalPlayer
+	local TPWalking,Noclipping,Noclipping2,flingDied,carpetLoop = nil,nil,nil,nil,nil
+
+	local plrserv = Players
+	local tempplr = plrserv.LocalPlayer
 	local tempchar = tempplr.Character or tempplr.CharacterAdded:Wait()
 	local temphum = tempchar:FindFirstChildWhichIsA("Humanoid",true)
-        local c = tempchr
+	local c = tempchar
 	local p = tempplr
 	local h = temphum
 
-	local IsOnMobile = false
-	local IsOnPC = false
+	local IsOnMobile,IsOnPC = false,false
 
 	local speaker = p
-	
+
 	local prefix = ">"
-	
+
 	local pm = p:GetMouse()
 
-	if SafeGetService("UserInputService").TouchEnabled then
+	if UserInputService.TouchEnabled then
 		IsOnMobile = true
 	end
 
-	if SafeGetService("UserInputService").KeyboardEnabled then
+	if UserInputService.KeyboardEnabled then
 		IsOnPC = true
 	end
-	
-	function getRoot(char)
+
+	local function getRoot(char)
 		local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
 		return rootPart
 	end
-	
-	function Lerp(a, b, t)
+
+	local function Lerp(a, b, t)
 		return a + (b - a) * t
 	end
-	
+
 	local getPlr = function(Name)
-		local Players = plrserv
 		if Name:lower() == "random" then
 			return Players:GetPlayers()[math.random(#Players:GetPlayers())]
 		else
@@ -2418,7 +2406,7 @@ local script = G2L["c"];
 			end
 		end
 	end
-	
+
 	pm.KeyDown:Connect(function(key)
 		if key == "-" then
 			input:CaptureFocus()
@@ -2428,7 +2416,7 @@ local script = G2L["c"];
 			end)
 		end
 	end)
-	
+
 	local allcmds = {
 		punch = {"punch","punchfling","flingpunch","hit","slap"},
 		dex = {"dex","dexexplorer","dexbypass","dexv3","dexexplorerv3"},
@@ -2523,13 +2511,13 @@ local script = G2L["c"];
 		puppetmas = {"puppetmas","puppetmaster"},
 		sadist = {"sadist"},
 	}
-	
-	function Commands(pf, text)
+
+	local function Commands(pf, text)
 		local split = string.split(string.lower(text), "/")
 		local cmd = split[1]
 		local arg1 = split[2]
 		local arg2 = split[3]
-	
+
 		for _, name in pairs(allcmds.iy) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2537,7 +2525,7 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.dex) do
 			if cmd == pf..name then
 				task.spawn(function()
@@ -2545,17 +2533,17 @@ local script = G2L["c"];
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.punch) do
 			if cmd == pf..name then
 				task.spawn(function()
 					local hiddenfling = false
-	
-					SafeGetService("UserInputService").InputBegan:Connect(function(Input, GPE)
+
+					UserInputService.InputBegan:Connect(function(Input, GPE)
 						if GPE then return end
-	
+
 						if Input.KeyCode == Enum.KeyCode.K then
-							local p = plrserv.LocalPlayer
+							local p = Players.LocalPlayer
 							local c = p.Character
 							local h = c:FindFirstChildOfClass("Humanoid")
 							if h.RigType == Enum.HumanoidRigType.R6 then
@@ -2581,13 +2569,13 @@ local script = G2L["c"];
 							end
 						end
 					end)
-	
+
 					local function fling()
 						local hrp, c, vel, movel = nil, nil, nil, 0.1
 						while true do
 							RunService.Heartbeat:Wait()
 							if hiddenfling then
-								local lp = plrserv.LocalPlayer
+								local lp = Players.LocalPlayer
 								while hiddenfling and not (c and c.Parent and hrp and hrp.Parent) do
 									RunService.Heartbeat:Wait()
 									c = lp.Character
@@ -2609,26 +2597,26 @@ local script = G2L["c"];
 							end
 						end
 					end
-	
+
 					fling()
 				end)
 			end
 		end
-	
+
 		for _, name in pairs(allcmds.fly) do
 			if cmd == pf..name then
 				task.spawn(function()
 					local ctrlModule = nil 
-					pcall(function() ctrlModule = require(plrserv.LocalPlayer:FindFirstChildOfClass("PlayerScripts"):WaitForChild('PlayerModule',5):WaitForChild("ControlModule",5)) end)
-					
+					pcall(function() ctrlModule = require(Players.LocalPlayer:FindFirstChildOfClass("PlayerScripts"):WaitForChild('PlayerModule',5):WaitForChild("ControlModule",5)) end)
+
 					TFlyEnabled = true
-					local speed=args1 ~= nil and arg1 or 2
+					local speed=arg1 ~= nil and arg1 or 2
 					if speed==nil then
 						speed=2
 					end
 					local e1, e2
-					local Hum, mouse = plrserv.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"), plrserv.LocalPlayer:GetMouse()
-					tflyCORE = Instance.new("Part",SafeGetService("Workspace"))
+					local Hum, mouse = Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"), Players.LocalPlayer:GetMouse()
+					tflyCORE = Instance.new("Part",Workspace)
 					tflyCORE:SetAttribute("tflyPart",true)
 					tflyCORE.Size, tflyCORE.CanCollide = Vector3.new(0.05, 0.05, 0.05), false
 					local Trs = tflyCORE
@@ -2667,9 +2655,9 @@ local script = G2L["c"];
 					local Weld = Instance.new("Weld", tflyCORE)
 					Weld.Part0, Weld.Part1, Weld.C0 = tflyCORE, Hum.RootPart, CFrame.new(0, 0, 0)
 
-					local pos, gyro = Instance.new("BodyPosition", plrserv.LocalPlayer.Character:WaitForChild("HumanoidRootPart",9e9)), Instance.new("BodyGyro", plrserv.LocalPlayer.Character:WaitForChild("HumanoidRootPart",9e9))
-					pos.maxForce, pos.position = Vector3.new(math.huge, math.huge, math.huge), plrserv.LocalPlayer.Character:WaitForChild("HumanoidRootPart",9e9).Position
-					gyro.maxTorque, gyro.cframe = Vector3.new(9e9, 9e9, 9e9), plrserv.LocalPlayer.Character:WaitForChild("HumanoidRootPart",9e9).CFrame
+					local pos, gyro = Instance.new("BodyPosition", Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart",9e9)), Instance.new("BodyGyro", Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart",9e9))
+					pos.maxForce, pos.position = Vector3.new(math.huge, math.huge, math.huge), Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart",9e9).Position
+					gyro.maxTorque, gyro.cframe = Vector3.new(9e9, 9e9, 9e9), Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart",9e9).CFrame
 
 					repeat
 						wait()
@@ -2678,10 +2666,10 @@ local script = G2L["c"];
 
 						if IsOnPC then
 							if keys.w then
-								new = new + SafeGetService("Workspace").CurrentCamera.CoordinateFrame.lookVector * speed
+								new = new + Workspace.CurrentCamera.CoordinateFrame.lookVector * speed
 							end
 							if keys.s then
-								new = new - SafeGetService("Workspace").CurrentCamera.CoordinateFrame.lookVector * speed
+								new = new - Workspace.CurrentCamera.CoordinateFrame.lookVector * speed
 							end
 							if keys.d then
 								new = new * CFrame.new(speed, 0, 0)
@@ -2692,18 +2680,18 @@ local script = G2L["c"];
 						elseif IsOnMobile then
 							local direction = ctrlModule:GetMoveVector()
 							if direction.Magnitude > 0 then
-								new = new + (direction.X * SafeGetService("Workspace").CurrentCamera.CFrame.RightVector * speed)
-								new = new - (direction.Z * SafeGetService("Workspace").CurrentCamera.CFrame.LookVector * speed)
+								new = new + (direction.X * Workspace.CurrentCamera.CFrame.RightVector * speed)
+								new = new - (direction.Z * Workspace.CurrentCamera.CFrame.LookVector * speed)
 							end
 						end
 
 						pos.position = new.p
 						if keys.w then
-						gyro.cframe = SafeGetService("Workspace").CurrentCamera.CoordinateFrame
+							gyro.cframe = Workspace.CurrentCamera.CoordinateFrame
 						elseif keys.s then
-							gyro.cframe = SafeGetService("Workspace").CurrentCamera.CoordinateFrame
+							gyro.cframe = Workspace.CurrentCamera.CoordinateFrame
 						else
-							gyro.cframe = SafeGetService("Workspace").CurrentCamera.CoordinateFrame
+							gyro.cframe = Workspace.CurrentCamera.CoordinateFrame
 						end
 					until TFlyEnabled == false
 					if gyro then
@@ -2764,12 +2752,7 @@ local script = G2L["c"];
 					local Username = arg1
 
 
-					char = plrserv.LocalPlayer
-
-					TweenService = SafeGetService("TweenService")
-
-					speaker = plrserv.LocalPlayer
-					Players = plrserv
+					local char = Players.LocalPlayer
 
 					local players = getPlr(Username)
 					TweenService:Create(getRoot(speaker.Character), TweenInfo.new(3, Enum.EasingStyle.Linear), {CFrame = getRoot(players.Character).CFrame + Vector3.new(3,1,0)}):Play()
@@ -2788,11 +2771,10 @@ local script = G2L["c"];
 		for _, name in pairs(allcmds.fling) do
 			if cmd == pf..name then
 				task.spawn(function()
-					local player = plrserv.LocalPlayer
+					local player = Players.LocalPlayer
 					local mouse = player:GetMouse()
 					local Targets = {arg1}
 
-					local Players = plrserv
 					local Player = Players.LocalPlayer
 
 					local AllBool = false
@@ -2822,7 +2804,7 @@ local script = G2L["c"];
 					end
 
 					local Message = function(_Title, _Text, Time)
-						SafeGetService("StarterGui"):SetCore("SendNotification", {Title = _Title, Text = _Text, Duration = Time})
+						StarterGui:SetCore("SendNotification", {Title = _Title, Text = _Text, Duration = Time})
 					end
 
 					local SkidFling = function(TargetPlayer)
@@ -2860,11 +2842,11 @@ local script = G2L["c"];
 							if THumanoid and THumanoid.Sit and not AllBool then
 							end
 							if THead then
-								SafeGetService("Workspace").CurrentCamera.CameraSubject = THead
+								Workspace.CurrentCamera.CameraSubject = THead
 							elseif not THead and Handle then
-								SafeGetService("Workspace").CurrentCamera.CameraSubject = Handle
+								Workspace.CurrentCamera.CameraSubject = Handle
 							elseif THumanoid and TRootPart then
-								SafeGetService("Workspace").CurrentCamera.CameraSubject = THumanoid
+								Workspace.CurrentCamera.CameraSubject = THumanoid
 							end
 							if not TCharacter:FindFirstChildWhichIsA("BasePart") then
 								return
@@ -2941,7 +2923,7 @@ local script = G2L["c"];
 								until BasePart.Velocity.Magnitude > 500 or BasePart.Parent ~= TargetPlayer.Character or TargetPlayer.Parent ~= Players or not TargetPlayer.Character == TCharacter or THumanoid.Sit or Humanoid.Health <= 0 or tick() > Time + TimeToWait
 							end
 
-							SafeGetService("Workspace").FallenPartsDestroyHeight = 0/0
+							Workspace.FallenPartsDestroyHeight = 0/0
 
 							local BV = Instance.new("BodyVelocity")
 							BV.Name = "EpixVel"
@@ -2968,7 +2950,7 @@ local script = G2L["c"];
 
 							BV:Destroy()
 							Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, true)
-							SafeGetService("Workspace").CurrentCamera.CameraSubject = Humanoid
+							Workspace.CurrentCamera.CameraSubject = Humanoid
 
 							repeat
 								RootPart.CFrame = getgenv().OldPos * CFrame.new(0, .5, 0)
@@ -2981,7 +2963,7 @@ local script = G2L["c"];
 								end)
 								task.wait()
 							until (RootPart.Position - getgenv().OldPos.p).Magnitude < 25
-							SafeGetService("Workspace").FallenPartsDestroyHeight = getgenv().FPDH
+							Workspace.FallenPartsDestroyHeight = getgenv().FPDH
 						else
 						end
 					end
@@ -3024,18 +3006,19 @@ local script = G2L["c"];
 				task.spawn(function()
 					if TPWalk == true then
 						TPWalk = false
-						TPWalking = TPWalking:Disconnect()
+						TPWalking:Disconnect()
+						TPWalking = nil
 					end
 					TPWalk = true
-					Speed = arg1
+					local Speed = arg1
 					TPWalking = RunService.Heartbeat:Wait()
 					RunService.Stepped:Connect(function()
 						if TPWalk == true then
-							if plrserv.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").MoveDirection.Magnitude > 0 then
+							if Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").MoveDirection.Magnitude > 0 then
 								if Speed then
-									plrserv.LocalPlayer.Character:TranslateBy(plrserv.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").MoveDirection * Speed * TPWalking * 10)
+									Players.LocalPlayer.Character:TranslateBy(Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").MoveDirection * Speed * TPWalking * 10)
 								else
-									plrserv.LocalPlayer.Character:TranslateBy(plrserv.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").MoveDirection * TPWalking * 10)
+									Players.LocalPlayer.Character:TranslateBy(Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").MoveDirection * TPWalking * 10)
 								end
 							end
 						end
@@ -3048,7 +3031,7 @@ local script = G2L["c"];
 			if cmd == pf..name then
 				task.spawn(function()
 					TFlyEnabled = false
-					for i, v in pairs(SafeGetService("Workspace"):GetDescendants()) do
+					for i, v in pairs(Workspace:GetDescendants()) do
 						if v:GetAttribute("tflyPart") then
 							v:Destroy()
 						end
@@ -3087,7 +3070,7 @@ local script = G2L["c"];
 		for _, name in pairs(allcmds.rejoin) do
 			if cmd == pf..name then
 				task.spawn(function()
-					SafeGetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, plrserv.LocalPlayer)
+					TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, Players.LocalPlayer)
 				end)
 			end
 		end
@@ -3152,7 +3135,8 @@ local script = G2L["c"];
 			if cmd == pf..name then
 				task.spawn(function()
 					TPWalk = false
-					TPWalking = TPWalking:Disconnect()
+					TPWalking:Disconnect()
+					TPWalking = nil
 				end)
 			end
 		end
@@ -3211,151 +3195,142 @@ local script = G2L["c"];
 					--[[
 	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
 ]]
-local Players = plrserv
-local RunService = RunService
-local LocalPlayer = Players.LocalPlayer
-local Workspace = SafeGetService("Workspace")
+					
+					local LocalPlayer = Players.LocalPlayer
 
-local angle = 1
-local radius = 10
-local blackHoleActive = false
+					local angle = 1
+					local radius = 10
+					local blackHoleActive = false
+					
+					local Network = nil
+					
+					local function setupPlayer()
+						local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+						local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
-local function setupPlayer()
-    local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
-    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+						local Folder = Instance.new("Folder", Workspace)
+						local Part = Instance.new("Part", Folder)
+						local Attachment1 = Instance.new("Attachment", Part)
+						Part.Anchored = true
+						Part.CanCollide = false
+						Part.Transparency = 1
 
-    local Folder = Instance.new("Folder", SafeGetService("Workspace"))
-    local Part = Instance.new("Part", Folder)
-    local Attachment1 = Instance.new("Attachment", Part)
-    Part.Anchored = true
-    Part.CanCollide = false
-    Part.Transparency = 1
+						return humanoidRootPart, Attachment1
+					end
 
-    return humanoidRootPart, Attachment1
-end
+					local humanoidRootPart, Attachment1 = setupPlayer()
 
-local humanoidRootPart, Attachment1 = setupPlayer()
+					if not Network then
+						Network = {
+							BaseParts = {},
+							Velocity = Vector3.new(14.46262424, 14.46262424, 14.46262424)
+						}
 
-if not getgenv().Network then
-    getgenv().Network = {
-        BaseParts = {},
-        Velocity = Vector3.new(14.46262424, 14.46262424, 14.46262424)
-    }
+						Network.RetainPart = function(part)
+							if typeof(part) == "Instance" and part:IsA("BasePart") and part:IsDescendantOf(Workspace) then
+								table.insert(Network.BaseParts, part)
+								part.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0)
+								part.CanCollide = false
+							end
+						end
 
-    Network.RetainPart = function(part)
-        if typeof(part) == "Instance" and part:IsA("BasePart") and part:IsDescendantOf(SafeGetService("Workspace")) then
-            table.insert(Network.BaseParts, part)
-            part.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0)
-            part.CanCollide = false
-        end
-    end
+						local function EnablePartControl()
+							LocalPlayer.ReplicationFocus = Workspace
+							RunService.Heartbeat:Connect(function()
+								sethiddenproperty(LocalPlayer, "SimulationRadius", math.huge)
+								for _, part in pairs(Network.BaseParts) do
+									if part:IsDescendantOf(Workspace) then
+										part.Velocity = Network.Velocity
+									end
+								end
+							end)
+						end
 
-    local function EnablePartControl()
-        LocalPlayer.ReplicationFocus = SafeGetService("Workspace")
-        RunService.Heartbeat:Connect(function()
-            sethiddenproperty(LocalPlayer, "SimulationRadius", math.huge)
-            for _, part in pairs(Network.BaseParts) do
-                if part:IsDescendantOf(SafeGetService("Workspace")) then
-                    part.Velocity = Network.Velocity
-                end
-            end
-        end)
-    end
+						EnablePartControl()
+					end
 
-    EnablePartControl()
-end
+					local function ForcePart(v)
+						if v:IsA("Part") and not v.Anchored and not v.Parent:FindFirstChild("Humanoid") and not v.Parent:FindFirstChild("Head") and v.Name ~= "Handle" then
+							for _, x in next, v:GetChildren() do
+								if x:IsA("BodyAngularVelocity") or x:IsA("BodyForce") or x:IsA("BodyGyro") or x:IsA("BodyPosition") or x:IsA("BodyThrust") or x:IsA("BodyVelocity") or x:IsA("RocketPropulsion") then
+									x:Destroy()
+								end
+							end
+							if v:FindFirstChild("Attachment") then
+								v:FindFirstChild("Attachment"):Destroy()
+							end
+							if v:FindFirstChild("AlignPosition") then
+								v:FindFirstChild("AlignPosition"):Destroy()
+							end
+							if v:FindFirstChild("Torque") then
+								v:FindFirstChild("Torque"):Destroy()
+							end
+							v.CanCollide = false
 
-local function ForcePart(v)
-    if v:IsA("Part") and not v.Anchored and not v.Parent:FindFirstChild("Humanoid") and not v.Parent:FindFirstChild("Head") and v.Name ~= "Handle" then
-        for _, x in next, v:GetChildren() do
-            if x:IsA("BodyAngularVelocity") or x:IsA("BodyForce") or x:IsA("BodyGyro") or x:IsA("BodyPosition") or x:IsA("BodyThrust") or x:IsA("BodyVelocity") or x:IsA("RocketPropulsion") then
-                x:Destroy()
-            end
-        end
-        if v:FindFirstChild("Attachment") then
-            v:FindFirstChild("Attachment"):Destroy()
-        end
-        if v:FindFirstChild("AlignPosition") then
-            v:FindFirstChild("AlignPosition"):Destroy()
-        end
-        if v:FindFirstChild("Torque") then
-            v:FindFirstChild("Torque"):Destroy()
-        end
-        v.CanCollide = false
-        
-        local Torque = Instance.new("Torque", v)
-        Torque.Torque = Vector3.new(1000000, 1000000, 1000000)
-        local AlignPosition = Instance.new("AlignPosition", v)
-        local Attachment2 = Instance.new("Attachment", v)
-        Torque.Attachment0 = Attachment2
-        AlignPosition.MaxForce = math.huge
-        AlignPosition.MaxVelocity = math.huge
-        AlignPosition.Responsiveness = 500
-        AlignPosition.Attachment0 = Attachment2
-        AlignPosition.Attachment1 = Attachment1
-    end
-end
+							local Torque = Instance.new("Torque", v)
+							Torque.Torque = Vector3.new(1000000, 1000000, 1000000)
+							local AlignPosition = Instance.new("AlignPosition", v)
+							local Attachment2 = Instance.new("Attachment", v)
+							Torque.Attachment0 = Attachment2
+							AlignPosition.MaxForce = math.huge
+							AlignPosition.MaxVelocity = math.huge
+							AlignPosition.Responsiveness = 500
+							AlignPosition.Attachment0 = Attachment2
+							AlignPosition.Attachment1 = Attachment1
+						end
+					end
 
-local function toggleBlackHole()
-    blackHoleActive = not blackHoleActive
-    if blackHoleActive then
-        for _, v in next, SafeGetService("Workspace"):GetDescendants() do
-            ForcePart(v)
-        end
+					local function toggleBlackHole()
+						blackHoleActive = not blackHoleActive
+						if blackHoleActive then
+							for _, v in next, Workspace:GetDescendants() do
+								ForcePart(v)
+							end
 
-        SafeGetService("Workspace").DescendantAdded:Connect(function(v)
-            if blackHoleActive then
-                ForcePart(v)
-            end
-        end)
+							Workspace.DescendantAdded:Connect(function(v)
+								if blackHoleActive then
+									ForcePart(v)
+								end
+							end)
 
-        spawn(function()
-            while blackHoleActive and RunService.RenderStepped:Wait() do
-                angle = angle + math.rad(2)
+							spawn(function()
+								while blackHoleActive and RunService.RenderStepped:Wait() do
+									angle = angle + math.rad(2)
 
-                local offsetX = math.cos(angle) * radius
-                local offsetZ = math.sin(angle) * radius
+									local offsetX = math.cos(angle) * radius
+									local offsetZ = math.sin(angle) * radius
 
-                Attachment1.WorldCFrame = humanoidRootPart.CFrame * CFrame.new(offsetX, 0, offsetZ)
-            end
-        end)
-    else
-        Attachment1.WorldCFrame = CFrame.new(0, -1000, 0)
-    end
-end
+									Attachment1.WorldCFrame = humanoidRootPart.CFrame * CFrame.new(offsetX, 0, offsetZ)
+								end
+							end)
+						else
+							Attachment1.WorldCFrame = CFrame.new(0, -1000, 0)
+						end
+					end
 
-LocalPlayer.CharacterAdded:Connect(function()
-    humanoidRootPart, Attachment1 = setupPlayer()
-    if blackHoleActive then
-        toggleBlackHole()
-    end
-end)
+					LocalPlayer.CharacterAdded:Connect(function()
+						humanoidRootPart, Attachment1 = setupPlayer()
+						if blackHoleActive then
+							toggleBlackHole()
+						end
+					end)
 
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/miroeramaa/TurtleLib/main/TurtleUiLib.lua"))()
-local window = library:Window("Project KGGJGBINY idk")
+					local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/miroeramaa/TurtleLib/main/TurtleUiLib.lua"))()
+					local window = library:Window("Projeto LKB")
 
-window:Slider("Radius Blackhole",1,100,10, function(Value)
-   radius = Value
-end)
+					window:Slider("Radius Blackhole",1,100,10, function(Value)
+						radius = Value
+					end)
 
-window:Toggle("Blackhole", true, function(Value)
-       if Value then
-            toggleBlackHole()
-        else
-            blackHoleActive = false
-        end
-end)
+					window:Toggle("Blackhole", true, function(Value)
+						if Value then
+							toggleBlackHole()
+						else
+							blackHoleActive = false
+						end
+					end)
 
-spawn(function()
-    while true do
-        RunService.RenderStepped:Wait()
-        if blackHoleActive then
-            angle = angle + math.rad(angleSpeed)
-        end
-    end
-end)
-
-toggleBlackHole()
+					toggleBlackHole()
 				end)
 			end
 		end
@@ -3372,13 +3347,13 @@ toggleBlackHole()
 			if cmd == pf..name then
 				task.spawn(function()
 					task.spawn(function()
-						Username = arg1
-						if SafeGetService("SoundService").RespectFilteringEnabled == true then
+						local Username = arg1
+						if SoundService.RespectFilteringEnabled == true then
 							print("Muted Radio as Client")
 						else
 							print("Muted Radio as FE")
 							if Username == "all" or Username == "others" then
-								local players = plrserv:GetPlayers()
+								local players = Players:GetPlayers()
 								for _, player in ipairs(players) do
 									for _, object in ipairs(player.Character:GetDescendants()) do
 										if object:IsA("Sound") and object.Playing then
@@ -3411,7 +3386,7 @@ toggleBlackHole()
 							end
 						end
 					end)
-					local plrs = plrserv:FindFirstChild(arg1)
+					local plrs = Players:FindFirstChild(arg1)
 					if arg1 ~= plrs.Name then
 						output.Text = "Error: Player not found."
 						task.wait(4)
@@ -3447,77 +3422,77 @@ toggleBlackHole()
 			if cmd == pf..name then
 				task.spawn(function()
 					if arg1 == "ping" then
-task.wait()
+						task.wait()
 
-	print("Searching for a server with the best ping...")
+						print("Searching for a server with the best ping...")
 
-	local JSONDecode = SafeGetService("HttpService").JSONDecode
-						
-	local Servers = JSONDecode(SafeGetService("HttpService"), game:HttpGetAsync("https://games.roblox.com/v1/games/"..PlaceId.."/servers/Public?sortOrder=Asc&limit=100")).data
-	local BestPing = math.huge
-	local BestJobId = nil
+						local JSONDecode = HttpService.JSONDecode
 
-	if Servers and #Servers > 0 then
-		for _, Server in next, Servers do
-			if type(Server) == "table" and Server.id ~= JobId then
-				local ping = Server.ping
-				if ping and ping < BestPing then
-					BestPing = ping
-					BestJobId = Server.id
-				end
-			end
-		end
-	end
+						local Servers = JSONDecode(HttpService, game:HttpGetAsync("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100")).data
+						local BestPing = math.huge
+						local BestJobId = nil
 
-	if BestJobId then
-		print(string.format("Serverhopping to a server with the ping: %s ms", tostring(BestPing)))
-		TeleportService:TeleportToPlaceInstance(PlaceId, BestJobId)
-	else
-		warn("No server found with the best ping")
-	end
-					elseif arg1 == "small"
-task.wait();
+						if Servers and #Servers > 0 then
+							for _, Server in next, Servers do
+								if type(Server) == "table" and Server.id ~= game.JobId then
+									local ping = Server.ping
+									if ping and ping < BestPing then
+										BestPing = ping
+										BestJobId = Server.id
+									end
+								end
+							end
+						end
 
-	print("Searching for a small server...")
+						if BestJobId then
+							print(string.format("Serverhopping to a server with the ping: %s ms", tostring(BestPing)))
+							TeleportService:TeleportToPlaceInstance(game.PlaceId, BestJobId)
+						else
+							warn("No server found with the best ping")
+						end
+					elseif arg1 == "small" then
+						task.wait();
 
-	local Number=math.huge
-	local SomeSRVS={}
-	local found=0
+						print("Searching for a small server...")
 
-	for _,v in ipairs(SafeGetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/"..PlaceId.."/servers/Public?sortOrder=Asc&limit=100")).data) do
-		if type(v)=="table" and v.maxPlayers>v.playing and v.id~=JobId then
-			if v.playing<Number then
-				Number=v.playing
-				SomeSRVS[1]=v.id
-				found=v.playing
-			end
-		end
-	end
+						local Number=math.huge
+						local SomeSRVS={}
+						local found=0
 
-	if #SomeSRVS>0 then
-		print("Serverhopping to a server with "..found.." players")
-		SafeGetService("TeleportService"):TeleportToPlaceInstance(PlaceId,SomeSRVS[1])
-	end
+						for _,v in ipairs(HttpService:JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100")).data) do
+							if type(v)=="table" and v.maxPlayers>v.playing and v.id~=game.JobId then
+								if v.playing<Number then
+									Number=v.playing
+									SomeSRVS[1]=v.id
+									found=v.playing
+								end
+							end
+						end
+
+						if #SomeSRVS>0 then
+							print("Serverhopping to a server with "..found.." players")
+							TeleportService:TeleportToPlaceInstance(game.PlaceId,SomeSRVS[1])
+						end
 					else
 						task.wait();
 
-	print("Searching for a server...")
-	local Number=0
-	local SomeSRVS={}
-	local found=0
-	for _,v in ipairs(SafeGetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100")).data) do
-		if type(v)=="table" and v.maxPlayers>v.playing and v.id~=JobId then
-			if v.playing>Number then
-				Number=v.playing
-				SomeSRVS[1]=v.id
-				found=v.playing
-			end
-		end
-	end
-	if #SomeSRVS>0 then
-		print("Serverhopping to a server with "..found.." players")
-		SafeGetService("TeleportService"):TeleportToPlaceInstance(PlaceId,SomeSRVS[1])
-	end
+						print("Searching for a server...")
+						local Number=0
+						local SomeSRVS={}
+						local found=0
+						for _,v in ipairs(HttpService:JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100")).data) do
+							if type(v)=="table" and v.maxPlayers>v.playing and v.id~=game.JobId then
+								if v.playing>Number then
+									Number=v.playing
+									SomeSRVS[1]=v.id
+									found=v.playing
+								end
+							end
+						end
+						if #SomeSRVS>0 then
+							print("Serverhopping to a server with "..found.." players")
+							TeleportService:TeleportToPlaceInstance(game.PlaceId,SomeSRVS[1])
+						end
 					end
 				end)
 			end
@@ -3526,27 +3501,22 @@ task.wait();
 		for _, name in pairs(allcmds.spinfling) do
 			if cmd == pf..name then
 				task.spawn(function()
-					function getRoot(char)
-						local rootPart = plrserv.LocalPlayer.Character:FindFirstChild('HumanoidRootPart') or plrserv.LocalPlayer.Character:FindFirstChild('Torso') or plrserv.LocalPlayer.Character:FindFirstChild('UpperTorso')
-						return rootPart
-					end
-
-					local Noclipping = nil
+					Noclipping2 = nil
 					Clip = false
 					task.wait(0.1)
 					local function NoclipLoop()
-						if Clip == false and plrserv.LocalPlayer.Character ~= nil then
-							for _, child in pairs(plrserv.LocalPlayer.Character:GetDescendants()) do
+						if Clip == false and Players.LocalPlayer.Character ~= nil then
+							for _, child in pairs(Players.LocalPlayer.Character:GetDescendants()) do
 								if child:IsA("BasePart") and child.CanCollide == true and child.Name ~= floatName then
 									child.CanCollide = false
 								end
 							end
 						end
 					end
-					Noclipping = RunService.Stepped:Connect(NoclipLoop)
+					Noclipping2 = RunService.Stepped:Connect(NoclipLoop)
 
 					flinging = false
-					for _, child in pairs(plrserv.LocalPlayer.Character:GetDescendants()) do
+					for _, child in pairs(Players.LocalPlayer.Character:GetDescendants()) do
 						if child:IsA("BasePart") then
 							child.CustomPhysicalProperties = PhysicalProperties.new(math.huge, 0.3, 0.5)
 						end
@@ -3555,11 +3525,11 @@ task.wait();
 					task.wait(.1)
 					local bambam = Instance.new("BodyAngularVelocity")
 					bambam.Name = "0"
-					bambam.Parent = getRoot(plrserv.LocalPlayer.Character)
+					bambam.Parent = getRoot(Players.LocalPlayer.Character)
 					bambam.AngularVelocity = Vector3.new(0,99999,0)
 					bambam.MaxTorque = Vector3.new(0,math.huge,0)
 					bambam.P = math.huge
-					local Char = plrserv.LocalPlayer.Character:GetChildren()
+					local Char = Players.LocalPlayer.Character:GetChildren()
 					for i, v in next, Char do
 						if v:IsA("BasePart") then
 							v.CanCollide = false
@@ -3574,7 +3544,7 @@ task.wait();
 						end
 						flinging = false
 						task.wait(.1)
-						local speakerChar = plrserv.LocalPlayer.Character
+						local speakerChar = Players.LocalPlayer.Character
 						if not speakerChar or not getRoot(speakerChar) then return end
 						for i,v in pairs(getRoot(speakerChar):GetChildren()) do
 							if v.ClassName == 'BodyAngularVelocity' then
@@ -3587,7 +3557,7 @@ task.wait();
 							end
 						end
 					end
-					flingDied = plrserv.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').Died:Connect(flingDiedF)
+					flingDied = Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').Died:Connect(flingDiedF)
 					repeat
 						bambam.AngularVelocity = Vector3.new(0,99999,0)
 						task.wait(.2)
@@ -3617,13 +3587,13 @@ task.wait();
 		for _, name in pairs(allcmds.collisions) do
 			if cmd == pf..name then
 				task.spawn(function()
-					LP = plrserv.LocalPlayer
+					local LP = Players.LocalPlayer
 					while task.wait(3) do
-						for i,v in pairs(plrserv:GetDescendants()) do
-							if v:IsA("Player") and SafeGetService("Workspace"):FindFirstChild(v.Name) and v ~= LP and SafeGetService("Workspace")[v.Name]:FindFirstChild("CHECKER") == nil then
-								checker = Instance.new("BoolValue",SafeGetService("Workspace")[v.Name])
+						for i,v in pairs(Players:GetDescendants()) do
+							if v:IsA("Player") and Workspace:FindFirstChild(v.Name) and v ~= LP and Workspace[v.Name]:FindFirstChild("CHECKER") == nil then
+								local checker = Instance.new("BoolValue",Workspace[v.Name])
 								checker.Name = "CHECKER"
-								for i,v in pairs(SafeGetService("Workspace"):WaitForChild(v.Name):GetDescendants()) do
+								for i,v in pairs(Workspace:WaitForChild(v.Name):GetDescendants()) do
 									if v:IsA("Part") or v:IsA("MeshPart") then
 										local collider = Instance.new("Part",v)
 										collider.Size = v.Size
@@ -3646,7 +3616,7 @@ task.wait();
 				task.spawn(function()
 					getgenv().mainKey = arg1
 
-					local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https\58//api.eclipsehub.xyz/auth";c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
+					local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https\58//api.eclipsehub.xyz/auth";c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(getgenv().mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
 
 					if arg1 == "" or arg1 == nil then
 						output.Text = "Error: You need to put 'nil' if you don't have a key."
@@ -3664,8 +3634,8 @@ task.wait();
 		for _, name in pairs(allcmds.expandchat) do
 			if cmd == pf..name then
 				task.spawn(function()
-					require(SafeGetService("Chat").ClientChatModules.ChatSettings).WindowResizable = true
-					require(SafeGetService("Chat").ClientChatModules.ChatSettings).WindowDraggable = true
+					require(ChatService.ClientChatModules.ChatSettings).WindowResizable = true
+					require(ChatService.ClientChatModules.ChatSettings).WindowDraggable = true
 				end)
 			end
 		end
@@ -3690,7 +3660,7 @@ task.wait();
 			if cmd == pf..name then
 				task.spawn(function()
 					task.spawn(function()
-						Username = arg1
+						local Username = arg1
 						Loopglitch = true
 						local players = getPlr(Username)
 						if players ~= nil then
@@ -3705,10 +3675,10 @@ task.wait();
 								end
 							end
 						end 
-						if SafeGetService("SoundService").RespectFilteringEnabled == true then
+						if SoundService.RespectFilteringEnabled == true then
 							print("Boombox Glitched as Client")
 						else
-							if SafeGetService("SoundService").RespectFilteringEnabled == false then
+							if SoundService.RespectFilteringEnabled == false then
 								print("Boombox Glitched as FE")
 							end
 						end
@@ -3737,7 +3707,7 @@ task.wait();
 							task.wait(0.2)
 						until Loopglitch == false
 					end)
-					local plrs = SafeGetService("Players"):FindFirstChild(arg1)
+					local plrs = Players:FindFirstChild(arg1)
 					if arg1 ~= plrs.Name then
 						output.Text = "Error: Player not found."
 						task.wait(4)
@@ -3754,15 +3724,15 @@ task.wait();
 		for _, name in pairs(allcmds.noclipfling) do
 			if cmd == pf..name then
 				task.spawn(function()
-					Target = arg1
-					flinghh = 1000
+					local Target = arg1
+					local flinghh = 1000
 
-					target = getPlr(Target)
-					SafeGetService("Workspace").CurrentCamera.CameraSubject = target.Character.Humanoid
+					local target = getPlr(Target)
+					Workspace.CurrentCamera.CameraSubject = target.Character.Humanoid
 
 
-					local lp = SafeGetService("Players").LocalPlayer
-					for i,v in pairs(SafeGetService("Players"):GetPlayers()) do
+					local lp = Players.LocalPlayer
+					for i,v in pairs(Players:GetPlayers()) do
 						if v.Name:lower():match("^"..Target:lower()) or v.DisplayName:lower():match("^"..Target:lower()) then
 							Target = v
 							break
@@ -3771,20 +3741,19 @@ task.wait();
 
 					if type(Target) == "string" then return end
 
-					local oldpos = lp.Character.HumanoidRootPart.CFrame
-					local oldhh = lp.Character.Humanoid.HipHeight
+					local oldpos,oldhh = lp.Character.HumanoidRootPart.CFrame,lp.Character.Humanoid.HipHeight
 
 					local carpetAnim = Instance.new("Animation")
 					carpetAnim.AnimationId = "rbxassetid://282574440"
-					carpet = lp.Character:FindFirstChildOfClass('Humanoid'):LoadAnimation(carpetAnim)
+					local carpet = lp.Character:FindFirstChildOfClass('Humanoid'):LoadAnimation(carpetAnim)
 					carpet:Play(.1, 1, 1)
 
-					local carpetLoop
+					carpetLoop = nil
 
 					local tTorso = Target.Character:FindFirstChild("Torso") or Target.Character:FindFirstChild("LowerTorso") or Target.Character:FindFirstChild("HumanoidRootPart")
 
 					spawn(function()
-						carpetLoop = SafeGetService('RunService').Heartbeat:Connect(function()
+						carpetLoop = RunService.Heartbeat:Connect(function()
 							pcall(function()
 								if tTorso.Velocity.magnitude <= 28 then -- if target uses netless just target their local position
 									local pos = {x=0, y=0, z=0}
@@ -3809,10 +3778,10 @@ task.wait();
 					task.wait(.5)
 
 					carpetLoop:Disconnect()
-					SafeGetService("Workspace").CurrentCamera.CameraSubject = target.Character.Humanoid
+					Workspace.CurrentCamera.CameraSubject = target.Character.Humanoid
 					task.wait(1)
 					lp.Character.Humanoid.Health = 0
-					task.wait(SafeGetService("Players").RespawnTime + .6)
+					task.wait(Players.RespawnTime + .6)
 					lp.Character.HumanoidRootPart.CFrame = oldpos
 				end)
 			end
@@ -3829,8 +3798,8 @@ task.wait();
 		for _, name in pairs(allcmds.toggletouch) do
 			if cmd == pf..name then
 				task.spawn(function()
-					local player = SafeGetService("Players").LocalPlayer
-					local UIS = SafeGetService("UserInputService")
+					local player = Players.LocalPlayer
+					local UIS = UserInputService
 					local myzaza = false
 
 					UIS.InputBegan:Connect(function(input, GPE)
@@ -3844,7 +3813,7 @@ task.wait();
 						if math.random(-5,5) == 0 then
 							task.wait()
 						end
-						local parts = SafeGetService("Workspace"):GetPartBoundsInRadius(player.Character:WaitForChild("HumanoidRootPart").Position, 20)
+						local parts = Workspace:GetPartBoundsInRadius(player.Character:WaitForChild("HumanoidRootPart").Position, 20)
 						for _, part in ipairs(parts) do
 							part.CanTouch = myzaza
 						end
@@ -3856,8 +3825,8 @@ task.wait();
 		for _, name in pairs(allcmds.unspinfling) do
 			if cmd == pf..name then
 				task.spawn(function()
-					if Noclipping then
-						Noclipping:Disconnect()
+					if Noclipping2 then
+						Noclipping2:Disconnect()
 					end
 					Clip = true
 
@@ -3866,7 +3835,7 @@ task.wait();
 					end
 					flinging = false
 					task.wait(.1)
-					local speakerChar = SafeGetService("Players").LocalPlayer.Character
+					local speakerChar = Players.LocalPlayer.Character
 					if not speakerChar or not getRoot(speakerChar) then return end
 					for i,v in pairs(getRoot(speakerChar):GetChildren()) do
 						if v.ClassName == 'BodyAngularVelocity' then
@@ -3886,11 +3855,11 @@ task.wait();
 			if cmd == pf..name then
 				task.spawn(function()
 					task.spawn(function()
-						Username = arg1
+						local Username = arg1
 						if Username == "all" or Username == "others" then
 							Loopmute = true
 							repeat task.wait()
-								local players = SafeGetService("Players"):GetPlayers()
+								local players = Players:GetPlayers()
 								for _, player in ipairs(players) do
 									for _, object in ipairs(player.Character:GetDescendants()) do
 										if object:IsA("Sound") and object.Playing then
@@ -3925,16 +3894,16 @@ task.wait();
 									end
 								end 
 							until Loopmute == false
-							if SafeGetService("SoundService").RespectFilteringEnabled == true then
+							if SoundService.RespectFilteringEnabled == true then
 								print("Boombox loop muted as Client")
 							else
-								if SafeGetService("SoundService").RespectFilteringEnabled == false then
+								if SoundService.RespectFilteringEnabled == false then
 									print("Boombox loop muted as FE")
 								end
 							end
 						end
 					end)
-					local plrs = SafeGetService("Players"):FindFirstChild(arg1)
+					local plrs = Players:FindFirstChild(arg1)
 					if arg1 ~= plrs.Name then
 						output.Text = "Error: Player not found."
 						task.wait(4)
@@ -4043,10 +4012,10 @@ task.wait();
 			if cmd == pf..name then
 				task.spawn(function()
 					-- DO NOT RUN THIS IN VR MODE
-					skyvrversion = '3.0.0'
+					local skyvrversion = '3.0.0'
 
-					VR_Model_Customization_GUI = game:GetObjects("rbxassetid://93922799482853")[1]
-					VR_Model_Customization_GUI.Parent = gethui and gethui() or SafeGetService("CoreGui")
+					local VR_Model_Customization_GUI = game:GetObjects("rbxassetid://93922799482853")[1]
+					VR_Model_Customization_GUI.Parent = gethui and gethui() or CoreGui
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/presidentanvil/skyvr/main/VRCustomizationMain.lua"))()
 				end)
@@ -4069,7 +4038,7 @@ task.wait();
 					local oldpos = chr:GetPivot()
 					chr:BreakJoints()
 					p.CharacterAdded:Wait()
-					SafeGetService("RunService").Heartbeat:Wait()
+					RunService.Heartbeat:Wait()
 					chr = p.Character
 					chr:PivotTo(oldpos)
 				end)
@@ -4080,12 +4049,12 @@ task.wait();
 			if cmd == pf..name then
 				task.spawn(function()
 					local chr = p.Character or p.CharacterAdded:Wait()
-					local oldtime = SafeGetService("Players").RespawnTime
-					SafeGetService("Players").RespawnTime = 0.5
+					local oldtime = Players.RespawnTime
+					Players.RespawnTime = 0.5
 					task.wait(0.5)
 					chr:BreakJoints()
 					task.wait(0.5)
-					SafeGetService("Players").RespawnTime = oldtime
+					Players.RespawnTime = oldtime
 				end)
 			end
 		end
@@ -4131,17 +4100,16 @@ task.wait();
 			if cmd == pf..name then
 				task.spawn(function()
 					local chr = p.Character or p.CharacterAdded:Wait()
-					local oldpos = chr:GetPivot()
-					local oldtime = SafeGetService("Players").RespawnTime
-					SafeGetService("Players").RespawnTime = 0.5
+					local oldpos,oldtime = chr:GetPivot(),Players.RespawnTime
+					Players.RespawnTime = 0.5
 					task.wait(0.5)
 					chr:BreakJoints()
 					p.CharacterAdded:Wait()
-					SafeGetService("RunService").Heartbeat:Wait()
+					RunService.Heartbeat:Wait()
 					chr = p.Character
 					chr:PivotTo(oldpos)
 					task.wait(0.5)
-					SafeGetService("Players").RespawnTime = oldtime
+					Players.RespawnTime = oldtime
 				end)
 			end
 		end
@@ -4170,56 +4138,54 @@ task.wait();
 							if key == "Name" then
 								return "SpoofedLocalPlayer" 
 							elseif key == "Character" then
-								return Instance.new("Model", SafeGetService("Workspace")).Name == "SpoofedCharacter"
+								return Instance.new("Model", Workspace).Name == "SpoofedCharacter"
 							elseif key == "UserId" then
 								return 1234567890 
 							end
 						end
 					}
 
-					local existingLocalPlayer = SafeGetService("Players").LocalPlayer
+					local existingLocalPlayer,fakeLocalPlayer = Players.LocalPlayer,{}
 
-					local fakeLocalPlayer = {}
 					setmetatable(fakeLocalPlayer, playerMetatable)
 
-					local limbs = {LeftLeg = Instance.new("Part"),RightLeg = Instance.new("Part"),LeftArm = Instance.new("Part"),RightArm = Instance.new("Part"),Torso = Instance.new("Part"),Head = Instance.new("Part")}
-					local fakehum = Instance.new("Humanoid")
+					local limbs,fakehum = {LeftLeg = Instance.new("Part"),RightLeg = Instance.new("Part"),LeftArm = Instance.new("Part"),RightArm = Instance.new("Part"),Torso = Instance.new("Part"),Head = Instance.new("Part")},Instance.new("Humanoid")
 
 					task.spawn(function()
 						fakehum.Name = "SpoofedHumanoid"
 						fakehum.DisplayName = "HelloIAmSpoofedHaHa"
-						fakehum.Parent = SafeGetService("Workspace"):WaitForChild("SpoofedCharacter",10)
+						fakehum.Parent = Workspace:WaitForChild("SpoofedCharacter",10)
 						limbs.LeftArm.Anchored = true
 						limbs.LeftArm.CFrame = CFrame.new(0,9e9,0)
 						limbs.LeftArm.Size = Vector3.new(1,2,1)
-						limbs.LeftArm.Parent = SafeGetService("Workspace"):WaitForChild("SpoofedCharacter",10)
+						limbs.LeftArm.Parent = Workspace:WaitForChild("SpoofedCharacter",10)
 						limbs.LeftLeg.Anchored = true
 						limbs.LeftLeg.CFrame = CFrame.new(0,9e9,0)
 						limbs.LeftLeg.Size = Vector3.new(1,2,1)
-						limbs.LeftLeg.Parent = SafeGetService("Workspace"):WaitForChild("SpoofedCharacter",10)
+						limbs.LeftLeg.Parent = Workspace:WaitForChild("SpoofedCharacter",10)
 						limbs.RightArm.Anchored = true
 						limbs.RightArm.CFrame = CFrame.new(0,9e9,0)
 						limbs.RightArm.Size = Vector3.new(1,2,1)
-						limbs.RightArm.Parent = SafeGetService("Workspace"):WaitForChild("SpoofedCharacter",10)
+						limbs.RightArm.Parent = Workspace:WaitForChild("SpoofedCharacter",10)
 						limbs.RightLeg.Anchored = true
 						limbs.RightLeg.CFrame = CFrame.new(0,9e9,0)
 						limbs.RightLeg.Size = Vector3.new(1,2,1)
-						limbs.RightLeg.Parent = SafeGetService("Workspace"):WaitForChild("SpoofedCharacter",10)
+						limbs.RightLeg.Parent = Workspace:WaitForChild("SpoofedCharacter",10)
 						limbs.Torso.Anchored = true
 						limbs.Torso.CFrame = CFrame.new(0,9e9,0)
 						limbs.Torso.Size = Vector3.new(2,2,1)
-						limbs.Torso.Parent = SafeGetService("Workspace"):WaitForChild("SpoofedCharacter",10)
+						limbs.Torso.Parent = Workspace:WaitForChild("SpoofedCharacter",10)
 						limbs.Head.Anchored = true
 						limbs.Head.CFrame = CFrame.new(0,9e9,0)
 						limbs.Head.Size = Vector3.new(2,1,1)
-						limbs.Head.Parent = SafeGetService("Workspace"):WaitForChild("SpoofedCharacter",10)
+						limbs.Head.Parent = Workspace:WaitForChild("SpoofedCharacter",10)
 					end)
 
 					existingLocalPlayer.Name = fakeLocalPlayer.Name
 					existingLocalPlayer.UserId = fakeLocalPlayer.UserId
 
-					print("Spoofed LocalPlayer Name:", SafeGetService("Players").LocalPlayer.Name)
-					print("Spoofed LocalPlayer UserID:", SafeGetService("Players").LocalPlayer.UserId)
+					print("Spoofed LocalPlayer Name:", Players.LocalPlayer.Name)
+					print("Spoofed LocalPlayer UserID:", Players.LocalPlayer.UserId)
 				end)
 			end
 		end
@@ -4246,43 +4212,32 @@ by rqz
 https://discord.com/invite/aEZpBEHgMT
 ]]--
 
---===================================--
---=         Script Options          =--
---===================================--
+					--===================================--
+					--=         Script Options          =--
+					--===================================--
 
-transparent = true --toggle clientsided parts (dragon head, claws, etc)
-effects = false --toggle clientsided effects (punch effect, laser effect, etc), set this to false if you use an emulator and you are lagging
+					local transparent,effects = true,false --toggle clientsided parts (dragon head, claws, etc) --toggle clientsided effects (punch effect, laser effect, etc), set this to false if you use an emulator and you are lagging
 
---====================================--
---           FDless Options           --
---====================================--
+					--====================================--
+					--           FDless Options           --
+					--====================================--
+					
+					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this --toggle fling --adds shiftlock to patchma rig --adds control click tp --adds transparent parts showing your hats when you don't have real ones --adds click flinging regardless of attacks --highlight fling --disable character scripts  --fling with whole body --hides the red damage border when you die (respawn) --respawn tp mode 
+					-- 0 - stay at spawn
+					-- 1 - randomtp close
+					-- 2 - behind fake character
+					-- 3 - hide body
+					 --breakjoints mode
+					-- 1 - health+breakjoints (the most support)
+					-- 2 - health or breakjoints
+					-- 3 - breakjoints
+					 --sets simulation radius
 
-permadeath = true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
-fling = true --toggle fling
-allowshiftlock = true --adds shiftlock to patchma rig
-ctrltp = true --adds control click tp
-placeholders = true --adds transparent parts showing your hats when you don't have real ones
-clickfling = false --adds click flinging regardless of attacks
-highlightflingtargets = true --highlight fling
-discharscripts = true --disable character scripts
-flingchangestate = true --fling with whole body
-hidedeatheffect = true --hides the red damage border when you die (respawn)
-respawntp = 3 --respawn tp mode
--- 0 - stay at spawn
--- 1 - randomtp close
--- 2 - behind fake character
--- 3 - hide body
-breakjointsmethod = 1 --breakjoints mode
--- 1 - health+breakjoints (the most support)
--- 2 - health or breakjoints
--- 3 - breakjoints
-simrad = true --sets simulation radius
+					--==========================================================================================================================--
 
---==========================================================================================================================--
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sin%20Dragon"))()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sin%20Dragon"))()
-
---==========================================================================================================================--
+					--==========================================================================================================================--
 				end)
 			end
 		end
@@ -4301,36 +4256,17 @@ by rqz
 https://discord.com/invite/aEZpBEHgMT
 ]]--
 
---====================================--
---           FDless Options           --
---====================================--
+					--====================================--
+					--           FDless Options           --
+					--====================================--
+					
+					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
-permadeath = true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
-fling = true --toggle fling
-allowshiftlock = true --adds shiftlock to patchma rig
-ctrltp = true --adds control click tp
-placeholders = true --adds transparent parts showing your hats when you don't have real ones
-clickfling = false --adds click flinging regardless of attacks
-highlightflingtargets = true --highlight fling
-discharscripts = true --disable character scripts
-flingchangestate = true --fling with whole body
-hidedeatheffect = true --hides the red damage border when you die (respawn)
-respawntp = 3 --respawn tp mode
--- 0 - stay at spawn
--- 1 - randomtp close
--- 2 - behind fake character
--- 3 - hide body
-breakjointsmethod = 1 --breakjoints mode
--- 1 - health+breakjoints (the most support)
--- 2 - health or breakjoints
--- 3 - breakjoints
-simrad = true --sets simulation radius
+					--==========================================================================================================================--
 
---==========================================================================================================================--
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Good%20Cop%20Bad%20Cop"))()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Good%20Cop%20Bad%20Cop"))()
-
---==========================================================================================================================--
+					--==========================================================================================================================--
 				end)
 			end
 		end
@@ -4349,36 +4285,17 @@ by rqz
 https://discord.com/invite/aEZpBEHgMT
 ]]--
 
---====================================--
---           FDless Options           --
---====================================--
+					--====================================--
+					--           FDless Options           --
+					--====================================--
+					
+					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
-permadeath = true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
-fling = true --toggle fling
-allowshiftlock = true --adds shiftlock to patchma rig
-ctrltp = true --adds control click tp
-placeholders = true --adds transparent parts showing your hats when you don't have real ones
-clickfling = false --adds click flinging regardless of attacks
-highlightflingtargets = true --highlight fling
-discharscripts = true --disable character scripts
-flingchangestate = true --fling with whole body
-hidedeatheffect = true --hides the red damage border when you die (respawn)
-respawntp = 3 --respawn tp mode
--- 0 - stay at spawn
--- 1 - randomtp close
--- 2 - behind fake character
--- 3 - hide body
-breakjointsmethod = 1 --breakjoints mode
--- 1 - health+breakjoints (the most support)
--- 2 - health or breakjoints
--- 3 - breakjoints
-simrad = true --sets simulation radius
+					--==========================================================================================================================--
 
---==========================================================================================================================--
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Goner"))()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Goner"))()
-
---==========================================================================================================================--
+					--==========================================================================================================================--
 				end)
 			end
 		end
@@ -4397,36 +4314,38 @@ by rqz
 https://discord.com/invite/aEZpBEHgMT
 ]]--
 
---====================================--
---           FDless Options           --
---====================================--
+					--====================================--
+					--           FDless Options           --
+					--====================================--
+					
+					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,true,true,true,true,true,3,1,true
 
-permadeath = true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
-fling = true --toggle fling
-allowshiftlock = true --adds shiftlock to patchma rig
-ctrltp = true --adds control click tp
-placeholders = true --adds transparent parts showing your hats when you don't have real ones
-clickfling = true --adds click flinging regardless of attacks
-highlightflingtargets = true --highlight fling
-discharscripts = true --disable character scripts
-flingchangestate = true --fling with whole body
-hidedeatheffect = true --hides the red damage border when you die (respawn)
-respawntp = 3 --respawn tp mode
--- 0 - stay at spawn
--- 1 - randomtp close
--- 2 - behind fake character
--- 3 - hide body
-breakjointsmethod = 1 --breakjoints mode
--- 1 - health+breakjoints (the most support)
--- 2 - health or breakjoints
--- 3 - breakjoints
-simrad = true --sets simulation radius
+					permadeath = true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
+					fling = true --toggle fling
+					allowshiftlock = true --adds shiftlock to patchma rig
+					ctrltp = true --adds control click tp
+					placeholders = true --adds transparent parts showing your hats when you don't have real ones
+					clickfling = true --adds click flinging regardless of attacks
+					highlightflingtargets = true --highlight fling
+					discharscripts = true --disable character scripts
+					flingchangestate = true --fling with whole body
+					hidedeatheffect = true --hides the red damage border when you die (respawn)
+					respawntp = 3 --respawn tp mode
+					-- 0 - stay at spawn
+					-- 1 - randomtp close
+					-- 2 - behind fake character
+					-- 3 - hide body
+					breakjointsmethod = 1 --breakjoints mode
+					-- 1 - health+breakjoints (the most support)
+					-- 2 - health or breakjoints
+					-- 3 - breakjoints
+					simrad = true --sets simulation radius
 
---==========================================================================================================================--
+					--==========================================================================================================================--
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Krystal%20Dance"))()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Krystal%20Dance"))()
 
---==========================================================================================================================--
+					--==========================================================================================================================--
 				end)
 			end
 		end
@@ -4445,36 +4364,17 @@ by rqz
 https://discord.com/invite/aEZpBEHgMT
 ]]--
 
---====================================--
---           FDless Options           --
---====================================--
+					--====================================--
+					--           FDless Options           --
+					--====================================--
+					
+					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
-permadeath = true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
-fling = true --toggle fling
-allowshiftlock = true --adds shiftlock to patchma rig
-ctrltp = true --adds control click tp
-placeholders = true --adds transparent parts showing your hats when you don't have real ones
-clickfling = false --adds click flinging regardless of attacks
-highlightflingtargets = true --highlight fling
-discharscripts = true --disable character scripts
-flingchangestate = true --fling with whole body
-hidedeatheffect = true --hides the red damage border when you die (respawn)
-respawntp = 3 --respawn tp mode
--- 0 - stay at spawn
--- 1 - randomtp close
--- 2 - behind fake character
--- 3 - hide body
-breakjointsmethod = 1 --breakjoints mode
--- 1 - health+breakjoints (the most support)
--- 2 - health or breakjoints
--- 3 - breakjoints
-simrad = true --sets simulation radius
+					--==========================================================================================================================--
 
---==========================================================================================================================--
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Gale%20Fighter"))()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Gale%20Fighter"))()
-
---==========================================================================================================================--
+					--==========================================================================================================================--
 				end)
 			end
 		end
@@ -4493,36 +4393,17 @@ by rqz
 https://discord.com/invite/aEZpBEHgMT
 ]]--
 
---====================================--
---           FDless Options           --
---====================================--
+					--====================================--
+					--           FDless Options           --
+					--====================================--
+					
+					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
-permadeath = true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
-fling = true --toggle fling
-allowshiftlock = true --adds shiftlock to patchma rig
-ctrltp = true --adds control click tp
-placeholders = true --adds transparent parts showing your hats when you don't have real ones
-clickfling = false --adds click flinging regardless of attacks
-highlightflingtargets = true --highlight fling
-discharscripts = true --disable character scripts
-flingchangestate = true --fling with whole body
-hidedeatheffect = true --hides the red damage border when you die (respawn)
-respawntp = 3 --respawn tp mode
--- 0 - stay at spawn
--- 1 - randomtp close
--- 2 - behind fake character
--- 3 - hide body
-breakjointsmethod = 1 --breakjoints mode
--- 1 - health+breakjoints (the most support)
--- 2 - health or breakjoints
--- 3 - breakjoints
-simrad = true --sets simulation radius
+					--==========================================================================================================================--
 
---==========================================================================================================================--
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Dearsister"))()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Dearsister"))()
-
---==========================================================================================================================--
+					--==========================================================================================================================--
 				end)
 			end
 		end
@@ -4531,52 +4412,53 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/mai
 			if cmd == pf..name then
 				task.spawn(function()
 					-- RUN LIMB REANIM NOTI
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-	Title = "Limb Reanim V2";
-	Text = "ENJOY!";
-	Icon = "rbxthumb://type=Asset&id=13775452736&w=150&h=150"})
-Duration = 15;
+					StarterGui:SetCore("SendNotification", { 
+						Title = "Limb Reanim V2";
+						Text = "ENJOY!";
+						Icon = "rbxthumb://type=Asset&id=13775452736&w=150&h=150";
+						Duration = 15;
+					})
 
--- SETTINGS --
-local settings = _G
+					-- SETTINGS --
+					local settings = _G
 
-settings["Use default animations"] = true
-settings["Fake character transparency level"] = 1 -- 0 to disable
-settings["Disable character scripts"] = true
-settings["Fake character should collide"] = true
-settings["Parent real character to fake character"] = false
-settings["Respawn character"] = true --[[ only should be disabled if
+					settings["Use default animations"] = true
+					settings["Fake character transparency level"] = 1 -- 0 to disable
+					settings["Disable character scripts"] = true
+					settings["Fake character should collide"] = true
+					settings["Parent real character to fake character"] = false
+					settings["Respawn character"] = true --[[ only should be disabled if
 your character havent played ANY animations, otherwise it breaks the reanimate ]]
-settings["Instant respawn"] = false --[[ Instant respawns the
+					settings["Instant respawn"] = false --[[ Instant respawns the
 character, it will still wait the respawn time, but your character wont be dead.
 Requires: replicatesignal function
 Enable if you want the feature
 ]]
-settings["Hide HumanoidRootPart"] = false --[[ Enabled by default. when enabled, your chat bubble or name tag
+					settings["Hide HumanoidRootPart"] = false --[[ Enabled by default. when enabled, your chat bubble or name tag
 will not appear above your character, but you will have your character immortal in the Fencing arena.
 ]]
-settings["Hide HumanoidRootPart"] = false --[[ Enabled by default. when enabled, your chat bubble or name tag
+					settings["Hide HumanoidRootPart"] = false --[[ Enabled by default. when enabled, your chat bubble or name tag
 will not appear above your character, but you will have your character immortal in the Fencing arena.
 ]]
-settings["PermaDeath fake character"] = false --[[When enabled, when you die when the reanimate is on, you
+					settings["PermaDeath fake character"] = false --[[When enabled, when you die when the reanimate is on, you
 wont respawn. If you want respawn, set it to false
 ]]
 
-settings["Names to exclude from transparency"] = {
+					settings["Names to exclude from transparency"] = {
     --[[ example:
     ["HumanoidRootPart"] = true,
     ["Left Arm"] = true
     ]]
-}
-(function() if getgenv then return getgenv() else return _G end end)().fling = nil
-local finished = false
+					}
+					(function() if getgenv then return getgenv() else return _G end end)().fling = nil
+					local finished = false
 
-task.spawn(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/somethingsimade/CurrentAngleV2/refs/heads/main/v2"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Scripts/refs/heads/main/Epik%20R6%20Dancezz"))()
-end)
+					task.spawn(function()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/somethingsimade/CurrentAngleV2/refs/heads/main/v2"))()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Scripts/refs/heads/main/Epik%20R6%20Dancezz"))()
+					end)
 
-repeat task.wait() until finished
+					repeat task.wait() until finished
 				end)
 			end
 		end
@@ -4603,36 +4485,17 @@ by rqz
 https://discord.com/invite/aEZpBEHgMT
 ]]--
 
---====================================--
---           FDless Options           --
---====================================--
+					--====================================--
+					--           FDless Options           --
+					--====================================--
+					
+					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
-permadeath = true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
-fling = true --toggle fling
-allowshiftlock = true --adds shiftlock to patchma rig
-ctrltp = true --adds control click tp
-placeholders = true --adds transparent parts showing your hats when you don't have real ones
-clickfling = false --adds click flinging regardless of attacks
-highlightflingtargets = true --highlight fling
-discharscripts = true --disable character scripts
-flingchangestate = true --fling with whole body
-hidedeatheffect = true --hides the red damage border when you die (respawn)
-respawntp = 3 --respawn tp mode
--- 0 - stay at spawn
--- 1 - randomtp close
--- 2 - behind fake character
--- 3 - hide body
-breakjointsmethod = 1 --breakjoints mode
--- 1 - health+breakjoints (the most support)
--- 2 - health or breakjoints
--- 3 - breakjoints
-simrad = true --sets simulation radius
+					--==========================================================================================================================--
 
---==========================================================================================================================--
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Ban%20Hammer"))()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Ban%20Hammer"))()
-
---==========================================================================================================================--
+					--==========================================================================================================================--
 				end)
 			end
 		end
@@ -4651,36 +4514,17 @@ by rqz
 https://discord.com/invite/aEZpBEHgMT
 ]]--
 
---====================================--
---           FDless Options           --
---====================================--
+					--====================================--
+					--           FDless Options           --
+					--====================================--
+					
+					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
-permadeath = true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
-fling = true --toggle fling
-allowshiftlock = true --adds shiftlock to patchma rig
-ctrltp = true --adds control click tp
-placeholders = true --adds transparent parts showing your hats when you don't have real ones
-clickfling = false --adds click flinging regardless of attacks
-highlightflingtargets = true --highlight fling
-discharscripts = true --disable character scripts
-flingchangestate = true --fling with whole body
-hidedeatheffect = true --hides the red damage border when you die (respawn)
-respawntp = 3 --respawn tp mode
--- 0 - stay at spawn
--- 1 - randomtp close
--- 2 - behind fake character
--- 3 - hide body
-breakjointsmethod = 1 --breakjoints mode
--- 1 - health+breakjoints (the most support)
--- 2 - health or breakjoints
--- 3 - breakjoints
-simrad = true --sets simulation radius
+					--==========================================================================================================================--
 
---==========================================================================================================================--
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/AK-47"))()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/AK-47"))()
-
---==========================================================================================================================--
+					--==========================================================================================================================--
 				end)
 			end
 		end
@@ -4699,36 +4543,17 @@ by rqz
 https://discord.com/invite/aEZpBEHgMT
 ]]--
 
---====================================--
---           FDless Options           --
---====================================--
+					--====================================--
+					--           FDless Options           --
+					--====================================--
+					
+					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
-permadeath = true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
-fling = true --toggle fling
-allowshiftlock = true --adds shiftlock to patchma rig
-ctrltp = true --adds control click tp
-placeholders = true --adds transparent parts showing your hats when you don't have real ones
-clickfling = false --adds click flinging regardless of attacks
-highlightflingtargets = true --highlight fling
-discharscripts = true --disable character scripts
-flingchangestate = true --fling with whole body
-hidedeatheffect = true --hides the red damage border when you die (respawn)
-respawntp = 3 --respawn tp mode
--- 0 - stay at spawn
--- 1 - randomtp close
--- 2 - behind fake character
--- 3 - hide body
-breakjointsmethod = 1 --breakjoints mode
--- 1 - health+breakjoints (the most support)
--- 2 - health or breakjoints
--- 3 - breakjoints
-simrad = true --sets simulation radius
+					--==========================================================================================================================--
 
---==========================================================================================================================--
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Neptunian%20V"))()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Neptunian%20V"))()
-
---==========================================================================================================================--
+					--==========================================================================================================================--
 				end)
 			end
 		end
@@ -4747,36 +4572,17 @@ by rqz
 https://discord.com/invite/aEZpBEHgMT
 ]]--
 
---====================================--
---           FDless Options           --
---====================================--
+					--====================================--
+					--           FDless Options           --
+					--====================================--
+					
+					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
-permadeath = true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
-fling = true --toggle fling
-allowshiftlock = true --adds shiftlock to patchma rig
-ctrltp = true --adds control click tp
-placeholders = true --adds transparent parts showing your hats when you don't have real ones
-clickfling = false --adds click flinging regardless of attacks
-highlightflingtargets = true --highlight fling
-discharscripts = true --disable character scripts
-flingchangestate = true --fling with whole body
-hidedeatheffect = true --hides the red damage border when you die (respawn)
-respawntp = 3 --respawn tp mode
--- 0 - stay at spawn
--- 1 - randomtp close
--- 2 - behind fake character
--- 3 - hide body
-breakjointsmethod = 1 --breakjoints mode
--- 1 - health+breakjoints (the most support)
--- 2 - health or breakjoints
--- 3 - breakjoints
-simrad = true --sets simulation radius
+					--==========================================================================================================================--
 
---==========================================================================================================================--
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sniper"))()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sniper"))()
-
---==========================================================================================================================--
+					--==========================================================================================================================--
 				end)
 			end
 		end
@@ -4795,36 +4601,17 @@ by rqz
 https://discord.com/invite/aEZpBEHgMT
 ]]--
 
---====================================--
---           FDless Options           --
---====================================--
+					--====================================--
+					--           FDless Options           --
+					--====================================--
+					
+					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
-permadeath = true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
-fling = true --toggle fling
-allowshiftlock = true --adds shiftlock to patchma rig
-ctrltp = true --adds control click tp
-placeholders = true --adds transparent parts showing your hats when you don't have real ones
-clickfling = false --adds click flinging regardless of attacks
-highlightflingtargets = true --highlight fling
-discharscripts = true --disable character scripts
-flingchangestate = true --fling with whole body
-hidedeatheffect = true --hides the red damage border when you die (respawn)
-respawntp = 3 --respawn tp mode
--- 0 - stay at spawn
--- 1 - randomtp close
--- 2 - behind fake character
--- 3 - hide body
-breakjointsmethod = 1 --breakjoints mode
--- 1 - health+breakjoints (the most support)
--- 2 - health or breakjoints
--- 3 - breakjoints
-simrad = true --sets simulation radius
+					--==========================================================================================================================--
 
---==========================================================================================================================--
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Studio%20Dummy"))()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Studio%20Dummy"))()
-
---==========================================================================================================================--
+					--==========================================================================================================================--
 				end)
 			end
 		end
@@ -4843,36 +4630,17 @@ by rqz
 https://discord.com/invite/aEZpBEHgMT
 ]]--
 
---====================================--
---           FDless Options           --
---====================================--
+					--====================================--
+					--           FDless Options           --
+					--====================================--
+					
+					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
-permadeath = true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
-fling = true --toggle fling
-allowshiftlock = true --adds shiftlock to patchma rig
-ctrltp = true --adds control click tp
-placeholders = true --adds transparent parts showing your hats when you don't have real ones
-clickfling = false --adds click flinging regardless of attacks
-highlightflingtargets = true --highlight fling
-discharscripts = true --disable character scripts
-flingchangestate = true --fling with whole body
-hidedeatheffect = true --hides the red damage border when you die (respawn)
-respawntp = 3 --respawn tp mode
--- 0 - stay at spawn
--- 1 - randomtp close
--- 2 - behind fake character
--- 3 - hide body
-breakjointsmethod = 1 --breakjoints mode
--- 1 - health+breakjoints (the most support)
--- 2 - health or breakjoints
--- 3 - breakjoints
-simrad = true --sets simulation radius
+					--==========================================================================================================================--
 
---==========================================================================================================================--
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sadist%20Genocider"))()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sadist%20Genocider"))()
-
---==========================================================================================================================--
+					--==========================================================================================================================--
 				end)
 			end
 		end
@@ -4891,36 +4659,17 @@ by rqz
 https://discord.com/invite/aEZpBEHgMT
 ]]--
 
---====================================--
---           FDless Options           --
---====================================--
+					--====================================--
+					--           FDless Options           --
+					--====================================--
+					
+					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
-permadeath = true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
-fling = true --toggle fling
-allowshiftlock = true --adds shiftlock to patchma rig
-ctrltp = true --adds control click tp
-placeholders = true --adds transparent parts showing your hats when you don't have real ones
-clickfling = false --adds click flinging regardless of attacks
-highlightflingtargets = true --highlight fling
-discharscripts = true --disable character scripts
-flingchangestate = true --fling with whole body
-hidedeatheffect = true --hides the red damage border when you die (respawn)
-respawntp = 3 --respawn tp mode
--- 0 - stay at spawn
--- 1 - randomtp close
--- 2 - behind fake character
--- 3 - hide body
-breakjointsmethod = 1 --breakjoints mode
--- 1 - health+breakjoints (the most support)
--- 2 - health or breakjoints
--- 3 - breakjoints
-simrad = true --sets simulation radius
+					--==========================================================================================================================--
 
---==========================================================================================================================--
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Minigun"))()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Minigun"))()
-
---==========================================================================================================================--
+					--==========================================================================================================================--
 				end)
 			end
 		end
@@ -4939,42 +4688,23 @@ by rqz
 https://discord.com/invite/aEZpBEHgMT
 ]]--
 
---===================================--
---=         Script Options          =--
---===================================--
+					--===================================--
+					--=         Script Options          =--
+					--===================================--
 
-DisableRedAnimatedText = true --disables the animated text that keeps popping up on screen, does not disable Kills, Target or Script Title
+					local DisableRedAnimatedText = true --disables the animated text that keeps popping up on screen, does not disable Kills, Target or Script Title
 
---====================================--
---           FDless Options           --
---====================================--
+					--====================================--
+					--           FDless Options           --
+					--====================================--
+					
+					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
-permadeath = true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
-fling = true --toggle fling
-allowshiftlock = true --adds shiftlock to patchma rig
-ctrltp = true --adds control click tp
-placeholders = true --adds transparent parts showing your hats when you don't have real ones
-clickfling = false --adds click flinging regardless of attacks
-highlightflingtargets = true --highlight fling
-discharscripts = true --disable character scripts
-flingchangestate = true --fling with whole body
-hidedeatheffect = true --hides the red damage border when you die (respawn)
-respawntp = 3 --respawn tp mode
--- 0 - stay at spawn
--- 1 - randomtp close
--- 2 - behind fake character
--- 3 - hide body
-breakjointsmethod = 1 --breakjoints mode
--- 1 - health+breakjoints (the most support)
--- 2 - health or breakjoints
--- 3 - breakjoints
-simrad = true --sets simulation radius
+					--==========================================================================================================================--
 
---==========================================================================================================================--
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Puppet%20Master"))()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Puppet%20Master"))()
-
---==========================================================================================================================--
+					--==========================================================================================================================--
 				end)
 			end
 		end
@@ -4993,36 +4723,17 @@ by rqz
 https://discord.com/invite/aEZpBEHgMT
 ]]--
 
---====================================--
---           FDless Options           --
---====================================--
+					--====================================--
+					--           FDless Options           --
+					--====================================--
+					
+					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
-permadeath = true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
-fling = true --toggle fling
-allowshiftlock = true --adds shiftlock to patchma rig
-ctrltp = true --adds control click tp
-placeholders = true --adds transparent parts showing your hats when you don't have real ones
-clickfling = false --adds click flinging regardless of attacks
-highlightflingtargets = true --highlight fling
-discharscripts = true --disable character scripts
-flingchangestate = true --fling with whole body
-hidedeatheffect = true --hides the red damage border when you die (respawn)
-respawntp = 3 --respawn tp mode
--- 0 - stay at spawn
--- 1 - randomtp close
--- 2 - behind fake character
--- 3 - hide body
-breakjointsmethod = 1 --breakjoints mode
--- 1 - health+breakjoints (the most support)
--- 2 - health or breakjoints
--- 3 - breakjoints
-simrad = true --sets simulation radius
+					--==========================================================================================================================--
 
---==========================================================================================================================--
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Motorcycle"))()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Motorcycle"))()
-
---==========================================================================================================================--
+					--==========================================================================================================================--
 				end)
 			end
 		end
@@ -5036,7 +4747,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/mai
 		Commands(prefix, input.Text)
 	end)
 
-	local chatprefix = SafeGetService("TextChatService").ChatVersion == Enum.ChatVersion.LegacyChatService and ">" or "&gt;"
+	local chatprefix = TextChatService.ChatVersion == Enum.ChatVersion.TextChatService and "&gt;" or ">"
 
 	p.Chatted:Connect(function(msg)
 		Commands(chatprefix, msg)
@@ -5047,7 +4758,9 @@ task.spawn(C_c);
 local function C_67()
 	local script = G2L["67"];
 	-- rewritten by E God
-
+	
+	local RunService = SafeGetService("RunService")
+	
 	for _, cmds in pairs(script.Parent:GetChildren()) do
 		if cmds:IsA("TextButton") and cmds:FindFirstChild("Info") then
 			local db = false
@@ -5058,11 +4771,11 @@ local function C_67()
 				db = true
 				local backupmsg = cmds.Text
 				print(cmds.Info.Value)
-				SafeGetService("RunService").RenderStepped:Wait()
+				RunService.RenderStepped:Wait()
 				cmds.Text = "Check Console for info on the command. (mobile: /console, computer: F9)"
 				task.wait(3)
 				cmds.Text = backupmsg
-				SafeGetService("RunService").RenderStepped:Wait()
+				RunService.RenderStepped:Wait()
 				db = false
 			end)
 		end
