@@ -11,12 +11,6 @@
 
 local env = getgenv and getgenv() or (_G or shared)
 
-if not env.E_COMMANDS_LOADED then
-	env.E_COMMANDS_LOADED = true
-else
-	return
-end
-
 local function SafeGetService(name) -- credits to nameless admin
 	local Service = (game.GetService);
 	local Reference = (cloneref) or function(reference) return reference end
