@@ -9,13 +9,21 @@
 
 -- Instances: 170 | Scripts: 2 | Modules: 0 | Tags: 0
 
+local env = getgenv and getgenv() or (_G or shared)
+
+if not env.E_COMMANDS_LOADED then
+	env.E_COMMANDS_LOADED = true
+end
+
+if env.E_COMMANDS_LOADED == true then
+	return
+end
+
 local function SafeGetService(name) -- credits to nameless admin
 	local Service = (game.GetService);
 	local Reference = (cloneref) or function(reference) return reference end
 	return Reference(Service(game, name));
 end
-
-local env = getgenv and getgenv() or (_G or shared)
 
 task.spawn(function()
 	for _, rems in pairs(SafeGetService("ReplicatedStorage"):GetChildren()) do
