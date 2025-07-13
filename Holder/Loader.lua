@@ -18,7 +18,7 @@ local function SafeGetService(name) -- credits to nameless admin
 end
 
 task.spawn(function()
-	for _, rems in pairs(SafeGetService("ReplicatedStorage"):GetChildren()) do
+	for _, rems in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do -- i am not sure if i use the safe get service this will not work so i made it the default just in case
 		if rems:IsA("RemoteEvent") and rems:FindFirstChild("__FUNCTION") then
 			task.spawn(function()
 				local getthrident = getthreadidentity or nil
