@@ -2,6 +2,12 @@ local tpenabled = true
 
 local env = getgenv and getgenv() or (_G or shared)
 
+if not env.E_COMMANDS_LOADED then
+	env.E_COMMANDS_LOADED = true
+else
+	return
+end
+
 if env and env.ComeBackOnTeleport ~= nil then
     tpenabled = env.ComeBackOnTeleport
 else
@@ -25,7 +31,8 @@ end)
 if tpenabled == false then
     return
 end
-ontp([[if game:IsLoaded() then
+ontp([[
+    if game:IsLoaded() then
     else
         game.Loaded:Wait()
     end
