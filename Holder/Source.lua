@@ -17,8 +17,8 @@ local function SafeGetService(name) -- credits to nameless admin
 	return Reference(Service(game, name));
 end
 
-task.spawn(function() -- i forgot who made this
-	for _, rems in pairs(SafeGetService("ReplicatedStorage"):GetChildren()) do
+task.spawn(function()
+	for _, rems in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do -- i am not sure if i use the safe get service this will not work so i made it the default just in case
 		if rems:IsA("RemoteEvent") and rems:FindFirstChild("__FUNCTION") then
 			task.spawn(function()
 				local getthrident = getthreadidentity or nil
@@ -769,7 +769,7 @@ G2L["39"]["Text"] = [[ >frakturess]];
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >frakturess.Info
 G2L["3a"] = Instance.new("StringValue", G2L["39"]);
 G2L["3a"]["Name"] = [[Info]];
-G2L["3a"]["Value"] = [[Command Info: Executes Frakture SS. (backdoor scanner) (idk if this is discontinued honestly)]];
+G2L["3a"]["Value"] = [[Command Info: Executes Rift Hub. (great hub for forsaken,gag,99nitf,ink game,and more) (includes a key system sadly BUT it is worth it)]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >chatbot
@@ -1048,14 +1048,14 @@ G2L["53"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], 
 G2L["53"]["ZIndex"] = 2147483647;
 G2L["53"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["53"]["BackgroundTransparency"] = 1;
-G2L["53"]["Name"] = [[ >brookhaven]];
-G2L["53"]["Text"] = [[ >brookhaven]];
+G2L["53"]["Name"] = [[ >talentless]];
+G2L["53"]["Text"] = [[ >talentless]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >brookhaven.Info
 G2L["54"] = Instance.new("StringValue", G2L["53"]);
 G2L["54"]["Name"] = [[Info]];
-G2L["54"]["Value"] = [[Command Info: Brookhaven trolling script.]];
+G2L["54"]["Value"] = [[Command Info: Executes a Piano Auto Player Gui.]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >animlogs
@@ -1114,14 +1114,14 @@ G2L["59"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], 
 G2L["59"]["ZIndex"] = 2147483647;
 G2L["59"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["59"]["BackgroundTransparency"] = 1;
-G2L["59"]["Name"] = [[ >vghub]];
-G2L["59"]["Text"] = [[ >vghub]];
+G2L["59"]["Name"] = [[ >snail]];
+G2L["59"]["Text"] = [[ >snail]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >vghub.Info
 G2L["5a"] = Instance.new("StringValue", G2L["59"]);
 G2L["5a"]["Name"] = [[Info]];
-G2L["5a"]["Value"] = [[Command Info: A script hub with a lot of games.]];
+G2L["5a"]["Value"] = [[Command Info: Turns you into a sliding head basically. Controls: ]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >scpfuturistic
@@ -2448,6 +2448,14 @@ local function C_c()
 		return a + (b - a) * t
 	end
 
+	function OutputMsg(text)
+		task.spawn(function()
+			output.Text = tostring(text)
+			task.wait(4)
+			output.Text = ""
+		end)
+	end
+
 	local getPlr = function(Name)
 		if Name:lower() == "random" then
 			return Players:GetPlayers()[math.random(#Players:GetPlayers())]
@@ -2574,6 +2582,9 @@ local function C_c()
 		neptv = {"neptv","neptunianv"},
 		puppetmas = {"puppetmas","puppetmaster"},
 		sadist = {"sadist"},
+		rift = {"rift","rifthub"},
+		piano = {"piano","pianogui","playpiano","talentless","autoplaypiano"},
+		snail = {"bug","slug","snail","insect"},
 	}
 
 	local function Commands(pf, text)
@@ -2586,6 +2597,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+					OutputMsg("Successfully ran Inf Yield")
 				end)
 			end
 		end
@@ -2594,6 +2606,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/MoonzyDev/Roblox-Scripts/refs/heads/main/BypassedDarkDexV3.lua"))()
+					OutputMsg("Successfully ran Dex V3 Bypassed")
 				end)
 			end
 		end
@@ -2662,6 +2675,8 @@ local function C_c()
 						end
 					end
 
+					OutputMsg("Successfully ran E God's Punch - Press K to punch")
+
 					fling()
 				end)
 			end
@@ -2670,6 +2685,7 @@ local function C_c()
 		for _, name in pairs(allcmds.fly) do
 			if cmd == pf..name then
 				task.spawn(function()
+					OutputMsg("Fly Enabled")
 					local ctrlModule = nil 
 					pcall(function() ctrlModule = require(Players.LocalPlayer:FindFirstChildOfClass("PlayerScripts"):WaitForChild('PlayerModule',5):WaitForChild("ControlModule",5)) end)
 
@@ -2773,6 +2789,7 @@ local function C_c()
 		for _, name in pairs(allcmds.cmds) do
 			if cmd == pf..name then
 				task.spawn(function()
+					OutputMsg("Opened Command list")
 					cmdlist.Visible = true
 				end)
 			end
@@ -2782,6 +2799,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/JSFKGBASDJKHIOAFHDGHIUODSGBJKLFGDKSB/fe/refs/heads/main/FEHUGG"))()
+					OutputMsg("Successfully ran FE Hug")
 				end)
 			end
 		end
@@ -2798,6 +2816,7 @@ local function C_c()
 						end
 					end
 					Clip = true
+					OutputMsg("Disabled Noclip")
 				end)
 			end
 		end
@@ -2806,6 +2825,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source"))()
+					OutputMsg("Successfully ran CMD-X")
 				end)
 			end
 		end
@@ -2820,6 +2840,7 @@ local function C_c()
 
 					local players = getPlr(Username)
 					TweenService:Create(getRoot(speaker.Character), TweenInfo.new(3, Enum.EasingStyle.Linear), {CFrame = getRoot(players.Character).CFrame + Vector3.new(3,1,0)}):Play()
+					OutputMsg("Teleported to "..players.Name)
 				end)
 			end
 		end
@@ -2828,6 +2849,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/k4scripts/backdoor.exe/v8/src/main.lua"))()
+					OutputMsg("Successfully ran Backdoor.EXE")
 				end)
 			end
 		end
@@ -3038,6 +3060,7 @@ local function C_c()
 					if AllBool then
 						for _,x in next, Players:GetPlayers() do
 							SkidFling(x)
+							OutputMsg("Flung everyone")
 						end
 					end
 
@@ -3047,6 +3070,7 @@ local function C_c()
 								local TPlayer = GetPlayer(x)
 								if TPlayer then
 									SkidFling(TPlayer)
+									OutputMsg("Flung "..TPlayer.Name)
 								end
 							else
 							end
@@ -3060,7 +3084,8 @@ local function C_c()
 		for _, name in pairs(allcmds.invis) do
 			if cmd == pf..name then
 				task.spawn(function()
-					loadstring(game:HttpGet('https://pastebin.com/raw/3Rnd9rHf'))()
+					loadstring(game:HttpGet("https://pastebin.com/raw/vP6CrQJj"))()
+					OutputMsg("Successfully ran Invisibility")
 				end)
 			end
 		end
@@ -3087,6 +3112,7 @@ local function C_c()
 							end
 						end
 					end)
+					OutputMsg("Enabled Walkspeed (TPWalk) at "..Speed.." speed")
 				end)
 			end
 		end
@@ -3100,6 +3126,7 @@ local function C_c()
 							v:Destroy()
 						end
 					end
+					OutputMsg("Disabled Fly")
 				end)
 			end
 		end
@@ -3107,7 +3134,7 @@ local function C_c()
 		for _, name in pairs(allcmds.vghub) do
 			if cmd == pf..name then
 				task.spawn(function()
-					loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+					OutputMsg("VG Hub is currently Discontinued so this command will be replaced soon")
 				end)
 			end
 		end
@@ -3127,6 +3154,7 @@ local function C_c()
 						end
 					end
 					Noclipping = RunService.Stepped:Connect(NoclipLoop)
+					OutputMsg("Enabled Noclip")
 				end)
 			end
 		end
@@ -3134,6 +3162,7 @@ local function C_c()
 		for _, name in pairs(allcmds.rejoin) do
 			if cmd == pf..name then
 				task.spawn(function()
+					OutputMsg("Rejoining...")
 					TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, Players.LocalPlayer)
 				end)
 			end
@@ -3143,6 +3172,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/SpiderScriptRB/SpiderScriptRBUniversal/refs/heads/main/Protected_Spider.txt"))()
+					OutputMsg("Successfully ran SCP-096")
 				end)
 			end
 		end
@@ -3151,6 +3181,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/uPGrjsd6"))()
+					OutputMsg("Successfully ran Spy Gui")
 				end)
 			end
 		end
@@ -3159,6 +3190,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					cmdlist.Visible = false
+					OutputMsg("Closed Commands list")
 				end)
 			end
 		end
@@ -3167,6 +3199,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/Guerric9018/chatbothub/main/ChatbotHub.lua"))()
+					OutputMsg("Successfully ran Chat Bot Hub")
 				end)
 			end
 		end
@@ -3175,6 +3208,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/iMSiUd3k"))()
+					OutputMsg("Successfully ran Chat Spy (Currently broken for now)")
 				end)
 			end
 		end
@@ -3183,6 +3217,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/Damian-11/quizbot/master/quizbot.luau"))()
+					OutputMsg("Successfully ran Quiz Gui")
 				end)
 			end
 		end
@@ -3191,6 +3226,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/OpenSource/main/rizzler.lua"))()
+					OutputMsg("Successfully ran Rizzler Gui (Currently broken for now)")
 				end)
 			end
 		end
@@ -3209,6 +3245,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/AKadminlol/Chatdraw/refs/heads/main/Chattdraw"))()
+					OutputMsg("Successfully ran Chat Draw")
 				end)
 			end
 		end
@@ -3217,6 +3254,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Blackking%20And%20BobHub"))()
+					OutputMsg("Successfully ran Doors Gui")
 				end)
 			end
 		end
@@ -3225,6 +3263,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/Gi7331/scripts/main/Emote.lua"))()
+					OutputMsg("Successfully ran Emotes Gui")
 				end)
 			end
 		end
@@ -3233,6 +3272,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet('https://raw.githubusercontent.com/randomstring0/pshade-ultimate/refs/heads/main/src/cd.lua'))()
+					OutputMsg("Successfully ran Graphics Gui")
 				end)
 			end
 		end
@@ -3241,6 +3281,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/mHaznh3T"))()
+					OutputMsg("Successfully ran Anti Fling")
 				end)
 			end
 		end
@@ -3249,6 +3290,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet('https://raw.githubusercontent.com/infyiff/backup/main/audiologger.lua'))()
+					OutputMsg("Successfully ran Audio Logger")
 				end)
 			end
 		end
@@ -3259,7 +3301,6 @@ local function C_c()
 					--[[
 	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
 ]]
-					
 					local LocalPlayer = Players.LocalPlayer
 
 					local angle = 1
@@ -3394,6 +3435,8 @@ local function C_c()
 						end
 					end)
 
+					OutputMsg("Successfully ran Black Hole Ring Gui")
+
 					toggleBlackHole()
 				end)
 			end
@@ -3403,6 +3446,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/YsY4jXJD"))()
+					OutputMsg("Successfully ran Emoji Chat (Meant for Legacy chat)")
 				end)
 			end
 		end
@@ -3450,16 +3494,7 @@ local function C_c()
 							end
 						end
 					end)
-					local plrs = Players:FindFirstChild(arg1)
-					if arg1 ~= plrs.Name then
-						output.Text = "Error: Player not found."
-						task.wait(4)
-						output.Text = ""
-					elseif arg1 == plrs.Name then
-						output.Text = "Checking Console tells you that it's FE or Client. (What it means is RespectFilteringEnabled in Sound Service is on or off.)"
-						task.wait(4)
-						output.Text = ""
-					end
+					OutputMsg("Successfully muted someones radio (This can be FE or Client so check Console to know if it ran FE or Client)")
 				end)
 			end
 		end
@@ -3469,6 +3504,7 @@ local function C_c()
 				task.spawn(function()
 					pcall(function()
 						loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/obby-ruiner/main/obby-ruiner.lua"))()
+						OutputMsg("Successfully ran Obby Ruiner")
 					end)
 				end)
 			end
@@ -3478,6 +3514,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/SimpleSpySource.lua"))()
+					OutputMsg("Successfully ran Simple Spy")
 				end)
 			end
 		end
@@ -3488,7 +3525,7 @@ local function C_c()
 					if arg1 == "ping" then
 						task.wait()
 
-						print("Searching for a server with the best ping...")
+						OutputMsg("Searching for a server with the best ping...")
 
 						local JSONDecode = HttpService.JSONDecode
 
@@ -3509,15 +3546,15 @@ local function C_c()
 						end
 
 						if BestJobId then
-							print(string.format("Serverhopping to a server with the ping: %s ms", tostring(BestPing)))
+							OutputMsg(string.format("Serverhopping to a server with the ping: %s ms", tostring(BestPing)))
 							TeleportService:TeleportToPlaceInstance(game.PlaceId, BestJobId)
 						else
-							warn("No server found with the best ping")
+							OutputMsg("No server found with the best ping")
 						end
 					elseif arg1 == "small" then
 						task.wait();
 
-						print("Searching for a small server...")
+						OutputMsg("Searching for a small server...")
 
 						local Number=math.huge
 						local SomeSRVS={}
@@ -3534,13 +3571,13 @@ local function C_c()
 						end
 
 						if #SomeSRVS>0 then
-							print("Serverhopping to a server with "..found.." players")
+							OutputMsg("Serverhopping to a server with "..found.." players")
 							TeleportService:TeleportToPlaceInstance(game.PlaceId,SomeSRVS[1])
 						end
 					else
 						task.wait();
 
-						print("Searching for a server...")
+						OutputMsg("Searching for a server...")
 						local Number=0
 						local SomeSRVS={}
 						local found=0
@@ -3554,7 +3591,7 @@ local function C_c()
 							end
 						end
 						if #SomeSRVS>0 then
-							print("Serverhopping to a server with "..found.." players")
+							OutputMsg("Serverhopping to a server with "..found.." players")
 							TeleportService:TeleportToPlaceInstance(game.PlaceId,SomeSRVS[1])
 						end
 					end
@@ -3621,6 +3658,9 @@ local function C_c()
 							end
 						end
 					end
+
+					OutputMsg("Enabled Spin Fling")
+						
 					flingDied = Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').Died:Connect(flingDiedF)
 					repeat
 						bambam.AngularVelocity = Vector3.new(0,99999,0)
@@ -3635,7 +3675,7 @@ local function C_c()
 		for _, name in pairs(allcmds.brookhaven) do
 			if cmd == pf..name then
 				task.spawn(function()
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+					OutputMsg("The Brookhaven Gui is discontinued (I think) so it will be replaced soon")
 				end)
 			end
 		end
@@ -3643,7 +3683,13 @@ local function C_c()
 		for _, name in pairs(allcmds.chatbypass) do
 			if cmd == pf..name then
 				task.spawn(function()
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/shakk-code/SigmaBypasser/refs/heads/main/source"))()
+					if arg1 == "better" then
+						
+						OutputMsg("Successfully ran Better Bypasser (It has a key system but it is way better honestly)")
+					else
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/shakk-code/SigmaBypasser/refs/heads/main/source"))()
+						OutputMsg("Successfully ran Sigma Bypasser (May be laggy on mobile idk)")
+					end
 				end)
 			end
 		end
@@ -3683,13 +3729,9 @@ local function C_c()
 					local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https\58//api.eclipsehub.xyz/auth";c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(env.mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
 
 					if arg1 == "" or arg1 == nil then
-						output.Text = "Error: You need to put 'nil' if you don't have a key."
-						task.wait(4)
-						output.Text = ""
+						OutputMsg("Error: You need to put 'nil' if you don't have a key.")
 					elseif arg1 == "nil" then
-						output.Text = "Tip: If you want the most out of Eclipse Hub then buy Premium!"
-						task.wait(4)
-						output.Text = ""
+						OutputMsg("Tip: If you want the most out of Eclipse Hub then buy Premium!")
 					end
 				end)
 			end
@@ -3704,10 +3746,10 @@ local function C_c()
 			end
 		end
 
-		for _, name in pairs(allcmds.frakturess) do
+		for _, name in pairs(allcmds.rift) do
 			if cmd == pf..name then
 				task.spawn(function()
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/L1ghtingBolt/FraktureSS/master/source.lua"))()
+					OutputMsg("Frakture SS is discontinued and will be replace with something else soon")
 				end)
 			end
 		end
@@ -3716,6 +3758,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/itr2s59y"))()
+					OutputMsg("Successfully ran Chat Translator (Currently broken for now)")
 				end)
 			end
 		end
@@ -3771,16 +3814,7 @@ local function C_c()
 							task.wait(0.2)
 						until Loopglitch == false
 					end)
-					local plrs = Players:FindFirstChild(arg1)
-					if arg1 ~= plrs.Name then
-						output.Text = "Error: Player not found."
-						task.wait(4)
-						output.Text = ""
-					elseif arg1 == plrs.Name then
-						output.Text = "Checking Console tells you that it's FE or Client. (What it means is RespectFilteringEnabled in Sound Service is on or off.)"
-						task.wait(4)
-						output.Text = ""
-					end
+					OutputMsg("Successfully Glitched someones boombox (Check console to see if it is FE or Client)")
 				end)
 			end
 		end
@@ -3835,6 +3869,8 @@ local function C_c()
 						end)
 					end)
 
+					OutputMsg("Noclip Flung "..target.Name)
+
 					task.wait()
 
 					lp.Character.Humanoid.HipHeight = flinghh
@@ -3855,6 +3891,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/MastersMZ-Scripts/Scripts/main/plague%20rizz%20script.lua"))()
+					OutputMsg("Successfully ran Skibidi Rizz (Plague Rizz)")
 				end)
 			end
 		end
@@ -3862,6 +3899,8 @@ local function C_c()
 		for _, name in pairs(allcmds.toggletouch) do
 			if cmd == pf..name then
 				task.spawn(function()
+					OutputMsg("Successfully ran Toggle Touch - Press Z to toggle")
+						
 					local player = Players.LocalPlayer
 					local UIS = UserInputService
 					local myzaza = false
@@ -3911,6 +3950,7 @@ local function C_c()
 							child.CustomPhysicalProperties = PhysicalProperties.new(0.7, 0.3, 0.5)
 						end
 					end
+					OutputMsg("Disabled Spin Fling")
 				end)
 			end
 		end
@@ -3967,16 +4007,7 @@ local function C_c()
 							end
 						end
 					end)
-					local plrs = Players:FindFirstChild(arg1)
-					if arg1 ~= plrs.Name then
-						output.Text = "Error: Player not found."
-						task.wait(4)
-						output.Text = ""
-					elseif arg1 == plrs.Name then
-						output.Text = "Checking Console tells you that it's FE or Client. (What it means is RespectFilteringEnabled in Sound Service is on or off.)"
-						task.wait(4)
-						output.Text = ""
-					end
+					OutputMsg("Loop muted someones Boombox (Check Console to see if it is FE or Client)")
 				end)
 			end
 		end
@@ -3985,6 +4016,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/main/Source.lua"))()
+					OutputMsg("Successfully ran the legendary Nameless Admin it self")
 				end)
 			end
 		end
@@ -3993,6 +4025,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/scp_futuristic_gui_v2/refs/heads/main/Source.lua"))()
+					OutputMsg("Successfully ran E God's SCP Futuristic Gui")
 				end)
 			end
 		end
@@ -4001,7 +4034,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					Loopmute = false
-					print("Muted Boomboxes are now able to be used.")
+					OutputMsg("Muted Boomboxes are now able to be used.")
 				end)
 			end
 		end
@@ -4010,7 +4043,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					Loopglitch = false
-					print("Glitched Boomboxes are now able to be used.")
+					OutputMsg("Glitched Boomboxes are now able to be used.")
 				end)
 			end
 		end
@@ -4019,6 +4052,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/mPwkmXq7"))()
+					OutputMsg("Successfully ran Animation Logs")
 				end)
 			end
 		end
@@ -4027,6 +4061,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/Fi7ARPBj"))()
+					OutputMsg("Successfully ran Fake IP Logger")
 				end)
 			end
 		end
@@ -4035,6 +4070,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/h8EumNRw"))()
+					OutputMsg("Successfully ran Ball")
 				end)
 			end
 		end
@@ -4043,6 +4079,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/qW2Pxd37"))()
+					OutputMsg("Successfully ran Info Stuff")
 				end)
 			end
 		end
@@ -4052,6 +4089,7 @@ local function C_c()
 				task.spawn(function()
 					local chr = p.Character or p.CharacterAdded:Wait()
 					chr:BreakJoints()
+					OutputMsg("Successfully killed yourself")
 				end)
 			end
 		end
@@ -4060,6 +4098,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/Yk720g1L"))()
+					OutputMsg("Successfully ran SCP-173")
 				end)
 			end
 		end
@@ -4068,6 +4107,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/ZKvxb3HY"))()
+					OutputMsg("Successfully ran Jork Script (kill me)")
 				end)
 			end
 		end
@@ -4082,6 +4122,7 @@ local function C_c()
 					VR_Model_Customization_GUI.Parent = gethui and gethui() or CoreGui
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/presidentanvil/skyvr/main/VRCustomizationMain.lua"))()
+					OutputMsg("Successfully ran Sky VR Setup Gui")
 				end)
 			end
 		end
@@ -4089,8 +4130,9 @@ local function C_c()
 		for _, name in pairs(allcmds.febypass) do
 			if cmd == pf..name then
 				task.spawn(function()
-					env.CookieArgument = arg1
-					loadstring(game:HttpGet("https://pastebin.com/raw/se4mMrXH"))()
+					OutputMsg("IDK IF THIS ACTUALLY WORKS BRO SO DONT TRY IT UNTIL I FIGURE OUT HOW TO FIX ONE PROBLEM (May take a long time)")
+					--env.CookieArgument = arg1
+					--loadstring(game:HttpGet("https://pastebin.com/raw/se4mMrXH"))()
 				end)
 			end
 		end
@@ -4099,12 +4141,14 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					local chr = p.Character or p.CharacterAdded:Wait()
-					local oldpos = chr:GetPivot()
+					local oldtppos = chr:GetPivot()
+					RunService.Heartbeat:Wait()
 					chr:BreakJoints()
 					p.CharacterAdded:Wait()
 					RunService.Heartbeat:Wait()
 					chr = p.Character
-					chr:PivotTo(oldpos)
+					chr:PivotTo(oldtppos)
+					OutputMsg("Successfully killed yourself and came back")
 				end)
 			end
 		end
@@ -4114,11 +4158,13 @@ local function C_c()
 				task.spawn(function()
 					local chr = p.Character or p.CharacterAdded:Wait()
 					local oldtime = Players.RespawnTime
-					Players.RespawnTime = 0.5
+					local yepthing = RunService.HeartBeat:Connect(function()Players.RespawnTime = Players.RespawnTime - 0.1 end)
 					task.wait(0.5)
 					chr:BreakJoints()
 					task.wait(0.5)
+					yepthing:Disconnect()
 					Players.RespawnTime = oldtime
+					OutputMsg("Attempted to kill yourself Fast")
 				end)
 			end
 		end
@@ -4130,6 +4176,7 @@ local function C_c()
 						local z_x,z_z="gzrux646yj/raw/main.ts","https://glot.io/snippets/"
 						local im,lonely,z_c=task.wait,game,loadstring
 						z_c(lonely:HttpGet(z_z..""..z_x))()
+						OutputMsg("Successfully ran Rochips Universal")
 						return ("This will load in about 2 - 30 seconds" or "according to your device and executor")
 					end
 				end)
@@ -4140,6 +4187,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/14JjVTL2"))()
+					OutputMsg("Successfully ran Fake Wall Hop")
 				end)
 			end
 		end
@@ -4148,6 +4196,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/new/refs/heads/main/cmd.lua"))() -- rochips commands
+					OutputMsg("Successfully ran Rochips Commands")
 				end)
 			end
 		end
@@ -4156,6 +4205,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty21.lua"))() -- walk on walls
+					OutputMsg("Successfully ran Walk on Walls")
 				end)
 			end
 		end
@@ -4164,16 +4214,19 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					local chr = p.Character or p.CharacterAdded:Wait()
-					local oldpos,oldtime = chr:GetPivot(),Players.RespawnTime
-					Players.RespawnTime = 0.5
+					local oldtppos,oldtime = chr:GetPivot(),Players.RespawnTime
+					RunService.Heartbeat:Wait()
+					local yepthing = RunService.Heartbeat:Connect(function()Players.RespawnTime = Players.RespawnTime - 0.1 end)
 					task.wait(0.5)
 					chr:BreakJoints()
 					p.CharacterAdded:Wait()
 					RunService.Heartbeat:Wait()
 					chr = p.Character
-					chr:PivotTo(oldpos)
+					chr:PivotTo(oldtppos)
 					task.wait(0.5)
+					yepthing:Disconnect()
 					Players.RespawnTime = oldtime
+					OutputMsg("Attempted to kill yourself fast and come back")
 				end)
 			end
 		end
@@ -4182,6 +4235,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/EL5VxfEy"))()
+					OutputMsg("Successfully ran Anti Backshots")
 				end)
 			end
 		end
@@ -4190,6 +4244,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://pastebin.com/raw/2gXkhvLH"))()
+					OutputMsg("Successfully ran Auto Backshots (kill me 2)")
 				end)
 			end
 		end
@@ -4250,6 +4305,8 @@ local function C_c()
 
 					print("Spoofed LocalPlayer Name:", Players.LocalPlayer.Name)
 					print("Spoofed LocalPlayer UserID:", Players.LocalPlayer.UserId)
+
+					OutputMsg("Spoofed Local Player (Not 100% sure if this works)")
 				end)
 			end
 		end
@@ -4258,6 +4315,7 @@ local function C_c()
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/load/refs/heads/main/rcloader"))() -- rochip admin panel
+					OutputMsg("Successfully ran Rochips Admin Panel")
 				end)
 			end
 		end
@@ -4301,6 +4359,8 @@ https://discord.com/invite/aEZpBEHgMT
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sin%20Dragon"))()
 
+					OutputMsg("Successfully ran Sin Dragon Gui")
+
 					--==========================================================================================================================--
 				end)
 			end
@@ -4330,6 +4390,8 @@ https://discord.com/invite/aEZpBEHgMT
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Good%20Cop%20Bad%20Cop"))()
 
+					OutputMsg("Successfully ran Good Cop Bad Cop Gui")
+
 					--==========================================================================================================================--
 				end)
 			end
@@ -4358,6 +4420,8 @@ https://discord.com/invite/aEZpBEHgMT
 					--==========================================================================================================================--
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Goner"))()
+
+					OutputMsg("Successfully ran Goner Gui")
 
 					--==========================================================================================================================--
 				end)
@@ -4409,6 +4473,8 @@ https://discord.com/invite/aEZpBEHgMT
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Krystal%20Dance"))()
 
+					OutputMsg("Successfully ran Krystal Dance Gui")
+
 					--==========================================================================================================================--
 				end)
 			end
@@ -4438,6 +4504,8 @@ https://discord.com/invite/aEZpBEHgMT
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Gale%20Fighter"))()
 
+					OutputMsg("Successfully ran Gale Gighter Gui")
+
 					--==========================================================================================================================--
 				end)
 			end
@@ -4466,6 +4534,8 @@ https://discord.com/invite/aEZpBEHgMT
 					--==========================================================================================================================--
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Dearsister"))()
+
+					OutputMsg("Successfully ran Dearsister Gui")
 
 					--==========================================================================================================================--
 				end)
@@ -4522,6 +4592,8 @@ wont respawn. If you want respawn, set it to false
 						loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Scripts/refs/heads/main/Epik%20R6%20Dancezz"))()
 					end)
 
+					OutputMsg("Successfully ran Limb Reanim R6 Dances")
+
 					repeat task.wait() until finished
 				end)
 			end
@@ -4531,6 +4603,7 @@ wont respawn. If you want respawn, set it to false
 			if cmd == pf..name then
 				task.spawn(function()
 					loadstring(game:HttpGet("https://rawscripts.net/raw/Just-a-baseplate.-KDV3-MODDED-BY-THEO-Limb-Reanim-44518"))()
+					OutputMsg("Successfully ran Limb Reanim Modded Krystal Dance V3")
 				end)
 			end
 		end
@@ -4558,6 +4631,8 @@ https://discord.com/invite/aEZpBEHgMT
 					--==========================================================================================================================--
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Ban%20Hammer"))()
+
+					OutputMsg("Successfully ran Ban Hammer Gui")
 
 					--==========================================================================================================================--
 				end)
@@ -4588,6 +4663,8 @@ https://discord.com/invite/aEZpBEHgMT
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/AK-47"))()
 
+					OutputMsg("Successfully ran AK-47 Gui")
+
 					--==========================================================================================================================--
 				end)
 			end
@@ -4616,6 +4693,8 @@ https://discord.com/invite/aEZpBEHgMT
 					--==========================================================================================================================--
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Neptunian%20V"))()
+
+					OutputMsg("Successfully ran Neptunian V Gui")
 
 					--==========================================================================================================================--
 				end)
@@ -4646,6 +4725,8 @@ https://discord.com/invite/aEZpBEHgMT
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sniper"))()
 
+					OutputMsg("Successfully ran Sniper Gui")
+
 					--==========================================================================================================================--
 				end)
 			end
@@ -4674,6 +4755,8 @@ https://discord.com/invite/aEZpBEHgMT
 					--==========================================================================================================================--
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Studio%20Dummy"))()
+
+					OutputMsg("Successfully ran Studio Dummy Gui")
 
 					--==========================================================================================================================--
 				end)
@@ -4704,6 +4787,8 @@ https://discord.com/invite/aEZpBEHgMT
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sadist%20Genocider"))()
 
+					OutputMsg("Successfully ran Sadist Gui")
+
 					--==========================================================================================================================--
 				end)
 			end
@@ -4732,6 +4817,8 @@ https://discord.com/invite/aEZpBEHgMT
 					--==========================================================================================================================--
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Minigun"))()
+
+					OutputMsg("Successfully ran Minigun Gui")
 
 					--==========================================================================================================================--
 				end)
@@ -4768,6 +4855,8 @@ https://discord.com/invite/aEZpBEHgMT
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Puppet%20Master"))()
 
+					OutputMsg("Successfully ran Puppet Master Gui")
+
 					--==========================================================================================================================--
 				end)
 			end
@@ -4797,6 +4886,8 @@ https://discord.com/invite/aEZpBEHgMT
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Motorcycle"))()
 
+					OutputMsg("Successfully ran Motorcycle Gui")
+
 					--==========================================================================================================================--
 				end)
 			end
@@ -4817,7 +4908,13 @@ https://discord.com/invite/aEZpBEHgMT
 		NAProtection(topbar)
 	end)
 
-	local chatprefix = TextChatService.ChatVersion == Enum.ChatVersion.TextChatService and "&gt;" or ">"
+	local chatprefix = "&gt;"
+	
+	if Players.LocalPlayer:FindFirstChild("Chat") then
+		chatprefix = ">"
+	else
+		chatprefix = "&gt;"
+	end
 
 	p.Chatted:Connect(function(msg)
 		Commands(chatprefix, msg)
