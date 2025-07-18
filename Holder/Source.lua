@@ -4909,12 +4909,6 @@ https://discord.com/invite/aEZpBEHgMT
 	end)
 
 	local chatprefix = "&gt;"
-	
-	if Players.LocalPlayer:FindFirstChild("Chat") then
-		chatprefix = ">"
-	else
-		chatprefix = "&gt;"
-	end
 
 	p.Chatted:Connect(function(msg)
 		Commands(chatprefix, msg)
