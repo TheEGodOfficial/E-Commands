@@ -17,87 +17,90 @@ local function SafeGetService(name) -- credits to nameless admin
 	return Reference(Service(game, name));
 end
 
+local ReplicatedStorage = SafeGetService("ReplicatedStorage")
+
 task.spawn(function()
-	for _, rems in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do -- i am not sure if i use the safe get service this will not work so i made it the default just in case
-		if rems:IsA("RemoteEvent") and rems:FindFirstChild("__FUNCTION") then
-			task.spawn(function()
-				local getthrident = getthreadidentity or nil
-				local gtgc = getgc or nil
-				local setthrident = setthreadidentity or nil
-				local hkfunc = hookfunction or nil
-				local gtrnv = getrenv or nil
-				local newccl = newcclosure or nil
-				
-				if not (getthrident or gtgc or setthrident or hkfunc or gtrnv or newccl) then
-					return
-				end
-				
-				local IsDebug = false
-				local hooks = {}
-				local oglevel = getthrident()
+	local getgc = getgc or debug.getgc
+	local hookfunction = hookfunction
+	local getrenv = getrenv
+	local debugInfo = (getrenv and getrenv().debug and getrenv().debug.info) or debug.info
+	local newcclosure = newcclosure or function(f) return f end
 
-				local DetectedMeth, KillMeth
+	if not (getgc and hookfunction and getrenv and debugInfo) then
+		warn("Required exploit functions not available. Skipping Adonis bypass.")
+		return
+	end
 
-				setthrident(2)
+	local IsDebug = false
+	local hooks = {}
+	local DetectedMeth, KillMeth
+	local AdonisFound = false
 
-				for index, value in gtgc(true) do
-					if typeof(value) == "table" then
-						local detected = rawget(value, "Detected")
-						local kill = rawget(value, "Kill")
+	for _, value in getgc(true) do
+		if typeof(value) == "table" then
+			local hasDetected = typeof(rawget(value, "Detected")) == "function"
+			local hasKill = typeof(rawget(value, "Kill")) == "function"
+			local hasVars = rawget(value, "Variables") ~= nil
+			local hasProcess = rawget(value, "Process") ~= nil
 
-						if typeof(detected) == "function" and not DetectedMeth then
-							DetectedMeth = detected
-
-							local hook
-							hook = hkfunc(DetectedMeth, function(methodName, methodFunc, methodInfo)
-								if methodName ~= "_" then
-									if IsDebug then
-										print("Adonis Found\nMethod: " .. tostring(methodName) .. "\nInfo: " .. tostring(methodFunc))
-									end
-								end
-
-								return true
-							end)
-
-							table.insert(hooks, DetectedMeth)
-						end
-
-						if rawget(value, "Variables") and rawget(value, "Process") and typeof(kill) == "function" and not KillMeth then
-							KillMeth = kill
-							local hook
-							hook = hkfunc(KillMeth, function(killFunc)
-								if IsDebug then
-									print("Adonis attempted to find: " .. tostring(killFunc))
-								end
-							end)
-
-							table.insert(hooks, KillMeth)
-						end
-					end
-				end
-
-				local hook
-				hook = hkfunc(gtrnv().debug.info, newccl(function(...)
-					local functionName, functionDetails = ...
-
-					if DetectedMeth and functionName == DetectedMeth then
-						if IsDebug or not IsDebug then
-							print("Adonis anti killed by someone who may be getting text found by Adonis")
-						end
-
-						return coroutine.yield(coroutine.running())
-					end
-
-					return hook(...)
-				end))
-
-				setthrident(oglevel)
-			end)
+			if hasDetected or (hasKill and hasVars and hasProcess) then
+				AdonisFound = true
+				break
+			end
 		end
+	end
+
+	if not AdonisFound then
+		warn("Adonis not found. Bypass skipped.")
+		return
+	end
+
+	for _, value in getgc(true) do
+		if typeof(value) == "table" then
+			local detected = rawget(value, "Detected")
+			local kill = rawget(value, "Kill")
+
+			if typeof(detected) == "function" and not DetectedMeth then
+				DetectedMeth = detected
+				local hook
+				hook = hookfunction(DetectedMeth, function(methodName, methodFunc)
+					if methodName ~= "_" and IsDebug then
+						warn("Adonis Detected\nMethod: "..methodName.."\nInfo: "..methodFunc)
+					end
+					return true
+				end)
+				Insert(hooks, DetectedMeth)
+				warn("Hooked Adonis 'Detected' method.")
+			end
+
+			if rawget(value, "Variables") and rawget(value, "Process") and typeof(kill) == "function" and not KillMeth then
+				KillMeth = kill
+				local hook
+				hook = hookfunction(KillMeth, function(killFunc)
+					if IsDebug then
+						warn("Adonis tried to kill function: "..killFunc)
+					end
+				end)
+				Insert(hooks, KillMeth)
+				warn("Hooked Adonis 'Kill' method.")
+			end
+		end
+	end
+
+	if DetectedMeth and debugInfo then
+		local hook
+		hook = hookfunction(debugInfo, newcclosure(function(...)
+			local functionName = ...
+			if functionName == DetectedMeth then
+				-- warn("Adonis detection intercepted. Bypassed by the_king.78.",3,"Adonis Bypasser")
+				return coroutine.yield(coroutine.running())
+			end
+			return hook(...)
+		end))
 	end
 end)
 
-function NAProtection(inst,var) -- credits to nameless admin (unused for now and will be used later on)
+function NAProtection(inst,var) -- credits to nameless admin (forgot to mention that it was used)
 	if not inst then return end
 	if var then
 		inst[var] = "\u{200B}\u{200C}"
@@ -2393,7 +2396,7 @@ local function C_c()
 	More idk I forgot
 	]]
 	
-	local RunService,HttpService,Players,TeleportService,Workspace,ReplicatedStorage,ChatService,TextChatService,UserInputService,TweenService,StarterGui,SoundService,CoreGui = SafeGetService("RunService"),SafeGetService("HttpService"),SafeGetService("Players"),SafeGetService("TeleportService"),SafeGetService("Workspace"),SafeGetService("ReplicatedStorage"),SafeGetService("Chat"),SafeGetService("TextChatService"),SafeGetService("UserInputService"),SafeGetService("TweenService"),SafeGetService("StarterGui"),SafeGetService("SoundService"),SafeGetService("CoreGui")
+	local RunService,HttpService,Players,TeleportService,Workspace,ChatService,TextChatService,UserInputService,TweenService,StarterGui,SoundService,CoreGui = SafeGetService("RunService"),SafeGetService("HttpService"),SafeGetService("Players"),SafeGetService("TeleportService"),SafeGetService("Workspace"),SafeGetService("Chat"),SafeGetService("TextChatService"),SafeGetService("UserInputService"),SafeGetService("TweenService"),SafeGetService("StarterGui"),SafeGetService("SoundService"),SafeGetService("CoreGui")
 
 	local cmdlist = script.Parent.Parent:FindFirstChild("CmdFrame")
 	local topbar = script.Parent.Parent:FindFirstChild("TopBar")
@@ -2605,8 +2608,8 @@ local function C_c()
 		for _, name in pairs(allcmds.dex) do
 			if cmd == pf..name then
 				task.spawn(function()
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/MoonzyDev/Roblox-Scripts/refs/heads/main/BypassedDarkDexV3.lua"))()
-					OutputMsg("Successfully ran Dex V3 Bypassed")
+					loadstring(game:HttpGet("https://github.com/AZYsGithub/DexPlusPlus/releases/latest/download/out.lua"))()
+					OutputMsg("Successfully ran Dex Explorer")
 				end)
 			end
 		end
