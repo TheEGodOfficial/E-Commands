@@ -20,83 +20,82 @@ end
 local ReplicatedStorage = SafeGetService("ReplicatedStorage")
 
 task.spawn(function()
-	local getgc = getgc or debug.getgc
-	local hookfunction = hookfunction
-	local getrenv = getrenv
-	local debugInfo = (getrenv and getrenv().debug and getrenv().debug.info) or debug.info
-	local newcclosure = newcclosure or function(f) return f end
+	for _, rems in pairs(ReplicatedStorage:GetChildren()) do -- i am not sure if i use the safe get service this will not work so i made it the default just in case
+		if rems:IsA("RemoteEvent") and rems:FindFirstChild("__FUNCTION") then
+			task.spawn(function()
+				local getthrident = getthreadidentity or nil
+				local gtgc = getgc or nil
+				local setthrident = setthreadidentity or nil
+				local hkfunc = hookfunction or nil
+				local gtrnv = getrenv or nil
+				local newccl = newcclosure or nil
+				
+				if not (getthrident or gtgc or setthrident or hkfunc or gtrnv or newccl) then
+					return
+				end
+				
+				local IsDebug = false
+				local hooks = {}
+				local oglevel = getthrident()
 
-	if not (getgc and hookfunction and getrenv and debugInfo) then
-		warn("Required exploit functions not available. Skipping Adonis bypass.")
-		return
-	end
+				local DetectedMeth, KillMeth
 
-	local IsDebug = false
-	local hooks = {}
-	local DetectedMeth, KillMeth
-	local AdonisFound = false
+				setthrident(2)
 
-	for _, value in getgc(true) do
-		if typeof(value) == "table" then
-			local hasDetected = typeof(rawget(value, "Detected")) == "function"
-			local hasKill = typeof(rawget(value, "Kill")) == "function"
-			local hasVars = rawget(value, "Variables") ~= nil
-			local hasProcess = rawget(value, "Process") ~= nil
+				for index, value in gtgc(true) do
+					if typeof(value) == "table" then
+						local detected = rawget(value, "Detected")
+						local kill = rawget(value, "Kill")
 
-			if hasDetected or (hasKill and hasVars and hasProcess) then
-				AdonisFound = true
-				break
-			end
-		end
-	end
+						if typeof(detected) == "function" and not DetectedMeth then
+							DetectedMeth = detected
 
-	if not AdonisFound then
-		warn("Adonis not found. Bypass skipped.")
-		return
-	end
+							local hook
+							hook = hkfunc(DetectedMeth, function(methodName, methodFunc, methodInfo)
+								if methodName ~= "_" then
+									if IsDebug then
+										print("Adonis Found\nMethod: " .. tostring(methodName) .. "\nInfo: " .. tostring(methodFunc))
+									end
+								end
 
-	for _, value in getgc(true) do
-		if typeof(value) == "table" then
-			local detected = rawget(value, "Detected")
-			local kill = rawget(value, "Kill")
+								return true
+							end)
 
-			if typeof(detected) == "function" and not DetectedMeth then
-				DetectedMeth = detected
-				local hook
-				hook = hookfunction(DetectedMeth, function(methodName, methodFunc)
-					if methodName ~= "_" and IsDebug then
-						warn("Adonis Detected\nMethod: "..methodName.."\nInfo: "..methodFunc)
+							table.insert(hooks, DetectedMeth)
+						end
+
+						if rawget(value, "Variables") and rawget(value, "Process") and typeof(kill) == "function" and not KillMeth then
+							KillMeth = kill
+							local hook
+							hook = hkfunc(KillMeth, function(killFunc)
+								if IsDebug then
+									print("Adonis attempted to find: " .. tostring(killFunc))
+								end
+							end)
+
+							table.insert(hooks, KillMeth)
+						end
 					end
-					return true
-				end)
-				Insert(hooks, DetectedMeth)
-				warn("Hooked Adonis 'Detected' method.")
-			end
+				end
 
-			if rawget(value, "Variables") and rawget(value, "Process") and typeof(kill) == "function" and not KillMeth then
-				KillMeth = kill
 				local hook
-				hook = hookfunction(KillMeth, function(killFunc)
-					if IsDebug then
-						warn("Adonis tried to kill function: "..killFunc)
-					end
-				end)
-				Insert(hooks, KillMeth)
-				warn("Hooked Adonis 'Kill' method.")
-			end
-		end
-	end
+				hook = hkfunc(gtrnv().debug.info, newccl(function(...)
+					local functionName, functionDetails = ...
 
-	if DetectedMeth and debugInfo then
-		local hook
-		hook = hookfunction(debugInfo, newcclosure(function(...)
-			local functionName = ...
-			if functionName == DetectedMeth then
-				-- warn("Adonis detection intercepted. Bypassed by the_king.78.",3,"Adonis Bypasser")
-				return coroutine.yield(coroutine.running())
-			end
-			return hook(...)
-		end))
+					if DetectedMeth and functionName == DetectedMeth then
+						if IsDebug or not IsDebug then
+							print("Adonis anti killed by someone who may be getting text found by Adonis")
+						end
+
+						return coroutine.yield(coroutine.running())
+					end
+
+					return hook(...)
+				end))
+
+				setthrident(oglevel)
+			end)
+		end
 	end
 end)
 
@@ -765,8 +764,8 @@ G2L["39"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], 
 G2L["39"]["ZIndex"] = 2147483647;
 G2L["39"]["Size"] = UDim2.new(0.923, 0, 0.003, 0);
 G2L["39"]["BackgroundTransparency"] = 1;
-G2L["39"]["Name"] = [[ >frakturess]];
-G2L["39"]["Text"] = [[ >frakturess]];
+G2L["39"]["Name"] = [[ >rifthub]];
+G2L["39"]["Text"] = [[ >rifthub]];
 
 
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll. >frakturess.Info
@@ -2512,7 +2511,7 @@ local function C_c()
 		audiologs = {"al","audiologs","audiologger"},
 		glitchradio = {"gradio","gboombox","glitchradio","glitchboombox"},
 		bdexe = {"bdexe","backdoorexe","backdoordotexe"},
-		frakturess = {"fss","frakture","frakturess"},
+		rift = {"rift","rifthub","refitgui"},
 		chatbot = {"cb","bot","cbot","chatb","chatbot"},
 		antifling = {"af","antif","afling","antifling"},
 		quizgui = {"quiz","quizg","quizgui","quizhub","quizes"},
@@ -2538,9 +2537,9 @@ local function C_c()
 		remotespy = {"rspy","remspy","remotespy","simplespy"},
 		chatbypass = {"chatb","chatbypass","betterbypasser"},
 		collisions = {"col","collisions","playercollisions","becomeflingable"},
-		brookhaven = {"icehub","brookhaven","brookhavengui","brookhavenhub"},
+		piano = {"piano","autopiano","pianoplayer","talentless"},
 		emojichat = {"emojis","emojichat","emojisinchat","emojiautocomplete"},
-		vghub = {"vghub"},
+		snail = {"snail","slug","bug","insect"},
 		scpfuturistic = {"scpf","scpfuture","scpfuturistic","egodscpfgui"},
 		toggletouch = {"toggletouch","togglekillparts","togglekillbricks"},
 		invis = {"invis","invisible"},
@@ -3134,10 +3133,105 @@ local function C_c()
 			end
 		end
 
-		for _, name in pairs(allcmds.vghub) do
+		for _, name in pairs(allcmds.snail) do
 			if cmd == pf..name then
 				task.spawn(function()
-					OutputMsg("VG Hub is currently Discontinued so this command will be replaced soon")
+					--[[
+	           ,."""""""""""""".,
+	        .d"                  "b.
+	      .d                        b.
+	    ."         .. depso ..        ".
+	   P        z$*"        "*e.        9.
+	  A       d"                "b       A
+	 J       J    .e*""""""%c     A       L
+	A       A    d"          $     L      A
+	#       %   d      d**y  'L    %      #
+	#       %   $     $ ,, Y  .$   %      #       _ _ 
+	#       %   $     *  """   F   %      #      (@)@)
+	#       V    4.    $.   .e"    Y      #        % %
+	#        $    *.    """"     .Y      V         $ $
+	#        'b     "b.      ..e*       Y         .eeee
+	V         '$      ""eeee""        eP         A     %
+	 Y         eb                ..d*"         _#    O %
+	 I    _e%*""""*$ee......ee$*"eeeeeeeezee$**"       $
+	  V ,"                                            B
+	  J'                                        _,e=""
+	.'#######################################DWB''
+
+	Made by Depso - mastersmzscripts.com
+	The SNAIL Script V2
+	
+	To update the config, run the script again.
+]]
+
+_G.Snail_Config = {
+	Speed = 0.4,
+	TunnelSpeed = 2,
+
+	--// Offsets
+	Offset = CFrame.new(0,-1,0),
+	TunnelOffset = CFrame.new(0,-2,0), -- This is added to the Offset
+
+	--// Control
+	Teleport = Enum.KeyCode.E,
+	Tunnel = Enum.KeyCode.Q,
+	ResetCamera = Enum.KeyCode.R,
+	
+	TunnelIsToggle = false,
+	DistanceChangesSpeed = true,
+	UseCameraRotaton = false, -- Old movement
+
+	Distance = 5,
+	
+	--// Animations
+	RotationEffect = false,
+	Enabled = true, -- If disabled, the script will not run after death
+	DirtParticles = true,
+	Sounds = true,
+
+	--// Trail Style
+	Color = ColorSequence.new{ -- Time Position, Value
+		ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 171, 3)), 
+		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(132, 255, 0))
+	},
+	Transparency = NumberSequence.new{ 
+		NumberSequenceKeypoint.new(0.00, 0.40), 
+		NumberSequenceKeypoint.new(1.00, 1.00)
+	},
+	Length = 0.3, -- 0: Disabled
+
+	--// Dirt style
+	DirtColor = ColorSequence.new{ -- Time Position, Value
+		ColorSequenceKeypoint.new(0, Color3.fromRGB(193, 135, 0)), 
+		ColorSequenceKeypoint.new(1, Color3.fromRGB(158, 84, 0))
+	},
+	DirtSize = NumberSequence.new{ 
+		NumberSequenceKeypoint.new(0, 0.2), 
+		NumberSequenceKeypoint.new(1, 0.25)
+	},
+
+	--// Sounds
+	Audios = {
+		Teleport = {
+			SoundId = 507863457
+		},
+		Tunnel = {
+			SoundId = 9114127078,
+			Looped = true,
+			PlaybackSpeed = 1.2
+		},
+	},
+
+	--// Misc (Advanced)
+	Max_Height = 15,
+	Root_Height = 4,
+}
+
+------------------------------
+
+if _G.Snail_Ran then return end
+loadstring(game:HttpGet('https://raw.githubusercontent.com/MastersMZ-Scripts/Scripts/master/Snail%20Script/Snail%20Script%20V2.lua'))()
+						OutputMsg("Executed Snail script Controls: E - tp, Q - tunnel, R - fix cam")
 				end)
 			end
 		end
@@ -3675,10 +3769,12 @@ local function C_c()
 			end
 		end
 
-		for _, name in pairs(allcmds.brookhaven) do
+		for _, name in pairs(allcmds.piano) do
 			if cmd == pf..name then
 				task.spawn(function()
-					OutputMsg("The Brookhaven Gui is discontinued (I think) so it will be replaced soon")
+					pcall(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/TALENTLESS/main/TALENTLESS", true))()
+end)
 				end)
 			end
 		end
@@ -3752,7 +3848,8 @@ local function C_c()
 		for _, name in pairs(allcmds.rift) do
 			if cmd == pf..name then
 				task.spawn(function()
-					OutputMsg("Frakture SS is discontinued and will be replace with something else soon")
+					loadstring(game:HttpGet("https://rifton.top/loader.lua"))()
+					OutputMsg("Successfully ran Rift Hub")
 				end)
 			end
 		end
