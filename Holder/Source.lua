@@ -3086,7 +3086,7 @@ local function C_c()
 		for _, name in pairs(allcmds.invis) do
 			if cmd == pf..name then
 				task.spawn(function()
-					loadstring(game:HttpGet("https://pastebin.com/raw/vP6CrQJj"))()
+					loadstring(game:HttpGet("https://pastebin.com/raw/EwvxquJz"))()
 					OutputMsg("Successfully ran Invisibility")
 				end)
 			end
