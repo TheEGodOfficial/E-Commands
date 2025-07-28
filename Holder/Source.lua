@@ -9,7 +9,47 @@
 
 -- Instances: 170 | Scripts: 2 | Modules: 0 | Tags: 0
 
-local env = getgenv and getgenv() or (_G or shared)
+function missing(t, f, fallback) -- credits to infinite yield (too lazy to remake this stuff)
+    if type(f) == t then return f end
+    return fallback
+end
+
+-- more from infinite yield (same here)
+cloneref = missing("function", cloneref, function(...) return ... end)
+sethidden =  missing("function", sethiddenproperty or set_hidden_property or set_hidden_prop)
+gethidden =  missing("function", gethiddenproperty or get_hidden_property or get_hidden_prop)
+queueteleport =  missing("function", queue_on_teleport or (syn and syn.queue_on_teleport) or (fluxus and fluxus.queue_on_teleport))
+httprequest =  missing("function", request or http_request or (syn and syn.request) or (http and http.request) or (fluxus and fluxus.request))
+everyClipboard = missing("function", setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set))
+firetouchinterest = missing("function", firetouchinterest)
+waxwritefile, waxreadfile = writefile, readfile
+writefile = missing("function", waxwritefile) and function(file, data, safe)
+    if safe == true then return pcall(waxwritefile, file, data) end
+    waxwritefile(file, data)
+end
+readfile = missing("function", waxreadfile) and function(file, safe)
+    if safe == true then return pcall(waxreadfile, file) end
+    return waxreadfile(file)
+end
+isfile = missing("function", isfile, readfile and function(file)
+    local success, result = pcall(function()
+        return readfile(file)
+    end)
+    return success and result ~= nil and result ~= ""
+end)
+makefolder = missing("function", makefolder)
+isfolder = missing("function", isfolder)
+waxgetcustomasset = missing("function", getcustomasset or getsynasset)
+hookfunction = missing("function", hookfunction)
+hookmetamethod = missing("function", hookmetamethod)
+getnamecallmethod = missing("function", getnamecallmethod or get_namecall_method)
+checkcaller = missing("function", checkcaller, function() return false end)
+newcclosure = missing("function", newcclosure)
+getgc = missing("function", getgc or get_gc_objects)
+setthreadidentity = missing("function", setthreadidentity or (syn and syn.set_thread_identity) or syn_context_set or setthreadcontext)
+replicatesignal = missing("function", replicatesignal)
+
+local env = (getgenv and getgenv()) or _G or shared
 
 local function SafeGetService(name) -- credits to nameless admin
 	local Service = (game.GetService);
@@ -20,7 +60,7 @@ end
 local ReplicatedStorage = SafeGetService("ReplicatedStorage")
 
 task.spawn(function()
-	for _, rems in pairs(ReplicatedStorage:GetChildren()) do -- i am not sure if i use the safe get service this will not work so i made it the default just in case
+	for _, rems in pairs(ReplicatedStorage:GetChildren()) do
 		if rems:IsA("RemoteEvent") and rems:FindFirstChild("__FUNCTION") then
 			task.spawn(function()
 				local getthrident = getthreadidentity or nil
@@ -2323,6 +2363,38 @@ G2L["b8"] = Instance.new("StringValue", G2L["b7"]);
 G2L["b8"]["Name"] = [[Info]];
 G2L["b8"]["Value"] = [[Command Info: gives you a reanimation script: Sin Dragon (go to the hats game by pressing the hat icon if you dont have the hats for it which costs robux unless you use the free ones available but some free ones are offsale forever or in events)]];
 
+local ecassets = {
+	["Holder/Assets/coolcmdicon.png"] = "rbxassetid://91802267107725",
+}
+
+local function getcustomasset(asset) -- credits to infinite yield AGAIN
+    if waxgetcustomasset then
+        local success, result = pcall(function()
+            return waxgetcustomasset(asset)
+        end)
+        if success and result ~= nil and result ~= "" then
+            return result
+        end
+    end
+    return ecassets[asset]
+end
+
+if makefolder and isfolder and writefile and isfile then -- same here
+    pcall(function()
+        local assets = "https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/refs/heads/main/"
+        for _, folder in {"ecmdsstuff", "ecmdsstuff/assets"} do
+            if not isfolder(folder) then
+                makefolder(folder)
+            end
+        end
+        for path in iyassets do
+            if not isfile(path) then
+                writefile(path, game:HttpGet((path:gsub("Holder/", assets))))
+            end
+        end
+        if IsOnMobile then writefile("ecmdsstuff/assets/.nomedia") end
+    end)
+end
 
 -- StarterGui.ECTopBar.TopBar
 G2L["b9"] = Instance.new("Frame", G2L["1"]);
@@ -2339,7 +2411,6 @@ G2L["ba"] = Instance.new("ImageButton", G2L["b9"]);
 G2L["ba"]["BorderSizePixel"] = 0;
 G2L["ba"]["BackgroundTransparency"] = 0.3;
 G2L["ba"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ba"]["AnchorPoint"] = Vector2.new(1, 0);
 G2L["ba"]["Size"] = UDim2.new(0, 42, 0, 42);
 G2L["ba"]["LayoutOrder"] = 5;
 G2L["ba"]["ClipsDescendants"] = true;
@@ -2357,7 +2428,7 @@ G2L["bb"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["bb"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
 G2L["bb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["bb"]["BackgroundTransparency"] = 1;
-G2L["bb"]["Image"] = getcustomasset and getcustomasset("https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/refs/heads/main/Holder/Assets/cool%20cmd%20icon.png") or "rbxassetid://91802267107725"
+G2L["bb"]["Image"] = getcustomasset("Holder/Assets/coolcmdicon.png")
 G2L["bb"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
