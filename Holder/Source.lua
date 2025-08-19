@@ -60,6 +60,9 @@ end
 local ReplicatedStorage = SafeGetService("ReplicatedStorage")
 
 task.spawn(function()
+	pcall(function() -- deletes the gameplay pause
+		game:GetService("CoreGui").RobloxGui["CoreScripts/NetworkPause"]:Destroy()
+	end)
 	for _, rems in pairs(ReplicatedStorage:GetChildren()) do
 		if rems:IsA("RemoteEvent") and rems:FindFirstChild("__FUNCTION") then
 			task.spawn(function()
@@ -3845,6 +3848,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/MastersMZ-Scripts/Scr
 				task.spawn(function()
 					pcall(function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/TALENTLESS/main/TALENTLESS", true))()
+						OutputMsg("Successfully ran TALENTLESS Piano Auto Player")
 end)
 				end)
 			end
@@ -3854,11 +3858,11 @@ end)
 			if cmd == pf..name then
 				task.spawn(function()
 					if arg1 == "better" then
-						
-						OutputMsg("Successfully ran Better Bypasser (It has a key system but it is way better honestly)")
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/randomizedcomponent/UC/refs/heads/main/3307468c285f4fe535fb5d87b4b053e6.lua"))()
+						OutputMsg("Better Bypasser is discontinued so it is switched with Usercreated")
 					else
-						loadstring(game:HttpGet("https://raw.githubusercontent.com/shakk-code/SigmaBypasser/refs/heads/main/source"))()
-						OutputMsg("Successfully ran Sigma Bypasser (May be laggy on mobile idk)")
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/randomizedcomponent/UC/refs/heads/main/3307468c285f4fe535fb5d87b4b053e6.lua"))()
+						OutputMsg("Sigma Bypasser is way too laggy and might be discontinued so it is switched with Usercreated")
 					end
 				end)
 			end
@@ -3868,6 +3872,7 @@ end)
 			if cmd == pf..name then
 				task.spawn(function()
 					local LP = Players.LocalPlayer
+					OutputMsg("Enabling Collisions (THIS DOES NOT LET YOU FLING PLAYERS BUT ALLOWS YOU TO BE FLUNG BY PLAYERS THOUGH)")
 					while task.wait(3) do
 						for i,v in pairs(Players:GetDescendants()) do
 							if v:IsA("Player") and Workspace:FindFirstChild(v.Name) and v ~= LP and Workspace[v.Name]:FindFirstChild("CHECKER") == nil then
@@ -4293,7 +4298,7 @@ end)
 					VR_Model_Customization_GUI.Parent = gethui and gethui() or CoreGui
 
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/presidentanvil/skyvr/main/VRCustomizationMain.lua"))()
-					OutputMsg("Successfully ran Sky VR Setup Gui")
+					OutputMsg("Successfully ran Sky VR Setup Gui (DO NOT RUN WHILE IN VR)")
 				end)
 			end
 		end
@@ -4316,7 +4321,7 @@ end)
 					RunService.Heartbeat:Wait()
 					chr:BreakJoints()
 					p.CharacterAdded:Wait()
-					RunService.Heartbeat:Wait()
+					task.wait(0.75)
 					chr = p.Character
 					chr:PivotTo(oldtppos)
 					OutputMsg("Successfully killed yourself and came back")
@@ -4391,7 +4396,7 @@ end)
 					task.wait(0.5)
 					chr:BreakJoints()
 					p.CharacterAdded:Wait()
-					RunService.Heartbeat:Wait()
+					task.wait(0.75)
 					chr = p.Character
 					chr:PivotTo(oldtppos)
 					task.wait(0.5)
