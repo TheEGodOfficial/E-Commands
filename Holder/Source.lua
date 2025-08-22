@@ -3858,8 +3858,8 @@ end)
 			if cmd == pf..name then
 				task.spawn(function()
 					if arg1 == "better" then
-						loadstring(game:HttpGet("https://raw.githubusercontent.com/randomizedcomponent/UC/refs/heads/main/3307468c285f4fe535fb5d87b4b053e6.lua"))()
-						OutputMsg("Better Bypasser is discontinued so it is switched with Usercreated")
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/vqmpjay/Vadrifts/refs/heads/main/VadriftsBypasser.lua"))()
+						OutputMsg("Better Bypasser is discontinued so it is switched with Vadrifts")
 					else
 						loadstring(game:HttpGet("https://raw.githubusercontent.com/randomizedcomponent/UC/refs/heads/main/3307468c285f4fe535fb5d87b4b053e6.lua"))()
 						OutputMsg("Sigma Bypasser is way too laggy and might be discontinued so it is switched with Usercreated")
