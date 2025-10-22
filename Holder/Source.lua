@@ -2390,7 +2390,7 @@ if makefolder and isfolder and writefile and isfile then -- same here
                 makefolder(folder)
             end
         end
-        for path in iyassets do
+        for path in ecassets do
             if not isfile(path) then
                 writefile(path, game:HttpGet((path:gsub("Holder/", assets))))
             end
@@ -2658,7 +2658,7 @@ local function C_c()
 		neptv = {"neptv","neptunianv"},
 		puppetmas = {"puppetmas","puppetmaster"},
 		sadist = {"sadist"},
-		rift = {"rift","rifthub"},
+		lc = {"lc","lightcan","lightningcan","lightningcannon"},
 		piano = {"piano","pianogui","playpiano","talentless","autoplaypiano"},
 		snail = {"bug","slug","snail","insect"},
 	}
@@ -5063,6 +5063,64 @@ https://discord.com/invite/aEZpBEHgMT
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Motorcycle"))()
 
 					OutputMsg("Successfully ran Motorcycle Gui")
+
+					--==========================================================================================================================--
+				end)
+			end
+		end
+	end
+
+	for _, name in pairs(allcmds.lc) do
+			if cmd == pf..name then
+				task.spawn(function()
+					--[[
+_________                       _____            ___________________
+__  ____/__________________________(_)_______    ___  ____/__  ____/
+_ /__ _  _ \_  __ \  _ \_  ___/_  /__  ___/    __  /_   __  __/   
+/ /_///  __/ /// __/(__  )_ /_(__  )     _  __/   _  /___   
+\____/  \___//_/ /_/\___//____/ /_/  /____/      /_/      /_____/   							
+
+by rqz					
+https://discord.com/invite/aEZpBEHgMT
+]]--
+
+--===================================--
+--          Script Options           --
+--===================================--
+
+					lightmode=arg1 --overwrite black mode colors with white
+					effects=false --toggle effects (if you experience performance issues try setting to false)
+					timemultiplier=1 --change animation speed (min=0.1,default=1,max=10)
+					walkspeedmultiplier=1 --change walkspeed (default=1,min/mix=-∞-->+∞)
+
+					--====================================--
+					--          FDless Options           --
+					--====================================--
+
+					permadeath=true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
+					fling=true --toggle fling
+					allowshiftlock=true --adds shiftlock to patchma rig
+					ctrltp=true --adds control click tp
+					placeholders=true --adds transparent parts showing your hats when you don't have real ones
+					clickfling=false --adds click flinging regardless of attacks
+					highlightflingtargets=true --highlight fling
+					discharscripts=true --disable character scripts
+					flingchangestate=true --fling with whole body
+					hidedeatheffect=true --hides the red damage border when you die (respawn)
+					respawntp=3 --respawn tp mode
+					--0 -stay at spawn
+					--1 -randomtp close
+					--2 -behind fake character
+					--3 -hide body
+					breakjointsmethod=1 --breakjoints mode
+					--1 -health+breakjoints (the most support)
+					--2 -health or breakjoints
+					--3 -breakjoints
+					simrad=true --sets simulation radius
+
+					--==========================================================================================================================--
+
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Lightning%20Cannon"))()
 
 					--==========================================================================================================================--
 				end)
