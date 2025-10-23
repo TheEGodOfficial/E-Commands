@@ -10,8 +10,8 @@
 -- Instances: 170 | Scripts: 2 | Modules: 0 | Tags: 0
 
 function missing(t, f, fallback) -- credits to infinite yield (too lazy to remake this stuff)
-    if type(f) == t then return f end
-    return fallback
+	if type(f) == t then return f end
+	return fallback
 end
 
 -- more from infinite yield (same here)
@@ -24,18 +24,18 @@ everyClipboard = missing("function", setclipboard or toclipboard or set_clipboar
 firetouchinterest = missing("function", firetouchinterest)
 waxwritefile, waxreadfile = writefile, readfile
 writefile = missing("function", waxwritefile) and function(file, data, safe)
-    if safe == true then return pcall(waxwritefile, file, data) end
-    waxwritefile(file, data)
+	if safe == true then return pcall(waxwritefile, file, data) end
+	waxwritefile(file, data)
 end
 readfile = missing("function", waxreadfile) and function(file, safe)
-    if safe == true then return pcall(waxreadfile, file) end
-    return waxreadfile(file)
+	if safe == true then return pcall(waxreadfile, file) end
+	return waxreadfile(file)
 end
 isfile = missing("function", isfile, readfile and function(file)
-    local success, result = pcall(function()
-        return readfile(file)
-    end)
-    return success and result ~= nil and result ~= ""
+	local success, result = pcall(function()
+		return readfile(file)
+	end)
+	return success and result ~= nil and result ~= ""
 end)
 makefolder = missing("function", makefolder)
 isfolder = missing("function", isfolder)
@@ -72,11 +72,11 @@ task.spawn(function()
 				local hkfunc = hookfunction or nil
 				local gtrnv = getrenv or nil
 				local newccl = newcclosure or nil
-				
+
 				if not (getthrident or gtgc or setthrident or hkfunc or gtrnv or newccl) then
 					return
 				end
-				
+
 				local IsDebug = false
 				local hooks = {}
 				local oglevel = getthrident()
@@ -2371,32 +2371,32 @@ local ecassets = {
 }
 
 local function getcustomasset(asset) -- credits to infinite yield AGAIN
-    if waxgetcustomasset then
-        local success, result = pcall(function()
-            return waxgetcustomasset(asset)
-        end)
-        if success and result ~= nil and result ~= "" then
-            return result
-        end
-    end
-    return ecassets[asset]
+	if waxgetcustomasset then
+		local success, result = pcall(function()
+			return waxgetcustomasset(asset)
+		end)
+		if success and result ~= nil and result ~= "" then
+			return result
+		end
+	end
+	return ecassets[asset]
 end
 
 if makefolder and isfolder and writefile and isfile then -- same here
-    pcall(function()
-        local assets = "https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/refs/heads/main/"
-        for _, folder in {"ecmdsstuff", "ecmdsstuff/assets"} do
-            if not isfolder(folder) then
-                makefolder(folder)
-            end
-        end
-        for path in ecassets do
-            if not isfile(path) then
-                writefile(path, game:HttpGet((path:gsub("Holder/", assets))))
-            end
-        end
-        if IsOnMobile then writefile("ecmdsstuff/assets/.nomedia") end
-    end)
+	pcall(function()
+		local assets = "https://raw.githubusercontent.com/TheEGodOfficial/E-Commands/refs/heads/main/"
+		for _, folder in {"ecmdsstuff", "ecmdsstuff/assets"} do
+			if not isfolder(folder) then
+				makefolder(folder)
+			end
+		end
+		for path in ecassets do
+			if not isfile(path) then
+				writefile(path, game:HttpGet((path:gsub("Holder/", assets))))
+			end
+		end
+		if IsOnMobile then writefile("ecmdsstuff/assets/.nomedia") end
+	end)
 end
 
 -- StarterGui.ECTopBar.TopBar
@@ -2468,7 +2468,7 @@ local function C_c()
 	E God,
 	More idk I forgot
 	]]
-	
+
 	local RunService,HttpService,Players,TeleportService,Workspace,ChatService,TextChatService,UserInputService,TweenService,StarterGui,SoundService,CoreGui = SafeGetService("RunService"),SafeGetService("HttpService"),SafeGetService("Players"),SafeGetService("TeleportService"),SafeGetService("Workspace"),SafeGetService("Chat"),SafeGetService("TextChatService"),SafeGetService("UserInputService"),SafeGetService("TweenService"),SafeGetService("StarterGui"),SafeGetService("SoundService"),SafeGetService("CoreGui")
 
 	local cmdlist = script.Parent.Parent:FindFirstChild("CmdFrame")
@@ -2556,7 +2556,7 @@ local function C_c()
 			end)
 		end
 	end)
-	
+
 	togbtn.MouseButton1Click:Connect(function()
 		if cmdbar.Visible == true then
 			cmdbar.Visible = false
@@ -3238,74 +3238,74 @@ local function C_c()
 	To update the config, run the script again.
 ]]
 
-_G.Snail_Config = {
-	Speed = 0.4,
-	TunnelSpeed = 2,
+					_G.Snail_Config = {
+						Speed = 0.4,
+						TunnelSpeed = 2,
 
-	--// Offsets
-	Offset = CFrame.new(0,-1,0),
-	TunnelOffset = CFrame.new(0,-2,0), -- This is added to the Offset
+						--// Offsets
+						Offset = CFrame.new(0,-1,0),
+						TunnelOffset = CFrame.new(0,-2,0), -- This is added to the Offset
 
-	--// Control
-	Teleport = Enum.KeyCode.E,
-	Tunnel = Enum.KeyCode.Q,
-	ResetCamera = Enum.KeyCode.R,
-	
-	TunnelIsToggle = false,
-	DistanceChangesSpeed = true,
-	UseCameraRotaton = false, -- Old movement
+						--// Control
+						Teleport = Enum.KeyCode.E,
+						Tunnel = Enum.KeyCode.Q,
+						ResetCamera = Enum.KeyCode.R,
 
-	Distance = 5,
-	
-	--// Animations
-	RotationEffect = false,
-	Enabled = true, -- If disabled, the script will not run after death
-	DirtParticles = true,
-	Sounds = true,
+						TunnelIsToggle = false,
+						DistanceChangesSpeed = true,
+						UseCameraRotaton = false, -- Old movement
 
-	--// Trail Style
-	Color = ColorSequence.new{ -- Time Position, Value
-		ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 171, 3)), 
-		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(132, 255, 0))
-	},
-	Transparency = NumberSequence.new{ 
-		NumberSequenceKeypoint.new(0.00, 0.40), 
-		NumberSequenceKeypoint.new(1.00, 1.00)
-	},
-	Length = 0.3, -- 0: Disabled
+						Distance = 5,
 
-	--// Dirt style
-	DirtColor = ColorSequence.new{ -- Time Position, Value
-		ColorSequenceKeypoint.new(0, Color3.fromRGB(193, 135, 0)), 
-		ColorSequenceKeypoint.new(1, Color3.fromRGB(158, 84, 0))
-	},
-	DirtSize = NumberSequence.new{ 
-		NumberSequenceKeypoint.new(0, 0.2), 
-		NumberSequenceKeypoint.new(1, 0.25)
-	},
+						--// Animations
+						RotationEffect = false,
+						Enabled = true, -- If disabled, the script will not run after death
+						DirtParticles = true,
+						Sounds = true,
 
-	--// Sounds
-	Audios = {
-		Teleport = {
-			SoundId = 507863457
-		},
-		Tunnel = {
-			SoundId = 9114127078,
-			Looped = true,
-			PlaybackSpeed = 1.2
-		},
-	},
+						--// Trail Style
+						Color = ColorSequence.new{ -- Time Position, Value
+							ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 171, 3)), 
+							ColorSequenceKeypoint.new(1.00, Color3.fromRGB(132, 255, 0))
+						},
+						Transparency = NumberSequence.new{ 
+							NumberSequenceKeypoint.new(0.00, 0.40), 
+							NumberSequenceKeypoint.new(1.00, 1.00)
+						},
+						Length = 0.3, -- 0: Disabled
 
-	--// Misc (Advanced)
-	Max_Height = 15,
-	Root_Height = 4,
-}
+						--// Dirt style
+						DirtColor = ColorSequence.new{ -- Time Position, Value
+							ColorSequenceKeypoint.new(0, Color3.fromRGB(193, 135, 0)), 
+							ColorSequenceKeypoint.new(1, Color3.fromRGB(158, 84, 0))
+						},
+						DirtSize = NumberSequence.new{ 
+							NumberSequenceKeypoint.new(0, 0.2), 
+							NumberSequenceKeypoint.new(1, 0.25)
+						},
 
-------------------------------
+						--// Sounds
+						Audios = {
+							Teleport = {
+								SoundId = 507863457
+							},
+							Tunnel = {
+								SoundId = 9114127078,
+								Looped = true,
+								PlaybackSpeed = 1.2
+							},
+						},
 
-if _G.Snail_Ran then return end
-loadstring(game:HttpGet('https://raw.githubusercontent.com/MastersMZ-Scripts/Scripts/master/Snail%20Script/Snail%20Script%20V2.lua'))()
-						OutputMsg("Executed Snail script Controls: E - tp, Q - tunnel, R - fix cam")
+						--// Misc (Advanced)
+						Max_Height = 15,
+						Root_Height = 4,
+					}
+
+					------------------------------
+
+					if _G.Snail_Ran then return end
+					loadstring(game:HttpGet('https://raw.githubusercontent.com/MastersMZ-Scripts/Scripts/master/Snail%20Script/Snail%20Script%20V2.lua'))()
+					OutputMsg("Executed Snail script Controls: E - tp, Q - tunnel, R - fix cam")
 				end)
 			end
 		end
@@ -3477,9 +3477,9 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/MastersMZ-Scripts/Scr
 					local angle = 1
 					local radius = 10
 					local blackHoleActive = false
-					
+
 					local Network = nil
-					
+
 					local function setupPlayer()
 						local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
 						local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -3831,7 +3831,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/MastersMZ-Scripts/Scr
 					end
 
 					OutputMsg("Enabled Spin Fling")
-						
+
 					flingDied = Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').Died:Connect(flingDiedF)
 					repeat
 						bambam.AngularVelocity = Vector3.new(0,99999,0)
@@ -3847,9 +3847,9 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/MastersMZ-Scripts/Scr
 			if cmd == pf..name then
 				task.spawn(function()
 					pcall(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/TALENTLESS/main/TALENTLESS", true))()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/TALENTLESS/main/TALENTLESS", true))()
 						OutputMsg("Successfully ran TALENTLESS Piano Auto Player")
-end)
+					end)
 				end)
 			end
 		end
@@ -4076,7 +4076,7 @@ end)
 			if cmd == pf..name then
 				task.spawn(function()
 					OutputMsg("Successfully ran Toggle Touch - Press Z to toggle")
-						
+
 					local player = Players.LocalPlayer
 					local UIS = UserInputService
 					local myzaza = false
@@ -4519,17 +4519,17 @@ https://discord.com/invite/aEZpBEHgMT
 					--====================================--
 					--           FDless Options           --
 					--====================================--
-					
+
 					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this --toggle fling --adds shiftlock to patchma rig --adds control click tp --adds transparent parts showing your hats when you don't have real ones --adds click flinging regardless of attacks --highlight fling --disable character scripts  --fling with whole body --hides the red damage border when you die (respawn) --respawn tp mode 
 					-- 0 - stay at spawn
 					-- 1 - randomtp close
 					-- 2 - behind fake character
 					-- 3 - hide body
-					 --breakjoints mode
+					--breakjoints mode
 					-- 1 - health+breakjoints (the most support)
 					-- 2 - health or breakjoints
 					-- 3 - breakjoints
-					 --sets simulation radius
+					--sets simulation radius
 
 					--==========================================================================================================================--
 
@@ -4559,7 +4559,7 @@ https://discord.com/invite/aEZpBEHgMT
 					--====================================--
 					--           FDless Options           --
 					--====================================--
-					
+
 					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
 					--==========================================================================================================================--
@@ -4590,7 +4590,7 @@ https://discord.com/invite/aEZpBEHgMT
 					--====================================--
 					--           FDless Options           --
 					--====================================--
-					
+
 					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
 					--==========================================================================================================================--
@@ -4621,7 +4621,7 @@ https://discord.com/invite/aEZpBEHgMT
 					--====================================--
 					--           FDless Options           --
 					--====================================--
-					
+
 					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,true,true,true,true,true,3,1,true
 
 					permadeath = true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
@@ -4673,7 +4673,7 @@ https://discord.com/invite/aEZpBEHgMT
 					--====================================--
 					--           FDless Options           --
 					--====================================--
-					
+
 					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
 					--==========================================================================================================================--
@@ -4704,7 +4704,7 @@ https://discord.com/invite/aEZpBEHgMT
 					--====================================--
 					--           FDless Options           --
 					--====================================--
-					
+
 					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
 					--==========================================================================================================================--
@@ -4801,7 +4801,7 @@ https://discord.com/invite/aEZpBEHgMT
 					--====================================--
 					--           FDless Options           --
 					--====================================--
-					
+
 					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
 					--==========================================================================================================================--
@@ -4832,7 +4832,7 @@ https://discord.com/invite/aEZpBEHgMT
 					--====================================--
 					--           FDless Options           --
 					--====================================--
-					
+
 					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
 					--==========================================================================================================================--
@@ -4863,7 +4863,7 @@ https://discord.com/invite/aEZpBEHgMT
 					--====================================--
 					--           FDless Options           --
 					--====================================--
-					
+
 					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
 					--==========================================================================================================================--
@@ -4894,7 +4894,7 @@ https://discord.com/invite/aEZpBEHgMT
 					--====================================--
 					--           FDless Options           --
 					--====================================--
-					
+
 					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
 					--==========================================================================================================================--
@@ -4925,7 +4925,7 @@ https://discord.com/invite/aEZpBEHgMT
 					--====================================--
 					--           FDless Options           --
 					--====================================--
-					
+
 					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
 					--==========================================================================================================================--
@@ -4956,7 +4956,7 @@ https://discord.com/invite/aEZpBEHgMT
 					--====================================--
 					--           FDless Options           --
 					--====================================--
-					
+
 					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
 					--==========================================================================================================================--
@@ -4987,7 +4987,7 @@ https://discord.com/invite/aEZpBEHgMT
 					--====================================--
 					--           FDless Options           --
 					--====================================--
-					
+
 					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
 					--==========================================================================================================================--
@@ -5024,7 +5024,7 @@ https://discord.com/invite/aEZpBEHgMT
 					--====================================--
 					--           FDless Options           --
 					--====================================--
-					
+
 					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
 					--==========================================================================================================================--
@@ -5055,7 +5055,7 @@ https://discord.com/invite/aEZpBEHgMT
 					--====================================--
 					--           FDless Options           --
 					--====================================--
-					
+
 					local permadeath,fling,allowshiftlock,ctrltp,placeholders,clickfling,highlightflingtargets,discharscripts,flingchangestate,hidedeatheffect,respawntp,breakjointsmethod,simrad = true,true,true,true,true,false,true,true,true,true,3,1,true
 
 					--==========================================================================================================================--
@@ -5071,8 +5071,8 @@ https://discord.com/invite/aEZpBEHgMT
 	end
 
 	for _, name in pairs(allcmds.lc) do
-			if cmd == pf..name then
-				task.spawn(function()
+		if cmd == pf..name then
+			task.spawn(function()
 					--[[
 _________                       _____            ___________________
 __  ____/__________________________(_)_______    ___  ____/__  ____/
@@ -5084,78 +5084,77 @@ by rqz
 https://discord.com/invite/aEZpBEHgMT
 ]]--
 
---===================================--
---          Script Options           --
---===================================--
+				--===================================--
+				--          Script Options           --
+				--===================================--
 
-					lightmode=arg1 --overwrite black mode colors with white
-					effects=false --toggle effects (if you experience performance issues try setting to false)
-					timemultiplier=1 --change animation speed (min=0.1,default=1,max=10)
-					walkspeedmultiplier=1 --change walkspeed (default=1,min/mix=-∞-->+∞)
+				lightmode=arg1 --overwrite black mode colors with white
+				effects=false --toggle effects (if you experience performance issues try setting to false)
+				timemultiplier=1 --change animation speed (min=0.1,default=1,max=10)
+				walkspeedmultiplier=1 --change walkspeed (default=1,min/mix=-∞-->+∞)
 
-					--====================================--
-					--          FDless Options           --
-					--====================================--
+				--====================================--
+				--          FDless Options           --
+				--====================================--
 
-					permadeath=true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
-					fling=true --toggle fling
-					allowshiftlock=true --adds shiftlock to patchma rig
-					ctrltp=true --adds control click tp
-					placeholders=true --adds transparent parts showing your hats when you don't have real ones
-					clickfling=false --adds click flinging regardless of attacks
-					highlightflingtargets=true --highlight fling
-					discharscripts=true --disable character scripts
-					flingchangestate=true --fling with whole body
-					hidedeatheffect=true --hides the red damage border when you die (respawn)
-					respawntp=3 --respawn tp mode
-					--0 -stay at spawn
-					--1 -randomtp close
-					--2 -behind fake character
-					--3 -hide body
-					breakjointsmethod=1 --breakjoints mode
-					--1 -health+breakjoints (the most support)
-					--2 -health or breakjoints
-					--3 -breakjoints
-					simrad=true --sets simulation radius
+				permadeath=true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
+				fling=true --toggle fling
+				allowshiftlock=true --adds shiftlock to patchma rig
+				ctrltp=true --adds control click tp
+				placeholders=true --adds transparent parts showing your hats when you don't have real ones
+				clickfling=false --adds click flinging regardless of attacks
+				highlightflingtargets=true --highlight fling
+				discharscripts=true --disable character scripts
+				flingchangestate=true --fling with whole body
+				hidedeatheffect=true --hides the red damage border when you die (respawn)
+				respawntp=3 --respawn tp mode
+				--0 -stay at spawn
+				--1 -randomtp close
+				--2 -behind fake character
+				--3 -hide body
+				breakjointsmethod=1 --breakjoints mode
+				--1 -health+breakjoints (the most support)
+				--2 -health or breakjoints
+				--3 -breakjoints
+				simrad=true --sets simulation radius
 
-					--==========================================================================================================================--
+				--==========================================================================================================================--
 
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Lightning%20Cannon"))()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Lightning%20Cannon"))()
 
-					--==========================================================================================================================--
-				end)
-			end
+				--==========================================================================================================================--
+			end)
 		end
 	end
+end
 
-	input.FocusLost:Connect(function(enter)
-		if not enter then
-			return
-		end
+input.FocusLost:Connect(function(enter)
+	if not enter then
+		return
+	end
 
-		Commands(prefix, input.Text)
-	end)
-	
-	task.spawn(function()
-		NAProtection(cmdbar)
-		NAProtection(cmdlist)
-		NAProtection(topbar)
-	end)
+	Commands(prefix, input.Text)
+end)
 
-	local chatprefix = "&gt;"
+task.spawn(function()
+	NAProtection(cmdbar)
+	NAProtection(cmdlist)
+	NAProtection(topbar)
+end)
 
-	p.Chatted:Connect(function(msg)
-		Commands(chatprefix, msg)
-	end)
-end;
+local chatprefix = "&gt;"
+
+p.Chatted:Connect(function(msg)
+	Commands(chatprefix, msg)
+end)
 task.spawn(C_c);
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.maininfo
 local function C_67()
 	local script = G2L["67"];
 	-- rewritten by E God
-	
+
 	local RunService = SafeGetService("RunService")
-	
+
 	for _, cmds in pairs(script.Parent:GetChildren()) do
 		if cmds:IsA("TextButton") and cmds:FindFirstChild("Info") then
 			local db = false
