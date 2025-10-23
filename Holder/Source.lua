@@ -5073,6 +5073,15 @@ https://discord.com/invite/aEZpBEHgMT
 	for _, name in pairs(allcmds.lc) do
 		if cmd == pf..name then
 			task.spawn(function()
+					local function convertbool(bool)
+							if bool == "true" then
+								return true
+							elseif bool == "false" then
+								return false
+							else
+								return true
+							end
+					end
 					--[[
 _________                       _____            ___________________
 __  ____/__________________________(_)_______    ___  ____/__  ____/
@@ -5088,7 +5097,7 @@ https://discord.com/invite/aEZpBEHgMT
 				--          Script Options           --
 				--===================================--
 
-				lightmode=arg1 --overwrite black mode colors with white
+				lightmode=convertbool(arg1) --overwrite black mode colors with white
 				effects=false --toggle effects (if you experience performance issues try setting to false)
 				timemultiplier=1 --change animation speed (min=0.1,default=1,max=10)
 				walkspeedmultiplier=1 --change walkspeed (default=1,min/mix=-∞-->+∞)
@@ -5127,7 +5136,9 @@ https://discord.com/invite/aEZpBEHgMT
 		end
 	end
 end
-
+repeat
+	task.wait(0.1)
+until input ~= nil
 input.FocusLost:Connect(function(enter)
 	if not enter then
 		return
