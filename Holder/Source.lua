@@ -2471,12 +2471,12 @@ local function C_c()
 
 	local RunService,HttpService,Players,TeleportService,Workspace,ChatService,TextChatService,UserInputService,TweenService,StarterGui,SoundService,CoreGui = SafeGetService("RunService"),SafeGetService("HttpService"),SafeGetService("Players"),SafeGetService("TeleportService"),SafeGetService("Workspace"),SafeGetService("Chat"),SafeGetService("TextChatService"),SafeGetService("UserInputService"),SafeGetService("TweenService"),SafeGetService("StarterGui"),SafeGetService("SoundService"),SafeGetService("CoreGui")
 
-	local cmdlist = script.Parent.Parent:FindFirstChild("CmdFrame")
-	local topbar = script.Parent.Parent:FindFirstChild("TopBar")
-	local togbtn = topbar:FindFirstChild("ToggleCmdBar")
+	local cmdlist = script.Parent.Parent:WaitForChild("CmdFrame")
+	local topbar = script.Parent.Parent:WaitForChild("TopBar")
+	local togbtn = topbar:WaitForChild("ToggleCmdBar")
 	local cmdbar = script.Parent
-	local input = cmdbar:FindFirstChild("Input")
-	local output = cmdbar:FindFirstChild("Output")
+	local input = cmdbar:WaitForChild("Input")
+	local output = cmdbar:WaitForChild("Output")
 
 	local Loopmute,Loopglitch,flinging,Clip,TPWalk,Toggled,Sprinting,TFlyEnabled = false,false,true,false,false,false,false,false
 	local floatName = "dfkjygsahfyvfnw7f8n538dnd4tgregw6er78red48hx35t6rgn8eewi"
@@ -5068,14 +5068,13 @@ https://discord.com/invite/aEZpBEHgMT
 				end)
 			end
 		end
-	end
 
-	for _, name in pairs(allcmds.lc) do
-		if cmd == pf..name then
-			task.spawn(function()
+		for _, name in pairs(allcmds.lc) do
+			if cmd == pf..name then
+				task.spawn(function()
 					local function convertbool(bool)
-							if bool == "true" then
-								return true
+						if bool == "true" then
+							return true
 							elseif bool == "false" then
 								return false
 							else
@@ -5135,7 +5134,6 @@ https://discord.com/invite/aEZpBEHgMT
 			end)
 		end
 	end
-end
 repeat
 	task.wait(0.1)
 until input ~= nil
@@ -5158,6 +5156,8 @@ local chatprefix = "&gt;"
 p.Chatted:Connect(function(msg)
 	Commands(chatprefix, msg)
 end)
+
+end;
 task.spawn(C_c);
 -- ServerStorage.GFUYHjBJHjHjhvfjhvfjhjhfjHJhHFhfyyhfHFJYFTYhhfJhfyHFTYHJhftyjYHfjh.CmdFrame.Frame.CmdScroll.maininfo
 local function C_67()
