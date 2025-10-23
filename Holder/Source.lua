@@ -5075,11 +5075,11 @@ https://discord.com/invite/aEZpBEHgMT
 					local function convertbool(bool)
 						if bool == "true" then
 							return true
-							elseif bool == "false" then
-								return false
-							else
-								return true
-							end
+						elseif bool == "false" then
+							return false
+						else
+							return true
+						end
 					end
 					--[[
 _________                       _____            ___________________
@@ -5092,70 +5092,71 @@ by rqz
 https://discord.com/invite/aEZpBEHgMT
 ]]--
 
-				--===================================--
-				--          Script Options           --
-				--===================================--
+					--===================================--
+					--          Script Options           --
+					--===================================--
 
-				lightmode=convertbool(arg1) --overwrite black mode colors with white
-				effects=false --toggle effects (if you experience performance issues try setting to false)
-				timemultiplier=1 --change animation speed (min=0.1,default=1,max=10)
-				walkspeedmultiplier=1 --change walkspeed (default=1,min/mix=-∞-->+∞)
+					lightmode=convertbool(arg1) --overwrite black mode colors with white
+					effects=false --toggle effects (if you experience performance issues try setting to false)
+					timemultiplier=1 --change animation speed (min=0.1,default=1,max=10)
+					walkspeedmultiplier=1 --change walkspeed (default=1,min/mix=-∞-->+∞)
 
-				--====================================--
-				--          FDless Options           --
-				--====================================--
+					--====================================--
+					--          FDless Options           --
+					--====================================--
 
-				permadeath=true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
-				fling=true --toggle fling
-				allowshiftlock=true --adds shiftlock to patchma rig
-				ctrltp=true --adds control click tp
-				placeholders=true --adds transparent parts showing your hats when you don't have real ones
-				clickfling=false --adds click flinging regardless of attacks
-				highlightflingtargets=true --highlight fling
-				discharscripts=true --disable character scripts
-				flingchangestate=true --fling with whole body
-				hidedeatheffect=true --hides the red damage border when you die (respawn)
-				respawntp=3 --respawn tp mode
-				--0 -stay at spawn
-				--1 -randomtp close
-				--2 -behind fake character
-				--3 -hide body
-				breakjointsmethod=1 --breakjoints mode
-				--1 -health+breakjoints (the most support)
-				--2 -health or breakjoints
-				--3 -breakjoints
-				simrad=true --sets simulation radius
+					permadeath=true --adds permanent death (no respawning), see #supported-executors channel for executors that work with this
+					fling=true --toggle fling
+					allowshiftlock=true --adds shiftlock to patchma rig
+					ctrltp=true --adds control click tp
+					placeholders=true --adds transparent parts showing your hats when you don't have real ones
+					clickfling=false --adds click flinging regardless of attacks
+					highlightflingtargets=true --highlight fling
+					discharscripts=true --disable character scripts
+					flingchangestate=true --fling with whole body
+					hidedeatheffect=true --hides the red damage border when you die (respawn)
+					respawntp=3 --respawn tp mode
+					--0 -stay at spawn
+					--1 -randomtp close
+					--2 -behind fake character
+					--3 -hide body
+					breakjointsmethod=1 --breakjoints mode
+					--1 -health+breakjoints (the most support)
+					--2 -health or breakjoints
+					--3 -breakjoints
+					simrad=true --sets simulation radius
 
-				--==========================================================================================================================--
+					--==========================================================================================================================--
 
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Lightning%20Cannon"))()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Lightning%20Cannon"))()
 
-				--==========================================================================================================================--
-			end)
+					--==========================================================================================================================--
+				end)
+			end
 		end
 	end
-repeat
-	task.wait(0.1)
-until input ~= nil
-input.FocusLost:Connect(function(enter)
-	if not enter then
-		return
-	end
+	repeat
+		task.wait(0.1)
+	until input ~= nil
+	input.FocusLost:Connect(function(enter)
+		if not enter then
+			return
+		end
 
-	Commands(prefix, input.Text)
-end)
+		Commands(prefix, input.Text)
+	end)
 
-task.spawn(function()
-	NAProtection(cmdbar)
-	NAProtection(cmdlist)
-	NAProtection(topbar)
-end)
+	task.spawn(function()
+		NAProtection(cmdbar)
+		NAProtection(cmdlist)
+		NAProtection(topbar)
+	end)
 
-local chatprefix = "&gt;"
+	local chatprefix = "&gt;"
 
-p.Chatted:Connect(function(msg)
-	Commands(chatprefix, msg)
-end)
+	p.Chatted:Connect(function(msg)
+		Commands(chatprefix, msg)
+	end)
 
 end;
 task.spawn(C_c);
