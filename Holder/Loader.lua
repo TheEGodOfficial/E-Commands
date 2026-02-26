@@ -1,6 +1,6 @@
 local tpenabled = true
 
-local env = (getgenv and getgenv()) or _G or shared
+local env = getgenv and getgenv() or _G or shared
 
 if not env.E_COMMANDS_LOADED then
 	env.E_COMMANDS_LOADED = true
